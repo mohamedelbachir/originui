@@ -1,5 +1,8 @@
 import registry from "@/registry.json"
+import { clsx, type ClassValue } from "clsx"
 import type { RegistryItem } from "shadcn/registry"
+import { toast } from "sonner"
+import { twMerge } from "tailwind-merge"
 
 import type { RegistryTag } from "@/registry/registry-tags"
 
@@ -54,4 +57,47 @@ export const convertRegistryPaths = (content: string): string => {
     .replace(/@\/registry\/default\/compositions/g, "@/components")
     .replace(/@\/registry\/default\/hooks/g, "@/hooks")
     .replace(/@\/registry\/default\/lib/g, "@/lib")
+}
+
+export const cn = (...inputs: ClassValue[]): string => twMerge(clsx(inputs))
+
+export const parseError = (error: unknown): string => {
+  if (error instanceof Error) {
+    return error.message
+  }
+
+  if (typeof error === "string") {
+    return error
+  }
+
+  return "An unknown error occurred"
+}
+
+export const handleError = (error: unknown) => {
+  const message = parseError(error)
+
+  toast.error(message)
+}
+
+export const formatDateRange = (
+  startDate: string,
+  endDate: string | null,
+  locale: string
+): string => {
+  const start = new Date(startDate)
+  const end = endDate ? new Date(endDate) : null
+
+  const formatter = new Intl.DateTimeFormat(locale, {
+    month: "long",
+    year: "numeric",
+  })
+
+  const startFormatted = formatter.format(start)
+  const endFormatted = end
+    ? formatter.format(end)
+    : locale === "fr"
+      ? "Présent"
+      : "Present"
+
+  return `${startFormatted} - ${endFormatted}`
 }

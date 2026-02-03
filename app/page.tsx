@@ -3,12 +3,13 @@ import Link from "next/link"
 
 import { categories } from "@/config/components"
 import SearchButton from "@/components/search-button"
+import { HeroSection } from "@/components/sections/hero"
 import { SubscribeBottom } from "@/components/subscribe-form"
 
 export default function Page() {
   return (
     <div data-home>
-      <div className="max-w-3xl max-sm:text-center">
+      {/* <div className="max-w-3xl max-sm:text-center">
         <h1 className="font-heading text-foreground mb-4 text-4xl/[1.1] font-bold tracking-tight md:text-5xl/[1.1]">
           Beautiful UI components built with Tailwind CSS and React.
         </h1>
@@ -17,8 +18,14 @@ export default function Page() {
           build application UIs.
         </p>
         <SearchButton />
-      </div>
-
+      </div> */}
+      <HeroSection title="Beautiful UI components built with Tailwind CSS and React.">
+        <p className="text-muted-foreground mb-8 text-lg">
+          An open-source collection of copy-and-paste components for quickly
+          build application UIs.
+        </p>
+        <SearchButton />
+      </HeroSection>
       <div className="relative my-16">
         <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {categories
