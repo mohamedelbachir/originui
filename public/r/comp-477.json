@@ -6,9 +6,9 @@
     "@tanstack/react-table"
   ],
   "registryDependencies": [
-    "https://originui.com/r/badge.json",
-    "https://originui.com/r/checkbox.json",
-    "https://originui.com/r/table.json"
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/checkbox.json",
+    "https://ui.woilasoft.com/r/table.json"
   ],
   "files": [
     {

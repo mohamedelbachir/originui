@@ -3,9 +3,9 @@
   "name": "comp-465",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/pagination.json"
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/pagination.json"
   ],
   "files": [
     {

@@ -3,8 +3,8 @@
   "name": "comp-598",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/tree.json",
-    "https://originui.com/r/checkbox.json"
+    "https://ui.woilasoft.com/r/tree.json",
+    "https://ui.woilasoft.com/r/checkbox.json"
   ],
   "files": [
     {

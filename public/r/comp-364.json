@@ -3,7 +3,7 @@
   "name": "comp-364",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/hover-card.json"
+    "https://ui.woilasoft.com/r/hover-card.json"
   ],
   "files": [
     {

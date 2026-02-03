@@ -74,9 +74,9 @@ export default function ComponentDetails({
 
   return (
     <div className="absolute top-2 right-2 flex gap-1 peer-data-comp-loading:hidden">
-      <CopyRegistry url={`https://originui.com/r/${component.name}.json`} />
+      <CopyRegistry url={`https://ui.woilasoft.com/r/${component.name}.json`} />
       <OpenInV0
-        componentSource={`https://originui.com/r/${component.name}.json`}
+        componentSource={`https://ui.woilasoft.com/r/${component.name}.json`}
       />
       <Dialog>
         <TooltipProvider delayDuration={0}>

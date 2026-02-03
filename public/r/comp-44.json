@@ -6,7 +6,7 @@
     "input-otp"
   ],
   "registryDependencies": [
-    "https://originui.com/r/label.json"
+    "https://ui.woilasoft.com/r/label.json"
   ],
   "files": [
     {

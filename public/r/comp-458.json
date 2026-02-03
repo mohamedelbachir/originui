@@ -3,8 +3,8 @@
   "name": "comp-458",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/pagination.json"
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/pagination.json"
   ],
   "files": [
     {

@@ -3,8 +3,8 @@
   "name": "comp-352",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/accordion.json",
-    "https://originui.com/r/collapsible.json"
+    "https://ui.woilasoft.com/r/accordion.json",
+    "https://ui.woilasoft.com/r/collapsible.json"
   ],
   "files": [
     {

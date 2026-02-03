@@ -6,17 +6,17 @@
     "@tanstack/react-table"
   ],
   "registryDependencies": [
-    "https://originui.com/r/alert-dialog.json",
-    "https://originui.com/r/badge.json",
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/checkbox.json",
-    "https://originui.com/r/dropdown-menu.json",
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/pagination.json",
-    "https://originui.com/r/popover.json",
-    "https://originui.com/r/select.json",
-    "https://originui.com/r/table.json"
+    "https://ui.woilasoft.com/r/alert-dialog.json",
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/checkbox.json",
+    "https://ui.woilasoft.com/r/dropdown-menu.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/pagination.json",
+    "https://ui.woilasoft.com/r/popover.json",
+    "https://ui.woilasoft.com/r/select.json",
+    "https://ui.woilasoft.com/r/table.json"
   ],
   "files": [
     {

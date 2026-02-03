@@ -3,9 +3,9 @@
   "name": "comp-437",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/badge.json",
-    "https://originui.com/r/scroll-area.json",
-    "https://originui.com/r/tabs.json"
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/scroll-area.json",
+    "https://ui.woilasoft.com/r/tabs.json"
   ],
   "files": [
     {

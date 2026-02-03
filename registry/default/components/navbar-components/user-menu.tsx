@@ -40,7 +40,7 @@ export default function UserMenu() {
             Keith Kennedy
           </span>
           <span className="text-muted-foreground truncate text-xs font-normal">
-            k.kennedy@originui.com
+            k.kennedy@ui.woilasoft.com
           </span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />

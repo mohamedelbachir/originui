@@ -3,9 +3,9 @@
   "name": "comp-142",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/checkbox.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/input.json"
+    "https://ui.woilasoft.com/r/checkbox.json",
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/input.json"
   ],
   "files": [
     {

@@ -3,10 +3,10 @@
   "name": "comp-587",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/input.json",
-    "https://originui.com/r/navigation-menu.json",
-    "https://originui.com/r/popover.json"
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/navigation-menu.json",
+    "https://ui.woilasoft.com/r/popover.json"
   ],
   "files": [
     {

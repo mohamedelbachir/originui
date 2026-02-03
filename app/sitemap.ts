@@ -4,16 +4,16 @@ import { categories } from "@/config/components"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const home = {
-    url: "https://originui.com",
+    url: "https://ui.woilasoft.com",
   }
   const search = {
-    url: "https://originui.com/search",
+    url: "https://ui.woilasoft.com/search",
   }
   const easings = {
-    url: "https://originui.com/easings",
+    url: "https://ui.woilasoft.com/easings",
   }
   const categoryPages = categories.map((category) => ({
-    url: `https://originui.com/${category.slug}`,
+    url: `https://ui.woilasoft.com/${category.slug}`,
   }))
 
   return [home, ...categoryPages, search, easings]

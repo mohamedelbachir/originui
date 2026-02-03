@@ -3,8 +3,8 @@
   "name": "comp-59",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/textarea.json"
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/textarea.json"
   ],
   "files": [
     {

@@ -3,8 +3,8 @@
   "name": "comp-205",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/select.json",
-    "https://originui.com/r/label.json"
+    "https://ui.woilasoft.com/r/select.json",
+    "https://ui.woilasoft.com/r/label.json"
   ],
   "files": [
     {

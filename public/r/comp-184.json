@@ -3,8 +3,8 @@
   "name": "comp-184",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/switch.json",
-    "https://originui.com/r/label.json"
+    "https://ui.woilasoft.com/r/switch.json",
+    "https://ui.woilasoft.com/r/label.json"
   ],
   "files": [
     {

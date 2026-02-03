@@ -3,8 +3,8 @@
   "name": "comp-595",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/avatar.json",
-    "https://originui.com/r/button.json"
+    "https://ui.woilasoft.com/r/avatar.json",
+    "https://ui.woilasoft.com/r/button.json"
   ],
   "files": [
     {

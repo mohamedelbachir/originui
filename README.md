@@ -4,7 +4,7 @@
 
 Origin UI is an extensive collection of copy-and-paste components for quickly building app UIs. It includes hundreds of components and is constantly updated with new designs.
 
-**Demo** → [https://originui.com](https://originui.com)
+**Demo** → [https://ui.woilasoft.com](https://ui.woilasoft.com)
 
 ![Origin UI](https://github.com/user-attachments/assets/a6428743-1628-4498-8b45-7000e30bdc24)
 
@@ -102,7 +102,7 @@ Our UI library has been updated to Tailwind CSS v4 as of February 25, 2025. Lega
 
 ```bash
 # v3 legacy component
-pnpm dlx shadcn@latest add https://originui.com/r/legacy/comp-01.json
+pnpm dlx shadcn@latest add https://ui.woilasoft.com/r/legacy/comp-01.json
 ```
 
 Note: New components will only be developed for Tailwind v4.
