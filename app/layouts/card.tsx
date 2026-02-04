@@ -11,23 +11,34 @@ interface CardProps {
     repoUrl?: string
     cmd?: string
     imgHeight: number
+    categorySlug: string
+    slug: string
   }
 }
 
 export default function Card({ card }: CardProps) {
   return (
     <article>
-      <figure className="bg-border/50 relative -m-px rounded-xl border p-4">
-        <Image
-          className="rounded-md"
-          src={`/layouts/app-${card.id}.png`}
-          alt={card.title}
-          width={1120}
-          height={card.imgHeight}
-        />
-      </figure>
+      <Link 
+        href={`/templates/${card.categorySlug}/${card.slug}`}
+        className="group block"
+      >
+        <figure className="bg-border/50 relative -m-px rounded-xl border p-4 transition-shadow group-hover:shadow-md">
+          <Image
+            className="rounded-md"
+            src={`/layouts/app-${card.id}.png`}
+            alt={card.title}
+            width={1120}
+            height={card.imgHeight}
+          />
+        </figure>
+      </Link>
       <div className="mt-4 flex items-center justify-between">
-        <h2 className="text-sm font-medium">{card.title}</h2>
+        <h2 className="text-sm font-medium">
+          <Link href={`/templates/${card.categorySlug}/${card.slug}`} className="hover:underline">
+            {card.title}
+          </Link>
+        </h2>
         {card.demoUrl && card.repoUrl ? (
           <div className="flex items-center gap-6">
             <CopyLayout command={card.cmd} />
@@ -50,11 +61,10 @@ export default function Card({ card }: CardProps) {
               </span>
             </Link>
             <Link
-              href={card.repoUrl}
+              href={`/templates/${card.categorySlug}/${card.slug}`}
               className="inline-flex items-center gap-1 text-sm hover:underline"
-              target="_blank"
             >
-              GitHub
+              Source Code
               <span className="text-muted-foreground">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

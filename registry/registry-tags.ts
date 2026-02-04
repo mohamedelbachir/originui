@@ -135,6 +135,22 @@ export const registryTags = [
   "warning",
   "week",
   "zoom",
+  // Block tags
+  "about section",
+  "header",
+  "footer",
+  "hero",
+  "contact",
+  "feature",
+  "cta",
+  "pricing",
+  "faq",
+  "testimonial",
+  // Template tags
+  "landingpage",
+  "portfolio",
+  "dashboard",
+  "ecommerce",
 ] as const
 
 export type RegistryTag = (typeof registryTags)[number]

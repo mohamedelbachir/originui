@@ -12,8 +12,8 @@ import { Button } from "@/registry/default/ui/button"
 import { Section } from "../section"
 
 const item = {
-  href: "/components/buy-me-coffee",
-  title: "Saas App",
+  href: "/showcase?category=tree",
+  title: "tree",
 }
 
 const index = () => {
@@ -71,8 +71,12 @@ const index = () => {
   const words = ["Better ", "Perfect", "Modern ", "Unique "]
   return (
     // <section className="relative h-screen overflow-hidden bg-white pb-10 dark:bg-black">
-    <Section className="relative overflow-hidden bg-white dark:bg-black">
-      <>
+    <Section className="sm:p-4">
+      <div
+      className={cn(
+        "bg-background relative sm:rounded-lg sm:border sm:px-8 sm:py-20 sm:shadow-sm overflow-hidden"
+      )}
+    >
         <div className="absolute inset-0 z-0 h-screen w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[16px_16px] dark:bg-[radial-gradient(#1d1d1d_1px,transparent_1px)]"></div>
         <div className="absolute inset-0 top-0 left-0 h-screen w-full items-center bg-linear-to-t from-white from-0% to-transparent to-60% px-5 py-24 dark:from-[#050505]"></div>
 
@@ -122,7 +126,7 @@ const index = () => {
             </defs>
           </svg>
         </div>
-        <article className="relative z-2 grid px-4 py-20 sm:px-0">
+        <article className="relative z-2 grid px-4 py-10 sm:py-20 sm:px-0">
           <a
             href={item?.href}
             className="mx-auto inline-flex w-fit items-center justify-center gap-1 rounded-full border-4 border-neutral-200 bg-[#334cec] py-0.5 pr-3 pl-0.5 text-xs shadow-[#080808] dark:border-neutral-800"
@@ -151,29 +155,29 @@ const index = () => {
             </svg>
           </a>
           <h1 className="text-center text-3xl font-semibold tracking-tight text-black sm:text-5xl md:text-6xl xl:text-7xl dark:text-white">
-            <span className="text-[2.5rem]">Don&apos;t Just Ship Website,</span>{" "}
-            <span className="relative flex translate-x-0 justify-center gap-2">
+            {/* <span className="text-[2.5rem]">Don&apos;t Just Ship Website,</span>{" "} */}
+            <span className="relative text-[2rem] sm:text-5xl mt-4 flex translate-x-0 justify-center gap-2">
               Ship{" "}
               <WordAnimator
                 words={words}
                 duration={5}
                 className="w-fit border-neutral-200 bg-gray-200 pr-3 italic dark:border-neutral-800 dark:bg-gray-800" // Add any additional styling here
               />{" "}
-              Ones.
+              Website.
             </span>
           </h1>
           <p className="mx-auto mt-5 text-center text-sm text-black sm:w-[80%] sm:text-lg lg:w-[700px] dark:text-white">
             50+ Stunning Sections and Templates Powered by{" "}
             <strong>React</strong>, <strong>TypeScript</strong>,
-            <strong> Tailwind CSS</strong>, and <strong> Tailwind CSS</strong>.
-            Save countless hours , craft eye-catching landing pages, and turn
-            visitors into loyal customers
+            <strong> Tailwind CSS</strong>.
+            <span className="hidden sm:inline">Save countless hours , craft eye-catching landing pages, and turn
+            visitors into loyal customers</span>
           </p>
           <div className="mt-4 flex items-center justify-center gap-2">
             <ShimmerButton
               borderRadius={"100px"}
               className={cn(
-                "flex w-fit items-center gap-2 rounded-full border px-2 py-2 text-white sm:px-4"
+                "flex w-fit items-center gap-2 rounded-full border px-4 py-4 text-white sm:px-4"
               )}
               background={"#334cec"}
             >
@@ -182,8 +186,8 @@ const index = () => {
               </span>
             </ShimmerButton>
 
-            <Button className="h-12 rounded-full px-4">
-              Browse Templates
+            <Button className="h-12 rounded-full px-4 lg:text-lg">
+              Get stated
               <ChevronsRight />
             </Button>
           </div>
@@ -192,7 +196,7 @@ const index = () => {
         <div className="absolute inset-0 top-0 left-0 z-0 flex h-screen overflow-hidden">
           {blocks}
         </div>
-      </>
+      </div>
     </Section>
 
     // </section>
