@@ -1,8 +1,10 @@
 import Link from "next/link"
 import { HeaderProvider } from "@/providers/header"
 import { ViewAnimation } from "@/providers/view-animation"
+import { PlusIcon } from "lucide-react"
 
 import { links } from "@/lib/navigation"
+// import SearchButton from "@/components/search-button"
 import { Button } from "@/registry/default/ui/button"
 
 import { ActiveLink } from "../active-link"
@@ -10,10 +12,21 @@ import { ThemeSwitcher } from "../theme-switcher"
 import { MobileMenu } from "./mobile-menu"
 import { MobileMenuTrigger } from "./mobile-menu-trigger"
 
+const Cross = () => (
+  <div className="relative h-6 w-6">
+    <div className="bg-border absolute left-3 h-6 w-px" />
+    <div className="bg-border absolute top-3 h-px w-6" />
+    <PlusIcon
+      size={20}
+      className="text-muted-foreground/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    />
+  </div>
+)
+
 export const Header = async () => {
   return (
     <>
-      <HeaderProvider className="bg-backdrop/90 fixed top-0 right-0 left-0 z-50 container mx-auto flex items-center justify-between border-x px-4 py-2 backdrop-blur-md transition-all sm:py-4">
+      <HeaderProvider className="bg-backdrop/90 sticky top-0 right-0 left-0 z-50 mx-auto flex max-w-[1600px] items-center justify-between border-x-0 px-4 py-2 backdrop-blur-md transition-all sm:px-6 sm:py-4">
         <div className="w-32">
           <ViewAnimation
             initial={{ opacity: 0, translateY: -8 }}
@@ -51,10 +64,11 @@ export const Header = async () => {
             delay={0.8}
           >
             <div className="flex items-center gap-2">
+              {/* <SearchButton /> */}
               <ThemeSwitcher />
-              {/* <Button variant="outline" size="sm" asChild>
-                            <Link href="/contact">{tHero('contact')}</Link>
-                        </Button> */}
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/showcase">Get started</Link>
+              </Button>
             </div>
           </ViewAnimation>
         </div>

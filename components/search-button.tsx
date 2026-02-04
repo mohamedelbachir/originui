@@ -23,7 +23,7 @@ export default function SearchButton() {
   return (
     <Link
       href="/search"
-      className="bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text rounded-full border px-4 py-2 text-sm outline-none focus:ring-[3px]"
+      className="bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text rounded-full border px-4 py-0 text-sm outline-none focus:ring-[3px]"
     >
       <span className="flex grow items-center gap-2">
         <RiSearch2Line

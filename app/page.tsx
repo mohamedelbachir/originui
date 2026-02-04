@@ -3,7 +3,10 @@ import Link from "next/link"
 
 import { categories } from "@/config/components"
 import SearchButton from "@/components/search-button"
+import { Section } from "@/components/section"
 import { HeroSection } from "@/components/sections/hero"
+import Hero from "@/components/sections/index"
+import { ThirdsSection } from "@/components/sections/thirds"
 import { SubscribeBottom } from "@/components/subscribe-form"
 
 export default function Page() {
@@ -19,34 +22,37 @@ export default function Page() {
         </p>
         <SearchButton />
       </div> */}
-      <HeroSection title="Beautiful UI components built with Tailwind CSS and React.">
+      {/* <HeroSection title="Beautiful UI components built with Tailwind CSS and React.">
         <p className="text-muted-foreground mb-8 text-lg">
           An open-source collection of copy-and-paste components for quickly
           build application UIs.
         </p>
         <SearchButton />
-      </HeroSection>
-      <div className="relative my-16">
-        <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {categories
-            .sort((a, b) => {
-              if (a.isNew && !b.isNew) return -1
-              if (!a.isNew && b.isNew) return 1
-              return 0
-            })
-            .map((category) => (
-              <CategoryCard
-                key={category.slug}
-                slug={category.slug}
-                name={category.name}
-                componentsCount={category.components.length}
-                isNew={category.isNew}
-              />
-            ))}
+      </HeroSection> */}
+      <Hero />
+      <Section className="bg-background border-t">
+        <div className="relative my-16">
+          <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {categories
+              .sort((a, b) => {
+                if (a.isNew && !b.isNew) return -1
+                if (!a.isNew && b.isNew) return 1
+                return 0
+              })
+              .map((category) => (
+                <CategoryCard
+                  key={category.slug}
+                  slug={category.slug}
+                  name={category.name}
+                  componentsCount={category.components.length}
+                  isNew={category.isNew}
+                />
+              ))}
+          </div>
         </div>
-      </div>
 
-      <SubscribeBottom />
+        <SubscribeBottom />
+      </Section>
     </div>
   )
 }

@@ -23,7 +23,7 @@ export const HeaderProvider = ({
   }, []);
 
   return (
-    <header className={cn(className, isScrolled && 'border-b')}>
+    <header className={cn(className,  'border-b')}>
       {children}
     </header>
   );

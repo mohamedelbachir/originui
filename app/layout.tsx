@@ -110,8 +110,10 @@ export default function RootLayout({
             </div>
           </div> */}
           <Header />
-          <div className="container mx-auto h-[52px] sm:h-16 sm:border-x" />
-          <main className="divide-y sm:border-b">{children}</main>
+          {/* <div className="container mx-auto h-[52px] sm:h-16 sm:border-x" /> */}
+          <main className="divide-y overflow-x-clip sm:border-b">
+            {children}
+          </main>
           <Footer />
           <Toaster />
           <Sonner />

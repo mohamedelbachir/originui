@@ -73,7 +73,7 @@ export default function ComponentDetails({
   }, [component.name])
 
   return (
-    <div className="absolute top-2 right-2 flex gap-1 peer-data-comp-loading:hidden">
+    <div className="absolute top-0 right-2 flex gap-1 peer-data-comp-loading:hidden">
       <CopyRegistry url={`https://ui.woilasoft.com/r/${component.name}.json`} />
       <OpenInV0
         componentSource={`https://ui.woilasoft.com/r/${component.name}.json`}
