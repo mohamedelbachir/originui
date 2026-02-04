@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/registry/default/ui/select"
 import { Slider } from "@/registry/default/ui/slider"
+import { cn } from "@/lib/utils"
 
 import CopyClass from "./copy-class"
 
@@ -22,6 +23,7 @@ interface Easing {
 
 interface EasingsProps {
   easings: Easing[]
+  view?: "grid" | "list"
 }
 
 type EasingFilter = "all" | "in" | "out" | "in-out"
@@ -268,7 +270,7 @@ const AnimatedSquare = ({
   )
 }
 
-export default function Easings({ easings }: EasingsProps) {
+export default function Easings({ easings, view = "grid" }: EasingsProps) {
   const [duration, setDuration] = useState(defaultConfig.animationDuration)
   const [tempDuration, setTempDuration] = useState(
     defaultConfig.animationDuration
@@ -394,18 +396,30 @@ export default function Easings({ easings }: EasingsProps) {
         </div>
       </div>
 
-      <div id="grid" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div 
+        id="easings-display" 
+        className={cn(
+          "grid gap-6",
+          view === "grid" ? "sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
+        )}
+      >
         {getFilteredEasings().map((easing) => (
           <div
             key={`${easing.name}-${easingFilter}`}
-            className="group bg-muted/65 relative flex aspect-square flex-col items-center justify-center gap-4 rounded-xl"
+            className={cn(
+              "group bg-muted/65 relative flex flex-col items-center justify-center gap-4 rounded-xl transition-all",
+              view === "grid" ? "aspect-square" : "py-8"
+            )}
           >
             <div className="pt-6 text-center text-sm font-medium">
               {easing.name}
             </div>
 
-            <div className="flex w-full grow flex-col items-start justify-center px-8">
-              <div className="mb-4 flex w-full justify-center">
+            <div className={cn(
+              "flex w-full grow flex-col items-start justify-center px-8",
+              view === "list" && "md:flex-row md:items-center md:gap-12"
+            )}>
+              <div className="mb-4 flex w-full justify-center md:mb-0">
                 <EasingSVG
                   easing={easing}
                   config={defaultConfig}
@@ -425,8 +439,6 @@ export default function Easings({ easings }: EasingsProps) {
             </div>
 
             <div className="flex items-center justify-center gap-2 pb-5">
-              {/* Using decodeURIComponent to properly escape special characters in the class name.
-                  Without this, Tailwind shows a warning: The class ... is ambiguous and matches multiple utilities. */}
               <CopyClass
                 value={`ease-[cubic-bezier(${easing.points.join(",")})]`}
               />
@@ -441,16 +453,16 @@ export default function Easings({ easings }: EasingsProps) {
           .animated-square {
             transition: opacity 0.25s ease;
           }
-          #grid:hover .group {
+          #easings-display:hover .group {
             opacity: 0.5;
           }
-          #grid:hover .group .animated-circle,
-          #grid:hover .group .animated-square {
+          #easings-display:hover .group .animated-circle,
+          #easings-display:hover .group .animated-square {
             opacity: 0;
           }
-          #grid .group:hover,
-          #grid .group:hover .animated-circle,
-          #grid .group:hover .animated-square {
+          #easings-display .group:hover,
+          #easings-display .group:hover .animated-circle,
+          #easings-display .group:hover .animated-square {
             opacity: 1;
           }
         }

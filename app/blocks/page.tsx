@@ -1,6 +1,12 @@
 import { blocks } from "@/config/blocks"
-import { RedirectToFirstCategory } from "@/components/redirect-to-first-category"
+import { BlockCategoryContent } from "@/components/block-category-content"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Blocks - Origin UI",
+  description: "Beautiful and functional sections for your website.",
+}
 
 export default function BlocksPage() {
-  return <RedirectToFirstCategory basePath="/blocks" firstCategorySlug={blocks[0].slug} />
+  return <BlockCategoryContent categorySlug={blocks[0].slug} />
 }

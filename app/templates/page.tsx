@@ -1,6 +1,12 @@
 import { templates } from "@/config/templates"
-import { RedirectToFirstCategory } from "@/components/redirect-to-first-category"
+import { TemplateCategoryContent } from "@/components/template-category-content"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Templates - Origin UI",
+  description: "Complete page templates and dashboard layouts.",
+}
 
 export default function TemplatesPage() {
-  return <RedirectToFirstCategory basePath="/templates" firstCategorySlug={templates[0].slug} />
+  return <TemplateCategoryContent categorySlug={templates[0].slug} />
 }

@@ -553,6 +553,42 @@
       ]
     },
     {
+      "name": "pricing-section",
+      "type": "registry:block",
+      "registryDependencies": [
+        "https://ui.woilasoft.com/r/button.json",
+        "https://ui.woilasoft.com/r/dialog.json",
+        "https://ui.woilasoft.com/r/radio-group.json",
+        "https://ui.woilasoft.com/r/label.json",
+        "https://ui.woilasoft.com/r/badge.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/blocks/pricing-section.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["pricing", "payment", "checkout"]
+      }
+    },
+    {
+      "name": "header-01",
+      "type": "registry:block",
+      "registryDependencies": [
+        "https://ui.woilasoft.com/r/button.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/blocks/header-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["header"]
+      }
+    },
+    {
       "name": "comp-01",
       "type": "registry:component",
       "registryDependencies": [

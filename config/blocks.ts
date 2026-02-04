@@ -8,6 +8,7 @@ export interface BlockItem {
   isPaid?: boolean
   price?: number
   isPrivate?: boolean
+  registryName?: string // if it exists in registry.json
 }
 
 export interface BlockCategory {
@@ -26,8 +27,7 @@ export const blocks: BlockCategory[] = [
         slug: "simple-header",
         name: "Simple Header",
         description: "A clean and minimalist header for any website.",
-        previewUrl: "https://originui.com",
-        repoUrl: "https://github.com/origin-space/originui",
+        registryName: "header-01",
         isPaid: false,
       },
       {
@@ -74,6 +74,19 @@ export const blocks: BlockCategory[] = [
     slug: "contact",
     name: "Contact",
     blocks: [],
+  },
+  {
+    slug: "pricing",
+    name: "Pricing",
+    blocks: [
+      {
+        slug: "premium-pricing",
+        name: "Premium Pricing",
+        description: "Multi-plan pricing section with payment integration.",
+        registryName: "pricing-section",
+        isPaid: false,
+      }
+    ],
   },
 ]
 

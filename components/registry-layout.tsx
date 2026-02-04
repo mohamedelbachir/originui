@@ -1,8 +1,10 @@
 import * as React from "react"
+import { Suspense } from "react"
 import {
   ArrowRightIcon,
   CheckIcon,
   LightbulbIcon,
+  Loader2Icon,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Prose } from "@/components/prose"
@@ -51,15 +53,17 @@ export function RegistryLayout({
   return (
     <WideSection className="grid min-h-screen divide-y border-b lg:grid-cols-4 lg:divide-x lg:divide-y-0">
       {/* Left Column: Sidebar */}
-      <RegistrySidebar
+      {sidebarTitle&&<RegistrySidebar
         categories={categories}
         currentCategorySlug={currentCategorySlug}
         basePath={basePath}
         title={sidebarTitle}
-      />
+      />}
 
       {/* Middle Column: Content */}
-      <div className="bg-muted/30 relative min-h-screen lg:col-span-2">
+      <div className={cn("bg-muted/30 relative min-h-screen lg:col-span-2",{
+       "lg:col-span-3":!sidebarTitle
+      })}>
         <div className="flex h-full flex-col p-4 lg:p-8">
           <RegistryMobileNav
             categories={categories}
@@ -67,7 +71,9 @@ export function RegistryLayout({
             basePath={basePath}
           />
           <div className="flex-1">
-            {children}
+            <Suspense fallback={<LoadingContent />}>
+              {children}
+            </Suspense>
           </div>
         </div>
       </div>
@@ -79,6 +85,14 @@ export function RegistryLayout({
         </div>
       </div>
     </WideSection>
+  )
+}
+
+function LoadingContent() {
+  return (
+    <div className="flex h-[400px] w-full items-center justify-center">
+      <Loader2Icon className="h-8 w-8 animate-spin text-muted-foreground opacity-20" />
+    </div>
   )
 }
 

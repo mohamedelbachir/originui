@@ -1,8 +1,11 @@
 import type { Metadata } from "next"
-
 import PageHeader from "@/components/page-header"
-
+import { RegistryLayout } from "@/components/registry-layout"
+import { categories } from "@/config/components"
 import Easings from "./easings"
+import { LayoutGridIcon, ListIcon } from "lucide-react"
+import { Button } from "@/registry/default/ui/button"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Tailwind CSS Easing Classes - Origin UI",
@@ -129,15 +132,60 @@ const easings = [
   },
 ]
 
-export default function Page() {
-  return (
-    <>
-      <PageHeader title="Tailwind CSS easing classes">
-        A set of easing functions ready to copy and paste into your Tailwind CSS
-        project.
-      </PageHeader>
+type Props = {
+  searchParams: Promise<{ view?: "grid" | "list" }>
+}
 
-      <Easings easings={easings} />
-    </>
+export default async function Page({ searchParams }: Props) {
+  const view = (await searchParams).view || "grid"
+
+  return (
+    <RegistryLayout
+      categories={categories}
+      currentCategorySlug=""
+      basePath={`/showcase?view=${view}`}
+    >
+      <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-4xl font-bold tracking-tight">
+            Easings
+          </h1>
+          <p className="text-muted-foreground text-lg">
+            A set of easing functions ready to copy and paste into your Tailwind CSS project.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-1 rounded-lg border bg-background p-1 shadow-sm">
+          <Button
+            asChild
+            variant={view === "list" ? "secondary" : "ghost"}
+            size="sm"
+            className="h-8 w-8 p-0"
+          >
+            <Link
+              href={`/easings?view=list`}
+              title="List View"
+            >
+              <ListIcon size={16} />
+            </Link>
+          </Button>
+          <Button
+            asChild
+            variant={view === "grid" ? "secondary" : "ghost"}
+            size="sm"
+            className="h-8 w-8 p-0"
+          >
+            <Link
+              href={`/easings?view=grid`}
+              title="Grid View"
+            >
+              <LayoutGridIcon size={16} />
+            </Link>
+          </Button>
+        </div>
+      </div>
+
+      <Easings easings={easings} view={view} />
+    </RegistryLayout>
   )
 }
