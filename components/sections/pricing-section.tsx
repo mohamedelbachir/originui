@@ -6,10 +6,9 @@ import {
   XIcon,
   CreditCardIcon,
   CircleIcon,
-  ChevronRightIcon,
   Loader2Icon,
 } from "lucide-react"
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -17,11 +16,11 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/default/ui/dialog"
-import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group"
-import { Label } from "@/registry/default/ui/label"
-import { Badge } from "@/registry/default/ui/badge"
-import { cn } from "@/registry/default/lib/utils"
+} from "@/components/ui/dialog"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
+import { Badge } from "@/components/ui/badge"
+import { cn } from "@/lib/utils"
 
 const plans = [
   {
@@ -63,7 +62,7 @@ const plans = [
 
 const paymentMethods = [
   { id: "card", name: "Credit Card", icon: CreditCardIcon },
-  { id: "paypal", name: "PayPal", icon: CircleIcon }, // Using Circle as placeholder for PayPal
+  { id: "paypal", name: "PayPal", icon: CircleIcon },
   { id: "orange", name: "Orange Money", icon: CircleIcon, color: "text-orange-500" },
   { id: "mtn", name: "MTN Money", icon: CircleIcon, color: "text-yellow-500" },
 ]
@@ -160,13 +159,13 @@ export default function PricingSection() {
                     {paymentMethods.map((method) => (
                       <Label
                         key={method.id}
-                        htmlFor={method.id}
+                        htmlFor={`ps-${method.id}`}
                         className={cn(
                           "flex cursor-pointer flex-col items-center justify-between rounded-xl border-2 bg-background p-4 hover:bg-muted/50 [&:has([data-state=checked])]:border-primary",
                           paymentMethod === method.id && "border-primary"
                         )}
                       >
-                        <RadioGroupItem value={method.id} id={method.id} className="sr-only" />
+                        <RadioGroupItem value={method.id} id={`ps-${method.id}`} className="sr-only" />
                         <method.icon className={cn("mb-3 h-6 w-6", method.color)} />
                         <span className="text-xs font-medium">{method.name}</span>
                       </Label>

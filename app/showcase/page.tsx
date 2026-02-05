@@ -1,26 +1,15 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import {
-  ArrowRightIcon,
-  CheckIcon,
-  LayoutGridIcon,
-  LightbulbIcon,
-  ListIcon,
-  PlusIcon,
-} from "lucide-react"
+import { ArrowRightIcon, LayoutGridIcon, ListIcon } from "lucide-react"
 
 import { categories, getCategory } from "@/config/components"
 import { cn, getComponentsByNames } from "@/lib/utils"
 import ComponentCard from "@/components/component-card"
 import ComponentDetails from "@/components/component-details"
 import ComponentLoader from "@/components/component-loader-server"
-import { Prose } from "@/components/prose"
-import { Button } from "@/registry/default/ui/button"
-
-import { MobileCategories } from "./mobile-categories"
-
 import { RegistryLayout } from "@/components/registry-layout"
+import { Button } from "@/registry/default/ui/button"
 
 export const metadata: Metadata = {
   title: "Component Showcase - Woilasoft UI",
@@ -77,7 +66,7 @@ export default async function ShowcasePage({ searchParams }: Props) {
           </p>
         </div>
 
-        <div className="flex items-center gap-1 rounded-lg border bg-background p-1 shadow-sm">
+        <div className="bg-background flex items-center gap-1 rounded-lg border p-1 shadow-sm">
           <Button
             asChild
             variant={view === "list" ? "secondary" : "ghost"}
