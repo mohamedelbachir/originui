@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation"
+
 import { blocks, getBlockItem } from "@/config/blocks"
-import PageHeader from "@/components/page-header"
-import { Section } from "@/components/section"
 import CodeViewer from "@/components/code-viewer"
 import Cta from "@/components/cta"
+import PageHeader from "@/components/page-header"
+import { Section } from "@/components/section"
 
 type Props = {
   params: Promise<{ category: string; slug: string }>
@@ -11,7 +12,7 @@ type Props = {
 
 export async function generateStaticParams() {
   const params: { category: string; slug: string }[] = []
-  
+
   blocks.forEach((category) => {
     category.blocks.forEach((block) => {
       params.push({
@@ -35,11 +36,12 @@ export default async function Page({ params }: Props) {
   return (
     <>
       <PageHeader title={item.name}>
-        {item.description || `A beautiful and functional block for your ${item.name.toLowerCase()} section.`}
+        {item.description ||
+          `A beautiful and functional block for your ${item.name.toLowerCase()} section.`}
       </PageHeader>
-      
+
       <Section className="py-12">
-        <div className="h-[600px] overflow-hidden rounded-xl border shadow-sm">
+        <div className="h-[500px] overflow-hidden rounded-xl border shadow-sm">
           <CodeViewer item={item} />
         </div>
       </Section>

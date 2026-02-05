@@ -33,12 +33,13 @@ export const blocks: BlockCategory[] = [
       {
         slug: "sticky-header",
         name: "Sticky Header",
-        description: "Header that stays at the top of the page while scrolling.",
+        description:
+          "Header that stays at the top of the page while scrolling.",
         previewUrl: "https://originui.com",
         repoUrl: "https://github.com/origin-space/originui",
         isPaid: true,
         price: 9,
-      }
+      },
     ],
   },
   {
@@ -52,7 +53,7 @@ export const blocks: BlockCategory[] = [
         previewUrl: "https://originui.com",
         repoUrl: "https://github.com/origin-space/originui",
         isPaid: false,
-      }
+      },
     ],
   },
   {
@@ -85,7 +86,7 @@ export const blocks: BlockCategory[] = [
         description: "Multi-plan pricing section with payment integration.",
         registryName: "pricing-section",
         isPaid: false,
-      }
+      },
     ],
   },
 ]
@@ -94,7 +95,10 @@ export function getBlockCategory(slug: string): BlockCategory | undefined {
   return blocks.find((block) => block.slug === slug)
 }
 
-export function getBlockItem(categorySlug: string, itemSlug: string): BlockItem | undefined {
+export function getBlockItem(
+  categorySlug: string,
+  itemSlug: string
+): BlockItem | undefined {
   const category = getBlockCategory(categorySlug)
   return category?.blocks.find((item) => item.slug === itemSlug)
 }

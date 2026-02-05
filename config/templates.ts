@@ -28,7 +28,8 @@ export const templates: TemplateCategory[] = [
         slug: "schema-visualizer",
         name: "Schema Visualizer",
         previewUrl: "https://crafted.is/exp7",
-        repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-07",
+        repoUrl:
+          "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-07",
         cmd: "npx shadcn init https://ui-experiment-07.vercel.app/r/experiment-07.json",
         imgHeight: 700,
         id: 7,
@@ -38,7 +39,8 @@ export const templates: TemplateCategory[] = [
         slug: "event-calendar-template",
         name: "Event Calendar Template",
         previewUrl: "https://crafted.is/exp6",
-        repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-06",
+        repoUrl:
+          "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-06",
         cmd: "npx shadcn init https://ui-experiment-06.vercel.app/r/experiment-06.json",
         imgHeight: 688,
         id: 6,
@@ -55,7 +57,8 @@ export const templates: TemplateCategory[] = [
         slug: "saas-dashboard",
         name: "SaaS Dashboard",
         previewUrl: "https://crafted.is/exp3",
-        repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-03",
+        repoUrl:
+          "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-03",
         cmd: "npx shadcn init https://ui-experiment-03.vercel.app/r/experiment-03.json",
         imgHeight: 829,
         id: 3,
@@ -65,7 +68,8 @@ export const templates: TemplateCategory[] = [
         slug: "crypto-wallet",
         name: "Crypto Wallet",
         previewUrl: "https://crafted.is/exp4",
-        repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-04",
+        repoUrl:
+          "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-04",
         cmd: "npx shadcn init https://ui-experiment-04.vercel.app/r/experiment-04.json",
         imgHeight: 894,
         id: 4,
@@ -81,7 +85,8 @@ export const templates: TemplateCategory[] = [
         slug: "candlestick-chart",
         name: "Candlestick Chart",
         previewUrl: "https://crafted.is/exp5",
-        repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-05",
+        repoUrl:
+          "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-05",
         cmd: "npx shadcn init https://ui-experiment-05.vercel.app/r/experiment-05.json",
         imgHeight: 770,
         id: 5,
@@ -97,7 +102,8 @@ export const templates: TemplateCategory[] = [
         slug: "ai-chat",
         name: "AI Chat",
         previewUrl: "https://crafted.is/exp2",
-        repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-02",
+        repoUrl:
+          "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-02",
         cmd: "npx shadcn init https://ui-experiment-02.vercel.app/r/experiment-02.json",
         imgHeight: 700,
         id: 2,
@@ -113,7 +119,8 @@ export const templates: TemplateCategory[] = [
         slug: "dark-table",
         name: "Dark Table",
         previewUrl: "https://crafted.is/exp1",
-        repoUrl: "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-01",
+        repoUrl:
+          "https://github.com/origin-space/ui-experiments/tree/main/apps/experiment-01",
         cmd: "npx shadcn init https://ui-experiments-green.vercel.app/r/experiment-01.json",
         imgHeight: 894,
         id: 1,
@@ -133,17 +140,22 @@ export const templates: TemplateCategory[] = [
   },
 ]
 
-export function getTemplateCategory(slug: string): TemplateCategory | undefined {
+export function getTemplateCategory(
+  slug: string
+): TemplateCategory | undefined {
   return templates.find((template) => template.slug === slug)
 }
 
-export function getTemplateItem(categorySlug: string, itemSlug: string): TemplateItem | undefined {
+export function getTemplateItem(
+  categorySlug: string,
+  itemSlug: string
+): TemplateItem | undefined {
   const category = getTemplateCategory(categorySlug)
   return category?.templates.find((item) => item.slug === itemSlug)
 }
 
 export function getAllTemplates(): (TemplateItem & { categorySlug: string })[] {
-  return templates.flatMap((category) => 
+  return templates.flatMap((category) =>
     category.templates.map((template) => ({
       ...template,
       categorySlug: category.slug,

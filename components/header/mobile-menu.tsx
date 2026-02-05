@@ -1,11 +1,9 @@
 "use client"
 
-import Link from "next/link"
 import { atom, useAtom } from "jotai"
 
 import { links } from "@/lib/navigation"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/default/ui/button"
 
 import { ActiveLink } from "../active-link"
 

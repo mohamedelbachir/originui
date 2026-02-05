@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import { cn } from "@/lib/utils"
 
 interface Category {
@@ -32,10 +33,10 @@ export function RegistrySidebar({
         <nav className="custom-scrollbar flex flex-1 flex-col gap-1 overflow-y-auto pr-2">
           {categories.map((c) => {
             let href = ""
-            if (basePath.includes('?')) {
-              const [path, query] = basePath.split('?')
+            if (basePath.includes("?")) {
+              const [path, query] = basePath.split("?")
               const params = new URLSearchParams(query)
-              params.set('category', c.slug)
+              params.set("category", c.slug)
               href = `${path}?${params.toString()}`
             } else {
               href = `${basePath}/${c.slug}`

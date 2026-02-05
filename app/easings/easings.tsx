@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react"
 
+import { cn } from "@/lib/utils"
 import { Input } from "@/registry/default/ui/input"
 import { Label } from "@/registry/default/ui/label"
 import {
@@ -12,7 +13,6 @@ import {
   SelectValue,
 } from "@/registry/default/ui/select"
 import { Slider } from "@/registry/default/ui/slider"
-import { cn } from "@/lib/utils"
 
 import CopyClass from "./copy-class"
 
@@ -396,8 +396,8 @@ export default function Easings({ easings, view = "grid" }: EasingsProps) {
         </div>
       </div>
 
-      <div 
-        id="easings-display" 
+      <div
+        id="easings-display"
         className={cn(
           "grid gap-6",
           view === "grid" ? "sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
@@ -415,10 +415,12 @@ export default function Easings({ easings, view = "grid" }: EasingsProps) {
               {easing.name}
             </div>
 
-            <div className={cn(
-              "flex w-full grow flex-col items-start justify-center px-8",
-              view === "list" && "md:flex-row md:items-center md:gap-12"
-            )}>
+            <div
+              className={cn(
+                "flex w-full grow flex-col items-start justify-center px-8",
+                view === "list" && "md:flex-row md:items-center md:gap-12"
+              )}
+            >
               <div className="mb-4 flex w-full justify-center md:mb-0">
                 <EasingSVG
                   easing={easing}

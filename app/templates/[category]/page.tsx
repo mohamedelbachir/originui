@@ -1,6 +1,7 @@
-import { templates, getTemplateCategory } from "@/config/templates"
-import { TemplateCategoryContent } from "@/components/template-category-content"
 import type { Metadata } from "next"
+
+import { getTemplateCategory, templates } from "@/config/templates"
+import { TemplateCategoryContent } from "@/components/template-category-content"
 
 type Props = {
   params: Promise<{ category: string }>

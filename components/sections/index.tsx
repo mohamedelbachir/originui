@@ -5,7 +5,6 @@ import Link from "next/link"
 import { ChevronsRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { HeroSection } from "@/components/sections/hero"
 import ShimmerButton from "@/components/shimmer-button"
 import WordAnimator from "@/components/word-animation"
 import { Button } from "@/registry/default/ui/button"
@@ -17,9 +16,7 @@ const item = {
   title: "tree",
 }
 
-const index = () => {
-  const [localTheme, setLocalTheme] = useState<"light" | "dark">("light")
-
+const Hero = () => {
   const [blocks, setBlocks] = useState([])
 
   const activeDivs = useMemo(
@@ -50,7 +47,7 @@ const index = () => {
             <div
               key={rowIndex}
               className={`h-[6vw] w-full border border-gray-50 dark:border-[rgba(255,255,255,0.015)] ${
-                // @ts-ignore
+                // @ts-expect-error - indexing activeDivs with dynamic columnIndex
                 activeDivs[columnIndex]?.has(rowIndex)
                   ? "bg-gray-50 dark:bg-[rgba(255,255,255,0.03)]"
                   : ""
@@ -60,7 +57,7 @@ const index = () => {
           ))}
         </div>
       ))
-      // @ts-ignore
+      // @ts-expect-error - ReactNode array to state setter mismatch
       setBlocks(newBlocks)
     }
 
@@ -209,4 +206,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Hero

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 type Props = {
-  params: Promise<any>
+  params: Promise<unknown>
   searchParams: Promise<{ category?: string; view?: "grid" | "list" }>
 }
 

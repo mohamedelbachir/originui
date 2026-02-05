@@ -1,6 +1,7 @@
+import type { Metadata } from "next"
+
 import { templates } from "@/config/templates"
 import { TemplateCategoryContent } from "@/components/template-category-content"
-import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Templates - Origin UI",

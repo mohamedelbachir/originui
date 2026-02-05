@@ -1,25 +1,26 @@
-'use client';
+"use client"
 
-import { cn } from '@/lib/utils';
-import { ArrowDown } from 'lucide-react';
-import { type ReactNode, useState } from 'react';
+import { useState, type ReactNode } from "react"
+import { ArrowDown } from "lucide-react"
+
+import { cn } from "@/lib/utils"
 
 type RevealProviderProperties = {
-  children: ReactNode;
-  className?: string;
-};
+  children: ReactNode
+  className?: string
+}
 
 export const RevealProvider = ({
   className,
   children,
 }: RevealProviderProperties) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <div
       className={cn(
-        'relative overflow-hidden',
-        open ? 'h-auto' : 'h-[40rem]',
+        "relative overflow-hidden",
+        open ? "h-auto" : "h-[40rem]",
         className
       )}
     >
@@ -29,8 +30,8 @@ export const RevealProvider = ({
           type="button"
           onClick={() => setOpen(!open)}
           className={cn(
-            'absolute right-0 bottom-0 left-0 z-10 flex items-center justify-center gap-2 border-t bg-backdrop/90 p-3 text-muted-foreground text-sm backdrop-blur-sm transition-all',
-            'hover:bg-background/90'
+            "bg-backdrop/90 text-muted-foreground absolute right-0 bottom-0 left-0 z-10 flex items-center justify-center gap-2 border-t p-3 text-sm backdrop-blur-sm transition-all",
+            "hover:bg-background/90"
           )}
         >
           <ArrowDown size={16} />
@@ -38,5 +39,5 @@ export const RevealProvider = ({
         </button>
       )}
     </div>
-  );
-};
+  )
+}

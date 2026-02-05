@@ -3,11 +3,14 @@
 import * as React from "react"
 import {
   CheckIcon,
-  XIcon,
-  CreditCardIcon,
   CircleIcon,
+  CreditCardIcon,
   Loader2Icon,
+  XIcon,
 } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -17,17 +20,20 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
-import { cn } from "@/lib/utils"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 const plans = [
   {
     name: "Starter",
     price: "0",
     description: "Perfect for small projects and individuals.",
-    features: ["5 Components", "Basic Documentation", "Community Support", "Free Updates"],
+    features: [
+      "5 Components",
+      "Basic Documentation",
+      "Community Support",
+      "Free Updates",
+    ],
     buttonText: "Current Plan",
     current: true,
   },
@@ -63,7 +69,12 @@ const plans = [
 const paymentMethods = [
   { id: "card", name: "Credit Card", icon: CreditCardIcon },
   { id: "paypal", name: "PayPal", icon: CircleIcon },
-  { id: "orange", name: "Orange Money", icon: CircleIcon, color: "text-orange-500" },
+  {
+    id: "orange",
+    name: "Orange Money",
+    icon: CircleIcon,
+    color: "text-orange-500",
+  },
   { id: "mtn", name: "MTN Money", icon: CircleIcon, color: "text-yellow-500" },
 ]
 
@@ -71,7 +82,9 @@ export default function PricingSection() {
   const [selectedPlan, setSelectedPlan] = React.useState(plans[1])
   const [paymentMethod, setPaymentMethod] = React.useState("card")
   const [isProcessing, setIsProcessing] = React.useState(false)
-  const [modalType, setModalType] = React.useState<"success" | "failed" | null>(null)
+  const [modalType, setModalType] = React.useState<"success" | "failed" | null>(
+    null
+  )
 
   const handlePayment = () => {
     setIsProcessing(true)
@@ -90,8 +103,8 @@ export default function PricingSection() {
           <div
             key={plan.name}
             className={cn(
-              "relative flex flex-col rounded-2xl border bg-background p-6 shadow-sm transition-all hover:shadow-md",
-              plan.popular && "border-primary ring-1 ring-primary",
+              "bg-background relative flex flex-col rounded-2xl border p-6 shadow-sm transition-all hover:shadow-md",
+              plan.popular && "border-primary ring-primary ring-1",
               plan.current && "opacity-80"
             )}
           >
@@ -103,16 +116,20 @@ export default function PricingSection() {
             <div className="mb-8">
               <h3 className="text-xl font-bold">{plan.name}</h3>
               <div className="mt-4 flex items-baseline">
-                <span className="text-4xl font-extrabold tracking-tight">${plan.price}</span>
-                <span className="ml-1 text-muted-foreground">/month</span>
+                <span className="text-4xl font-extrabold tracking-tight">
+                  ${plan.price}
+                </span>
+                <span className="text-muted-foreground ml-1">/month</span>
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">{plan.description}</p>
+              <p className="text-muted-foreground mt-2 text-sm">
+                {plan.description}
+              </p>
             </div>
 
             <ul className="mb-8 flex-1 space-y-3">
               {plan.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-3 text-sm">
-                  <CheckIcon className="h-5 w-5 shrink-0 text-primary" />
+                  <CheckIcon className="text-primary h-5 w-5 shrink-0" />
                   <span>{feature}</span>
                 </li>
               ))}
@@ -132,21 +149,26 @@ export default function PricingSection() {
 
       {/* Payment Selection Area (Only shown if a non-current plan is selected) */}
       {!selectedPlan.current && (
-        <div className="mt-16 rounded-2xl border bg-muted/30 p-8">
+        <div className="bg-muted/30 mt-16 rounded-2xl border p-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
               <h2 className="text-2xl font-bold">Secure Payment</h2>
-              <p className="mt-2 text-muted-foreground">
-                Choose your preferred payment method to upgrade to the {selectedPlan.name} plan.
+              <p className="text-muted-foreground mt-2">
+                Choose your preferred payment method to upgrade to the{" "}
+                {selectedPlan.name} plan.
               </p>
 
               <div className="mt-8 space-y-6">
-                <div className="flex items-center justify-between rounded-lg border bg-background p-4">
+                <div className="bg-background flex items-center justify-between rounded-lg border p-4">
                   <div className="flex flex-col">
                     <span className="text-sm font-medium">Selected Plan</span>
-                    <span className="text-lg font-bold">{selectedPlan.name}</span>
+                    <span className="text-lg font-bold">
+                      {selectedPlan.name}
+                    </span>
                   </div>
-                  <span className="text-2xl font-bold">${selectedPlan.price}</span>
+                  <span className="text-2xl font-bold">
+                    ${selectedPlan.price}
+                  </span>
                 </div>
 
                 <div className="space-y-4">
@@ -161,13 +183,21 @@ export default function PricingSection() {
                         key={method.id}
                         htmlFor={`ps-${method.id}`}
                         className={cn(
-                          "flex cursor-pointer flex-col items-center justify-between rounded-xl border-2 bg-background p-4 hover:bg-muted/50 [&:has([data-state=checked])]:border-primary",
+                          "bg-background hover:bg-muted/50 [&:has([data-state=checked])]:border-primary flex cursor-pointer flex-col items-center justify-between rounded-xl border-2 p-4",
                           paymentMethod === method.id && "border-primary"
                         )}
                       >
-                        <RadioGroupItem value={method.id} id={`ps-${method.id}`} className="sr-only" />
-                        <method.icon className={cn("mb-3 h-6 w-6", method.color)} />
-                        <span className="text-xs font-medium">{method.name}</span>
+                        <RadioGroupItem
+                          value={method.id}
+                          id={`ps-${method.id}`}
+                          className="sr-only"
+                        />
+                        <method.icon
+                          className={cn("mb-3 h-6 w-6", method.color)}
+                        />
+                        <span className="text-xs font-medium">
+                          {method.name}
+                        </span>
                       </Label>
                     ))}
                   </RadioGroup>
@@ -176,7 +206,7 @@ export default function PricingSection() {
             </div>
 
             <div className="flex flex-col justify-end space-y-4">
-              <div className="rounded-xl border bg-background p-6">
+              <div className="bg-background rounded-xl border p-6">
                 <h3 className="font-bold">Order Summary</h3>
                 <div className="mt-4 space-y-2">
                   <div className="flex justify-between text-sm">
@@ -187,7 +217,7 @@ export default function PricingSection() {
                     <span className="text-muted-foreground">Tax</span>
                     <span>$0.00</span>
                   </div>
-                  <div className="mt-4 border-t pt-4 flex justify-between font-bold">
+                  <div className="mt-4 flex justify-between border-t pt-4 font-bold">
                     <span>Total</span>
                     <span>${selectedPlan.price}.00</span>
                   </div>
@@ -209,7 +239,7 @@ export default function PricingSection() {
                   `Pay $${selectedPlan.price}`
                 )}
               </Button>
-              <p className="text-center text-xs text-muted-foreground">
+              <p className="text-muted-foreground text-center text-xs">
                 Payment secured by industry standard encryption.
               </p>
             </div>
@@ -218,15 +248,20 @@ export default function PricingSection() {
       )}
 
       {/* Success Modal */}
-      <Dialog open={modalType === "success"} onOpenChange={() => setModalType(null)}>
+      <Dialog
+        open={modalType === "success"}
+        onOpenChange={() => setModalType(null)}
+      >
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30">
               <CheckIcon className="h-6 w-6 text-emerald-600" />
             </div>
-            <DialogTitle className="text-center">Payment Successful!</DialogTitle>
+            <DialogTitle className="text-center">
+              Payment Successful!
+            </DialogTitle>
             <DialogDescription className="text-center">
-              Your subscription to the {selectedPlan.name} plan is now active. 
+              Your subscription to the {selectedPlan.name} plan is now active.
               Enjoy all the premium features!
             </DialogDescription>
           </DialogHeader>
@@ -239,7 +274,10 @@ export default function PricingSection() {
       </Dialog>
 
       {/* Failed Modal */}
-      <Dialog open={modalType === "failed"} onOpenChange={() => setModalType(null)}>
+      <Dialog
+        open={modalType === "failed"}
+        onOpenChange={() => setModalType(null)}
+      >
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
@@ -247,15 +285,23 @@ export default function PricingSection() {
             </div>
             <DialogTitle className="text-center">Payment Failed</DialogTitle>
             <DialogDescription className="text-center">
-              We couldn't process your payment. Please check your payment details 
-              or try a different method.
+              We couldn&apos;t process your payment. Please check your payment
+              details or try a different method.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="flex-col gap-2 sm:flex-col">
-            <Button className="w-full" variant="destructive" onClick={() => setModalType(null)}>
+            <Button
+              className="w-full"
+              variant="destructive"
+              onClick={() => setModalType(null)}
+            >
               Try Again
             </Button>
-            <Button className="w-full" variant="ghost" onClick={() => setModalType(null)}>
+            <Button
+              className="w-full"
+              variant="ghost"
+              onClick={() => setModalType(null)}
+            >
               Cancel
             </Button>
           </DialogFooter>

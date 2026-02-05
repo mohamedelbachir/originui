@@ -1,6 +1,7 @@
+import type { Metadata } from "next"
+
 import { blocks, getBlockCategory } from "@/config/blocks"
 import { BlockCategoryContent } from "@/components/block-category-content"
-import type { Metadata } from "next"
 
 type Props = {
   params: Promise<{ category: string }>
@@ -10,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = getBlockCategory((await params).category)
   if (!category) return {}
   return {
-    title: `${category.name} Blocks - Origin UI`,
+    title: `${category.name} Blocks - Woilasoft UI`,
     description: `A collection of beautiful and functional ${category.name.toLowerCase()} blocks.`,
   }
 }

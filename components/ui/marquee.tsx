@@ -1,13 +1,12 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-interface MarqueeProps {
-  className?: string;
-  reverse?: boolean;
-  pauseOnHover?: boolean;
-  children?: React.ReactNode;
-  vertical?: boolean;
-  repeat?: number;
-  [key: string]: any;
+interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string
+  reverse?: boolean
+  pauseOnHover?: boolean
+  children?: React.ReactNode
+  vertical?: boolean
+  repeat?: number
 }
 
 export default function Marquee({
@@ -23,12 +22,12 @@ export default function Marquee({
     <div
       {...props}
       className={cn(
-        "group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
+        "group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:40s] [--gap:1rem]",
         {
           "flex-row": !vertical,
           "flex-col": vertical,
         },
-        className,
+        className
       )}
     >
       {Array(repeat)
@@ -47,5 +46,5 @@ export default function Marquee({
           </div>
         ))}
     </div>
-  );
+  )
 }

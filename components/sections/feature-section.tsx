@@ -109,7 +109,7 @@ export function FeatureSection() {
             //   align: "start",
             // }}
             opts={{
-              //@ts-ignore
+              // @ts-expect-error - loop property mismatch in Embla carousel options
               loop: true,
             }}
             plugins={[
@@ -144,7 +144,7 @@ export function FeatureSection() {
             //   align: "start",
             // }}
             opts={{
-              //@ts-ignore
+              // @ts-expect-error - loop property mismatch in Embla carousel options
               loop: true,
             }}
             plugins={[

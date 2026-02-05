@@ -73,7 +73,7 @@ export default function Page() {
           <div className="relative">
             <Carousel
               opts={{
-                //@ts-ignore
+                // @ts-expect-error - align start is sometimes not recognized in Embla types
                 align: "start",
                 loop: true,
               }}

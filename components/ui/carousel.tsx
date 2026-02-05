@@ -14,7 +14,7 @@ type CarouselOptions = UseEmblaCarouselType[0]
 
 type CarouselProps = {
   opts?: CarouselOptions
-  plugins?: any
+  plugins?: unknown
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
 }
@@ -61,6 +61,7 @@ const Carousel = React.forwardRef<
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y",
       },
+      /* @ts-expect-error - plugins type mismatch with Embla */
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -125,6 +126,7 @@ const Carousel = React.forwardRef<
           api: api,
           opts,
           orientation:
+            /* @ts-expect-error - orientation union type mismatch */
             orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
           scrollPrev,
           scrollNext,
@@ -204,9 +206,9 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute  size-8 rounded-full",
+        "absolute size-8 rounded-full",
         orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
+          ? "top-1/2 -left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -235,7 +237,7 @@ const CarouselNext = React.forwardRef<
       className={cn(
         "absolute size-8 rounded-full",
         orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
+          ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}

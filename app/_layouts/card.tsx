@@ -19,7 +19,7 @@ interface CardProps {
 export default function Card({ card }: CardProps) {
   return (
     <article>
-      <Link 
+      <Link
         href={`/templates/${card.categorySlug}/${card.slug}`}
         className="group block"
       >
@@ -35,7 +35,10 @@ export default function Card({ card }: CardProps) {
       </Link>
       <div className="mt-4 flex items-center justify-between">
         <h2 className="text-sm font-medium">
-          <Link href={`/templates/${card.categorySlug}/${card.slug}`} className="hover:underline">
+          <Link
+            href={`/templates/${card.categorySlug}/${card.slug}`}
+            className="hover:underline"
+          >
             {card.title}
           </Link>
         </h2>

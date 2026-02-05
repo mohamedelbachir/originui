@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import { LockIcon, CodeIcon, EyeIcon, ExternalLinkIcon, GithubIcon } from "lucide-react"
-import { Button } from "@/registry/default/ui/button"
-import { cn } from "@/lib/utils"
-import CodeViewer from "./code-viewer"
+import { CodeIcon, ExternalLinkIcon, EyeIcon, LockIcon } from "lucide-react"
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from "@/registry/default/ui/button"
+
+import CodeViewer from "./code-viewer"
 
 interface RegistryItemCardProps {
   item: {
@@ -18,17 +18,17 @@ interface RegistryItemCardProps {
     price?: number
     isPrivate?: boolean
   }
-  basePath: string
+  basePath?: string
 }
 
-export default function RegistryItemCard({ item, basePath }: RegistryItemCardProps) {
+export default function RegistryItemCard({ item }: RegistryItemCardProps) {
   return (
-    <div className="flex flex-col gap-4 scroll-mt-24" id={item.slug}>
+    <div className="flex scroll-mt-24 flex-col gap-4" id={item.slug}>
       <div className="flex items-center justify-between">
         <div>
           <h3 className="text-lg font-bold">{item.name}</h3>
           {item.description && (
-            <p className="text-sm text-muted-foreground">{item.description}</p>
+            <p className="text-muted-foreground text-sm">{item.description}</p>
           )}
         </div>
       </div>
@@ -45,11 +45,15 @@ export default function RegistryItemCard({ item, basePath }: RegistryItemCardPro
               Code
             </TabsTrigger>
           </TabsList>
-          
+
           <div className="flex items-center gap-2">
             {item.previewUrl && (
               <Button variant="outline" size="sm" asChild className="h-8 gap-2">
-                <a href={item.previewUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={item.previewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <ExternalLinkIcon size={14} />
                   Live Demo
                 </a>
@@ -58,7 +62,7 @@ export default function RegistryItemCard({ item, basePath }: RegistryItemCardPro
           </div>
         </div>
 
-        <div className="mt-4 relative overflow-hidden rounded-xl border bg-background shadow-sm">
+        <div className="bg-background relative mt-4 overflow-hidden rounded-xl border shadow-sm">
           <TabsContent value="preview" className="m-0 border-0">
             <div className="bg-grid-zinc-100/50 dark:bg-grid-zinc-900/50 relative aspect-video w-full">
               {item.previewUrl ? (
@@ -69,14 +73,14 @@ export default function RegistryItemCard({ item, basePath }: RegistryItemCardPro
                   loading="lazy"
                 />
               ) : (
-                <div className="flex h-full flex-col items-center justify-center p-12 text-center text-muted-foreground">
+                <div className="text-muted-foreground flex h-full flex-col items-center justify-center p-12 text-center">
                   <EyeIcon size={48} className="mb-4 opacity-20" />
                   <p>No live preview available.</p>
                 </div>
               )}
-              
+
               {item.isPaid && (
-                <div className="absolute top-4 right-4 rounded-full bg-background/90 backdrop-blur-sm px-3 py-1 text-xs font-bold shadow-sm flex items-center gap-1 border">
+                <div className="bg-background/90 absolute top-4 right-4 flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-bold shadow-sm backdrop-blur-sm">
                   <LockIcon size={12} />
                   Premium ${item.price}
                 </div>

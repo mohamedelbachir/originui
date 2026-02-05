@@ -1,30 +1,27 @@
-'use client';
+"use client"
 
-import { cn } from '@/lib/utils';
-import { type HTMLAttributes, useEffect, useState } from 'react';
+import { useEffect, useState, type HTMLAttributes } from "react"
 
-type HeaderProviderProps = HTMLAttributes<HTMLDivElement>;
+import { cn } from "@/lib/utils"
+
+type HeaderProviderProps = HTMLAttributes<HTMLDivElement>
 
 export const HeaderProvider = ({
   children,
   className,
 }: HeaderProviderProps) => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 5);
-    const throttledHandleScroll = () => requestAnimationFrame(handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 5)
+    const throttledHandleScroll = () => requestAnimationFrame(handleScroll)
 
-    window.addEventListener('scroll', throttledHandleScroll);
+    window.addEventListener("scroll", throttledHandleScroll)
 
     return () => {
-      window.removeEventListener('scroll', throttledHandleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", throttledHandleScroll)
+    }
+  }, [])
 
-  return (
-    <header className={cn(className,  'border-b')}>
-      {children}
-    </header>
-  );
-};
+  return <header className={cn(className, "border-b")}>{children}</header>
+}

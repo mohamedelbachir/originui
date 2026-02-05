@@ -1,15 +1,12 @@
 import * as React from "react"
 import { Suspense } from "react"
-import {
-  ArrowRightIcon,
-  CheckIcon,
-  LightbulbIcon,
-  Loader2Icon,
-} from "lucide-react"
+import { CheckIcon, LightbulbIcon, Loader2Icon } from "lucide-react"
+
 import { cn } from "@/lib/utils"
 import { Prose } from "@/components/prose"
-import { RegistrySidebar } from "./registry-sidebar"
+
 import { RegistryMobileNav } from "./registry-mobile-nav"
+import { RegistrySidebar } from "./registry-sidebar"
 
 interface Category {
   slug: string
@@ -53,17 +50,21 @@ export function RegistryLayout({
   return (
     <WideSection className="grid min-h-screen divide-y border-b lg:grid-cols-4 lg:divide-x lg:divide-y-0">
       {/* Left Column: Sidebar */}
-      {sidebarTitle&&<RegistrySidebar
-        categories={categories}
-        currentCategorySlug={currentCategorySlug}
-        basePath={basePath}
-        title={sidebarTitle}
-      />}
+      {sidebarTitle && (
+        <RegistrySidebar
+          categories={categories}
+          currentCategorySlug={currentCategorySlug}
+          basePath={basePath}
+          title={sidebarTitle}
+        />
+      )}
 
       {/* Middle Column: Content */}
-      <div className={cn("bg-muted/30 relative min-h-screen lg:col-span-2",{
-       "lg:col-span-3":!sidebarTitle
-      })}>
+      <div
+        className={cn("bg-muted/30 relative min-h-screen lg:col-span-2", {
+          "lg:col-span-3": !sidebarTitle,
+        })}
+      >
         <div className="flex h-full flex-col p-4 lg:p-8">
           <RegistryMobileNav
             categories={categories}
@@ -71,9 +72,7 @@ export function RegistryLayout({
             basePath={basePath}
           />
           <div className="flex-1">
-            <Suspense fallback={<LoadingContent />}>
-              {children}
-            </Suspense>
+            <Suspense fallback={<LoadingContent />}>{children}</Suspense>
           </div>
         </div>
       </div>
@@ -91,7 +90,7 @@ export function RegistryLayout({
 function LoadingContent() {
   return (
     <div className="flex h-[400px] w-full items-center justify-center">
-      <Loader2Icon className="h-8 w-8 animate-spin text-muted-foreground opacity-20" />
+      <Loader2Icon className="text-muted-foreground h-8 w-8 animate-spin opacity-20" />
     </div>
   )
 }
@@ -103,9 +102,7 @@ function DefaultTips() {
         <div className="rounded-lg bg-amber-100 p-2 dark:bg-amber-900/30">
           <LightbulbIcon className="h-5 w-5" />
         </div>
-        <span className="text-foreground text-lg font-bold">
-          Quick Tips
-        </span>
+        <span className="text-foreground text-lg font-bold">Quick Tips</span>
       </div>
 
       <div className="space-y-8">
@@ -115,7 +112,8 @@ function DefaultTips() {
             Easy Implementation
           </h4>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Copy and paste these components directly into your project. All styles are handled via Tailwind CSS.
+            Copy and paste these components directly into your project. All
+            styles are handled via Tailwind CSS.
           </p>
         </div>
 
@@ -126,7 +124,8 @@ function DefaultTips() {
             Fully Responsive
           </h4>
           <p className="text-muted-foreground relative z-10 text-xs leading-relaxed">
-            Every component and block is optimized for all screen sizes, from mobile to desktop.
+            Every component and block is optimized for all screen sizes, from
+            mobile to desktop.
           </p>
         </div>
 
@@ -136,7 +135,8 @@ function DefaultTips() {
             Theming Support
           </h4>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Supports both light and dark modes out of the box using CSS variables.
+            Supports both light and dark modes out of the box using CSS
+            variables.
           </p>
         </div>
       </div>

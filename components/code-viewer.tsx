@@ -1,7 +1,17 @@
 "use client"
 
 import * as React from "react"
-import { LockIcon, CodeIcon, CheckIcon, XIcon, Loader2Icon, CreditCardIcon, CircleIcon } from "lucide-react"
+import {
+  CheckIcon,
+  CircleIcon,
+  CodeIcon,
+  CreditCardIcon,
+  Loader2Icon,
+  LockIcon,
+  XIcon,
+} from "lucide-react"
+
+import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -11,9 +21,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
-import { cn } from "@/lib/utils"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 interface CodeViewerProps {
   item: {
@@ -29,7 +38,12 @@ interface CodeViewerProps {
 const paymentMethods = [
   { id: "card", name: "Credit Card", icon: CreditCardIcon },
   { id: "paypal", name: "PayPal", icon: CircleIcon },
-  { id: "orange", name: "Orange Money", icon: CircleIcon, color: "text-orange-500" },
+  {
+    id: "orange",
+    name: "Orange Money",
+    icon: CircleIcon,
+    color: "text-orange-500",
+  },
   { id: "mtn", name: "MTN Money", icon: CircleIcon, color: "text-yellow-500" },
 ]
 
@@ -37,8 +51,10 @@ export default function CodeViewer({ item }: CodeViewerProps) {
   const [isCheckoutOpen, setIsCheckoutOpen] = React.useState(false)
   const [isProcessing, setIsProcessing] = React.useState(false)
   const [paymentMethod, setPaymentMethod] = React.useState("card")
-  const [modalType, setModalType] = React.useState<"success" | "failed" | null>(null)
-  
+  const [modalType, setModalType] = React.useState<"success" | "failed" | null>(
+    null
+  )
+
   const github1sUrl = item.repoUrl?.replace("github.com", "github1s.com")
 
   const handlePayment = () => {
@@ -53,10 +69,10 @@ export default function CodeViewer({ item }: CodeViewerProps) {
   }
 
   return (
-    <div className="relative h-full w-full bg-muted">
+    <div className="bg-muted relative h-full w-full">
       {item.isPaid ? (
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-background/80 backdrop-blur-sm p-12 text-center">
-          <div className="mb-6 rounded-full bg-primary/10 p-4">
+        <div className="bg-background/80 absolute inset-0 z-10 flex flex-col items-center justify-center p-12 text-center backdrop-blur-sm">
+          <div className="bg-primary/10 mb-6 rounded-full p-4">
             <LockIcon size={32} className="text-primary" />
           </div>
           <h3 className="mb-2 text-2xl font-bold">This is a Premium Item</h3>
@@ -65,14 +81,21 @@ export default function CodeViewer({ item }: CodeViewerProps) {
           </p>
           <div className="flex flex-col items-center gap-4">
             <span className="text-4xl font-bold">${item.price}</span>
-            <Button size="lg" className="w-full min-w-[200px]" onClick={() => setIsCheckoutOpen(true)}>
+            <Button
+              size="lg"
+              className="w-full min-w-[200px]"
+              onClick={() => setIsCheckoutOpen(true)}
+            >
               Buy Now
             </Button>
           </div>
         </div>
       ) : item.isPrivate ? (
         <div className="flex h-full flex-col items-center justify-center p-12 text-center">
-          <LockIcon size={48} className="text-muted-foreground mb-4 opacity-20" />
+          <LockIcon
+            size={48}
+            className="text-muted-foreground mb-4 opacity-20"
+          />
           <h3 className="mb-2 font-bold">Private Repository</h3>
           <p className="text-muted-foreground max-w-sm">
             The source code for this item is currently in a private repository.
@@ -86,8 +109,13 @@ export default function CodeViewer({ item }: CodeViewerProps) {
         />
       ) : (
         <div className="flex h-full flex-col items-center justify-center p-12 text-center">
-          <CodeIcon size={48} className="text-muted-foreground mb-4 opacity-20" />
-          <p className="text-muted-foreground">Source code not available yet.</p>
+          <CodeIcon
+            size={48}
+            className="text-muted-foreground mb-4 opacity-20"
+          />
+          <p className="text-muted-foreground">
+            Source code not available yet.
+          </p>
         </div>
       )}
 
@@ -100,7 +128,7 @@ export default function CodeViewer({ item }: CodeViewerProps) {
               Complete your purchase for {item.name}
             </DialogDescription>
           </DialogHeader>
-          
+
           <div className="grid gap-6 py-4">
             <div className="flex items-center justify-between rounded-lg border p-4">
               <div className="flex flex-col">
@@ -122,11 +150,15 @@ export default function CodeViewer({ item }: CodeViewerProps) {
                     key={method.id}
                     htmlFor={`cv-${method.id}`}
                     className={cn(
-                      "flex cursor-pointer flex-col items-center justify-between rounded-xl border-2 bg-background p-4 hover:bg-muted/50 [&:has([data-state=checked])]:border-primary",
+                      "bg-background hover:bg-muted/50 [&:has([data-state=checked])]:border-primary flex cursor-pointer flex-col items-center justify-between rounded-xl border-2 p-4",
                       paymentMethod === method.id && "border-primary"
                     )}
                   >
-                    <RadioGroupItem value={method.id} id={`cv-${method.id}`} className="sr-only" />
+                    <RadioGroupItem
+                      value={method.id}
+                      id={`cv-${method.id}`}
+                      className="sr-only"
+                    />
                     <method.icon className={cn("mb-3 h-6 w-6", method.color)} />
                     <span className="text-xs font-medium">{method.name}</span>
                   </Label>
@@ -137,7 +169,7 @@ export default function CodeViewer({ item }: CodeViewerProps) {
 
           <DialogFooter>
             <Button
-              className="w-full h-12 text-lg"
+              className="h-12 w-full text-lg"
               disabled={isProcessing}
               onClick={handlePayment}
             >
@@ -155,16 +187,21 @@ export default function CodeViewer({ item }: CodeViewerProps) {
       </Dialog>
 
       {/* Success Modal */}
-      <Dialog open={modalType === "success"} onOpenChange={() => setModalType(null)}>
+      <Dialog
+        open={modalType === "success"}
+        onOpenChange={() => setModalType(null)}
+      >
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30">
               <CheckIcon className="h-6 w-6 text-emerald-600" />
             </div>
-            <DialogTitle className="text-center">Payment Successful!</DialogTitle>
+            <DialogTitle className="text-center">
+              Payment Successful!
+            </DialogTitle>
             <DialogDescription className="text-center">
-              You now have full access to {item.name}.
-              The source code is now unlocked.
+              You now have full access to {item.name}. The source code is now
+              unlocked.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -176,7 +213,10 @@ export default function CodeViewer({ item }: CodeViewerProps) {
       </Dialog>
 
       {/* Failed Modal */}
-      <Dialog open={modalType === "failed"} onOpenChange={() => setModalType(null)}>
+      <Dialog
+        open={modalType === "failed"}
+        onOpenChange={() => setModalType(null)}
+      >
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
@@ -184,15 +224,23 @@ export default function CodeViewer({ item }: CodeViewerProps) {
             </div>
             <DialogTitle className="text-center">Payment Failed</DialogTitle>
             <DialogDescription className="text-center">
-              We couldn't process your payment. Please check your payment details 
-              or try a different method.
+              We couldn&apos;t process your payment. Please check your payment
+              details or try a different method.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="flex-col gap-2 sm:flex-col">
-            <Button className="w-full" variant="destructive" onClick={() => setIsCheckoutOpen(true)}>
+            <Button
+              className="w-full"
+              variant="destructive"
+              onClick={() => setIsCheckoutOpen(true)}
+            >
               Try Again
             </Button>
-            <Button className="w-full" variant="ghost" onClick={() => setModalType(null)}>
+            <Button
+              className="w-full"
+              variant="ghost"
+              onClick={() => setModalType(null)}
+            >
               Cancel
             </Button>
           </DialogFooter>

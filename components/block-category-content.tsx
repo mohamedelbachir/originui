@@ -1,14 +1,19 @@
 import { notFound } from "next/navigation"
-import { blocks, getBlockCategory } from "@/config/blocks"
-import { RegistryLayout } from "@/components/registry-layout"
-import RegistryItemCard from "@/components/registry-item-card"
 import { ConstructionIcon } from "lucide-react"
+
+import { blocks, getBlockCategory } from "@/config/blocks"
 import { getComponentsByNames } from "@/lib/utils"
 import ComponentCard from "@/components/component-card"
 import ComponentDetails from "@/components/component-details"
 import ComponentLoader from "@/components/component-loader-server"
+import RegistryItemCard from "@/components/registry-item-card"
+import { RegistryLayout } from "@/components/registry-layout"
 
-export function BlockCategoryContent({ categorySlug }: { categorySlug: string }) {
+export function BlockCategoryContent({
+  categorySlug,
+}: {
+  categorySlug: string
+}) {
   const category = getBlockCategory(categorySlug)
 
   if (!category) {
@@ -16,8 +21,8 @@ export function BlockCategoryContent({ categorySlug }: { categorySlug: string })
   }
 
   // Split blocks into registry-based and external
-  const registryBlocks = category.blocks.filter(b => b.registryName)
-  const externalBlocks = category.blocks.filter(b => !b.registryName)
+  const registryBlocks = category.blocks.filter((b) => b.registryName)
+  const externalBlocks = category.blocks.filter((b) => !b.registryName)
 
   const components = getComponentsByNames(
     registryBlocks.map((item) => item.registryName!)
@@ -31,9 +36,7 @@ export function BlockCategoryContent({ categorySlug }: { categorySlug: string })
       sidebarTitle="Block Categories"
     >
       <div className="mb-10 flex flex-col gap-3">
-        <h1 className="text-4xl font-bold tracking-tight">
-          {category.name}
-        </h1>
+        <h1 className="text-4xl font-bold tracking-tight">{category.name}</h1>
         <p className="text-muted-foreground text-lg">
           {category.blocks.length}{" "}
           {category.blocks.length === 1
@@ -67,24 +70,28 @@ export function BlockCategoryContent({ categorySlug }: { categorySlug: string })
         {externalBlocks.length > 0 && (
           <div className="space-y-12">
             {externalBlocks.map((block) => (
-              <RegistryItemCard 
-                key={block.slug} 
-                item={block} 
-                basePath={`/blocks/${category.slug}`} 
+              <RegistryItemCard
+                key={block.slug}
+                item={block}
+                //basePath={`/blocks/${category.slug}`}
               />
             ))}
           </div>
         )}
 
         {category.blocks.length === 0 && (
-          <div className="flex flex-1 flex-col items-center justify-center rounded-2xl border-2 border-dashed p-12 text-center my-12">
-            <div className="mb-4 rounded-full bg-muted p-6">
-              <ConstructionIcon size={48} className="text-muted-foreground opacity-50" />
+          <div className="my-12 flex flex-1 flex-col items-center justify-center rounded-2xl border-2 border-dashed p-12 text-center">
+            <div className="bg-muted mb-4 rounded-full p-6">
+              <ConstructionIcon
+                size={48}
+                className="text-muted-foreground opacity-50"
+              />
             </div>
             <h2 className="text-2xl font-bold">Coming Soon</h2>
             <p className="text-muted-foreground mt-2 max-w-sm">
-              We're currently crafting beautiful {category.name.toLowerCase()} blocks. 
-              Check back soon for new updates!
+              We&apos;re currently crafting beautiful{" "}
+              {category.name.toLowerCase()} blocks. Check back soon for new
+              updates!
             </p>
           </div>
         )}

@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { HeaderProvider } from "@/providers/header"
 import { ViewAnimation } from "@/providers/view-animation"
-import { PlusIcon } from "lucide-react"
 
 import { links } from "@/lib/navigation"
 // import SearchButton from "@/components/search-button"
@@ -11,17 +10,6 @@ import { ActiveLink } from "../active-link"
 import { ThemeSwitcher } from "../theme-switcher"
 import { MobileMenu } from "./mobile-menu"
 import { MobileMenuTrigger } from "./mobile-menu-trigger"
-
-const Cross = () => (
-  <div className="relative h-6 w-6">
-    <div className="bg-border absolute left-3 h-6 w-px" />
-    <div className="bg-border absolute top-3 h-px w-6" />
-    <PlusIcon
-      size={20}
-      className="text-muted-foreground/50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-    />
-  </div>
-)
 
 export const Header = async () => {
   return (

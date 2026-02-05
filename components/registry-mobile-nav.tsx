@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
 import { Menu, X } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -72,15 +71,15 @@ export function RegistryMobileNav({
         <nav className="flex h-[calc(100vh-100px)] flex-col gap-1 overflow-y-auto pr-2">
           {categories.map((c) => {
             let href = ""
-            if (basePath.includes('?')) {
-              const [path, query] = basePath.split('?')
+            if (basePath.includes("?")) {
+              const [path, query] = basePath.split("?")
               const params = new URLSearchParams(query)
-              params.set('category', c.slug)
+              params.set("category", c.slug)
               href = `${path}?${params.toString()}`
             } else {
               href = `${basePath}/${c.slug}`
             }
-            
+
             return (
               <Link
                 key={c.slug}

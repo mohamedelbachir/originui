@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation"
-import { templates, getTemplateItem } from "@/config/templates"
-import PageHeader from "@/components/page-header"
-import { Section } from "@/components/section"
+
+import { getTemplateItem, templates } from "@/config/templates"
 import CodeViewer from "@/components/code-viewer"
 import Cta from "@/components/cta"
+import PageHeader from "@/components/page-header"
+import { Section } from "@/components/section"
 
 type Props = {
   params: Promise<{ category: string; slug: string }>
@@ -11,7 +12,7 @@ type Props = {
 
 export async function generateStaticParams() {
   const params: { category: string; slug: string }[] = []
-  
+
   templates.forEach((category) => {
     category.templates.forEach((template) => {
       params.push({
@@ -35,9 +36,10 @@ export default async function Page({ params }: Props) {
   return (
     <>
       <PageHeader title={item.name}>
-        {item.description || `A beautiful and functional template for your ${item.name.toLowerCase()} projects.`}
+        {item.description ||
+          `A beautiful and functional template for your ${item.name.toLowerCase()} projects.`}
       </PageHeader>
-      
+
       <Section className="py-12">
         <div className="h-[600px] overflow-hidden rounded-xl border shadow-sm">
           <CodeViewer item={item} />

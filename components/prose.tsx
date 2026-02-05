@@ -1,11 +1,12 @@
-import { cn } from '@/lib/utils';
-import type { ComponentProps } from 'react';
+import type { ComponentProps } from "react"
 
-type ProseProps = ComponentProps<'div'>;
+import { cn } from "@/lib/utils"
+
+type ProseProps = ComponentProps<"div">
 
 export const Prose = ({ className, ...props }: ProseProps) => (
   <div
-    className={cn('prose prose-neutral dark:prose-invert', className)}
+    className={cn("prose prose-neutral dark:prose-invert", className)}
     {...props}
   />
-);
+)
