@@ -3,12 +3,14 @@
 import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
 import { ChevronsRight } from "lucide-react"
+import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils"
 import ShimmerButton from "@/components/shimmer-button"
 import WordAnimator from "@/components/word-animation"
 import { Button } from "@/registry/default/ui/button"
 
+import { LineShadowText } from "../line-shadow-text"
 import { Section } from "../section"
 
 const item = {
@@ -18,7 +20,8 @@ const item = {
 
 const Hero = () => {
   const [blocks, setBlocks] = useState([])
-
+  const theme = useTheme()
+  const shadowColor = theme.resolvedTheme === "dark" ? "white" : "black"
   const activeDivs = useMemo(
     () => ({
       0: new Set([4, 1]),
@@ -67,6 +70,7 @@ const Hero = () => {
     return () => window.removeEventListener("resize", updateBlocks)
   }, [activeDivs])
   const words = ["Better ", "Perfect", "Modern ", "Unique "]
+
   return (
     // <section className="relative h-screen overflow-hidden bg-white pb-10 dark:bg-black">
     <Section className="px-0 sm:p-4">
@@ -152,8 +156,12 @@ const Hero = () => {
               ></path>
             </svg>
           </a>
-          <h1 className="text-center text-3xl font-semibold tracking-tight text-black sm:text-5xl md:text-6xl xl:text-7xl dark:text-white">
-            {/* <span className="text-[2.5rem]">Don&apos;t Just Ship Website,</span>{" "} */}
+          {/* <h1 className="mt-5 text-center text-4xl leading-none font-semibold tracking-tighter text-balance sm:text-5xl">
+            Woilasoft&ensp;
+            <LineShadowText shadowColor={shadowColor}>UI</LineShadowText>
+          </h1> */}
+          <h2 className="text-center text-3xl font-semibold tracking-tight text-black sm:text-5xl md:text-6xl xl:text-7xl dark:text-white">
+            {/* <span className="text-[2.5rem]">Don&apos;t Just Ship Website,</span>{" "}  */}
             <span className="relative mt-4 flex translate-x-0 justify-center gap-2 text-[2rem] sm:text-5xl">
               Ship{" "}
               <WordAnimator
@@ -163,14 +171,14 @@ const Hero = () => {
               />{" "}
               Website.
             </span>
-          </h1>
+          </h2>
           <p className="mx-auto mt-5 text-center text-sm text-black sm:w-[80%] sm:text-lg lg:w-[700px] dark:text-white">
-            50+ Stunning Sections and Templates Powered by{" "}
-            <strong>React</strong>, <strong>TypeScript</strong>,
-            <strong> Tailwind CSS</strong>.
+            50+ Stunning Sections and Templates made with <strong>React</strong>
+            , <strong>TypeScript</strong>,<strong> Tailwind CSS</strong>.
             <span className="hidden sm:inline">
-              Save countless hours , craft eye-catching landing pages, and turn
-              visitors into loyal customers
+              {" "}
+              Powered by <b>originUI</b> , <b>shadcnUI</b> and{" "}
+              <b>framer motion</b>
             </span>
           </p>
           <div className="mt-4 flex items-center justify-center gap-2">

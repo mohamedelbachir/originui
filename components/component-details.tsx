@@ -5,10 +5,12 @@ import { CodeIcon } from "lucide-react"
 import type { RegistryItem } from "shadcn/registry"
 
 import { convertRegistryPaths } from "@/lib/utils"
+import { useFavorites } from "@/hooks/use-favorites"
 import ComponentCli from "@/components/cli-commands"
 import CodeBlock, { highlight } from "@/components/code-block"
 import CopyButton from "@/components/copy-button"
 import CopyRegistry from "@/components/copy-registry"
+import FavoriteButton from "@/components/favorite-button"
 import OpenInV0 from "@/components/open-in-v0"
 import { Button } from "@/registry/default/ui/button"
 import {
@@ -28,8 +30,12 @@ import {
 
 export default function ComponentDetails({
   component,
+  categorie,
+  favorites,
 }: {
   component: RegistryItem
+  categorie: string
+  favorites: ReturnType<typeof useFavorites>
 }) {
   const [code, setCode] = useState<string | null>(null)
   const [highlightedCode, setHighlightedCode] = useState<JSX.Element | null>(
@@ -71,9 +77,17 @@ export default function ComponentDetails({
 
     loadCode()
   }, [component.name])
+  const stored = localStorage.getItem("woilasoft-ui-favorite")
 
   return (
     <div className="absolute top-0 right-2 flex gap-1 peer-data-comp-loading:hidden">
+      {JSON.stringify(stored)}
+      <FavoriteButton
+        componentName={component.name}
+        favorites={favorites}
+        componentCategorie={categorie}
+        className="opacity-0 group-focus-within/item:opacity-100 group-hover/item:opacity-100 lg:opacity-0"
+      />
       <CopyRegistry url={`https://ui.woilasoft.com/r/${component.name}.json`} />
       <OpenInV0
         componentSource={`https://ui.woilasoft.com/r/${component.name}.json`}
@@ -101,6 +115,7 @@ export default function ComponentDetails({
         </TooltipProvider>
         <DialogContent className="sm:max-w-[600px]">
           <DialogHeader>
+            {JSON.stringify(component.categories)}
             <DialogTitle className="text-left">Installation</DialogTitle>
             <DialogDescription className="sr-only">
               Use the CLI to add components to your project

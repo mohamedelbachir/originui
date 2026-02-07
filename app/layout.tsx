@@ -5,6 +5,7 @@ import Script from "next/script"
 
 import Footer from "@/components/footer"
 // import Header from "@/components/header"
+import { CommandMenu } from "@/components/command-menu"
 import { Header } from "@/components/header/index"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster as Sonner } from "@/registry/default/ui/sonner"
@@ -115,6 +116,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <CommandMenu />
           <Toaster />
           <Sonner />
         </ThemeProvider>

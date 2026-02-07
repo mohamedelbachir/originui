@@ -1,29 +1,37 @@
 "use client"
 
-import { useEffect } from "react"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
+import { isCommandMenuOpenAtom } from "@/atoms/command-menu"
 import { RiSearch2Line } from "@remixicon/react"
+import { useSetAtom } from "jotai"
+import { SearchIcon } from "lucide-react"
 
-export default function SearchButton() {
-  const router = useRouter()
+import { cn } from "@/lib/utils"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { Button } from "@/registry/default/ui/button"
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-        e.preventDefault()
-        router.push("/search")
-      }
-    }
+export default function SearchButton({className}:{className?:string}) {
+  const setOpen = useSetAtom(isCommandMenuOpenAtom)
+  const isMobile = useIsMobile()
 
-    document.addEventListener("keydown", handleKeyDown)
-    return () => document.removeEventListener("keydown", handleKeyDown)
-  }, [router])
+  // if (isMobile) {
+  //   return (
+  //     <Button
+  //       variant="outline"
+  //       size="icon"
+  //       onClick={() => setOpen(true)}
+  //       aria-label="Search"
+  //     >
+  //       <SearchIcon size={20} />
+  //     </Button>
+  //   )
+  // }
 
   return (
-    <Link
-      href="/search"
-      className="bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text rounded-full border px-4 py-0 text-sm outline-none focus:ring-[3px]"
+    <button
+      onClick={() => setOpen(true)}
+      className={cn(
+        "bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text items-center rounded-full border px-4 py-0 text-sm outline-none focus:ring-[3px]",className
+      )}
     >
       <span className="flex grow items-center gap-2">
         <RiSearch2Line
@@ -40,6 +48,6 @@ export default function SearchButton() {
           </kbd>
         </div>
       </span>
-    </Link>
+    </button>
   )
 }

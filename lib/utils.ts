@@ -20,12 +20,18 @@ export const getComponents = (
     : components
 }
 
-export const getComponentsByNames = (names: string[]): RegistryItem[] => {
+export const getComponentsByNames = (
+  names: string[],
+  type?: RegistryItem["type"]
+): RegistryItem[] => {
   const componentsMap = new Map(components.map((comp) => [comp.name, comp]))
 
   return names
     .map((name) => componentsMap.get(name))
-    .filter((comp): comp is RegistryItem => comp !== undefined)
+    .filter(
+      (comp): comp is RegistryItem =>
+        comp !== undefined && (type ? comp.type === type : true)
+    )
 }
 
 export const getAvailableTags = (
