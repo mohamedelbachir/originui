@@ -4,7 +4,7 @@ import { templates } from "@/config/templates"
 import { TemplateCategoryContent } from "@/components/template-category-content"
 
 export const metadata: Metadata = {
-  title: "Templates - Origin UI",
+  title: "Templates - Woilasoft UI",
   description: "Complete page templates and dashboard layouts.",
 }
 

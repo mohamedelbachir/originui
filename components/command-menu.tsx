@@ -3,7 +3,6 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { isCommandMenuOpenAtom } from "@/atoms/command-menu"
-import { DialogTitle } from "@radix-ui/react-dialog"
 import { useAtom } from "jotai"
 import {
   CircleIcon,
@@ -14,9 +13,9 @@ import {
 } from "lucide-react"
 import { useTheme } from "next-themes"
 
+import { blocks } from "@/config/blocks"
 import { categories } from "@/config/components"
 import { links } from "@/lib/navigation"
-import { getComponents } from "@/lib/utils"
 import {
   CommandDialog,
   CommandEmpty,
@@ -31,8 +30,23 @@ export function CommandMenu() {
   const router = useRouter()
   const [open, setOpen] = useAtom(isCommandMenuOpenAtom)
   const { setTheme } = useTheme()
-  const allComponents = React.useMemo(() => getComponents(), [])
+  //const allComponents = React.useMemo(() => getComponents().filter((c)=>), [])
+  const allLinks = React.useMemo(() => {
+    const c = categories.map((category) => {
+      return { name: category.name, slug: category.slug, type: "category" }
+    })
 
+    const b = blocks.map((block) => {
+      return {
+        name: block.name,
+        slug: block.slug,
+        type: "block",
+      }
+    })
+    const result = [...c, ...b]
+    return result
+  }, [])
+  //const allComponents = React.useMemo(() => getComponents(), [])
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || e.key === "/") {
@@ -94,29 +108,31 @@ export function CommandMenu() {
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Components">
-            {allComponents.map((component) => (
+            {allLinks.map((link) => (
               <CommandItem
-                key={component.name}
-                value={component.name}
+                key={link.name}
+                value={link.name}
                 onSelect={() => {
                   // Find category for this component to construct URL
-                  const category = categories.find((cat) =>
-                    cat.components.some((c) => c.name === component.name)
-                  )
-                  if (category) {
+
+                  if (link.type === "category") {
                     runCommand(() =>
-                      router.push(`/showcase?category=${category.slug}`)
+                      router.push(`/showcase?category=${link.slug}`)
+                    )
+                  } else if (link.type === "block") {
+                    runCommand(() =>
+                      router.push(`/blocks?category=${link.slug}`)
                     )
                   }
                 }}
               >
                 <CircleIcon className="mr-2 h-4 w-4" />
-                {component.name}
-                {component.description && (
+                {link.name}
+                {/* {link.description && (
                   <span className="text-muted-foreground ml-2 truncate text-xs">
-                    {component.description}
+                    {link.description}
                   </span>
-                )}
+                )} */}
               </CommandItem>
             ))}
           </CommandGroup>

@@ -55,7 +55,7 @@ export default function RegistryItemCard({ item }: RegistryItemCardProps) {
                   rel="noopener noreferrer"
                 >
                   <ExternalLinkIcon size={14} />
-                  Live Demo
+                  <span className="hidden sm:inline">Live Demo</span>
                 </a>
               </Button>
             )}
@@ -64,13 +64,14 @@ export default function RegistryItemCard({ item }: RegistryItemCardProps) {
 
         <div className="bg-background relative mt-4 overflow-hidden rounded-xl border shadow-sm">
           <TabsContent value="preview" className="m-0 border-0">
-            <div className="bg-grid-zinc-100/50 dark:bg-grid-zinc-900/50 relative aspect-video w-full">
+            <div className="bg-grid-zinc-100/50 dark:bg-grid-zinc-900/50 relative h-[600px] w-full">
               {item.previewUrl ? (
                 <iframe
                   src={item.previewUrl}
                   className="h-full w-full"
                   title={`${item.name} Preview`}
                   loading="lazy"
+                  security="none"
                 />
               ) : (
                 <div className="text-muted-foreground flex h-full flex-col items-center justify-center p-12 text-center">

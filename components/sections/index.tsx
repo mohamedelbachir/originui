@@ -3,14 +3,15 @@
 import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
 import { ChevronsRight } from "lucide-react"
-import { useTheme } from "next-themes"
+
+//import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils"
 import ShimmerButton from "@/components/shimmer-button"
 import WordAnimator from "@/components/word-animation"
 import { Button } from "@/registry/default/ui/button"
 
-import { LineShadowText } from "../line-shadow-text"
+// import { LineShadowText } from "../line-shadow-text"
 import { Section } from "../section"
 
 const item = {
@@ -20,8 +21,8 @@ const item = {
 
 const Hero = () => {
   const [blocks, setBlocks] = useState([])
-  const theme = useTheme()
-  const shadowColor = theme.resolvedTheme === "dark" ? "white" : "black"
+  // const theme = useTheme()
+  // const shadowColor = theme.resolvedTheme === "dark" ? "white" : "black"
   const activeDivs = useMemo(
     () => ({
       0: new Set([4, 1]),

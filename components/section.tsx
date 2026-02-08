@@ -4,7 +4,10 @@ import { PlusIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-type SectionProps = HTMLAttributes<HTMLDivElement>
+type SectionProps = HTMLAttributes<HTMLDivElement> & {
+  sectionClassName?: string
+  crossClassName?: string
+}
 
 const Cross = () => (
   <div className="relative h-6 w-6">
@@ -21,16 +24,32 @@ const Cross = () => (
   </div>
 )
 
-export const Section = ({ children, className, ...props }: SectionProps) => (
+export const Section = ({
+  children,
+  className,
+  sectionClassName,
+  crossClassName,
+  ...props
+}: SectionProps) => (
   <section {...props}>
-    <div className="relative mx-auto max-w-[1406px]">
+    <div className={cn("relative mx-auto max-w-[1406px]", sectionClassName)}>
       <div className={cn("px-4 sm:border-x sm:px-6", className)}>
         {children}
       </div>
-      <div className="absolute -bottom-3 -left-3 z-10 hidden h-6 sm:block">
+      <div
+        className={cn(
+          "absolute -bottom-3 -left-3 z-10 hidden h-6 sm:block",
+          crossClassName
+        )}
+      >
         <Cross />
       </div>
-      <div className="absolute -right-3 -bottom-3 z-10 hidden h-6 -translate-x-px sm:block">
+      <div
+        className={cn(
+          "absolute -right-3 -bottom-3 z-10 hidden h-6 -translate-x-px sm:block",
+          crossClassName
+        )}
+      >
         <Cross />
       </div>
     </div>

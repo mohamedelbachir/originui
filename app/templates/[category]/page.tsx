@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = getTemplateCategory((await params).category)
   if (!category) return {}
   return {
-    title: `${category.name} Templates - Origin UI`,
+    title: `${category.name} Templates - Woilasoft UI`,
     description: `Complete ${category.name.toLowerCase()} templates built with React and Tailwind CSS.`,
   }
 }

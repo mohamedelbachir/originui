@@ -3,15 +3,18 @@
 import { isCommandMenuOpenAtom } from "@/atoms/command-menu"
 import { RiSearch2Line } from "@remixicon/react"
 import { useSetAtom } from "jotai"
-import { SearchIcon } from "lucide-react"
+
+// import { SearchIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { useIsMobile } from "@/hooks/use-mobile"
-import { Button } from "@/registry/default/ui/button"
 
-export default function SearchButton({className}:{className?:string}) {
+// import { useIsMobile } from "@/hooks/use-mobile"
+
+// import { Button } from "@/registry/default/ui/button"
+
+export default function SearchButton({ className }: { className?: string }) {
   const setOpen = useSetAtom(isCommandMenuOpenAtom)
-  const isMobile = useIsMobile()
+  // const isMobile = useIsMobile()
 
   // if (isMobile) {
   //   return (
@@ -30,7 +33,8 @@ export default function SearchButton({className}:{className?:string}) {
     <button
       onClick={() => setOpen(true)}
       className={cn(
-        "bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text items-center rounded-full border px-4 py-0 text-sm outline-none focus:ring-[3px]",className
+        "bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text items-center rounded-full border px-4 py-0 text-sm outline-none focus:ring-[3px]",
+        className
       )}
     >
       <span className="flex grow items-center gap-2">

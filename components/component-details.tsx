@@ -5,7 +5,6 @@ import { CodeIcon } from "lucide-react"
 import type { RegistryItem } from "shadcn/registry"
 
 import { convertRegistryPaths } from "@/lib/utils"
-import { useFavorites } from "@/hooks/use-favorites"
 import ComponentCli from "@/components/cli-commands"
 import CodeBlock, { highlight } from "@/components/code-block"
 import CopyButton from "@/components/copy-button"
@@ -31,11 +30,9 @@ import {
 export default function ComponentDetails({
   component,
   categorie,
-  favorites,
 }: {
   component: RegistryItem
-  categorie: string
-  favorites: ReturnType<typeof useFavorites>
+  categorie: { slug: string; name: string }
 }) {
   const [code, setCode] = useState<string | null>(null)
   const [highlightedCode, setHighlightedCode] = useState<JSX.Element | null>(
@@ -77,15 +74,12 @@ export default function ComponentDetails({
 
     loadCode()
   }, [component.name])
-  const stored = localStorage.getItem("woilasoft-ui-favorite")
 
   return (
     <div className="absolute top-0 right-2 flex gap-1 peer-data-comp-loading:hidden">
-      {JSON.stringify(stored)}
       <FavoriteButton
-        componentName={component.name}
-        favorites={favorites}
-        componentCategorie={categorie}
+        component={{ id: component.name, name: component.name }}
+        categorie={categorie}
         className="opacity-0 group-focus-within/item:opacity-100 group-hover/item:opacity-100 lg:opacity-0"
       />
       <CopyRegistry url={`https://ui.woilasoft.com/r/${component.name}.json`} />

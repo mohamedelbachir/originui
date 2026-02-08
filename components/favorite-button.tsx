@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Heart } from "lucide-react"
 
-import { useFavorites } from "@/hooks/use-favorites"
+import { useFavoritesStore } from "@/hooks/useFavoritesStore"
 import { Button } from "@/registry/default/ui/button"
 import {
   Tooltip,
@@ -13,40 +13,32 @@ import {
 } from "@/registry/default/ui/tooltip"
 
 interface FavoriteButtonProps {
-  componentName: string
-  componentCategorie: string
+  component: { id: string; name: string }
+  categorie: { slug: string; name: string }
   className?: string
-  favorites: ReturnType<typeof useFavorites>
+  // favorites: ReturnType<typeof useFavorites>
 }
 
 export default function FavoriteButton({
-  componentName,
+  component,
   className,
-  componentCategorie,
-  favorites,
+  categorie,
 }: FavoriteButtonProps) {
-  const { isFavorite, toggleFavorite, isLoaded, addFavorite, removeFavorite } =
-    favorites
+  const { isFavorite, toggleFavorite, isLoaded } = useFavoritesStore()
+  const categorySlug = categorie.slug
+  const categoryName = categorie.name
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  if (!mounted || !isLoaded) {
-    return (
-      <Button
-        variant="ghost"
-        size="icon"
-        className="text-muted-foreground/80 disabled:opacity-50"
-        disabled
-      >
-        <Heart size={16} />
-      </Button>
-    )
+  if (!mounted || !isLoaded()) {
+    return null
   }
 
-  const isFav = isFavorite(componentCategorie, componentName)
+  //const isFav = isFavorite(componentCategorie, componentName)
+  const isFav = isFavorite(categorySlug, component.name)
 
   return (
     <TooltipProvider delayDuration={0}>
@@ -64,7 +56,11 @@ export default function FavoriteButton({
               // } else {
               //   addFavorite(componentCategorie, componentName)
               // }
-              toggleFavorite(componentCategorie, componentName)
+              // toggleFavorite(componentCategorie, componentName)
+              toggleFavorite(
+                { slug: categorySlug, name: categoryName },
+                { id: component.name, name: component.name }
+              )
             }}
           >
             <Heart

@@ -54,7 +54,7 @@ export default function Page() {
                   <SimpleCard
                     slug={`blocks/${block.slug}`}
                     name={block.name}
-                    count={block.blocks.length}
+                    count={block.components.length}
                     isNew={block.isNew}
                   />
                 </div>

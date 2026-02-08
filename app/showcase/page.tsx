@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import FavoritesProvider from "@/providers/favorites-provider"
 import { ArrowRightIcon, LayoutGridIcon, ListIcon } from "lucide-react"
 
 import { categories, getCategory } from "@/config/components"
@@ -68,7 +67,7 @@ export default async function ShowcasePage({ searchParams }: Props) {
           </p>
         </div>
 
-        <div className="bg-background flex items-center gap-1 rounded-lg border p-1 shadow-sm">
+        <div className="bg-background hidden items-center gap-1 rounded-lg border p-1 shadow-sm sm:flex">
           <Button
             asChild
             variant={view === "list" ? "secondary" : "ghost"}
@@ -106,35 +105,25 @@ export default async function ShowcasePage({ searchParams }: Props) {
             : "space-y-8"
         )}
       >
-        <FavoritesProvider>
-          {(favorites) =>
-            components.map((component) => (
-              <div key={component.name} className="scroll-mt-24">
-                <ComponentCard
-                  component={component}
-                  className="bg-background rounded-xs border shadow-sm transition-shadow"
-                >
-                  <div
-                    className={cn(
-                      "bg-grid-zinc-100/50 dark:bg-grid-zinc-900/50 w-full overflow-x-hidden",
-                      view === "grid"
-                        ? "p-4 pt-8"
-                        : "p-4 pt-10 sm:p-10 sm:pt-12"
-                    )}
-                  >
-                    <ComponentLoader component={component} />
-                  </div>
-
-                  <ComponentDetails
-                    component={component}
-                    categorie={categorySlug}
-                    favorites={favorites}
-                  />
-                </ComponentCard>
+        {components.map((component) => (
+          <div key={component.name} className="scroll-mt-24">
+            <ComponentCard
+              component={component}
+              className="bg-background rounded-xs border shadow-sm transition-shadow"
+            >
+              <div
+                className={cn(
+                  "bg-grid-zinc-100/50 dark:bg-grid-zinc-900/50 w-full overflow-x-hidden",
+                  view === "grid" ? "p-4 pt-8" : "p-4 pt-10 sm:p-10 sm:pt-12"
+                )}
+              >
+                <ComponentLoader component={component} />
               </div>
-            ))
-          }
-        </FavoritesProvider>
+
+              <ComponentDetails component={component} categorie={category} />
+            </ComponentCard>
+          </div>
+        ))}
       </div>
 
       <div className="mt-10 flex justify-center border-t border-dashed py-6">
