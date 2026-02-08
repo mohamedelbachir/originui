@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { blocks } from "@/config/blocks"
+// import { blocks } from "@/config/blocks"
 import { categories } from "@/config/components"
 import Marquee from "@/components/ui/marquee"
 import { Section } from "@/components/section"
@@ -72,46 +72,46 @@ export default function Page() {
   )
 }
 
-function SimpleCard({
-  slug,
-  name,
-  count,
-  isNew = false,
-}: {
-  slug: string
-  name: string
-  count: number
-  isNew?: boolean
-}) {
-  return (
-    <div className="space-y-3 text-center">
-      <Link
-        href={`/${slug}`}
-        className="peer bg-background hover:bg-background/80 relative flex h-40 items-center justify-center overflow-hidden rounded-xl border transition-colors dark:border-zinc-700/80"
-      >
-        <span className="text-xl font-bold">{name}</span>
-        {isNew && (
-          <span className="bg-primary text-primary-foreground absolute top-2 right-2 rounded-full px-2 py-0.5 text-[10px]">
-            New
-          </span>
-        )}
-      </Link>
-      <div className="[&_a]:peer-hover:underline">
-        <h2>
-          <Link
-            href={`/${slug}`}
-            className="text-sm font-medium hover:underline"
-          >
-            {name}
-          </Link>
-        </h2>
-        <p className="text-muted-foreground text-[13px]">
-          {count} {count === 1 ? "Item" : "Items"}
-        </p>
-      </div>
-    </div>
-  )
-}
+// function SimpleCard({
+//   slug,
+//   name,
+//   count,
+//   isNew = false,
+// }: {
+//   slug: string
+//   name: string
+//   count: number
+//   isNew?: boolean
+// }) {
+//   return (
+//     <div className="space-y-3 text-center">
+//       <Link
+//         href={`/${slug}`}
+//         className="peer bg-background hover:bg-background/80 relative flex h-40 items-center justify-center overflow-hidden rounded-xl border transition-colors dark:border-zinc-700/80"
+//       >
+//         <span className="text-xl font-bold">{name}</span>
+//         {isNew && (
+//           <span className="bg-primary text-primary-foreground absolute top-2 right-2 rounded-full px-2 py-0.5 text-[10px]">
+//             New
+//           </span>
+//         )}
+//       </Link>
+//       <div className="[&_a]:peer-hover:underline">
+//         <h2>
+//           <Link
+//             href={`/${slug}`}
+//             className="text-sm font-medium hover:underline"
+//           >
+//             {name}
+//           </Link>
+//         </h2>
+//         <p className="text-muted-foreground text-[13px]">
+//           {count} {count === 1 ? "Item" : "Items"}
+//         </p>
+//       </div>
+//     </div>
+//   )
+// }
 type CategoryCardProps = {
   slug: string
   name: string
