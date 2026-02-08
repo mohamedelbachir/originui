@@ -46,7 +46,7 @@ function Form() {
 
     try {
       // const result = await subscribe(formState.email)
-      const result = await handleSubmission({ email: formState.email })
+      await handleSubmission({ email: formState.email })
     } catch (error) {
       setFormState((prev) => ({
         ...prev,

@@ -14,7 +14,7 @@ export const IframeWrapper = React.forwardRef<
   HTMLDivElement,
   IframeWrapperProps
 >(({ children, className, ...props }, ref) => {
-  const [_, setMountNode] = React.useState<HTMLElement | null>(null)
+  const [, setMountNode] = React.useState<HTMLElement | null>(null)
   const iframeRef = React.useRef<HTMLIFrameElement>(null)
 
   React.useEffect(() => {
