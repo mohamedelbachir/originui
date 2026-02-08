@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "page-headings-with-actions",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/page-headings-with-actions.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Calendar, Download, Share2 } from \"lucide-react\";\r\r\n\r\r\nexport default function PageHeadingWithActions() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-16\">\r\r\n      <div className=\"flex flex-col md:flex-row md:items-center md:justify-between gap-4\">\r\r\n        <div>\r\r\n          <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\r\r\n            Annual Report 2024\r\r\n          </h1>\r\r\n          <div className=\"mt-2 flex items-center gap-4 text-sm text-muted-foreground\">\r\r\n            <div className=\"flex items-center gap-1\">\r\r\n              <Calendar className=\"h-4 w-4\" />\r\r\n              <span>Updated April 2024</span>\r\r\n            </div>\r\r\n            <div>•</div>\r\r\n            <div>24 pages</div>\r\r\n            <div>•</div>\r\r\n            <div>PDF</div>\r\r\n          </div>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"flex items-center gap-2\">\r\r\n          <Button variant=\"outline\" size=\"sm\">\r\r\n            <Share2 className=\"mr-2 h-4 w-4\" />\r\r\n            Share\r\r\n          </Button>\r\r\n          <Button size=\"sm\">\r\r\n            <Download className=\"mr-2 h-4 w-4\" />\r\r\n            Download PDF\r\r\n          </Button>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "page-headings"
+    ]
+  }
+}

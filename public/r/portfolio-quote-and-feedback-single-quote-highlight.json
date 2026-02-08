@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-quote-and-feedback-single-quote-highlight",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-quote-and-feedback-single-quote-highlight.tsx",
+      "content": "import { Badge } from \"@/registry/default/ui/badge\";\r\r\nimport Image from \"next/image\";\r\r\n\r\r\nexport default function SingleQuoteHighlight() {\r\r\n  return (\r\r\n    <section className=\"bg-muted/40 w-full py-12 md:py-24 lg:py-32\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6\">\r\r\n        <div className=\"flex flex-col items-center justify-center space-y-4 text-center\">\r\r\n          <div className=\"space-y-2\">\r\r\n            <Badge variant=\"secondary\">Featured Testimonial</Badge>\r\r\n            <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl\">\r\r\n              Client <span className=\"text-primary\">Spotlight</span>\r\r\n            </h2>\r\r\n            <p className=\"text-muted-foreground mx-auto max-w-[700px] md:text-xl/relaxed\">\r\r\n              Hear what our clients have to say about working with us\r\r\n            </p>\r\r\n          </div>\r\r\n\r\r\n          <div className=\"mx-auto mt-10 w-full max-w-3xl\">\r\r\n            <blockquote className=\"relative\">\r\r\n              <div className=\"relative z-10\">\r\r\n                <p className=\"text-2xl leading-relaxed font-medium md:text-3xl md:leading-relaxed\">\r\r\n                  &ldquo;Their creativity and attention to detail transformed\r\r\n                  our vision into a reality that exceeded our expectations. The\r\r\n                  result wasn&apos;t just visually stunning, but strategically\r\r\n                  crafted to achieve our business goals.&rdquo;\r\r\n                </p>\r\r\n                <span className=\"text-primary absolute right-0 bottom-0 translate-x-6 translate-y-8 text-8xl leading-none opacity-20\"></span>\r\r\n                <div className=\"mt-8 flex items-center justify-center gap-4 sm:justify-start\">\r\r\n                  <div className=\"relative h-14 w-14 overflow-hidden rounded-full\">\r\r\n                    <Image\r\r\n                      src=\"https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop\"\r\r\n                      alt=\"Alexandra Chen\"\r\r\n                      fill\r\r\n                      className=\"object-cover\"\r\r\n                    />\r\r\n                  </div>\r\r\n                  <div className=\"text-left\">\r\r\n                    <p className=\"font-semibold\">Alexandra Chen</p>\r\r\n                    <p className=\"text-muted-foreground\">\r\r\n                      Marketing Director, Innovate Inc.\r\r\n                    </p>\r\r\n                  </div>\r\r\n                </div>\r\r\n              </div>\r\r\n            </blockquote>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-quote-and-feedback"
+    ]
+  }
+}

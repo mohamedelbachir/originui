@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-sections-circle-icons-centre-aligned",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/icon-sections-circle-icons-centre-aligned.tsx",
+      "content": "import {\r\r\n  BookOpenIcon,\r\r\n  MessagesSquareIcon,\r\r\n  Settings2Icon,\r\r\n  TabletSmartphoneIcon,\r\r\n} from \"lucide-react\";\r\r\n\r\r\nexport default function IconSectionCircleIconsCentreAligned() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Icon Blocks */}\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32\">\r\r\n        <div className=\"grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12\">\r\r\n          {/* Icon Block */}\r\r\n          <div className=\"text-center\">\r\r\n            <div className=\"flex justify-center items-center w-12 h-12 bg-primary border rounded-full mx-auto\">\r\r\n              <TabletSmartphoneIcon className=\"flex-shrink-0 w-5 h-5 text-primary-foreground\" />\r\r\n            </div>\r\r\n            <div className=\"mt-3\">\r\r\n              <h3 className=\"text-lg font-semibold \">Responsive</h3>\r\r\n              <p className=\"mt-1 text-muted-foreground\">\r\r\n                Responsive, and mobile-first project on the web\r\r\n              </p>\r\r\n            </div>\r\r\n          </div>\r\r\n          {/* End Icon Block */}\r\r\n          {/* Icon Block */}\r\r\n          <div className=\"text-center\">\r\r\n            <div className=\"flex justify-center items-center w-12 h-12 bg-primary border rounded-full mx-auto\">\r\r\n              <Settings2Icon className=\"flex-shrink-0 w-5 h-5 text-primary-foreground\" />\r\r\n            </div>\r\r\n            <div className=\"mt-3\">\r\r\n              <h3 className=\"text-lg font-semibold \">Customizable</h3>\r\r\n              <p className=\"mt-1 text-muted-foreground\">\r\r\n                Components are easily customized and extendable\r\r\n              </p>\r\r\n            </div>\r\r\n          </div>\r\r\n          {/* End Icon Block */}\r\r\n          {/* Icon Block */}\r\r\n          <div className=\"text-center\">\r\r\n            <div className=\"flex justify-center items-center w-12 h-12 bg-primary border rounded-full mx-auto\">\r\r\n              <BookOpenIcon className=\"flex-shrink-0 w-5 h-5 text-primary-foreground\" />\r\r\n            </div>\r\r\n            <div className=\"mt-3\">\r\r\n              <h3 className=\"text-lg font-semibold \">Documentation</h3>\r\r\n              <p className=\"mt-1 text-muted-foreground\">\r\r\n                Every component and plugin is well documented\r\r\n              </p>\r\r\n            </div>\r\r\n          </div>\r\r\n          {/* End Icon Block */}\r\r\n          {/* Icon Block */}\r\r\n          <div className=\"text-center\">\r\r\n            <div className=\"flex justify-center items-center w-12 h-12 bg-primary border rounded-full mx-auto\">\r\r\n              <MessagesSquareIcon className=\"flex-shrink-0 w-5 h-5 text-primary-foreground\" />\r\r\n            </div>\r\r\n            <div className=\"mt-3\">\r\r\n              <h3 className=\"text-lg font-semibold \">24/7 Support</h3>\r\r\n              <p className=\"mt-1 text-muted-foreground\">\r\r\n                Contact us 24 hours a day, 7 days a week\r\r\n              </p>\r\r\n            </div>\r\r\n          </div>\r\r\n          {/* End Icon Block */}\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Icon Blocks */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "icon-sections"
+    ]
+  }
+}

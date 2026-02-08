@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-sections-simple",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/pricing-sections-simple.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardFooter,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\nimport { CheckIcon } from \"lucide-react\";\r\r\n\r\r\nconst plans = [\r\r\n  {\r\r\n    name: \"Basic\",\r\r\n    price: \"$9\",\r\r\n    description: [\r\r\n      \"1 user\",\r\r\n      \"Up to 10 projects\",\r\r\n      \"5GB storage\",\r\r\n      \"Basic support\",\r\r\n      \"Basic analytics\",\r\r\n    ],\r\r\n  },\r\r\n  {\r\r\n    name: \"Pro\",\r\r\n    price: \"$19\",\r\r\n    description: [\r\r\n      \"5 users\",\r\r\n      \"Up to 50 projects\",\r\r\n      \"20GB storage\",\r\r\n      \"Priority support\",\r\r\n      \"Advanced analytics\",\r\r\n      \"Custom domains\",\r\r\n    ],\r\r\n  },\r\r\n  {\r\r\n    name: \"Enterprise\",\r\r\n    price: \"$49\",\r\r\n    description: [\r\r\n      \"Unlimited users\",\r\r\n      \"Unlimited projects\",\r\r\n      \"500GB storage\",\r\r\n      \"24/7 support\",\r\r\n      \"Advanced analytics\",\r\r\n      \"Custom domains\",\r\r\n      \"Custom integrations\",\r\r\n    ],\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function PricingSectionSimple() {\r\r\n  return (\r\r\n    <section className=\"w-full py-12\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n        <div className=\"grid gap-6 lg:grid-cols-3 lg:gap-8\">\r\r\n          {plans.map((plan) => (\r\r\n            <Card key={plan.name} className=\"flex flex-col\">\r\r\n              <CardHeader>\r\r\n                <CardTitle className=\"text-xl\">{plan.name}</CardTitle>\r\r\n                <div className=\"mt-4 text-4xl font-bold\">\r\r\n                  {plan.price}\r\r\n                  <span className=\"text-sm font-normal text-muted-foreground\">\r\r\n                    /month\r\r\n                  </span>\r\r\n                </div>\r\r\n              </CardHeader>\r\r\n              <CardContent className=\"flex-1\">\r\r\n                <ul className=\"grid gap-3 text-sm text-muted-foreground\">\r\r\n                  {plan.description.map((item) => (\r\r\n                    <li key={item} className=\"flex items-center\">\r\r\n                      <CheckIcon className=\"mr-2 h-4 w-4\" />\r\r\n                      {item}\r\r\n                    </li>\r\r\n                  ))}\r\r\n                </ul>\r\r\n              </CardContent>\r\r\n              <CardFooter>\r\r\n                <Button className=\"w-full\" asChild>\r\r\n                  <Link href=\"/signup\">Get Started</Link>\r\r\n                </Button>\r\r\n              </CardFooter>\r\r\n            </Card>\r\r\n          ))}\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pricing-sections"
+    ]
+  }
+}

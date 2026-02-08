@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "product-list-grid-list",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/product-list-grid-list.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Heart, Star } from \"lucide-react\";\r\r\nimport Image from \"next/image\";\r\r\n\r\r\nexport default function GridList() {\r\r\n  return (\r\r\n    <div className=\"w-full max-w-7xl mx-auto p-6\">\r\r\n      <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\r\n        {/* Product Card */}\r\r\n        {[...Array(8)].map((_, i) => (\r\r\n          <div\r\r\n            key={i}\r\r\n            className=\"group bg-card rounded-xl border overflow-hidden\"\r\r\n          >\r\r\n            <div className=\"relative aspect-square bg-muted\">\r\r\n              <Image\r\r\n                src=\"https://images.unsplash.com/photo-1523275335684-37898b6baf30\"\r\r\n                alt=\"Product image\"\r\r\n                fill\r\r\n                className=\"object-cover transition-transform group-hover:scale-105\"\r\r\n                sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw\"\r\r\n              />\r\r\n              <Button\r\r\n                size=\"icon\"\r\r\n                variant=\"ghost\"\r\r\n                className=\"absolute top-2 right-2 h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity\"\r\r\n              >\r\r\n                <Heart className=\"h-4 w-4\" />\r\r\n              </Button>\r\r\n            </div>\r\r\n            <div className=\"p-4\">\r\r\n              <div className=\"flex items-center justify-between gap-4\">\r\r\n                <div className=\"min-w-0\">\r\r\n                  <h3 className=\"font-medium truncate\">\r\r\n                    Classic Leather Watch\r\r\n                  </h3>\r\r\n                  <div className=\"flex items-center gap-1 mt-1\">\r\r\n                    <Star className=\"h-3.5 w-3.5 fill-primary text-primary\" />\r\r\n                    <span className=\"text-sm\">4.9</span>\r\r\n                    <span className=\"text-sm text-muted-foreground\">(128)</span>\r\r\n                  </div>\r\r\n                </div>\r\r\n                <div className=\"text-right\">\r\r\n                  <div className=\"font-medium\">$299</div>\r\r\n                  <div className=\"text-sm text-muted-foreground line-through\">\r\r\n                    $399\r\r\n                  </div>\r\r\n                </div>\r\r\n              </div>\r\r\n              <div className=\"mt-4 grid grid-cols-2 gap-2\">\r\r\n                <Button size=\"sm\" className=\"w-full\">\r\r\n                  Buy Now\r\r\n                </Button>\r\r\n                <Button size=\"sm\" variant=\"outline\" className=\"w-full\">\r\r\n                  Add to Cart\r\r\n                </Button>\r\r\n              </div>\r\r\n            </div>\r\r\n          </div>\r\r\n        ))}\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "product-list"
+    ]
+  }
+}

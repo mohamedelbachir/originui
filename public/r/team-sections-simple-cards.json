@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "team-sections-simple-cards",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/avatar.json",
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/team-sections-simple-cards.tsx",
+      "content": "import { Twitter, Github, Linkedin } from \"lucide-react\";\r\r\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/registry/default/ui/avatar\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nconst team = [\r\r\n  {\r\r\n    name: \"David Forren\",\r\r\n    role: \"Founder / CEO\",\r\r\n    image:\r\r\n      \"https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80\",\r\r\n  },\r\r\n  {\r\r\n    name: \"Amil Evara\",\r\r\n    role: \"UI/UX Designer\",\r\r\n    image:\r\r\n      \"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80\",\r\r\n  },\r\r\n  {\r\r\n    name: \"Ebele Egbuna\",\r\r\n    role: \"Support Consultant\",\r\r\n    image:\r\r\n      \"https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80\",\r\r\n  },\r\r\n  {\r\r\n    name: \"Maria Powers\",\r\r\n    role: \"Director of sales\",\r\r\n    image:\r\r\n      \"https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80\",\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function SimpleCards() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32\">\r\r\n      {/* Title */}\r\r\n      <div className=\"max-w-2xl mx-auto text-center mb-10 lg:mb-14\">\r\r\n        <h2 className=\"text-3xl font-bold md:text-4xl md:leading-tight\">\r\r\n          Meet the crew\r\r\n        </h2>\r\r\n        <p className=\"mt-1 text-lg text-muted-foreground\">Creative people</p>\r\r\n      </div>\r\r\n      {/* End Title */}\r\r\n\r\r\n      {/* Grid */}\r\r\n      <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6\">\r\r\n        {team.map((member) => (\r\r\n          <div key={member.name} className=\"flex flex-col items-center\">\r\r\n            <Avatar className=\"size-20\">\r\r\n              <AvatarImage src={member.image} alt={member.name} />\r\r\n              <AvatarFallback>{member.name[0]}</AvatarFallback>\r\r\n            </Avatar>\r\r\n            <div className=\"mt-4 text-center\">\r\r\n              <h3 className=\"font-medium\">{member.name}</h3>\r\r\n              <p className=\"text-sm text-muted-foreground mt-1\">\r\r\n                {member.role}\r\r\n              </p>\r\r\n            </div>\r\r\n            <div className=\"mt-3 flex gap-2\">\r\r\n              <Button size=\"icon\" variant=\"ghost\">\r\r\n                <Twitter className=\"size-4\" />\r\r\n              </Button>\r\r\n              <Button size=\"icon\" variant=\"ghost\">\r\r\n                <Github className=\"size-4\" />\r\r\n              </Button>\r\r\n              <Button size=\"icon\" variant=\"ghost\">\r\r\n                <Linkedin className=\"size-4\" />\r\r\n              </Button>\r\r\n            </div>\r\r\n          </div>\r\r\n        ))}\r\r\n      </div>\r\r\n      {/* End Grid */}\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "team-sections"
+    ]
+  }
+}

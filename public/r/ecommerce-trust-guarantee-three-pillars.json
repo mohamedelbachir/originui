@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ecommerce-trust-guarantee-three-pillars",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/ecommerce-trust-guarantee-three-pillars.tsx",
+      "content": "import { Truck, RotateCcw, Headphones } from \"lucide-react\";\r\r\n\r\r\nexport default function TrustGuaranteeThreePillars() {\r\r\n  const trustPillars = [\r\r\n    {\r\r\n      icon: Truck,\r\r\n      title: \"Fast Shipping\",\r\r\n      description:\r\r\n        \"Free shipping on orders over $50. Most orders ship within 24 hours.\",\r\r\n    },\r\r\n    {\r\r\n      icon: RotateCcw,\r\r\n      title: \"No-Risk Returns\",\r\r\n      description:\r\r\n        \"30-day hassle-free returns. Love it or your money back, guaranteed.\",\r\r\n    },\r\r\n    {\r\r\n      icon: Headphones,\r\r\n      title: \"Top-Rated Support\",\r\r\n      description:\r\r\n        \"Award-winning customer service. We're here to help 7 days a week.\",\r\r\n    },\r\r\n  ];\r\r\n\r\r\n  return (\r\r\n    <section className=\"w-full px-4 py-8 md:py-12\">\r\r\n      <div className=\"container mx-auto\">\r\r\n        <div className=\"grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6\">\r\r\n          {trustPillars.map((pillar, index) => {\r\r\n            const IconComponent = pillar.icon;\r\r\n            return (\r\r\n              <div\r\r\n                key={index}\r\r\n                className=\"flex flex-col items-center space-y-4 text-center\"\r\r\n              >\r\r\n                <div className=\"bg-primary/10 flex h-16 w-16 items-center justify-center rounded-full\">\r\r\n                  <IconComponent className=\"text-primary h-8 w-8\" />\r\r\n                </div>\r\r\n                <div className=\"space-y-2\">\r\r\n                  <h3 className=\"text-foreground text-lg font-semibold\">\r\r\n                    {pillar.title}\r\r\n                  </h3>\r\r\n                  <p className=\"text-muted-foreground max-w-xs text-sm leading-relaxed\">\r\r\n                    {pillar.description}\r\r\n                  </p>\r\r\n                </div>\r\r\n              </div>\r\r\n            );\r\r\n          })}\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ecommerce-trust-guarantee"
+    ]
+  }
+}

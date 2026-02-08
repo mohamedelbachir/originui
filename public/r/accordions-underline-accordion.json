@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordions-underline-accordion",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/accordion.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/accordions-underline-accordion.tsx",
+      "content": "import {\r\r\n  Accordion,\r\r\n  AccordionContent,\r\r\n  AccordionItem,\r\r\n  AccordionTrigger,\r\r\n} from \"@/registry/default/ui/accordion\";\r\r\n\r\r\nexport default function UnderlineAccordion() {\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6\">\r\r\n      <Accordion type=\"single\" collapsible className=\"w-full\">\r\r\n        <AccordionItem value=\"item-1\" className=\"border-b\">\r\r\n          <AccordionTrigger className=\"hover:no-underline group relative\">\r\r\n            <span className=\"relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-foreground after:origin-left after:scale-x-0 group-hover:after:scale-x-100 group-data-[state=open]:after:scale-x-100 after:transition-transform after:duration-300\">\r\r\n              Is it accessible?\r\r\n            </span>\r\r\n          </AccordionTrigger>\r\r\n          <AccordionContent>\r\r\n            Yes. It adheres to the WAI-ARIA design pattern.\r\r\n          </AccordionContent>\r\r\n        </AccordionItem>\r\r\n        <AccordionItem value=\"item-2\" className=\"border-b\">\r\r\n          <AccordionTrigger className=\"hover:no-underline group relative\">\r\r\n            <span className=\"relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-foreground after:origin-left after:scale-x-0 group-hover:after:scale-x-100 group-data-[state=open]:after:scale-x-100 after:transition-transform after:duration-300\">\r\r\n              Is it styled?\r\r\n            </span>\r\r\n          </AccordionTrigger>\r\r\n          <AccordionContent>\r\r\n            Yes. It comes with default styles that matches the other\r\r\n            components&apos; aesthetic.\r\r\n          </AccordionContent>\r\r\n        </AccordionItem>\r\r\n        <AccordionItem value=\"item-3\" className=\"border-b\">\r\r\n          <AccordionTrigger className=\"hover:no-underline group relative\">\r\r\n            <span className=\"relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-foreground after:origin-left after:scale-x-0 group-hover:after:scale-x-100 group-data-[state=open]:after:scale-x-100 after:transition-transform after:duration-300\">\r\r\n              Is it animated?\r\r\n            </span>\r\r\n          </AccordionTrigger>\r\r\n          <AccordionContent>\r\r\n            Yes. It&apos;s animated by default, but you can disable it if you\r\r\n            prefer.\r\r\n          </AccordionContent>\r\r\n        </AccordionItem>\r\r\n      </Accordion>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "accordions"
+    ]
+  }
+}

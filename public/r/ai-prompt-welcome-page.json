@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-prompt-welcome-page",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/input.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/ai-prompt-welcome-page.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { GalleryVerticalEnd, Mic, UploadCloud } from \"lucide-react\";\r\r\nimport Link from \"next/link\";\r\r\n\r\r\nexport default function WelcomePage() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Content */}\r\r\n      <div className=\"min-h-screen flex flex-col pb-6\">\r\r\n        <div className=\"flex-grow py-24 lg:py-32  flex flex-col justify-center\">\r\r\n          <div className=\"mt-0 max-w-4xl w-full text-center mx-auto px-4 sm:px-6 lg:px-8\">\r\r\n            <div className=\"mb-4 flex justify-center items-center\">\r\r\n              {/* Logo */}\r\r\n              <Link\r\r\n                href=\"#\"\r\r\n                className=\"flex items-center gap-2 self-center font-medium\"\r\r\n              >\r\r\n                <div className=\"flex h-6 w-6 items-center justify-center rounded-md bg-primary text-primary-foreground\">\r\r\n                  <GalleryVerticalEnd className=\"size-4\" />\r\r\n                </div>\r\r\n                Acme Inc.\r\r\n              </Link>\r\r\n              {/* End Logo */}\r\r\n            </div>\r\r\n            <h1 className=\"text-3xl font-bold text-primary sm:text-4xl\">\r\r\n              Welcome to Your Application\r\r\n            </h1>\r\r\n            <p className=\"mt-3 text-muted-foreground\">\r\r\n              Your AI-powered copilot for the web\r\r\n            </p>\r\r\n          </div>\r\r\n          {/* Search */}\r\r\n          <div className=\"mt-10 max-w-2xl w-full mx-auto px-4 sm:px-6 lg:px-8\">\r\r\n            <div className=\"relative\">\r\r\n              <Input\r\r\n                type=\"text\"\r\r\n                className=\"p-4 block w-full rounded-full\"\r\r\n                placeholder=\"Ask me anything...\"\r\r\n              />\r\r\n              <div className=\"absolute top-1/2 right-2 -translate-y-1/2\">\r\r\n                <Button size=\"sm\" variant=\"ghost\" className=\"rounded-full\">\r\r\n                  <UploadCloud className=\"shrink-0 w-6 h-6\" />\r\r\n                </Button>\r\r\n                <Button size=\"sm\" variant=\"ghost\" className=\"rounded-full\">\r\r\n                  <Mic className=\"shrink-0 w-6 h-6\" />\r\r\n                </Button>\r\r\n              </div>\r\r\n            </div>\r\r\n          </div>\r\r\n          {/* End Search */}\r\r\n        </div>\r\r\n        <footer className=\"mt-auto max-w-4xl text-center mx-auto px-4 sm:px-6 lg:px-8\">\r\r\n          <p className=\"text-xs text-muted-foreground\">© 2025 Acme Inc.</p>\r\r\n        </footer>\r\r\n      </div>\r\r\n      {/* End Content */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ai-prompt"
+    ]
+  }
+}

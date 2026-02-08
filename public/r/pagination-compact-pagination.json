@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-compact-pagination",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/pagination.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/pagination-compact-pagination.tsx",
+      "content": "import {\r\r\n  Pagination,\r\r\n  PaginationContent,\r\r\n  PaginationItem,\r\r\n  PaginationLink,\r\r\n} from \"@/registry/default/ui/pagination\";\r\r\nimport { ChevronLeft, ChevronRight } from \"lucide-react\";\r\r\n\r\r\nexport default function CompactPagination() {\r\r\n  return (\r\r\n    <div className=\"p-6\">\r\r\n      <Pagination>\r\r\n        <PaginationContent className=\"gap-0.5\">\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              size=\"icon\"\r\r\n              className=\"h-7 w-7\"\r\r\n              aria-label=\"Go to previous page\"\r\r\n            >\r\r\n              <ChevronLeft className=\"h-3 w-3\" />\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" className=\"h-7 w-7 text-xs\">\r\r\n              1\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" isActive className=\"h-7 w-7 text-xs\">\r\r\n              2\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" className=\"h-7 w-7 text-xs\">\r\r\n              3\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" className=\"h-7 w-7 text-xs\">\r\r\n              4\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" className=\"h-7 w-7 text-xs\">\r\r\n              5\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              size=\"icon\"\r\r\n              className=\"h-7 w-7\"\r\r\n              aria-label=\"Go to next page\"\r\r\n            >\r\r\n              <ChevronRight className=\"h-3 w-3\" />\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n        </PaginationContent>\r\r\n      </Pagination>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pagination"
+    ]
+  }
+}

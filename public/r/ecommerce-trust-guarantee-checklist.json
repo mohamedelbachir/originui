@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ecommerce-trust-guarantee-checklist",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/ecommerce-trust-guarantee-checklist.tsx",
+      "content": "import { Check } from \"lucide-react\";\r\r\n\r\r\nexport default function TrustGuaranteeChecklist() {\r\r\n  const trustItems = [\r\r\n    {\r\r\n      title: \"Money-Back Guarantee\",\r\r\n      description: \"30-day hassle-free returns\",\r\r\n    },\r\r\n    {\r\r\n      title: \"Verified Payments\",\r\r\n      description: \"SSL encrypted & secure checkout\",\r\r\n    },\r\r\n    {\r\r\n      title: \"Easy Returns\",\r\r\n      description: \"Free return shipping included\",\r\r\n    },\r\r\n    {\r\r\n      title: \"Fast Shipping\",\r\r\n      description: \"Free delivery on orders over $50\",\r\r\n    },\r\r\n    {\r\r\n      title: \"Secure Transactions\",\r\r\n      description: \"Protected by industry standards\",\r\r\n    },\r\r\n    {\r\r\n      title: \"24/7 Support\",\r\r\n      description: \"Always here to help you\",\r\r\n    },\r\r\n  ];\r\r\n\r\r\n  return (\r\r\n    <div className=\"px-4 py-8 md:py-12\">\r\r\n      <div className=\"mx-auto max-w-4xl\">\r\r\n        <div className=\"mb-8 text-center\">\r\r\n          <h2 className=\"mb-2 text-2xl font-bold md:text-3xl\">\r\r\n            Shop with Confidence\r\r\n          </h2>\r\r\n          <p className=\"text-muted-foreground\">\r\r\n            Your satisfaction is our guarantee\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6\">\r\r\n          {trustItems.map((item, index) => {\r\r\n            return (\r\r\n              <div\r\r\n                key={index}\r\r\n                className=\"bg-card flex items-start gap-3 rounded-lg border p-4\"\r\r\n              >\r\r\n                <div className=\"bg-primary mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full\">\r\r\n                  <Check className=\"text-primary-foreground h-4 w-4\" />\r\r\n                </div>\r\r\n                <div className=\"flex flex-1 items-start gap-3\">\r\r\n                  <div className=\"min-w-0 flex-1\">\r\r\n                    <h3 className=\"text-sm leading-tight font-semibold md:text-base\">\r\r\n                      {item.title}\r\r\n                    </h3>\r\r\n                    <p className=\"text-muted-foreground mt-1 text-sm leading-relaxed\">\r\r\n                      {item.description}\r\r\n                    </p>\r\r\n                  </div>\r\r\n                </div>\r\r\n              </div>\r\r\n            );\r\r\n          })}\r\r\n        </div>\r\r\n\r\r\n        <div className=\"mt-8 text-center\">\r\r\n          <p className=\"text-muted-foreground text-sm\">\r\r\n            Questions about our policies?{\" \"}\r\r\n            <span className=\"text-primary cursor-pointer font-medium hover:underline\">\r\r\n              Contact our support team\r\r\n            </span>\r\r\n          </p>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ecommerce-trust-guarantee"
+    ]
+  }
+}

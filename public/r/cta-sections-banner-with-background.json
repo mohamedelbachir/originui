@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-sections-banner-with-background",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cta-sections-banner-with-background.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function BannerWithBackgroundCTA() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Banner CTA Section */}\r\r\n      <div className=\"relative py-16 md:py-24 overflow-hidden bg-primary text-primary-foreground\">\r\r\n        {/* Background Image */}\r\r\n        <div className=\"absolute inset-0 z-0\">\r\r\n          <Image\r\r\n            src=\"https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3\"\r\r\n            alt=\"Abstract digital technology background\"\r\r\n            fill\r\r\n            className=\"object-cover opacity-20\"\r\r\n          />\r\r\n        </div>\r\r\n\r\r\n        <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] relative z-10 px-4 md:px-6\">\r\r\n          <div className=\"mx-auto max-w-2xl space-y-6 text-center\">\r\r\n            <div className=\"space-y-2\">\r\r\n              <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl\">\r\r\n                Ready to transform your business?\r\r\n              </h2>\r\r\n              <p className=\"mx-auto max-w-[600px] text-primary-foreground/80 md:text-xl\">\r\r\n                Join our platform today and see immediate results.\r\r\n              </p>\r\r\n            </div>\r\r\n            <div className=\"space-x-4\">\r\r\n              <Button size=\"lg\" variant=\"secondary\" asChild>\r\r\n                <Link href=\"#\">Get Started</Link>\r\r\n              </Button>\r\r\n              <Button\r\r\n                size=\"lg\"\r\r\n                variant=\"outline\"\r\r\n                className=\"bg-transparent border-primary-foreground hover:bg-primary-foreground/10 text-primary-foreground hover:text-primary-foreground\"\r\r\n                asChild\r\r\n              >\r\r\n                <Link href=\"#\">Learn More</Link>\r\r\n              </Button>\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Banner CTA Section */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cta-sections"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cards-status-card",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cards-status-card.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardDescription,\r\r\n  CardFooter,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\nexport default function StatusCard() {\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6 px-4\">\r\r\n      <Card>\r\r\n        <CardHeader className=\"flex flex-row items-start justify-between space-y-0\">\r\r\n          <div>\r\r\n            <CardTitle>Project Status</CardTitle>\r\r\n            <CardDescription>Current deployment status</CardDescription>\r\r\n          </div>\r\r\n          <Badge variant=\"default\" className=\"ml-2\">\r\r\n            Active\r\r\n          </Badge>\r\r\n        </CardHeader>\r\r\n        <CardContent>\r\r\n          <div className=\"space-y-4\">\r\r\n            <div className=\"flex items-center justify-between\">\r\r\n              <span className=\"text-sm font-medium\">Uptime</span>\r\r\n              <span className=\"text-sm text-muted-foreground\">99.9%</span>\r\r\n            </div>\r\r\n            <div className=\"flex items-center justify-between\">\r\r\n              <span className=\"text-sm font-medium\">Last Deployed</span>\r\r\n              <span className=\"text-sm text-muted-foreground\">2 hours ago</span>\r\r\n            </div>\r\r\n            <div className=\"flex items-center justify-between\">\r\r\n              <span className=\"text-sm font-medium\">Environment</span>\r\r\n              <span className=\"text-sm text-muted-foreground\">Production</span>\r\r\n            </div>\r\r\n          </div>\r\r\n        </CardContent>\r\r\n        <CardFooter className=\"flex justify-between\">\r\r\n          <Button variant=\"outline\">View Logs</Button>\r\r\n          <Button>Manage</Button>\r\r\n        </CardFooter>\r\r\n      </Card>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cards"
+    ]
+  }
+}

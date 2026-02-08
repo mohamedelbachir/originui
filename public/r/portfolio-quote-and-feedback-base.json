@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-quote-and-feedback-base",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-quote-and-feedback-base.tsx",
+      "content": "export default function Base() {\r\r\n  return (\r\r\n    <div>\r\r\n      <div className=\"container mx-auto px-4 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px]\">\r\r\n        <blockquote className=\"mx-auto max-w-4xl\">\r\r\n          <div className=\"flex flex-col items-center\">\r\r\n            <div className=\"text-primary mb-6 font-serif text-4xl\">&ldquo;</div>\r\r\n            <p className=\"text-center text-xl sm:text-2xl md:text-3xl md:leading-normal\">\r\r\n              Working with this team was an absolute pleasure. The level of\r\r\n              professionalism and creativity exceeded all my expectations.\r\r\n            </p>\r\r\n            <div className=\"mt-6 flex flex-col items-center md:mt-10\">\r\r\n              <p className=\"font-semibold\">Sarah Johnson</p>\r\r\n              <p className=\"text-muted-foreground\">\r\r\n                Design Director, Creative Studio\r\r\n              </p>\r\r\n            </div>\r\r\n          </div>\r\r\n        </blockquote>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-quote-and-feedback"
+    ]
+  }
+}

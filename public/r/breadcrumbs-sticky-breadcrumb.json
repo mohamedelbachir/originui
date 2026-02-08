@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs-sticky-breadcrumb",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/breadcrumb.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/breadcrumbs-sticky-breadcrumb.tsx",
+      "content": "import {\r\r\n  Breadcrumb,\r\r\n  BreadcrumbItem,\r\r\n  BreadcrumbLink,\r\r\n  BreadcrumbList,\r\r\n  BreadcrumbPage,\r\r\n  BreadcrumbSeparator,\r\r\n} from \"@/registry/default/ui/breadcrumb\";\r\r\nimport { ChevronRight } from \"lucide-react\";\r\r\n\r\r\nexport default function StickyBreadcrumb() {\r\r\n  return (\r\r\n    <div className=\"relative h-[300px] border rounded-md overflow-hidden\">\r\r\n      {/* This container simulates a scrollable area */}\r\r\n      <div className=\"h-full overflow-y-auto\">\r\r\n        {/* Sticky breadcrumb */}\r\r\n        <Breadcrumb className=\"sticky top-0 z-10 bg-background/80 backdrop-blur-sm border-b p-3 shadow-sm\">\r\r\n          <BreadcrumbList>\r\r\n            <BreadcrumbItem>\r\r\n              <BreadcrumbLink href=\"/\">Home</BreadcrumbLink>\r\r\n            </BreadcrumbItem>\r\r\n            <BreadcrumbSeparator>\r\r\n              <ChevronRight className=\"h-4 w-4\" />\r\r\n            </BreadcrumbSeparator>\r\r\n            <BreadcrumbItem>\r\r\n              <BreadcrumbLink href=\"/products\">Products</BreadcrumbLink>\r\r\n            </BreadcrumbItem>\r\r\n            <BreadcrumbSeparator>\r\r\n              <ChevronRight className=\"h-4 w-4\" />\r\r\n            </BreadcrumbSeparator>\r\r\n            <BreadcrumbItem>\r\r\n              <BreadcrumbLink href=\"/products/categories\">\r\r\n                Categories\r\r\n              </BreadcrumbLink>\r\r\n            </BreadcrumbItem>\r\r\n            <BreadcrumbSeparator>\r\r\n              <ChevronRight className=\"h-4 w-4\" />\r\r\n            </BreadcrumbSeparator>\r\r\n            <BreadcrumbItem>\r\r\n              <BreadcrumbPage className=\"font-medium\">\r\r\n                Electronics\r\r\n              </BreadcrumbPage>\r\r\n            </BreadcrumbItem>\r\r\n          </BreadcrumbList>\r\r\n        </Breadcrumb>\r\r\n\r\r\n        {/* Sample content to demonstrate scrolling */}\r\r\n        <div className=\"p-6 space-y-4\">\r\r\n          <h2 className=\"text-2xl font-bold\">Electronics</h2>\r\r\n          <p className=\"text-muted-foreground\">\r\r\n            Browse our selection of electronic products.\r\r\n          </p>\r\r\n          <div className=\"space-y-4\">\r\r\n            {Array.from({ length: 5 }).map((_, i) => (\r\r\n              <div key={i} className=\"p-4 border rounded-md\">\r\r\n                <h3 className=\"font-medium\">Product Category {i + 1}</h3>\r\r\n                <p className=\"text-sm text-muted-foreground\">\r\r\n                  This is a sample product category description.\r\r\n                </p>\r\r\n              </div>\r\r\n            ))}\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "breadcrumbs"
+    ]
+  }
+}

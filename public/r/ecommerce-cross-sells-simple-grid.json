@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ecommerce-cross-sells-simple-grid",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/ecommerce-cross-sells-simple-grid.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\n\r\r\nconst relatedProducts = [\r\r\n  {\r\r\n    id: 1,\r\r\n    name: \"Wireless Bluetooth Headphones\",\r\r\n    description: \"Premium sound quality with noise cancellation\",\r\r\n    price: \"$89.99\",\r\r\n    image: \"/placeholder.svg?height=200&width=200\",\r\r\n  },\r\r\n  {\r\r\n    id: 2,\r\r\n    name: \"Portable Phone Charger\",\r\r\n    description: \"Fast charging power bank with USB-C\",\r\r\n    price: \"$34.99\",\r\r\n    image: \"/placeholder.svg?height=200&width=200\",\r\r\n  },\r\r\n  {\r\r\n    id: 3,\r\r\n    name: \"Smart Watch Band\",\r\r\n    description: \"Comfortable silicone band in multiple colors\",\r\r\n    price: \"$19.99\",\r\r\n    image: \"/placeholder.svg?height=200&width=200\",\r\r\n  },\r\r\n  {\r\r\n    id: 4,\r\r\n    name: \"Phone Case with Stand\",\r\r\n    description: \"Protective case with built-in kickstand\",\r\r\n    price: \"$24.99\",\r\r\n    image: \"/placeholder.svg?height=200&width=200\",\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function CrossSellSimpleGrid() {\r\r\n  return (\r\r\n    <section className=\"px-4 py-8 md:py-12\">\r\r\n      <div className=\"mx-auto max-w-6xl\">\r\r\n        <h2 className=\"mb-8 text-center text-2xl font-bold tracking-tight\">\r\r\n          You May Also Like\r\r\n        </h2>\r\r\n\r\r\n        <div className=\"grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4\">\r\r\n          {relatedProducts.map((product) => (\r\r\n            <Card\r\r\n              key={product.id}\r\r\n              className=\"group overflow-hidden border-0 p-0 shadow-sm transition-shadow hover:shadow-md\"\r\r\n            >\r\r\n              <CardContent className=\"p-0\">\r\r\n                <div className=\"relative overflow-hidden\">\r\r\n                  <Link href=\"#\" className=\"block\">\r\r\n                    <Image\r\r\n                      src={product.image || \"/placeholder.svg\"}\r\r\n                      alt={product.name}\r\r\n                      width={200}\r\r\n                      height={200}\r\r\n                      className=\"h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105\"\r\r\n                    />\r\r\n                  </Link>\r\r\n                </div>\r\r\n\r\r\n                <div className=\"space-y-3 p-4\">\r\r\n                  <div className=\"space-y-1\">\r\r\n                    <Link href=\"#\" className=\"block\">\r\r\n                      <h3 className=\"hover:text-primary line-clamp-2 text-sm leading-tight font-semibold transition-colors\">\r\r\n                        {product.name}\r\r\n                      </h3>\r\r\n                    </Link>\r\r\n                    <p className=\"text-muted-foreground line-clamp-2 text-xs\">\r\r\n                      {product.description}\r\r\n                    </p>\r\r\n                  </div>\r\r\n\r\r\n                  <div className=\"flex items-center justify-between\">\r\r\n                    <span className=\"text-lg font-bold\">{product.price}</span>\r\r\n                    <Button size=\"sm\" variant=\"outline\" className=\"text-xs\">\r\r\n                      Add to Cart\r\r\n                    </Button>\r\r\n                  </div>\r\r\n                </div>\r\r\n              </CardContent>\r\r\n            </Card>\r\r\n          ))}\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ecommerce-cross-sells"
+    ]
+  }
+}

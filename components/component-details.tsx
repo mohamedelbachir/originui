@@ -1,12 +1,14 @@
 "use client"
 
 import { JSX, useEffect, useState } from "react"
-import { CodeIcon } from "lucide-react"
+//import dynamic from "next/dynamic"
+import { CodeIcon, Maximize2 } from "lucide-react"
 import type { RegistryItem } from "shadcn/registry"
 
 import { convertRegistryPaths } from "@/lib/utils"
 import ComponentCli from "@/components/cli-commands"
 import CodeBlock, { highlight } from "@/components/code-block"
+import ComponentLoader from "@/components/component-loader-client"
 import CopyButton from "@/components/copy-button"
 import CopyRegistry from "@/components/copy-registry"
 import FavoriteButton from "@/components/favorite-button"
@@ -76,7 +78,7 @@ export default function ComponentDetails({
   }, [component.name])
 
   return (
-    <div className="absolute top-0 right-2 flex gap-1 peer-data-comp-loading:hidden">
+    <div className="absolute top-2 right-2 z-10 flex gap-1 peer-data-comp-loading:hidden">
       <FavoriteButton
         component={{ id: component.name, name: component.name }}
         categorie={categorie}
@@ -86,6 +88,41 @@ export default function ComponentDetails({
       <OpenInV0
         componentSource={`https://ui.woilasoft.com/r/${component.name}.json`}
       />
+      <Dialog>
+        <TooltipProvider delayDuration={0}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
+                  >
+                    <Maximize2 size={16} aria-hidden={true} />
+                  </Button>
+                </DialogTrigger>
+              </span>
+            </TooltipTrigger>
+            <TooltipContent className="text-muted-foreground px-2 py-1 text-xs">
+              Maximize view
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <DialogContent className="flex max-h-[90vh] max-w-[90vw] flex-col overflow-hidden p-0 sm:max-h-[90vh] sm:max-w-[90vw]">
+          <DialogHeader className="sr-only">
+            <DialogTitle>Component Preview</DialogTitle>
+            <DialogDescription>
+              Full screen preview of the component
+            </DialogDescription>
+          </DialogHeader>
+          <div className="items-top h-full justify-top mt-auto flex flex-1 flex-col overflow-auto">
+            <ComponentLoader component={component} />
+            {/* <div className="mx-auto mt-auto h-full w-full">
+            </div> */}
+          </div>
+        </DialogContent>
+      </Dialog>
       <Dialog>
         <TooltipProvider delayDuration={0}>
           <Tooltip>

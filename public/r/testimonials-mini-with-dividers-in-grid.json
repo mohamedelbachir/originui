@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonials-mini-with-dividers-in-grid",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/avatar.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/testimonials-mini-with-dividers-in-grid.tsx",
+      "content": "import { Avatar, AvatarImage } from \"@/registry/default/ui/avatar\";\r\r\n\r\r\nexport default function MiniWithDividersInGrid() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 py-24 md:px-6 lg:py-32 2xl:max-w-[1400px]\">\r\r\n      {/* Grid */}\r\r\n      <div className=\"divide-border grid grid-cols-1 gap-x-3 divide-y border-y sm:grid-cols-2 sm:divide-x sm:divide-y-0\">\r\r\n        <div className=\"py-6 sm:-ms-4 sm:px-4\">\r\r\n          {/* Review */}\r\r\n          <blockquote>\r\r\n            <span className=\"text-sm\">\r\r\n              I&apos;m absolutely floored by the level of care and attention to\r\r\n              detail Eliana has put into this project and for one can guarantee\r\r\n              that we will be a return customer.\r\r\n            </span>\r\r\n\r\r\n            <footer className=\"mt-3\">\r\r\n              <div className=\"flex items-center gap-x-2\">\r\r\n                <Avatar className=\"size-5 shrink-0\">\r\r\n                  <AvatarImage src=\"https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80\" />\r\r\n                </Avatar>\r\r\n                <div className=\"grow\">\r\r\n                  <div className=\"text-muted-foreground text-xs\">\r\r\n                    Josh Grazioso\r\r\n                  </div>\r\r\n                </div>\r\r\n              </div>\r\r\n            </footer>\r\r\n          </blockquote>\r\r\n          {/* End Review */}\r\r\n        </div>\r\r\n\r\r\n        <div className=\"py-6 sm:px-4\">\r\r\n          {/* Review */}\r\r\n          <blockquote>\r\r\n            <span className=\"text-sm\">\r\r\n              To say that hiring Eliana has been life-changing is an\r\r\n              understatement. My business has tripled and I got my life back.\r\r\n            </span>\r\r\n\r\r\n            <footer className=\"mt-3\">\r\r\n              <div className=\"flex items-center gap-x-2\">\r\r\n                <Avatar className=\"size-5 shrink-0\">\r\r\n                  <AvatarImage src=\"https://images.unsplash.com/photo-1671726203390-cdc4354ee2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80\" />\r\r\n                </Avatar>\r\r\n                <div className=\"grow\">\r\r\n                  <div className=\"text-muted-foreground text-xs\">\r\r\n                    Nicole Grazioso\r\r\n                  </div>\r\r\n                </div>\r\r\n              </div>\r\r\n            </footer>\r\r\n          </blockquote>\r\r\n          {/* End Review */}\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Grid */}\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "testimonials"
+    ]
+  }
+}

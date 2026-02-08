@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "announcement-banners-simple-centered",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/announcement-banners-simple-centered.tsx",
+      "content": "import Link from \"next/link\";\r\r\n\r\r\nexport default function SimpleCentered() {\r\r\n  return (\r\r\n    <div className=\"bg-muted\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n        <div className=\"flex items-center justify-between gap-x-6 p-4\">\r\r\n          <div className=\"flex w-full items-center gap-x-4 text-sm\">\r\r\n            <p className=\"flex-1 text-center\">\r\r\n              <Link\r\r\n                href=\"#\"\r\r\n                className=\"font-semibold underline-offset-4 hover:underline\"\r\r\n              >\r\r\n                Introducing our new UI blocks\r\r\n              </Link>\r\r\n              <span className=\"hidden sm:inline\">\r\r\n                {\" \"}\r\r\n                — Get started with 50+ new components.\r\r\n              </span>\r\r\n            </p>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "announcement-banners"
+    ]
+  }
+}

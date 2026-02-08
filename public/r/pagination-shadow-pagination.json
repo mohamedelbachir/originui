@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-shadow-pagination",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/pagination.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/pagination-shadow-pagination.tsx",
+      "content": "import {\r\r\n  Pagination,\r\r\n  PaginationContent,\r\r\n  PaginationEllipsis,\r\r\n  PaginationItem,\r\r\n  PaginationLink,\r\r\n  PaginationNext,\r\r\n  PaginationPrevious,\r\r\n} from \"@/registry/default/ui/pagination\";\r\r\n\r\r\nexport default function ShadowPagination() {\r\r\n  return (\r\r\n    <div className=\"p-6\">\r\r\n      <Pagination>\r\r\n        <PaginationContent>\r\r\n          <PaginationItem>\r\r\n            <PaginationPrevious\r\r\n              href=\"#\"\r\r\n              className=\"shadow-md hover:shadow-lg transition-shadow border-none\"\r\r\n            />\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              className=\"shadow-md hover:shadow-lg transition-shadow border-none\"\r\r\n            >\r\r\n              1\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              isActive\r\r\n              className=\"shadow-lg border-none bg-primary text-primary-foreground hover:text-primary-foreground/90 hover:bg-primary/90\"\r\r\n            >\r\r\n              2\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              className=\"shadow-md hover:shadow-lg transition-shadow border-none\"\r\r\n            >\r\r\n              3\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationEllipsis className=\"text-muted-foreground\" />\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              className=\"shadow-md hover:shadow-lg transition-shadow border-none\"\r\r\n            >\r\r\n              8\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationNext\r\r\n              href=\"#\"\r\r\n              className=\"shadow-md hover:shadow-lg transition-shadow border-none\"\r\r\n            />\r\r\n          </PaginationItem>\r\r\n        </PaginationContent>\r\r\n      </Pagination>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pagination"
+    ]
+  }
+}

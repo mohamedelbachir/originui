@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-sections-gradient-cta",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cta-sections-gradient-cta.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Sparkles } from \"lucide-react\";\r\r\n\r\r\nexport default function GradientCTA() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Gradient CTA Section */}\r\r\n      <div className=\"relative py-16 md:py-24 overflow-hidden\">\r\r\n        <div className=\"absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-background\"></div>\r\r\n        <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] relative z-10 px-4 md:px-6\">\r\r\n          <div className=\"flex flex-col items-center justify-center space-y-4 text-center\">\r\r\n            <div className=\"inline-block rounded-full bg-background/80 backdrop-blur-sm px-3 py-1 border shadow-sm\">\r\r\n              <div className=\"flex items-center gap-1.5\">\r\r\n                <Sparkles className=\"h-3.5 w-3.5 text-primary\" />\r\r\n                <span className=\"text-xs font-medium\">\r\r\n                  New Features Available\r\r\n                </span>\r\r\n              </div>\r\r\n            </div>\r\r\n            <div className=\"space-y-2 max-w-3xl\">\r\r\n              <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl\">\r\r\n                Elevate your experience with our premium plan\r\r\n              </h2>\r\r\n              <p className=\"mx-auto max-w-[700px] text-muted-foreground md:text-xl\">\r\r\n                Get access to advanced features, priority support, and powerful\r\r\n                integrations.\r\r\n              </p>\r\r\n            </div>\r\r\n            <div className=\"flex flex-col sm:flex-row gap-4 mt-4\">\r\r\n              <Button size=\"lg\" className=\"shadow-md\" asChild>\r\r\n                <Link href=\"#\">Upgrade Now</Link>\r\r\n              </Button>\r\r\n              <Button\r\r\n                size=\"lg\"\r\r\n                variant=\"outline\"\r\r\n                className=\"bg-background/80 backdrop-blur-sm shadow-sm\"\r\r\n                asChild\r\r\n              >\r\r\n                <Link href=\"#\">Compare Plans</Link>\r\r\n              </Button>\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Gradient CTA Section */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cta-sections"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "buttons-pulse-buttons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/buttons-pulse-buttons.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function PulseButtons() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Button variant=\"default\" className=\"animate-pulse hover:animate-none\">\r\r\n        Default\r\r\n      </Button>\r\r\n\r\r\n      <Button variant=\"secondary\" className=\"animate-pulse hover:animate-none\">\r\r\n        Secondary\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"destructive\"\r\r\n        className=\"animate-pulse hover:animate-none\"\r\r\n      >\r\r\n        Destructive\r\r\n      </Button>\r\r\n\r\r\n      <Button variant=\"outline\" className=\"animate-pulse hover:animate-none\">\r\r\n        Outline\r\r\n      </Button>\r\r\n\r\r\n      <Button variant=\"ghost\" className=\"animate-pulse hover:animate-none\">\r\r\n        Ghost\r\r\n      </Button>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "buttons"
+    ]
+  }
+}

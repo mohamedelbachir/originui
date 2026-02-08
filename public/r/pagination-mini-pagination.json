@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-mini-pagination",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/pagination.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/pagination-mini-pagination.tsx",
+      "content": "import {\r\r\n  Pagination,\r\r\n  PaginationContent,\r\r\n  PaginationItem,\r\r\n  PaginationLink,\r\r\n} from \"@/registry/default/ui/pagination\";\r\r\nimport { ChevronLeft, ChevronRight } from \"lucide-react\";\r\r\n\r\r\nexport default function MiniPagination() {\r\r\n  return (\r\r\n    <div className=\"p-6\">\r\r\n      <Pagination>\r\r\n        <PaginationContent className=\"gap-1\">\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              size=\"icon\"\r\r\n              aria-label=\"Go to previous page\"\r\r\n              className=\"h-8 w-8 border border-border\"\r\r\n            >\r\r\n              <ChevronLeft className=\"h-4 w-4\" />\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <span className=\"flex h-8 items-center px-2 text-sm\">2 / 8</span>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              size=\"icon\"\r\r\n              aria-label=\"Go to next page\"\r\r\n              className=\"h-8 w-8 border border-border\"\r\r\n            >\r\r\n              <ChevronRight className=\"h-4 w-4\" />\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n        </PaginationContent>\r\r\n      </Pagination>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pagination"
+    ]
+  }
+}

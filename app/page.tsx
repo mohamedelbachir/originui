@@ -44,7 +44,7 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section className="bg-muted/30 border-t !px-0">
+      {/* <Section className="bg-muted/30 border-t !px-0">
         <div className="py-8">
           <h2 className="mb-12 text-center text-3xl font-bold">Blocks</h2>
           <div className="relative">
@@ -54,7 +54,7 @@ export default function Page() {
                   <SimpleCard
                     slug={`blocks/${block.slug}`}
                     name={block.name}
-                    count={block.components.length}
+                    count={block.components?.length||0}
                     isNew={block.isNew}
                   />
                 </div>
@@ -64,7 +64,7 @@ export default function Page() {
             <div className="from-muted/30 absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l to-transparent" />
           </div>
         </div>
-      </Section>
+      </Section> */}
       <Section className="bg-background border-t p-4">
         <SubscribeBottom />
       </Section>

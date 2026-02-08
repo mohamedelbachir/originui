@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs-numbered-breadcrumb",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/breadcrumb.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/breadcrumbs-numbered-breadcrumb.tsx",
+      "content": "import {\r\r\n  Breadcrumb,\r\r\n  BreadcrumbItem,\r\r\n  BreadcrumbLink,\r\r\n  BreadcrumbList,\r\r\n  BreadcrumbPage,\r\r\n  BreadcrumbSeparator,\r\r\n} from \"@/registry/default/ui/breadcrumb\";\r\r\nimport { ChevronRight } from \"lucide-react\";\r\r\n\r\r\nexport default function NumberedBreadcrumb() {\r\r\n  return (\r\r\n    <Breadcrumb className=\"p-6\">\r\r\n      <BreadcrumbList>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink href=\"/\" className=\"flex items-center gap-2\">\r\r\n            <span className=\"flex h-5 w-5 items-center justify-center rounded-full bg-muted text-xs font-medium\">\r\r\n              1\r\r\n            </span>\r\r\n            <span>Home</span>\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink href=\"/products\" className=\"flex items-center gap-2\">\r\r\n            <span className=\"flex h-5 w-5 items-center justify-center rounded-full bg-muted text-xs font-medium\">\r\r\n              2\r\r\n            </span>\r\r\n            <span>Products</span>\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink\r\r\n            href=\"/products/categories\"\r\r\n            className=\"flex items-center gap-2\"\r\r\n          >\r\r\n            <span className=\"flex h-5 w-5 items-center justify-center rounded-full bg-muted text-xs font-medium\">\r\r\n              3\r\r\n            </span>\r\r\n            <span>Categories</span>\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbPage className=\"flex items-center gap-2 font-medium\">\r\r\n            <span className=\"flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-medium\">\r\r\n              4\r\r\n            </span>\r\r\n            <span>Electronics</span>\r\r\n          </BreadcrumbPage>\r\r\n        </BreadcrumbItem>\r\r\n      </BreadcrumbList>\r\r\n    </Breadcrumb>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "breadcrumbs"
+    ]
+  }
+}

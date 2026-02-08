@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "feature-sections-card-grid",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/feature-sections-card-grid.tsx",
+      "content": "import { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  ArrowRight,\r\r\n  Sparkles,\r\r\n  Zap,\r\r\n  Shield,\r\r\n  Rocket,\r\r\n  Cloud,\r\r\n  Code,\r\r\n} from \"lucide-react\";\r\r\n\r\r\nconst features = [\r\r\n  {\r\r\n    title: \"AI-Powered Automation\",\r\r\n    description:\r\r\n      \"Automate repetitive tasks with advanced machine learning algorithms.\",\r\r\n    icon: Sparkles,\r\r\n    badge: \"New\",\r\r\n  },\r\r\n  {\r\r\n    title: \"Lightning Fast\",\r\r\n    description: \"Optimized for speed with sub-millisecond response times.\",\r\r\n    icon: Zap,\r\r\n  },\r\r\n  {\r\r\n    title: \"Enterprise Security\",\r\r\n    description: \"Bank-grade security with end-to-end encryption.\",\r\r\n    icon: Shield,\r\r\n  },\r\r\n  {\r\r\n    title: \"Scalable Infrastructure\",\r\r\n    description: \"Built to scale with your needs, from startup to enterprise.\",\r\r\n    icon: Rocket,\r\r\n  },\r\r\n  {\r\r\n    title: \"Cloud Native\",\r\r\n    description: \"Deploy anywhere with our cloud-native architecture.\",\r\r\n    icon: Cloud,\r\r\n  },\r\r\n  {\r\r\n    title: \"Developer First\",\r\r\n    description: \"Built by developers, for developers with great DX.\",\r\r\n    icon: Code,\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function FeatureSectionCardGrid() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto space-y-8 px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"space-y-4 text-center\">\r\r\n        <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl\">\r\r\n          Features that set us apart\r\r\n        </h2>\r\r\n        <p className=\"text-muted-foreground mx-auto max-w-[700px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed\">\r\r\n          Everything you need to build modern applications at scale. Built for\r\r\n          developers, designed for growth.\r\r\n        </p>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"grid gap-6 md:grid-cols-2 lg:grid-cols-3\">\r\r\n        {features.map((feature) => (\r\r\n          <Card key={feature.title} className=\"relative overflow-hidden p-0\">\r\r\n            <CardContent className=\"p-6\">\r\r\n              <div className=\"flex items-start justify-between\">\r\r\n                <div className=\"bg-primary/10 rounded-lg p-3\">\r\r\n                  <feature.icon className=\"text-primary size-6\" />\r\r\n                </div>\r\r\n                {feature.badge && (\r\r\n                  <Badge variant=\"secondary\" className=\"absolute top-4 right-4\">\r\r\n                    {feature.badge}\r\r\n                  </Badge>\r\r\n                )}\r\r\n              </div>\r\r\n              <div className=\"mt-6 space-y-4\">\r\r\n                <h3 className=\"text-xl font-semibold\">{feature.title}</h3>\r\r\n                <p className=\"text-muted-foreground\">{feature.description}</p>\r\r\n              </div>\r\r\n              <div className=\"flex justify-end\">\r\r\n                <Button\r\r\n                  variant=\"ghost\"\r\r\n                  size={\"sm\"}\r\r\n                  className=\"mt-4 font-semibold\"\r\r\n                >\r\r\n                  Learn more <ArrowRight className=\"size-4\" />\r\r\n                </Button>\r\r\n              </div>\r\r\n            </CardContent>\r\r\n          </Card>\r\r\n        ))}\r\r\n      </div>\r\r\n\r\r\n      <div className=\"text-center\">\r\r\n        <Button size=\"lg\" className=\"gap-2\">\r\r\n          Get Started Now <ArrowRight className=\"size-4\" />\r\r\n        </Button>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "feature-sections"
+    ]
+  }
+}

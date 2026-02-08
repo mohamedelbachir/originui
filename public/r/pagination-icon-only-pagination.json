@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-icon-only-pagination",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/pagination.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/pagination-icon-only-pagination.tsx",
+      "content": "import {\r\r\n  Pagination,\r\r\n  PaginationContent,\r\r\n  PaginationItem,\r\r\n  PaginationLink,\r\r\n} from \"@/registry/default/ui/pagination\";\r\r\nimport {\r\r\n  ChevronLeft,\r\r\n  ChevronRight,\r\r\n  ChevronsLeft,\r\r\n  ChevronsRight,\r\r\n} from \"lucide-react\";\r\r\n\r\r\nexport default function IconOnlyPagination() {\r\r\n  return (\r\r\n    <div className=\"p-6\">\r\r\n      <Pagination>\r\r\n        <PaginationContent>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" size=\"icon\" aria-label=\"Go to first page\">\r\r\n              <ChevronsLeft className=\"h-4 w-4\" />\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink\r\r\n              href=\"#\"\r\r\n              size=\"icon\"\r\r\n              aria-label=\"Go to previous page\"\r\r\n            >\r\r\n              <ChevronLeft className=\"h-4 w-4\" />\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <span className=\"flex h-9 items-center text-sm font-medium\">\r\r\n              Page 2 of 8\r\r\n            </span>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" size=\"icon\" aria-label=\"Go to next page\">\r\r\n              <ChevronRight className=\"h-4 w-4\" />\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" size=\"icon\" aria-label=\"Go to last page\">\r\r\n              <ChevronsRight className=\"h-4 w-4\" />\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n        </PaginationContent>\r\r\n      </Pagination>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pagination"
+    ]
+  }
+}

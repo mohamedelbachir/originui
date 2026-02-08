@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "subscribe-simple-right-aligned",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/subscribe-simple-right-aligned.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Label } from \"@/registry/default/ui/label\";\r\r\n\r\r\nexport default function SimpleRightAligned() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32\">\r\r\n      <div className=\"grid md:grid-cols-2 gap-8\">\r\r\n        <div className=\"max-w-md\">\r\r\n          <h2 className=\"text-2xl font-bold md:text-3xl md:leading-tight\">\r\r\n            Subscribe\r\r\n          </h2>\r\r\n          <p className=\"mt-3 text-muted-foreground\">\r\r\n            Subscribe and start making the most of every engagement.\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        <form>\r\r\n          <div className=\"w-full sm:max-w-lg md:ms-auto\">\r\r\n            <div className=\"flex flex-col items-center gap-2 sm:flex-row sm:gap-3\">\r\r\n              <div className=\"w-full\">\r\r\n                <Label htmlFor=\"subscribe-input\" className=\"sr-only\">\r\r\n                  Search\r\r\n                </Label>\r\r\n                <Input\r\r\n                  type=\"text\"\r\r\n                  id=\"subscribe-input\"\r\r\n                  name=\"subscribe-input\"\r\r\n                  className=\"py-3 px-4 block w-full\"\r\r\n                  placeholder=\"Enter your email\"\r\r\n                />\r\r\n              </div>\r\r\n              <Button className=\"w-full sm:w-auto\">Subscribe</Button>\r\r\n            </div>\r\r\n            <p className=\"mt-3 text-sm text-muted-foreground\">\r\r\n              No spam, unsubscribe at any time\r\r\n            </p>\r\r\n          </div>\r\r\n        </form>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "subscribe"
+    ]
+  }
+}

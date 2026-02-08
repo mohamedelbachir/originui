@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badges-dot-indicator-badge",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/badges-dot-indicator-badge.tsx",
+      "content": "import { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\nexport default function DotIndicatorBadge() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Badge variant=\"default\" className=\"flex items-center gap-1.5\">\r\r\n        <span className=\"relative flex h-2 w-2\">\r\r\n          <span className=\"absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-foreground/80 opacity-75\"></span>\r\r\n          <span className=\"relative inline-flex h-2 w-2 rounded-full bg-primary-foreground\"></span>\r\r\n        </span>\r\r\n        Default\r\r\n      </Badge>\r\r\n\r\r\n      <Badge variant=\"secondary\" className=\"flex items-center gap-1.5\">\r\r\n        <span className=\"relative flex h-2 w-2\">\r\r\n          <span className=\"absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary-foreground/80 opacity-75\"></span>\r\r\n          <span className=\"relative inline-flex h-2 w-2 rounded-full bg-secondary-foreground\"></span>\r\r\n        </span>\r\r\n        Secondary\r\r\n      </Badge>\r\r\n\r\r\n      <Badge variant=\"destructive\" className=\"flex items-center gap-1.5\">\r\r\n        <span className=\"relative flex h-2 w-2\">\r\r\n          <span className=\"absolute inline-flex h-full w-full animate-ping rounded-full bg-destructive-foreground/80 opacity-75\"></span>\r\r\n          <span className=\"relative inline-flex h-2 w-2 rounded-full bg-destructive-foreground\"></span>\r\r\n        </span>\r\r\n        Destructive\r\r\n      </Badge>\r\r\n\r\r\n      <Badge variant=\"outline\" className=\"flex items-center gap-1.5\">\r\r\n        <span className=\"relative flex h-2 w-2\">\r\r\n          <span className=\"absolute inline-flex h-full w-full animate-ping rounded-full bg-foreground/50 opacity-75\"></span>\r\r\n          <span className=\"relative inline-flex h-2 w-2 rounded-full bg-foreground/80\"></span>\r\r\n        </span>\r\r\n        Outline\r\r\n      </Badge>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badges"
+    ]
+  }
+}

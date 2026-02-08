@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cards-icon-card",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cards-icon-card.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardDescription,\r\r\n  CardFooter,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\nimport { RocketIcon } from \"lucide-react\";\r\r\n\r\r\nexport default function IconCard() {\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6 px-4\">\r\r\n      <Card>\r\r\n        <CardHeader className=\"flex flex-row items-center gap-4 pb-2\">\r\r\n          <div className=\"p-2 rounded-full bg-primary/10 flex items-center justify-center\">\r\r\n            <RocketIcon className=\"h-6 w-6 text-primary\" />\r\r\n          </div>\r\r\n          <div>\r\r\n            <CardTitle>Quick Start</CardTitle>\r\r\n            <CardDescription>Get your project up and running</CardDescription>\r\r\n          </div>\r\r\n        </CardHeader>\r\r\n        <CardContent>\r\r\n          <p className=\"text-sm text-muted-foreground\">\r\r\n            Follow our streamlined process to deploy your application in\r\r\n            minutes. No complex configuration required.\r\r\n          </p>\r\r\n        </CardContent>\r\r\n        <CardFooter className=\"flex justify-end\">\r\r\n          <Button>Launch Project</Button>\r\r\n        </CardFooter>\r\r\n      </Card>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cards"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "buttons-liquid-buttons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/buttons-liquid-buttons.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function LiquidButtons() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Button\r\r\n        variant=\"default\"\r\r\n        className=\"rounded-[60%_40%_40%_60%/60%_30%_70%_40%] hover:rounded-[40%_60%_70%_30%/50%_60%_30%_60%] transition-all duration-500\"\r\r\n      >\r\r\n        Default\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"secondary\"\r\r\n        className=\"rounded-[60%_40%_40%_60%/60%_30%_70%_40%] hover:rounded-[40%_60%_70%_30%/50%_60%_30%_60%] transition-all duration-500\"\r\r\n      >\r\r\n        Secondary\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"destructive\"\r\r\n        className=\"rounded-[60%_40%_40%_60%/60%_30%_70%_40%] hover:rounded-[40%_60%_70%_30%/50%_60%_30%_60%] transition-all duration-500\"\r\r\n      >\r\r\n        Destructive\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"outline\"\r\r\n        className=\"rounded-[60%_40%_40%_60%/60%_30%_70%_40%] hover:rounded-[40%_60%_70%_30%/50%_60%_30%_60%] transition-all duration-500\"\r\r\n      >\r\r\n        Outline\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"ghost\"\r\r\n        className=\"rounded-[60%_40%_40%_60%/60%_30%_70%_40%] hover:rounded-[40%_60%_70%_30%/50%_60%_30%_60%] transition-all duration-500\"\r\r\n      >\r\r\n        Ghost\r\r\n      </Button>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "buttons"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stats-simple-3-cols",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/stats-simple-3-cols.tsx",
+      "content": "export default function Simple3Cols() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32\">\r\r\n      {/* Grid */}\r\r\n      <div className=\"grid gap-6 grid-cols-1 sm:gap-12 sm:grid-cols-2 md:grid-cols-3 lg:gap-8\">\r\r\n        {/* Stats */}\r\r\n\r\r\n        <div>\r\r\n          <h4 className=\"text-lg sm:text-xl font-semibold text-foreground/85\">\r\r\n            Accuracy rate\r\r\n          </h4>\r\r\n          <p className=\"mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold\">99.95%</p>\r\r\n          <p className=\"mt-1 text-muted-foreground\">in fulfilling orders</p>\r\r\n        </div>\r\r\n        {/* End Stats */}\r\r\n\r\r\n        {/* Stats */}\r\r\n        <div>\r\r\n          <h4 className=\"text-lg sm:text-xl font-semibold text-foreground/85\">\r\r\n            Startup businesses\r\r\n          </h4>\r\r\n          <p className=\"mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold\">2,000+</p>\r\r\n          <p className=\"mt-1 text-muted-foreground\">partner with Acme</p>\r\r\n        </div>\r\r\n        {/* End Stats */}\r\r\n\r\r\n        {/* Stats */}\r\r\n        <div>\r\r\n          <h4 className=\"text-lg sm:text-xl font-semibold text-foreground/85\">\r\r\n            Happy customer\r\r\n          </h4>\r\r\n          <p className=\"mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold\">85%</p>\r\r\n          <p className=\"mt-1 text-muted-foreground\">this year alone</p>\r\r\n        </div>\r\r\n        {/* End Stats */}\r\r\n      </div>\r\r\n      {/* End Grid */}\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stats"
+    ]
+  }
+}

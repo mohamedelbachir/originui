@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-cta-banner-inline-cta",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-cta-banner-inline-cta.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight } from \"lucide-react\";\r\r\n\r\r\nexport default function PortfolioCTAInlineBanner() {\r\r\n  return (\r\r\n    <div className=\"border-border bg-muted/30 w-full border-y py-8 md:py-10\">\r\r\n      <div className=\"container mx-auto px-4\">\r\r\n        <div className=\"flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left\">\r\r\n          <div className=\"flex-1\">\r\r\n            <h3 className=\"text-lg font-medium md:text-xl\">\r\r\n              Interested in working together?\r\r\n            </h3>\r\r\n            <p className=\"text-muted-foreground mt-1 text-sm md:text-base\">\r\r\n              I&apos;m currently taking on select freelance opportunities.\r\r\n            </p>\r\r\n          </div>\r\r\n\r\r\n          <Button asChild className=\"group\">\r\r\n            <Link href=\"#\">\r\r\n              Let&apos;s Talk\r\r\n              <ArrowRight className=\"ml-2 h-4 w-4 transition-transform group-hover:translate-x-1\" />\r\r\n            </Link>\r\r\n          </Button>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-cta-banner"
+    ]
+  }
+}

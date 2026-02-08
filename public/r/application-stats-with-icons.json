@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "application-stats-with-icons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/application-stats-with-icons.tsx",
+      "content": "import { Users, Timer, MousePointer, Eye } from \"lucide-react\";\r\r\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\n\r\r\nexport default function WithIcons() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 py-10 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4\">\r\r\n        {/* Card */}\r\r\n        <Card className=\"pt-0\">\r\r\n          <CardContent className=\"pt-6\">\r\r\n            <div className=\"flex justify-between\">\r\r\n              <div>\r\r\n                <p className=\"text-muted-foreground text-xs tracking-wide uppercase\">\r\r\n                  Total users\r\r\n                </p>\r\r\n                <div className=\"mt-1\">\r\r\n                  <h3 className=\"text-xl font-medium sm:text-2xl\">72,540</h3>\r\r\n                </div>\r\r\n              </div>\r\r\n              <div className=\"bg-primary/10 flex h-[46px] w-[46px] items-center justify-center rounded-lg\">\r\r\n                <Users className=\"text-primary h-5 w-5\" />\r\r\n              </div>\r\r\n            </div>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n\r\r\n        {/* Card */}\r\r\n        <Card className=\"pt-0\">\r\r\n          <CardContent className=\"pt-6\">\r\r\n            <div className=\"flex justify-between\">\r\r\n              <div>\r\r\n                <p className=\"text-muted-foreground text-xs tracking-wide uppercase\">\r\r\n                  Avg. Time\r\r\n                </p>\r\r\n                <div className=\"mt-1\">\r\r\n                  <h3 className=\"text-xl font-medium sm:text-2xl\">2.4m</h3>\r\r\n                </div>\r\r\n              </div>\r\r\n              <div className=\"bg-primary/10 flex h-[46px] w-[46px] items-center justify-center rounded-lg\">\r\r\n                <Timer className=\"text-primary h-5 w-5\" />\r\r\n              </div>\r\r\n            </div>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n\r\r\n        {/* Card */}\r\r\n        <Card className=\"pt-0\">\r\r\n          <CardContent className=\"pt-6\">\r\r\n            <div className=\"flex justify-between\">\r\r\n              <div>\r\r\n                <p className=\"text-muted-foreground text-xs tracking-wide uppercase\">\r\r\n                  Click Rate\r\r\n                </p>\r\r\n                <div className=\"mt-1\">\r\r\n                  <h3 className=\"text-xl font-medium sm:text-2xl\">56.8%</h3>\r\r\n                </div>\r\r\n              </div>\r\r\n              <div className=\"bg-primary/10 flex h-[46px] w-[46px] items-center justify-center rounded-lg\">\r\r\n                <MousePointer className=\"text-primary h-5 w-5\" />\r\r\n              </div>\r\r\n            </div>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n\r\r\n        {/* Card */}\r\r\n        <Card className=\"pt-0\">\r\r\n          <CardContent className=\"pt-6\">\r\r\n            <div className=\"flex justify-between\">\r\r\n              <div>\r\r\n                <p className=\"text-muted-foreground text-xs tracking-wide uppercase\">\r\r\n                  Pageviews\r\r\n                </p>\r\r\n                <div className=\"mt-1\">\r\r\n                  <h3 className=\"text-xl font-medium sm:text-2xl\">92,913</h3>\r\r\n                </div>\r\r\n              </div>\r\r\n              <div className=\"bg-primary/10 flex h-[46px] w-[46px] items-center justify-center rounded-lg\">\r\r\n                <Eye className=\"text-primary h-5 w-5\" />\r\r\n              </div>\r\r\n            </div>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "application-stats"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ecommerce-cross-sells-stacked-list",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/ecommerce-cross-sells-stacked-list.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Card } from \"@/registry/default/ui/card\";\r\r\n\r\r\nconst crossSellProducts = [\r\r\n  {\r\r\n    id: 1,\r\r\n    title: \"Wireless Charging Pad\",\r\r\n    price: \"$29.99\",\r\r\n    image: \"/placeholder.svg?height=80&width=80\",\r\r\n  },\r\r\n  {\r\r\n    id: 2,\r\r\n    title: \"Premium Phone Case\",\r\r\n    price: \"$24.99\",\r\r\n    image: \"/placeholder.svg?height=80&width=80\",\r\r\n  },\r\r\n  {\r\r\n    id: 3,\r\r\n    title: \"Screen Protector Kit\",\r\r\n    price: \"$12.99\",\r\r\n    image: \"/placeholder.svg?height=80&width=80\",\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function CrossSellStackedList() {\r\r\n  return (\r\r\n    <div className=\"px-4 py-8 md:py-12\">\r\r\n      <div className=\"mx-auto max-w-md\">\r\r\n        <h3 className=\"text-foreground mb-4 text-lg font-semibold\">\r\r\n          You might also like\r\r\n        </h3>\r\r\n\r\r\n        <div className=\"space-y-3\">\r\r\n          {crossSellProducts.map((product) => (\r\r\n            <Card key={product.id} className=\"p-3\">\r\r\n              <div className=\"flex items-center gap-3\">\r\r\n                <div className=\"flex-shrink-0\">\r\r\n                  <Image\r\r\n                    src={product.image || \"/placeholder.svg\"}\r\r\n                    alt={product.title}\r\r\n                    width={60}\r\r\n                    height={60}\r\r\n                    className=\"rounded-md object-cover\"\r\r\n                  />\r\r\n                </div>\r\r\n\r\r\n                <div className=\"min-w-0 flex-1\">\r\r\n                  <h4 className=\"text-foreground truncate text-sm font-medium\">\r\r\n                    {product.title}\r\r\n                  </h4>\r\r\n                  <p className=\"text-foreground mt-1 text-sm font-semibold\">\r\r\n                    {product.price}\r\r\n                  </p>\r\r\n                </div>\r\r\n\r\r\n                <div className=\"flex-shrink-0\">\r\r\n                  <Button size=\"sm\" className=\"h-8 px-3 text-xs\">\r\r\n                    Add\r\r\n                  </Button>\r\r\n                </div>\r\r\n              </div>\r\r\n            </Card>\r\r\n          ))}\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ecommerce-cross-sells"
+    ]
+  }
+}

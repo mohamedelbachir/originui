@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "page-headings-simple-centered",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/page-headings-simple-centered.tsx",
+      "content": "export default function SimplePageHeading() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 py-16 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"mx-auto mt-6 max-w-3xl text-center\">\r\r\n        <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\r\r\n          New Collection\r\r\n        </h1>\r\r\n        <p className=\"text-muted-foreground mt-4 text-xl\">\r\r\n          Discover our latest collection of products designed to elevate your\r\r\n          everyday life with style and functionality.\r\r\n        </p>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "page-headings"
+    ]
+  }
+}

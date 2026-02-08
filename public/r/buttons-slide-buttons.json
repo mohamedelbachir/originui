@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "buttons-slide-buttons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/buttons-slide-buttons.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function SlideButtons() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Button\r\r\n        variant=\"default\"\r\r\n        className=\"relative overflow-hidden before:absolute before:inset-0 before:bg-foreground/10 before:translate-x-[-101%] hover:before:translate-x-0 before:transition-transform before:duration-300\"\r\r\n      >\r\r\n        <span className=\"relative z-10\">Default</span>\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"secondary\"\r\r\n        className=\"relative overflow-hidden before:absolute before:inset-0 before:bg-foreground/10 before:translate-x-[-101%] hover:before:translate-x-0 before:transition-transform before:duration-300\"\r\r\n      >\r\r\n        <span className=\"relative z-10\">Secondary</span>\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"destructive\"\r\r\n        className=\"relative overflow-hidden before:absolute before:inset-0 before:bg-foreground/10 before:translate-x-[-101%] hover:before:translate-x-0 before:transition-transform before:duration-300\"\r\r\n      >\r\r\n        <span className=\"relative z-10\">Destructive</span>\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"outline\"\r\r\n        className=\"relative overflow-hidden before:absolute before:inset-0 before:bg-foreground/10 before:translate-x-[-101%] hover:before:translate-x-0 before:transition-transform before:duration-300\"\r\r\n      >\r\r\n        <span className=\"relative z-10\">Outline</span>\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"ghost\"\r\r\n        className=\"relative overflow-hidden before:absolute before:inset-0 before:bg-foreground/10 before:translate-x-[-101%] hover:before:translate-x-0 before:transition-transform before:duration-300\"\r\r\n      >\r\r\n        <span className=\"relative z-10\">Ghost</span>\r\r\n      </Button>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "buttons"
+    ]
+  }
+}

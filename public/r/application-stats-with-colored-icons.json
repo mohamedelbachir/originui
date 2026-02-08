@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "application-stats-with-colored-icons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/application-stats-with-colored-icons.tsx",
+      "content": "import { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\nimport { Users, Timer, MousePointer, Eye } from \"lucide-react\";\r\r\n\r\r\nexport default function WithColoredIcons() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 py-10 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4\">\r\r\n        {/* Card */}\r\r\n        <Card className=\"pt-0\">\r\r\n          <CardContent className=\"flex justify-between pt-6\">\r\r\n            <div>\r\r\n              <p className=\"text-muted-foreground text-xs tracking-wide uppercase\">\r\r\n                Total users\r\r\n              </p>\r\r\n              <div className=\"mt-1\">\r\r\n                <h3 className=\"text-xl font-medium sm:text-2xl\">72,540</h3>\r\r\n              </div>\r\r\n            </div>\r\r\n            <div className=\"flex h-[46px] w-[46px] items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-800\">\r\r\n              <Users className=\"h-5 w-5 text-blue-600 dark:text-blue-400\" />\r\r\n            </div>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n\r\r\n        {/* Card */}\r\r\n        <Card className=\"pt-0\">\r\r\n          <CardContent className=\"flex justify-between pt-6\">\r\r\n            <div>\r\r\n              <p className=\"text-muted-foreground text-xs tracking-wide uppercase\">\r\r\n                Avg. Time\r\r\n              </p>\r\r\n              <div className=\"mt-1\">\r\r\n                <h3 className=\"text-xl font-medium sm:text-2xl\">2.4m</h3>\r\r\n              </div>\r\r\n            </div>\r\r\n            <div className=\"flex h-[46px] w-[46px] items-center justify-center rounded-lg bg-green-100 dark:bg-green-800\">\r\r\n              <Timer className=\"h-5 w-5 text-green-600 dark:text-green-400\" />\r\r\n            </div>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n\r\r\n        {/* Card */}\r\r\n        <Card className=\"pt-0\">\r\r\n          <CardContent className=\"flex justify-between pt-6\">\r\r\n            <div>\r\r\n              <p className=\"text-muted-foreground text-xs tracking-wide uppercase\">\r\r\n                Click Rate\r\r\n              </p>\r\r\n              <div className=\"mt-1\">\r\r\n                <h3 className=\"text-xl font-medium sm:text-2xl\">56.8%</h3>\r\r\n              </div>\r\r\n            </div>\r\r\n            <div className=\"flex h-[46px] w-[46px] items-center justify-center rounded-lg bg-yellow-100 dark:bg-yellow-800\">\r\r\n              <MousePointer className=\"h-5 w-5 text-yellow-600 dark:text-yellow-400\" />\r\r\n            </div>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n\r\r\n        {/* Card */}\r\r\n        <Card className=\"pt-0\">\r\r\n          <CardContent className=\"flex justify-between pt-6\">\r\r\n            <div>\r\r\n              <p className=\"text-muted-foreground text-xs tracking-wide uppercase\">\r\r\n                Pageviews\r\r\n              </p>\r\r\n              <div className=\"mt-1\">\r\r\n                <h3 className=\"text-xl font-medium sm:text-2xl\">92,913</h3>\r\r\n              </div>\r\r\n            </div>\r\r\n            <div className=\"flex h-[46px] w-[46px] items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-800\">\r\r\n              <Eye className=\"h-5 w-5 text-purple-600 dark:text-purple-400\" />\r\r\n            </div>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "application-stats"
+    ]
+  }
+}

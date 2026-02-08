@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "promo-sections-full-width-large-content",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/promo-sections-full-width-large-content.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport Image from \"next/image\";\r\r\nimport Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\nexport default function FullWidthLargeContentPromo() {\r\r\n  return (\r\r\n    <div className=\"relative overflow-hidden bg-background\">\r\r\n      <div className=\"absolute inset-0\">\r\r\n        <Image\r\r\n          src=\"https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=2400&auto=format&fit=crop\"\r\r\n          alt=\"Promotional background image featuring a premium tech product\"\r\r\n          fill\r\r\n          className=\"h-full w-full object-cover object-center\"\r\r\n          priority\r\r\n        />\r\r\n        <div\r\r\n          className=\"absolute inset-0 bg-primary/60 dark:bg-primary-foreground/60 mix-blend-multiply\"\r\r\n          aria-hidden=\"true\"\r\r\n        />\r\r\n      </div>\r\r\n      <div className=\"relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8\">\r\r\n        <Badge className=\"mb-4 bg-primary-foreground dark:bg-primary text-primary dark:text-primary-foreground\">\r\r\n          Limited Edition\r\r\n        </Badge>\r\r\n        <h1 className=\"text-4xl font-extrabold tracking-tight text-primary-foreground dark:text-primary sm:text-5xl lg:text-6xl\">\r\r\n          The Ultimate Tech Companion\r\r\n        </h1>\r\r\n        <p className=\"mt-6 max-w-xl mx-auto text-xl text-primary-foreground/80 dark:text-primary/80\">\r\r\n          Experience unparalleled performance and design. Pre-order now and\r\r\n          receive exclusive early access benefits and a special gift.\r\r\n        </p>\r\r\n        <div className=\"mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row\">\r\r\n          <Button\r\r\n            variant=\"secondary\"\r\r\n            size=\"lg\"\r\r\n            className=\"w-full sm:w-auto\"\r\r\n            asChild\r\r\n          >\r\r\n            <Link href=\"#\">Pre-Order Now</Link>\r\r\n          </Button>\r\r\n          <Button\r\r\n            variant=\"outline\"\r\r\n            size=\"lg\"\r\r\n            className=\"w-full border-primary-foreground/30 dark:border-primary/30 bg-transparent text-primary-foreground dark:text-primary hover:bg-primary-foreground/10 dark:hover:bg-primary/10 hover:text-primary-foreground dark:hover:text-primary sm:w-auto\"\r\r\n            asChild\r\r\n          >\r\r\n            <Link href=\"#\">Learn More</Link>\r\r\n          </Button>\r\r\n        </div>\r\r\n        <p className=\"mt-8 text-xs text-primary-foreground/60 dark:text-primary/60\">\r\r\n          Offer valid until October 31st. Terms and conditions apply.\r\r\n        </p>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "promo-sections"
+    ]
+  }
+}

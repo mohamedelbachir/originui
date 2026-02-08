@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-cta-banner-sticky-cta",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-cta-banner-sticky-cta.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport { useState, useEffect } from \"react\";\r\r\nimport Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight, X } from \"lucide-react\";\r\r\n\r\r\nexport default function PortfolioCTAStickyBanner() {\r\r\n  const [isVisible, setIsVisible] = useState(true);\r\r\n  const [isScrolled, setIsScrolled] = useState(false);\r\r\n\r\r\n  // Handle scroll to toggle sticky behavior\r\r\n  useEffect(() => {\r\r\n    const handleScroll = () => {\r\r\n      const scrollPosition = window.scrollY;\r\r\n      setIsScrolled(scrollPosition > 300);\r\r\n    };\r\r\n\r\r\n    window.addEventListener(\"scroll\", handleScroll);\r\r\n    return () => window.removeEventListener(\"scroll\", handleScroll);\r\r\n  }, []);\r\r\n\r\r\n  if (!isVisible) return null;\r\r\n\r\r\n  return (\r\r\n    <div\r\r\n      className={`fixed right-0 bottom-0 left-0 z-50 transform transition-transform duration-300 ${isScrolled ? \"translate-y-0\" : \"translate-y-full md:translate-y-0\"}`}\r\r\n    >\r\r\n      <div className=\"bg-background border-border border-t px-4 py-3 shadow-lg md:py-4\">\r\r\n        <div className=\"container mx-auto\">\r\r\n          <div className=\"flex flex-col items-center justify-between gap-3 md:flex-row\">\r\r\n            {/* Close button (mobile only) */}\r\r\n            <button\r\r\n              onClick={() => setIsVisible(false)}\r\r\n              className=\"text-muted-foreground hover:text-foreground absolute top-2 right-2 p-1 md:hidden\"\r\r\n              aria-label=\"Close banner\"\r\r\n            >\r\r\n              <X className=\"h-4 w-4\" />\r\r\n            </button>\r\r\n\r\r\n            <div className=\"flex-1 text-center md:text-left\">\r\r\n              <p className=\"text-sm font-medium md:text-base\">\r\r\n                Taking on new projects for Q3 2023.{\" \"}\r\r\n                <span className=\"hidden md:inline\">\r\r\n                  Limited spots available.\r\r\n                </span>\r\r\n              </p>\r\r\n            </div>\r\r\n\r\r\n            <Button\r\r\n              asChild\r\r\n              size=\"sm\"\r\r\n              variant=\"default\"\r\r\n              className=\"group w-full md:w-auto\"\r\r\n            >\r\r\n              <Link href=\"#\">\r\r\n                Book Your Spot\r\r\n                <ArrowRight className=\"ml-1 h-3 w-3 transition-transform group-hover:translate-x-1\" />\r\r\n              </Link>\r\r\n            </Button>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-cta-banner"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "about-sections-two-column",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/about-sections-two-column.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport Link from \"next/link\";\r\r\nimport { CheckCircle2 } from \"lucide-react\";\r\r\n\r\r\nconst competencies = [\r\r\n  \"User-centered design approach\",\r\r\n  \"Agile development methodology\",\r\r\n  \"Full-stack engineering expertise\",\r\r\n  \"End-to-end product strategy\",\r\r\n  \"Enterprise-grade security\",\r\r\n  \"24/7 customer support\",\r\r\n];\r\r\n\r\r\nexport default function AboutSectionTwoColumn() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"grid grid-cols-1 items-center gap-12 lg:grid-cols-2\">\r\r\n        <div className=\"relative aspect-square overflow-hidden rounded-xl\">\r\r\n          <Image\r\r\n            src=\"https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000\"\r\r\n            alt=\"Team collaborating in modern office\"\r\r\n            fill\r\r\n            className=\"object-cover\"\r\r\n            sizes=\"(max-width: 768px) 100vw, 50vw\"\r\r\n            priority\r\r\n          />\r\r\n        </div>\r\r\n\r\r\n        <div className=\"space-y-6\">\r\r\n          <div>\r\r\n            <h4 className=\"text-primary mb-2 font-semibold\">Who We Are</h4>\r\r\n            <h2 className=\"text-3xl font-bold tracking-tight\">\r\r\n              Building digital products that make a difference\r\r\n            </h2>\r\r\n          </div>\r\r\n\r\r\n          <p className=\"text-muted-foreground\">\r\r\n            We are a team of passionate designers, developers, and strategists\r\r\n            who believe in creating thoughtful digital experiences that solve\r\r\n            real problems. Our approach combines deep technical expertise with a\r\r\n            human-centered design philosophy.\r\r\n          </p>\r\r\n\r\r\n          <div className=\"pt-2\">\r\r\n            <h3 className=\"mb-3 text-lg font-bold\">Our Core Competencies</h3>\r\r\n            <ul className=\"grid grid-cols-1 gap-2 md:grid-cols-2\">\r\r\n              {competencies.map((item) => (\r\r\n                <li key={item} className=\"flex items-center gap-2\">\r\r\n                  <CheckCircle2 className=\"text-primary h-5 w-5 flex-shrink-0\" />\r\r\n                  <span>{item}</span>\r\r\n                </li>\r\r\n              ))}\r\r\n            </ul>\r\r\n          </div>\r\r\n\r\r\n          <div className=\"flex flex-wrap gap-4 pt-2\">\r\r\n            <Button asChild>\r\r\n              <Link href=\"#\">Learn our approach</Link>\r\r\n            </Button>\r\r\n            <Button variant=\"outline\" asChild>\r\r\n              <Link href=\"#\">View case studies</Link>\r\r\n            </Button>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "about-sections"
+    ]
+  }
+}

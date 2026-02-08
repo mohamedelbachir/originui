@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form-layouts-stacked",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/separator.json",
+    "https://ui.woilasoft.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/form-layouts-stacked.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/registry/default/ui/card\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Label } from \"@/registry/default/ui/label\";\r\r\nimport { Separator } from \"@/registry/default/ui/separator\";\r\r\nimport { Textarea } from \"@/registry/default/ui/textarea\";\r\r\n\r\r\nexport default function StackedForm() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-10\">\r\r\n      <Card>\r\r\n        <CardHeader>\r\r\n          <CardTitle>Personal Information</CardTitle>\r\r\n        </CardHeader>\r\r\n        <CardContent>\r\r\n          <form>\r\r\n            <div className=\"space-y-8\">\r\r\n              {/* Profile section */}\r\r\n              <div className=\"space-y-6\">\r\r\n                <div className=\"space-y-2\">\r\r\n                  <Label htmlFor=\"name\">Name</Label>\r\r\n                  <Input id=\"name\" placeholder=\"Enter your name\" />\r\r\n                </div>\r\r\n\r\r\n                <div className=\"space-y-2\">\r\r\n                  <Label htmlFor=\"email\">Email</Label>\r\r\n                  <Input\r\r\n                    id=\"email\"\r\r\n                    type=\"email\"\r\r\n                    placeholder=\"Enter your email\"\r\r\n                  />\r\r\n                </div>\r\r\n\r\r\n                <div className=\"space-y-2\">\r\r\n                  <Label htmlFor=\"about\">About</Label>\r\r\n                  <Textarea\r\r\n                    id=\"about\"\r\r\n                    placeholder=\"Write a few sentences about yourself\"\r\r\n                  />\r\r\n                </div>\r\r\n              </div>\r\r\n\r\r\n              <Separator />\r\r\n\r\r\n              {/* Additional Details */}\r\r\n              <div className=\"space-y-6\">\r\r\n                <div>\r\r\n                  <h3 className=\"text-lg font-medium\">Additional Details</h3>\r\r\n                  <p className=\"text-sm text-muted-foreground\">\r\r\n                    Please provide any additional information.\r\r\n                  </p>\r\r\n                </div>\r\r\n\r\r\n                <div className=\"space-y-2\">\r\r\n                  <Label htmlFor=\"company\">Company</Label>\r\r\n                  <Input id=\"company\" placeholder=\"Your company name\" />\r\r\n                </div>\r\r\n\r\r\n                <div className=\"space-y-2\">\r\r\n                  <Label htmlFor=\"role\">Role</Label>\r\r\n                  <Input id=\"role\" placeholder=\"Your role\" />\r\r\n                </div>\r\r\n\r\r\n                <div className=\"space-y-2\">\r\r\n                  <Label htmlFor=\"country\">Country</Label>\r\r\n                  <Input id=\"country\" placeholder=\"Your country\" />\r\r\n                </div>\r\r\n              </div>\r\r\n\r\r\n              <div className=\"flex justify-end\">\r\r\n                <Button>Save Changes</Button>\r\r\n              </div>\r\r\n            </div>\r\r\n          </form>\r\r\n        </CardContent>\r\r\n      </Card>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "form-layouts"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cards-magnetic-card",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cards-magnetic-card.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardDescription,\r\r\n  CardFooter,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\nimport { useState, useRef } from \"react\";\r\r\n\r\r\nexport default function MagneticCard() {\r\r\n  const cardRef = useRef<HTMLDivElement>(null);\r\r\n  const [position, setPosition] = useState({ x: 0, y: 0 });\r\r\n  const [isHovered, setIsHovered] = useState(false);\r\r\n\r\r\n  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\r\r\n    if (!cardRef.current || !isHovered) return;\r\r\n\r\r\n    const rect = cardRef.current.getBoundingClientRect();\r\r\n    const x = e.clientX - rect.left - rect.width / 2;\r\r\n    const y = e.clientY - rect.top - rect.height / 2;\r\r\n\r\r\n    // Limit the movement range\r\r\n    const maxMove = 15;\r\r\n    const limitedX = Math.max(Math.min(x, maxMove), -maxMove);\r\r\n    const limitedY = Math.max(Math.min(y, maxMove), -maxMove);\r\r\n\r\r\n    setPosition({ x: limitedX, y: limitedY });\r\r\n  };\r\r\n\r\r\n  const handleMouseEnter = () => {\r\r\n    setIsHovered(true);\r\r\n  };\r\r\n\r\r\n  const handleMouseLeave = () => {\r\r\n    setIsHovered(false);\r\r\n    setPosition({ x: 0, y: 0 });\r\r\n  };\r\r\n\r\r\n  return (\r\r\n    <div className=\"mx-auto max-w-md px-4 py-6\">\r\r\n      <div\r\r\n        ref={cardRef}\r\r\n        className=\"transition-transform duration-200 ease-out\"\r\r\n        style={{\r\r\n          transform: `translate(${position.x * 0.1}px, ${position.y * 0.1}px)`,\r\r\n        }}\r\r\n        onMouseMove={handleMouseMove}\r\r\n        onMouseEnter={handleMouseEnter}\r\r\n        onMouseLeave={handleMouseLeave}\r\r\n      >\r\r\n        <Card>\r\r\n          <CardHeader>\r\r\n            <CardTitle>Create project</CardTitle>\r\r\n            <CardDescription>\r\r\n              Deploy your new project in one-click.\r\r\n            </CardDescription>\r\r\n          </CardHeader>\r\r\n          <CardContent>\r\r\n            <p className=\"text-muted-foreground text-sm\">\r\r\n              Your new project will be created with the latest version of our\r\r\n              framework, complete with authentication, database, and API routes.\r\r\n            </p>\r\r\n          </CardContent>\r\r\n          <CardFooter className=\"flex justify-between\">\r\r\n            <Button\r\r\n              variant=\"outline\"\r\r\n              style={{\r\r\n                transform: isHovered\r\r\n                  ? `translate(${position.x * 0.2}px, ${position.y * 0.2}px)`\r\r\n                  : \"none\",\r\r\n                transition: \"transform 0.2s ease-out\",\r\r\n              }}\r\r\n            >\r\r\n              Cancel\r\r\n            </Button>\r\r\n            <Button\r\r\n              style={{\r\r\n                transform: isHovered\r\r\n                  ? `translate(${position.x * 0.2}px, ${position.y * 0.2}px)`\r\r\n                  : \"none\",\r\r\n                transition: \"transform 0.2s ease-out\",\r\r\n              }}\r\r\n            >\r\r\n              Deploy\r\r\n            </Button>\r\r\n          </CardFooter>\r\r\n        </Card>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cards"
+    ]
+  }
+}

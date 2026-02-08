@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-contact-sections-classic-contact-form",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-contact-sections-classic-contact-form.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Label } from \"@/registry/default/ui/label\";\r\r\nimport { Textarea } from \"@/registry/default/ui/textarea\";\r\r\n\r\r\nexport default function ClassicContactForm() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto px-4 py-12 md:px-6 md:py-24 lg:py-32 2xl:max-w-[1400px]\">\r\r\n      <div className=\"mx-auto max-w-lg\">\r\r\n        <div className=\"mb-10 text-center\">\r\r\n          <h2 className=\"mb-2 text-3xl font-bold tracking-tight sm:text-4xl\">\r\r\n            Get in touch\r\r\n          </h2>\r\r\n          <p className=\"text-muted-foreground\">\r\r\n            I&apos;d love to hear from you. Please fill out the form below and\r\r\n            I&apos;ll get back to you as soon as possible.\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        <Card className=\"border-border/40\">\r\r\n          <CardContent>\r\r\n            <form className=\"space-y-6\">\r\r\n              <div>\r\r\n                <Label htmlFor=\"name\" className=\"mb-2 block\">\r\r\n                  Name\r\r\n                </Label>\r\r\n                <Input id=\"name\" name=\"name\" placeholder=\"Your name\" required />\r\r\n              </div>\r\r\n\r\r\n              <div>\r\r\n                <Label htmlFor=\"email\" className=\"mb-2 block\">\r\r\n                  Email\r\r\n                </Label>\r\r\n                <Input\r\r\n                  id=\"email\"\r\r\n                  name=\"email\"\r\r\n                  type=\"email\"\r\r\n                  placeholder=\"Your email address\"\r\r\n                  required\r\r\n                />\r\r\n              </div>\r\r\n\r\r\n              <div>\r\r\n                <Label htmlFor=\"subject\" className=\"mb-2 block\">\r\r\n                  Subject\r\r\n                </Label>\r\r\n                <Input\r\r\n                  id=\"subject\"\r\r\n                  name=\"subject\"\r\r\n                  placeholder=\"What's this regarding?\"\r\r\n                  required\r\r\n                />\r\r\n              </div>\r\r\n\r\r\n              <div>\r\r\n                <Label htmlFor=\"message\" className=\"mb-2 block\">\r\r\n                  Message\r\r\n                </Label>\r\r\n                <Textarea\r\r\n                  id=\"message\"\r\r\n                  name=\"message\"\r\r\n                  rows={5}\r\r\n                  placeholder=\"Your message\"\r\r\n                  required\r\r\n                  className=\"resize-none\"\r\r\n                />\r\r\n              </div>\r\r\n\r\r\n              <Button type=\"submit\" className=\"w-full\">\r\r\n                Send Message\r\r\n              </Button>\r\r\n\r\r\n              <p className=\"text-muted-foreground text-center text-sm\">\r\r\n                I&apos;ll respond to your message within 1-2 business days.\r\r\n              </p>\r\r\n            </form>\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-contact-sections"
+    ]
+  }
+}

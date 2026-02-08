@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-stepped-collapsible",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/collapsible.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/collapsible-stepped-collapsible.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport {\r\r\n  Collapsible,\r\r\n  CollapsibleContent,\r\r\n  CollapsibleTrigger,\r\r\n} from \"@/registry/default/ui/collapsible\";\r\r\nimport { ChevronDown, ChevronUp } from \"lucide-react\";\r\r\nimport { useState } from \"react\";\r\r\n\r\r\nexport default function SteppedCollapsible() {\r\r\n  const [isOpen, setIsOpen] = useState(false);\r\r\n\r\r\n  return (\r\r\n    <div className=\"mx-auto max-w-md py-6\">\r\r\n      <Collapsible className=\"w-full\" open={isOpen} onOpenChange={setIsOpen}>\r\r\n        <div className=\"overflow-hidden rounded-md border\">\r\r\n          <CollapsibleTrigger className=\"bg-muted/10 hover:bg-muted/20 flex w-full items-center justify-between px-4 py-3 transition-colors\">\r\r\n            <span className=\"font-medium\">Installation Instructions</span>\r\r\n            {isOpen ? (\r\r\n              <ChevronUp className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\r\r\n            ) : (\r\r\n              <ChevronDown className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\r\r\n            )}\r\r\n          </CollapsibleTrigger>\r\r\n        </div>\r\r\n        <CollapsibleContent>\r\r\n          <div className=\"pt-3 pr-0 pl-6\">\r\r\n            <div className=\"border-border text-muted-foreground border-l-2 py-2 pl-4 text-sm\">\r\r\n              <ol className=\"list-decimal space-y-2 pl-4\">\r\r\n                <li>\r\r\n                  Unpack all components from the box and verify all parts are\r\r\n                  included.\r\r\n                </li>\r\r\n                <li>\r\r\n                  Attach the base to the main unit using the provided screws.\r\r\n                </li>\r\r\n                <li>Connect the power cable to the back of the unit.</li>\r\r\n                <li>\r\r\n                  Plug the power cable into a wall outlet and press the power\r\r\n                  button.\r\r\n                </li>\r\r\n                <li>Follow the on-screen instructions to complete setup.</li>\r\r\n              </ol>\r\r\n            </div>\r\r\n          </div>\r\r\n        </CollapsibleContent>\r\r\n      </Collapsible>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "collapsible"
+    ]
+  }
+}

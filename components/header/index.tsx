@@ -21,7 +21,7 @@ export const Header = () => {
   const shadowColor = theme.resolvedTheme === "dark" ? "white" : "black"
   return (
     <>
-      <HeaderProvider className="bg-backdrop/90 sticky top-0 right-0 left-0 z-50 mx-auto flex max-w-[1600px] items-center justify-between border-x-0 px-4 py-2 backdrop-blur-md transition-all sm:px-6">
+      <HeaderProvider className="bg-backdrop/90 sticky top-0 right-0 left-0 z-20 mx-auto flex max-w-[1600px] items-center justify-between border-x-0 px-4 py-2 backdrop-blur-md transition-all sm:px-6">
         <div className="w-32">
           <ViewAnimation
             initial={{ opacity: 0, translateY: -8 }}

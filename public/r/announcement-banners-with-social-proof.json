@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "announcement-banners-with-social-proof",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/avatar.json",
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/announcement-banners-with-social-proof.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/default/ui/avatar\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function WithSocialProof() {\r\r\n  return (\r\r\n    <div className=\"bg-muted\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n        <div className=\"flex items-center justify-between gap-x-6 p-4\">\r\r\n          <div className=\"flex items-center gap-4\">\r\r\n            <div className=\"flex -space-x-2\">\r\r\n              <Avatar className=\"border-2 border-background\">\r\r\n                <AvatarImage src=\"https://github.com/shadcn.png\" />\r\r\n                <AvatarFallback>CN</AvatarFallback>\r\r\n              </Avatar>\r\r\n              <Avatar className=\"border-2 border-background\">\r\r\n                <AvatarImage src=\"https://github.com/shadcn.png\" />\r\r\n                <AvatarFallback>CN</AvatarFallback>\r\r\n              </Avatar>\r\r\n              <Avatar className=\"border-2 border-background\">\r\r\n                <AvatarImage src=\"https://github.com/shadcn.png\" />\r\r\n                <AvatarFallback>CN</AvatarFallback>\r\r\n              </Avatar>\r\r\n            </div>\r\r\n            <p className=\"text-sm\">\r\r\n              <span className=\"font-semibold\">20+ people</span> joined in the\r\r\n              last 24 hours\r\r\n            </p>\r\r\n          </div>\r\r\n          <div className=\"flex items-center gap-2\">\r\r\n            <Button size=\"sm\">Join them</Button>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "announcement-banners"
+    ]
+  }
+}

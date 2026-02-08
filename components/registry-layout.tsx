@@ -1,8 +1,22 @@
+"use client"
+
 import * as React from "react"
 import { Suspense } from "react"
-import { CheckIcon, LightbulbIcon, Loader2Icon } from "lucide-react"
+import Image from "next/image"
+import Autoplay from "embla-carousel-autoplay"
+import {
+  CheckIcon,
+  ExternalLink,
+  LightbulbIcon,
+  Loader2Icon,
+} from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
 import { Prose } from "@/components/prose"
 
 import { RegistryMobileNav } from "./registry-mobile-nav"
@@ -80,7 +94,8 @@ export function RegistryLayout({
       {/* Right Column: Tips or Custom Content */}
       <div className="bg-background hidden sm:block lg:col-span-1">
         <div className="custom-scrollbar sticky top-[64px] flex h-[calc(100vh-64px)] flex-col overflow-y-auto p-6">
-          {rightColumn || <DefaultTips />}
+          <div className="flex-1">{rightColumn || <DefaultTips />}</div>
+          <RegistryAd />
         </div>
       </div>
     </WideSection>
@@ -129,7 +144,7 @@ function DefaultTips() {
           </p>
         </div>
 
-        <div>
+        {/* <div>
           <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold">
             <div className="bg-primary h-1.5 w-1.5 rounded-full" />
             Theming Support
@@ -138,14 +153,157 @@ function DefaultTips() {
             Supports both light and dark modes out of the box using CSS
             variables.
           </p>
-        </div>
+        </div> */}
       </div>
 
-      <div className="bg-muted/50 mt-10 rounded-lg p-4 text-center">
+      {/* <div className="bg-muted/50 mt-10 rounded-lg p-4 text-center">
         <p className="text-muted-foreground text-[11px] font-medium tracking-widest uppercase">
           Explore our collection
         </p>
-      </div>
+      </div> */}
     </Prose>
+  )
+}
+
+function RegistryAd() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  )
+
+  const ads = [
+    {
+      title: "Woilasoft Premium",
+      description:
+        "Get access to 100+ premium components, production-ready templates, and priority support.",
+      link: "https://woilasoft.com/pro",
+      gradient: "from-indigo-500 to-purple-600",
+      cta: "Upgrade Now",
+      textColor: "text-indigo-100/90",
+      ctaColor: "text-indigo-600 hover:bg-indigo-50",
+      image:
+        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=300&h=150&fit=crop",
+    },
+    {
+      title: "Hire Expert Devs",
+      description:
+        "Need help with your project? Hire our top-tier developers to build your next big thing.",
+      link: "https://woilasoft.com/hire",
+      gradient: "from-emerald-500 to-teal-600",
+      cta: "Get a Quote",
+      textColor: "text-emerald-100/90",
+      ctaColor: "text-emerald-600 hover:bg-emerald-50",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=150&fit=crop",
+    },
+    {
+      title: "UI Design Kit",
+      description:
+        "The ultimate Figma kit for modern web applications. Speed up your design workflow today.",
+      link: "https://woilasoft.com/design",
+      gradient: "from-pink-500 to-rose-600",
+      cta: "Download Kit",
+      textColor: "text-pink-100/90",
+      ctaColor: "text-pink-600 hover:bg-pink-50",
+      image:
+        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300&h=150&fit=crop",
+    },
+  ]
+
+  return (
+    <div className="mt-10 border-t pt-10">
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent>
+          {ads.map((ad, index) => (
+            <CarouselItem key={index}>
+              <div
+                className={cn(
+                  "relative overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-xl transition-all hover:scale-[1.02]",
+                  ad.gradient
+                )}
+              >
+                <div className="relative z-10">
+                  <div className="mb-4 overflow-hidden rounded-lg shadow-sm">
+                    <Image
+                      src={ad.image}
+                      alt={ad.title}
+                      width={300}
+                      height={150}
+                      className="h-32 w-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <span className="mb-2 inline-block rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-bold tracking-wider text-white uppercase">
+                    Sponsored
+                  </span>
+                  <h3 className="mb-2 text-xl leading-tight font-bold">
+                    {ad.title}
+                  </h3>
+                  <p
+                    className={cn("mb-4 text-xs leading-relaxed", ad.textColor)}
+                  >
+                    {ad.description}
+                  </p>
+                  <a
+                    href={ad.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-bold transition-colors",
+                      ad.ctaColor
+                    )}
+                  >
+                    {ad.cta}
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </div>
+                <div className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-white/10 blur-2xl" />
+                <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-white/10 blur-2xl" />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+
+      {/* <div className="mt-6 flex flex-col gap-4">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-muted">
+            <Image
+              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=80&h=80&fit=crop"
+              alt="Mock Ad"
+              width={40}
+              height={40}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div>
+            <h5 className="text-xs font-semibold">Framer Motion Pro</h5>
+            <p className="text-muted-foreground text-[10px]">
+              Advanced animation course for developers.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-muted">
+            <Image
+              src="https://images.unsplash.com/photo-1614850523296-e8c041de4398?w=80&h=80&fit=crop"
+              alt="Mock Ad"
+              width={40}
+              height={40}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div>
+            <h5 className="text-xs font-semibold">Tailwind Templates</h5>
+            <p className="text-muted-foreground text-[10px]">
+              Beautifully crafted UI kits for Next.js.
+            </p>
+          </div>
+        </div>
+      </div> */}
+    </div>
   )
 }

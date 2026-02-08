@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "page-headings-with-tabs",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/input.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/page-headings-with-tabs.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Search, SlidersHorizontal } from \"lucide-react\";\r\r\nimport Link from \"next/link\";\r\r\n\r\r\nexport default function PageHeadingWithTabs() {\r\r\n  return (\r\r\n    <div className=\"border-b\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-16\">\r\r\n        <div className=\"flex flex-col gap-4 md:flex-row md:items-center md:justify-between\">\r\r\n          <div>\r\r\n            <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\r\r\n              Products\r\r\n            </h1>\r\r\n            <p className=\"mt-2 text-muted-foreground\">\r\r\n              Browse and manage your products inventory\r\r\n            </p>\r\r\n          </div>\r\r\n\r\r\n          <div className=\"flex items-center gap-2\">\r\r\n            <div className=\"relative w-full md:w-64\">\r\r\n              <Search className=\"absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground\" />\r\r\n              <Input\r\r\n                type=\"search\"\r\r\n                placeholder=\"Search products...\"\r\r\n                className=\"pl-8\"\r\r\n              />\r\r\n            </div>\r\r\n            <Button>\r\r\n              <SlidersHorizontal className=\"mr-2 h-4 w-4\" />\r\r\n              Filters\r\r\n            </Button>\r\r\n          </div>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"mt-8 flex gap-4 border-b\">\r\r\n          <Link\r\r\n            href=\"#\"\r\r\n            className=\"border-b-2 border-primary px-4 py-2.5 text-sm font-medium\"\r\r\n          >\r\r\n            All Products\r\r\n          </Link>\r\r\n          <Link\r\r\n            href=\"#\"\r\r\n            className=\"border-b-2 border-transparent px-4 py-2.5 text-sm font-medium text-muted-foreground hover:border-muted\"\r\r\n          >\r\r\n            Active\r\r\n          </Link>\r\r\n          <Link\r\r\n            href=\"#\"\r\r\n            className=\"border-b-2 border-transparent px-4 py-2.5 text-sm font-medium text-muted-foreground hover:border-muted\"\r\r\n          >\r\r\n            Draft\r\r\n          </Link>\r\r\n          <Link\r\r\n            href=\"#\"\r\r\n            className=\"border-b-2 border-transparent px-4 py-2.5 text-sm font-medium text-muted-foreground hover:border-muted\"\r\r\n          >\r\r\n            Archived\r\r\n          </Link>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "page-headings"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-icon-tabs",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/tabs.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/tabs-icon-tabs.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/registry/default/ui/tabs\";\r\r\nimport { User, Lock, Settings } from \"lucide-react\";\r\r\n\r\r\nexport default function IconTabs() {\r\r\n  return (\r\r\n    <div className=\"p-6\">\r\r\n      <Tabs defaultValue=\"account\" className=\"w-full max-w-3xl mx-auto\">\r\r\n        <TabsList className=\"grid w-full grid-cols-3 mb-8\">\r\r\n          <TabsTrigger value=\"account\" className=\"flex items-center gap-2\">\r\r\n            <User className=\"h-4 w-4\" />\r\r\n            <span>Account</span>\r\r\n          </TabsTrigger>\r\r\n          <TabsTrigger value=\"password\" className=\"flex items-center gap-2\">\r\r\n            <Lock className=\"h-4 w-4\" />\r\r\n            <span>Password</span>\r\r\n          </TabsTrigger>\r\r\n          <TabsTrigger value=\"settings\" className=\"flex items-center gap-2\">\r\r\n            <Settings className=\"h-4 w-4\" />\r\r\n            <span>Settings</span>\r\r\n          </TabsTrigger>\r\r\n        </TabsList>\r\r\n        <TabsContent value=\"account\" className=\"p-4 border rounded-md\">\r\r\n          <h3 className=\"text-lg font-medium\">Account</h3>\r\r\n          <p className=\"text-sm text-muted-foreground mt-2\">\r\r\n            Manage your account settings and preferences.\r\r\n          </p>\r\r\n        </TabsContent>\r\r\n        <TabsContent value=\"password\" className=\"p-4 border rounded-md\">\r\r\n          <h3 className=\"text-lg font-medium\">Password</h3>\r\r\n          <p className=\"text-sm text-muted-foreground mt-2\">\r\r\n            Change your password here. After saving, you&apos;ll be logged out.\r\r\n          </p>\r\r\n        </TabsContent>\r\r\n        <TabsContent value=\"settings\" className=\"p-4 border rounded-md\">\r\r\n          <h3 className=\"text-lg font-medium\">Settings</h3>\r\r\n          <p className=\"text-sm text-muted-foreground mt-2\">\r\r\n            Configure your application preferences and settings.\r\r\n          </p>\r\r\n        </TabsContent>\r\r\n      </Tabs>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "tabs"
+    ]
+  }
+}

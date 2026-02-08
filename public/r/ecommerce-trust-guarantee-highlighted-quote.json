@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ecommerce-trust-guarantee-highlighted-quote",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/ecommerce-trust-guarantee-highlighted-quote.tsx",
+      "content": "import { Quote } from \"lucide-react\";\r\r\n\r\r\ninterface TrustGuaranteeHighlightedQuoteProps {\r\r\n  quote: string;\r\r\n  author?: string;\r\r\n  role?: string;\r\r\n}\r\r\n\r\r\nexport default function TrustGuaranteeHighlightedQuote({\r\r\n  quote = \"We stand behind every order — or your money back.\",\r\r\n  author,\r\r\n  role,\r\r\n}: TrustGuaranteeHighlightedQuoteProps) {\r\r\n  return (\r\r\n    <section className=\"px-4 py-8 md:py-12\">\r\r\n      <div className=\"mx-auto max-w-4xl text-center\">\r\r\n        <div className=\"relative\">\r\r\n          {/* Quote Icon */}\r\r\n          <Quote className=\"text-muted-foreground/40 mx-auto mb-6 h-8 w-8\" />\r\r\n\r\r\n          {/* Main Quote */}\r\r\n          <blockquote className=\"text-foreground text-2xl leading-relaxed font-medium sm:text-3xl lg:text-4xl\">\r\r\n            &quot;{quote}&quot;\r\r\n          </blockquote>\r\r\n\r\r\n          {/* Author Attribution */}\r\r\n          {(author || role) && (\r\r\n            <footer className=\"mt-8\">\r\r\n              <div className=\"text-muted-foreground flex items-center justify-center gap-2 text-sm\">\r\r\n                {author && (\r\r\n                  <cite className=\"text-foreground font-medium not-italic\">\r\r\n                    {author}\r\r\n                  </cite>\r\r\n                )}\r\r\n                {author && role && (\r\r\n                  <span className=\"text-muted-foreground\">•</span>\r\r\n                )}\r\r\n                {role && <span>{role}</span>}\r\r\n              </div>\r\r\n            </footer>\r\r\n          )}\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ecommerce-trust-guarantee"
+    ]
+  }
+}

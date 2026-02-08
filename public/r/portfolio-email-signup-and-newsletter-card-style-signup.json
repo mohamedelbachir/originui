@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-email-signup-and-newsletter-card-style-signup",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-email-signup-and-newsletter-card-style-signup.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Label } from \"@/registry/default/ui/label\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardDescription,\r\r\n  CardFooter,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\nimport { Mail, CheckCircle, ArrowRight } from \"lucide-react\";\r\r\n\r\r\nexport default function PortfolioCardStyleSignup() {\r\r\n  return (\r\r\n    <div className=\"w-full py-12 md:py-16\">\r\r\n      <div className=\"container mx-auto px-4\">\r\r\n        <Card className=\"border-border mx-auto max-w-lg overflow-hidden pt-0\">\r\r\n          <div className=\"bg-primary/10 relative flex h-16 items-center justify-center\">\r\r\n            <div className=\"from-primary/20 absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] via-transparent to-transparent opacity-60\"></div>\r\r\n            <Mail className=\"text-primary relative z-10 h-8 w-8\" />\r\r\n          </div>\r\r\n\r\r\n          <CardHeader className=\"text-center\">\r\r\n            <CardTitle className=\"text-xl md:text-2xl\">\r\r\n              Get My Free UX Checklist\r\r\n            </CardTitle>\r\r\n            <CardDescription className=\"text-muted-foreground\">\r\r\n              Join my newsletter and receive a comprehensive UX design checklist\r\r\n              to ensure your projects cover all the essentials.\r\r\n            </CardDescription>\r\r\n          </CardHeader>\r\r\n\r\r\n          <CardContent>\r\r\n            <div className=\"mb-6\">\r\r\n              <div className=\"space-y-3\">\r\r\n                <div className=\"flex items-start\">\r\r\n                  <CheckCircle className=\"text-primary mt-0.5 mr-2 h-5 w-5 flex-shrink-0\" />\r\r\n                  <span>Weekly design tips & resources</span>\r\r\n                </div>\r\r\n                <div className=\"flex items-start\">\r\r\n                  <CheckCircle className=\"text-primary mt-0.5 mr-2 h-5 w-5 flex-shrink-0\" />\r\r\n                  <span>Project case studies & process insights</span>\r\r\n                </div>\r\r\n                <div className=\"flex items-start\">\r\r\n                  <CheckCircle className=\"text-primary mt-0.5 mr-2 h-5 w-5 flex-shrink-0\" />\r\r\n                  <span>Exclusive guides and templates</span>\r\r\n                </div>\r\r\n              </div>\r\r\n            </div>\r\r\n\r\r\n            <form>\r\r\n              <div className=\"space-y-4\">\r\r\n                <div className=\"space-y-2\">\r\r\n                  <Label htmlFor=\"name\">Name</Label>\r\r\n                  <Input id=\"name\" placeholder=\"Your name\" />\r\r\n                </div>\r\r\n\r\r\n                <div className=\"space-y-2\">\r\r\n                  <Label htmlFor=\"email\">Email</Label>\r\r\n                  <Input id=\"email\" type=\"email\" placeholder=\"your@email.com\" />\r\r\n                </div>\r\r\n\r\r\n                <Button type=\"submit\" className=\"group w-full\">\r\r\n                  Send Me the Checklist\r\r\n                  <ArrowRight className=\"ml-2 h-4 w-4 transition-transform group-hover:translate-x-1\" />\r\r\n                </Button>\r\r\n              </div>\r\r\n            </form>\r\r\n          </CardContent>\r\r\n\r\r\n          <CardFooter>\r\r\n            <p className=\"text-muted-foreground w-full text-center text-xs\">\r\r\n              I send one newsletter per week. No spam, just valuable content.\r\r\n              Unsubscribe anytime.\r\r\n            </p>\r\r\n          </CardFooter>\r\r\n        </Card>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-email-signup-and-newsletter"
+    ]
+  }
+}

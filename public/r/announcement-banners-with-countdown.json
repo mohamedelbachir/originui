@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "announcement-banners-with-countdown",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/announcement-banners-with-countdown.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { useEffect, useState } from \"react\";\r\r\n\r\r\nexport default function WithCountdown() {\r\r\n  const [timeLeft, setTimeLeft] = useState({\r\r\n    hours: 24,\r\r\n    minutes: 0,\r\r\n    seconds: 0,\r\r\n  });\r\r\n\r\r\n  useEffect(() => {\r\r\n    const timer = setInterval(() => {\r\r\n      setTimeLeft((current) => {\r\r\n        if (\r\r\n          current.hours === 0 &&\r\r\n          current.minutes === 0 &&\r\r\n          current.seconds === 0\r\r\n        ) {\r\r\n          clearInterval(timer);\r\r\n          return current;\r\r\n        }\r\r\n\r\r\n        let newSeconds = current.seconds - 1;\r\r\n        let newMinutes = current.minutes;\r\r\n        let newHours = current.hours;\r\r\n\r\r\n        if (newSeconds < 0) {\r\r\n          newSeconds = 59;\r\r\n          newMinutes -= 1;\r\r\n        }\r\r\n        if (newMinutes < 0) {\r\r\n          newMinutes = 59;\r\r\n          newHours -= 1;\r\r\n        }\r\r\n\r\r\n        return {\r\r\n          hours: newHours,\r\r\n          minutes: newMinutes,\r\r\n          seconds: newSeconds,\r\r\n        };\r\r\n      });\r\r\n    }, 1000);\r\r\n\r\r\n    return () => clearInterval(timer);\r\r\n  }, []);\r\r\n\r\r\n  return (\r\r\n    <div className=\"bg-muted\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n        <div className=\"flex items-center justify-between gap-x-6 p-4\">\r\r\n          <div className=\"flex flex-wrap w-full justify-between items-center gap-x-4 gap-y-2\">\r\r\n            <p className=\"text-sm font-medium\">\r\r\n              Flash Sale Ends in:{\" \"}\r\r\n              <span className=\"font-mono\">\r\r\n                {String(timeLeft.hours).padStart(2, \"0\")}:\r\r\n                {String(timeLeft.minutes).padStart(2, \"0\")}:\r\r\n                {String(timeLeft.seconds).padStart(2, \"0\")}\r\r\n              </span>\r\r\n            </p>\r\r\n            <Button size=\"sm\" variant=\"default\">\r\r\n              Shop Now\r\r\n            </Button>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "announcement-banners"
+    ]
+  }
+}

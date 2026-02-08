@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "about-sections-with-image",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/about-sections-with-image.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport Link from \"next/link\";\r\r\n\r\r\nexport default function AboutSectionWithImage() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"grid grid-cols-1 items-center gap-12 lg:grid-cols-2\">\r\r\n        <div className=\"space-y-6\">\r\r\n          <h2 className=\"text-3xl font-bold tracking-tight\">Our Story</h2>\r\r\n          <div className=\"space-y-4\">\r\r\n            <p className=\"text-muted-foreground\">\r\r\n              Founded in 2010, our company began with a simple idea: to create\r\r\n              technology that truly serves people. What started as a small team\r\r\n              of three passionate developers has grown into a global\r\r\n              organization with offices in 12 countries.\r\r\n            </p>\r\r\n            <p className=\"text-muted-foreground\">\r\r\n              Over the years, we&apos;ve helped thousands of businesses\r\r\n              transform their digital presence and streamline their operations.\r\r\n              Our approach combines technical expertise with deep industry\r\r\n              knowledge.\r\r\n            </p>\r\r\n            <p className=\"text-muted-foreground\">\r\r\n              Today, we continue to innovate and push boundaries, always with\r\r\n              our original mission at heart: putting people first in everything\r\r\n              we build.\r\r\n            </p>\r\r\n          </div>\r\r\n          <div className=\"flex flex-wrap gap-4\">\r\r\n            <Button asChild>\r\r\n              <Link href=\"#\">Learn our history</Link>\r\r\n            </Button>\r\r\n            <Button variant=\"outline\" asChild>\r\r\n              <Link href=\"#\">Meet our team</Link>\r\r\n            </Button>\r\r\n          </div>\r\r\n        </div>\r\r\n        <div className=\"relative aspect-video overflow-hidden rounded-lg lg:aspect-square\">\r\r\n          <Image\r\r\n            src=\"https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2000\"\r\r\n            alt=\"Our team collaboration\"\r\r\n            fill\r\r\n            className=\"object-cover\"\r\r\n            sizes=\"(max-width: 768px) 100vw, 50vw\"\r\r\n            priority\r\r\n          />\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "about-sections"
+    ]
+  }
+}

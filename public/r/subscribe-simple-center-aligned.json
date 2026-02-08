@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "subscribe-simple-center-aligned",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/subscribe-simple-center-aligned.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Label } from \"@/registry/default/ui/label\";\r\r\n\r\r\nexport default function SimpleCenterAligned() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32\">\r\r\n      <div className=\"max-w-xl text-center mx-auto\">\r\r\n        <div className=\"mb-5\">\r\r\n          <h2 className=\"text-2xl font-bold md:text-3xl md:leading-tight\">\r\r\n            Sign up to our newsletter\r\r\n          </h2>\r\r\n        </div>\r\r\n\r\r\n        <form>\r\r\n          <div className=\"mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3\">\r\r\n            <div className=\"w-full\">\r\r\n              <Label htmlFor=\"subscribe-input\" className=\"sr-only\">\r\r\n                Search\r\r\n              </Label>\r\r\n              <Input\r\r\n                type=\"text\"\r\r\n                id=\"subscribe-input\"\r\r\n                name=\"subscribe-input\"\r\r\n                className=\"\"\r\r\n                placeholder=\"Enter your email\"\r\r\n              />\r\r\n            </div>\r\r\n            <Button className=\"w-full sm:w-auto\">Subscribe</Button>\r\r\n          </div>\r\r\n        </form>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "subscribe"
+    ]
+  }
+}

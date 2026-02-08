@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-floating-pagination",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/pagination.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/pagination-floating-pagination.tsx",
+      "content": "import {\r\r\n  Pagination,\r\r\n  PaginationContent,\r\r\n  PaginationEllipsis,\r\r\n  PaginationItem,\r\r\n  PaginationLink,\r\r\n  PaginationNext,\r\r\n  PaginationPrevious,\r\r\n} from \"@/registry/default/ui/pagination\";\r\r\n\r\r\nexport default function FloatingPagination() {\r\r\n  return (\r\r\n    <div className=\"relative h-[300px] border rounded-md overflow-hidden\">\r\r\n      {/* This container simulates a scrollable area */}\r\r\n      <div className=\"h-full overflow-y-auto p-4\">\r\r\n        {/* Sample content */}\r\r\n        <div className=\"space-y-4\">\r\r\n          <h2 className=\"text-2xl font-bold\">Sample Content</h2>\r\r\n          <p className=\"text-muted-foreground\">\r\r\n            Scroll down to see the floating pagination.\r\r\n          </p>\r\r\n          {Array.from({ length: 10 }).map((_, i) => (\r\r\n            <div key={i} className=\"p-4 border rounded-md\">\r\r\n              <h3 className=\"font-medium\">Item {i + 1}</h3>\r\r\n              <p className=\"text-sm text-muted-foreground\">\r\r\n                This is a sample item description.\r\r\n              </p>\r\r\n            </div>\r\r\n          ))}\r\r\n        </div>\r\r\n\r\r\n        {/* Floating pagination */}\r\r\n        <div className=\"sticky bottom-4 left-0 right-0 flex justify-center mt-4\">\r\r\n          <Pagination>\r\r\n            <PaginationContent className=\"bg-card text-card-foreground shadow-md border rounded-full p-1\">\r\r\n              <PaginationItem>\r\r\n                <PaginationPrevious href=\"#\" className=\"rounded-full\" />\r\r\n              </PaginationItem>\r\r\n              <PaginationItem>\r\r\n                <PaginationLink href=\"#\" className=\"rounded-full\">\r\r\n                  1\r\r\n                </PaginationLink>\r\r\n              </PaginationItem>\r\r\n              <PaginationItem>\r\r\n                <PaginationLink href=\"#\" isActive className=\"rounded-full\">\r\r\n                  2\r\r\n                </PaginationLink>\r\r\n              </PaginationItem>\r\r\n              <PaginationItem>\r\r\n                <PaginationLink href=\"#\" className=\"rounded-full\">\r\r\n                  3\r\r\n                </PaginationLink>\r\r\n              </PaginationItem>\r\r\n              <PaginationItem>\r\r\n                <PaginationEllipsis />\r\r\n              </PaginationItem>\r\r\n              <PaginationItem>\r\r\n                <PaginationLink href=\"#\" className=\"rounded-full\">\r\r\n                  8\r\r\n                </PaginationLink>\r\r\n              </PaginationItem>\r\r\n              <PaginationItem>\r\r\n                <PaginationNext href=\"#\" className=\"rounded-full\" />\r\r\n              </PaginationItem>\r\r\n            </PaginationContent>\r\r\n          </Pagination>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pagination"
+    ]
+  }
+}

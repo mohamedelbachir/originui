@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-resource-download-sections-featured-resource-card",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-resource-download-sections-featured-resource-card.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Download } from \"lucide-react\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\nexport default function PortfolioFeaturedResourceCard() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 py-12 md:py-16\">\r\r\n      <div className=\"bg-card overflow-hidden rounded-xl border shadow-sm\">\r\r\n        <div className=\"grid grid-cols-1 items-stretch gap-8 md:grid-cols-2\">\r\r\n          {/* Image column */}\r\r\n          <div className=\"relative h-full min-h-[300px] md:min-h-0\">\r\r\n            <div className=\"absolute inset-0 w-full overflow-hidden\">\r\r\n              <Image\r\r\n                src=\"https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3\"\r\r\n                alt=\"UX Design Checklist preview\"\r\r\n                fill\r\r\n                className=\"object-cover object-center\"\r\r\n                sizes=\"(max-width: 768px) 100vw, 50vw\"\r\r\n              />\r\r\n\r\r\n              {/* Decorative pattern overlay */}\r\r\n              <div className=\"from-primary/40 absolute inset-0 bg-gradient-to-tr to-transparent opacity-60 mix-blend-overlay\"></div>\r\r\n            </div>\r\r\n\r\r\n            {/* Resource type badge */}\r\r\n            <Badge className=\"absolute top-4 left-4\">PDF Guide</Badge>\r\r\n          </div>\r\r\n\r\r\n          {/* Content column */}\r\r\n          <div className=\"flex flex-col p-6 md:p-8 lg:p-10\">\r\r\n            <div className=\"max-w-md\">\r\r\n              <h2 className=\"text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl\">\r\r\n                The Complete UX Design Checklist\r\r\n              </h2>\r\r\n\r\r\n              <p className=\"text-muted-foreground mt-3 md:text-lg\">\r\r\n                A comprehensive, 35-point checklist to ensure your design\r\r\n                projects cover all essential UX principles. Perfect for\r\r\n                freelancers and design teams.\r\r\n              </p>\r\r\n\r\r\n              <ul className=\"mt-6 space-y-2\">\r\r\n                <li className=\"flex items-start\">\r\r\n                  <span className=\"text-primary mr-2 text-lg\">•</span>\r\r\n                  <span>35 actionable UX checkpoints</span>\r\r\n                </li>\r\r\n                <li className=\"flex items-start\">\r\r\n                  <span className=\"text-primary mr-2 text-lg\">•</span>\r\r\n                  <span>Project planning templates included</span>\r\r\n                </li>\r\r\n                <li className=\"flex items-start\">\r\r\n                  <span className=\"text-primary mr-2 text-lg\">•</span>\r\r\n                  <span>Based on industry best practices</span>\r\r\n                </li>\r\r\n              </ul>\r\r\n\r\r\n              <Button asChild size=\"lg\" className=\"mt-8 w-full sm:w-auto\">\r\r\n                <Link href=\"#\">\r\r\n                  <Download className=\"mr-2 h-4 w-4\" />\r\r\n                  Download Free Guide\r\r\n                </Link>\r\r\n              </Button>\r\r\n\r\r\n              <p className=\"text-muted-foreground mt-4 text-sm\">\r\r\n                No email required. Instant download.\r\r\n              </p>\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-resource-download-sections"
+    ]
+  }
+}

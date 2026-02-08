@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badges-elevated-badge",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/badges-elevated-badge.tsx",
+      "content": "import { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\nexport default function ElevatedBadge() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Badge\r\r\n        variant=\"default\"\r\r\n        className=\"shadow-md hover:shadow-lg transition-shadow\"\r\r\n      >\r\r\n        Default\r\r\n      </Badge>\r\r\n\r\r\n      <Badge\r\r\n        variant=\"secondary\"\r\r\n        className=\"shadow-md hover:shadow-lg transition-shadow\"\r\r\n      >\r\r\n        Secondary\r\r\n      </Badge>\r\r\n\r\r\n      <Badge\r\r\n        variant=\"destructive\"\r\r\n        className=\"shadow-md hover:shadow-lg transition-shadow\"\r\r\n      >\r\r\n        Destructive\r\r\n      </Badge>\r\r\n\r\r\n      <Badge\r\r\n        variant=\"outline\"\r\r\n        className=\"shadow-md hover:shadow-lg transition-shadow\"\r\r\n      >\r\r\n        Outline\r\r\n      </Badge>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badges"
+    ]
+  }
+}

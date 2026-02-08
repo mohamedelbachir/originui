@@ -5,6 +5,8 @@ import dynamic from "next/dynamic"
 import { LoaderCircleIcon } from "lucide-react"
 import type { RegistryItem } from "shadcn/registry"
 
+import { IframeWrapper } from "@/components/iframe-wrapper"
+
 interface ComponentLoaderProps {
   component: RegistryItem
 }
@@ -38,5 +40,11 @@ export default function ComponentLoader<TProps extends object>({
     }
   ) as ComponentType<TProps>
 
-  return <Component {...(props as TProps)} currentPage={1} totalPages={10} />
+  return (
+    // <IframeWrapper className="min-h-[350px]">
+    <Component {...(props as TProps)} currentPage={1} totalPages={10} />
+    // <div className="flex h-fit w-full items-center justify-center p-8">
+    // </div>
+    // </IframeWrapper>
+  )
 }

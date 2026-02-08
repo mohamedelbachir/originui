@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "about-sections-achievements",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/about-sections-achievements.tsx",
+      "content": "import { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\nimport { Trophy, Users, Building, Globe } from \"lucide-react\";\r\r\n\r\r\nconst achievements = [\r\r\n  {\r\r\n    icon: Trophy,\r\r\n    stat: \"150+\",\r\r\n    title: \"Industry Awards\",\r\r\n    description: \"Recognized for excellence in design and innovation.\",\r\r\n  },\r\r\n  {\r\r\n    icon: Users,\r\r\n    stat: \"50,000+\",\r\r\n    title: \"Happy Clients\",\r\r\n    description: \"Helping businesses worldwide achieve their goals.\",\r\r\n  },\r\r\n  {\r\r\n    icon: Building,\r\r\n    stat: \"12\",\r\r\n    title: \"Global Offices\",\r\r\n    description: \"Local presence with international reach.\",\r\r\n  },\r\r\n  {\r\r\n    icon: Globe,\r\r\n    stat: \"24/7\",\r\r\n    title: \"Customer Support\",\r\r\n    description: \"Always available to help when you need us.\",\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function AboutSectionAchievements() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto space-y-12 px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"mx-auto max-w-3xl space-y-4 text-center\">\r\r\n        <h2 className=\"text-3xl font-bold\">Our Achievements</h2>\r\r\n        <p className=\"text-muted-foreground\">\r\r\n          Since our founding in 2010, we&apos;ve reached significant milestones\r\r\n          and earned the trust of clients across industries and continents.\r\r\n        </p>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4\">\r\r\n        {achievements.map((item) => (\r\r\n          <Card key={item.title} className=\"p-0\">\r\r\n            <CardContent className=\"space-y-4 p-6 text-center\">\r\r\n              <div className=\"flex justify-center\">\r\r\n                <item.icon className=\"text-primary h-10 w-10\" />\r\r\n              </div>\r\r\n              <div>\r\r\n                <p className=\"text-3xl font-bold\">{item.stat}</p>\r\r\n                <h3 className=\"font-semibold\">{item.title}</h3>\r\r\n              </div>\r\r\n              <p className=\"text-muted-foreground text-sm\">\r\r\n                {item.description}\r\r\n              </p>\r\r\n            </CardContent>\r\r\n          </Card>\r\r\n        ))}\r\r\n      </div>\r\r\n\r\r\n      <div className=\"mx-auto max-w-2xl space-y-4 pt-8 text-center\">\r\r\n        <h3 className=\"text-xl font-bold\">Trusted by Leading Organizations</h3>\r\r\n        <p className=\"text-muted-foreground\">\r\r\n          Our solutions power businesses of all sizes, from innovative startups\r\r\n          to Fortune 500 companies across a wide range of industries.\r\r\n        </p>\r\r\n        <div className=\"grid grid-cols-2 gap-8 pt-6 opacity-75 sm:grid-cols-3 md:grid-cols-6\">\r\r\n          {[1, 2, 3, 4, 5, 6].map((i) => (\r\r\n            <div key={i} className=\"bg-muted h-8 rounded-md\"></div>\r\r\n          ))}\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "about-sections"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-mission-and-values-three-pillars-layout",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-mission-and-values-three-pillars-layout.tsx",
+      "content": "import { ShieldCheck, Lightbulb, Users } from \"lucide-react\";\r\r\n\r\r\nexport default function MissionAndValuesThreePillars() {\r\r\n  return (\r\r\n    <section className=\"py-16 md:py-24\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n        {/* Mission Statement Header */}\r\r\n        <div className=\"mb-16 text-center\">\r\r\n          <h2 className=\"mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl\">\r\r\n            Our Mission\r\r\n          </h2>\r\r\n          <p className=\"text-muted-foreground mx-auto max-w-3xl text-lg md:text-xl\">\r\r\n            We strive to create meaningful digital experiences that transform\r\r\n            businesses and enrich lives through innovative design and technology\r\r\n            solutions.\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        {/* Three Pillars */}\r\r\n        <div className=\"grid gap-8 md:grid-cols-3\">\r\r\n          {/* Pillar 1 */}\r\r\n          <div className=\"bg-card flex flex-col items-center rounded-lg border p-8 text-center shadow-sm transition-all hover:shadow-md\">\r\r\n            <div className=\"bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-full\">\r\r\n              <ShieldCheck className=\"h-7 w-7\" />\r\r\n            </div>\r\r\n            <h3 className=\"mt-6 text-xl font-semibold\">Integrity</h3>\r\r\n            <p className=\"text-muted-foreground mt-3\">\r\r\n              We hold ourselves to the highest ethical standards in all\r\r\n              interactions. Honesty and transparency guide our relationships\r\r\n              with clients and teammates.\r\r\n            </p>\r\r\n          </div>\r\r\n\r\r\n          {/* Pillar 2 */}\r\r\n          <div className=\"bg-card flex flex-col items-center rounded-lg border p-8 text-center shadow-sm transition-all hover:shadow-md\">\r\r\n            <div className=\"bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-full\">\r\r\n              <Lightbulb className=\"h-7 w-7\" />\r\r\n            </div>\r\r\n            <h3 className=\"mt-6 text-xl font-semibold\">Innovation</h3>\r\r\n            <p className=\"text-muted-foreground mt-3\">\r\r\n              We continuously explore new possibilities and challenge\r\r\n              conventional thinking to create solutions that are ahead of their\r\r\n              time.\r\r\n            </p>\r\r\n          </div>\r\r\n\r\r\n          {/* Pillar 3 */}\r\r\n          <div className=\"bg-card flex flex-col items-center rounded-lg border p-8 text-center shadow-sm transition-all hover:shadow-md\">\r\r\n            <div className=\"bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-full\">\r\r\n              <Users className=\"h-7 w-7\" />\r\r\n            </div>\r\r\n            <h3 className=\"mt-6 text-xl font-semibold\">Collaboration</h3>\r\r\n            <p className=\"text-muted-foreground mt-3\">\r\r\n              We believe in the power of diverse perspectives and foster an\r\r\n              environment where teamwork and open communication drive our\r\r\n              success.\r\r\n            </p>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-mission-and-values"
+    ]
+  }
+}

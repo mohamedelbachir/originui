@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-sections-stats-cta",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cta-sections-stats-cta.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function StatsCTA() {\r\r\n  const stats = [\r\r\n    { value: \"10K+\", label: \"Active Users\" },\r\r\n    { value: \"500+\", label: \"Enterprise Clients\" },\r\r\n    { value: \"99.9%\", label: \"Uptime\" },\r\r\n    { value: \"24/7\", label: \"Support\" },\r\r\n  ];\r\r\n\r\r\n  return (\r\r\n    <>\r\r\n      {/* Stats CTA Section */}\r\r\n      <div className=\"py-16 md:py-24\">\r\r\n        <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n          <div className=\"flex flex-col items-center justify-center space-y-4 text-center\">\r\r\n            <div className=\"space-y-2\">\r\r\n              <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl\">\r\r\n                Trusted by thousands worldwide\r\r\n              </h2>\r\r\n              <p className=\"mx-auto max-w-[700px] text-muted-foreground md:text-xl\">\r\r\n                Join the community of businesses improving their workflows with\r\r\n                our platform.\r\r\n              </p>\r\r\n            </div>\r\r\n\r\r\n            <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8 mt-8\">\r\r\n              {stats.map((stat, index) => (\r\r\n                <div\r\r\n                  key={index}\r\r\n                  className=\"flex flex-col items-center space-y-2\"\r\r\n                >\r\r\n                  <div className=\"text-3xl md:text-4xl font-bold text-primary\">\r\r\n                    {stat.value}\r\r\n                  </div>\r\r\n                  <div className=\"text-sm md:text-base text-muted-foreground\">\r\r\n                    {stat.label}\r\r\n                  </div>\r\r\n                </div>\r\r\n              ))}\r\r\n            </div>\r\r\n\r\r\n            <div className=\"mt-10 space-y-4\">\r\r\n              <Button size=\"lg\" asChild>\r\r\n                <Link href=\"#\">Get Started</Link>\r\r\n              </Button>\r\r\n              <p className=\"text-sm text-muted-foreground\">\r\r\n                No credit card required to start your 14-day trial\r\r\n              </p>\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Stats CTA Section */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cta-sections"
+    ]
+  }
+}

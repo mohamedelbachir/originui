@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "promo-sections-large-image-split",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/promo-sections-large-image-split.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\nimport { Check } from \"lucide-react\";\r\r\n\r\r\nexport default function LargeImageSplitPromo() {\r\r\n  return (\r\r\n    <div className=\"relative overflow-hidden bg-background\">\r\r\n      <div className=\"mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8\">\r\r\n        {/* Content Section */}\r\r\n        <div className=\"px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6\">\r\r\n          <div className=\"mx-auto max-w-2xl lg:mx-0\">\r\r\n            <Badge variant=\"secondary\" className=\"mb-4\">\r\r\n              Premium Quality\r\r\n            </Badge>\r\r\n            <h1 className=\"mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl\">\r\r\n              Handcrafted Leather Goods\r\r\n            </h1>\r\r\n            <p className=\"mt-6 text-lg leading-8 text-muted-foreground\">\r\r\n              Discover timeless style and durability with our collection of\r\r\n              artisanal leather bags, wallets, and accessories. Made to last a\r\r\n              lifetime.\r\r\n            </p>\r\r\n            <ul\r\r\n              role=\"list\"\r\r\n              className=\"mt-8 space-y-3 text-sm leading-6 text-muted-foreground\"\r\r\n            >\r\r\n              <li className=\"flex gap-x-3 items-center\">\r\r\n                <Check\r\r\n                  className=\"h-5 w-5 flex-none text-primary\"\r\r\n                  aria-hidden=\"true\"\r\r\n                />\r\r\n                Full-grain Italian leather\r\r\n              </li>\r\r\n              <li className=\"flex gap-x-3 items-center\">\r\r\n                <Check\r\r\n                  className=\"h-5 w-5 flex-none text-primary\"\r\r\n                  aria-hidden=\"true\"\r\r\n                />\r\r\n                Expert craftsmanship\r\r\n              </li>\r\r\n              <li className=\"flex gap-x-3 items-center\">\r\r\n                <Check\r\r\n                  className=\"h-5 w-5 flex-none text-primary\"\r\r\n                  aria-hidden=\"true\"\r\r\n                />\r\r\n                Sustainable sourcing\r\r\n              </li>\r\r\n            </ul>\r\r\n            <div className=\"mt-10 flex items-center gap-x-6\">\r\r\n              <Button size=\"lg\" asChild>\r\r\n                <Link href=\"#\">Shop Collection</Link>\r\r\n              </Button>\r\r\n              <Button variant=\"outline\" size=\"lg\" asChild>\r\r\n                <Link href=\"#\">Our Story</Link>\r\r\n              </Button>\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n\r\r\n        {/* Image Section */}\r\r\n        <div className=\"relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-y-0 xl:right-0 xl:w-1/2\">\r\r\n          <Image\r\r\n            className=\"aspect-[3/2] w-full bg-muted object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full\"\r\r\n            src=\"https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=1200&auto=format&fit=crop\"\r\r\n            alt=\"Collection of handcrafted leather goods\"\r\r\n            width={900}\r\r\n            height={600}\r\r\n            priority\r\r\n          />\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "promo-sections"
+    ]
+  }
+}

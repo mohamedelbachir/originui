@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordions-fade-in-content-accordion",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/accordion.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/accordions-fade-in-content-accordion.tsx",
+      "content": "import {\r\r\n  Accordion,\r\r\n  AccordionContent,\r\r\n  AccordionItem,\r\r\n  AccordionTrigger,\r\r\n} from \"@/registry/default/ui/accordion\";\r\r\n\r\r\nexport default function FadeInContentAccordion() {\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6\">\r\r\n      <Accordion type=\"single\" collapsible className=\"w-full\">\r\r\n        <AccordionItem value=\"item-1\" className=\"border-b\">\r\r\n          <AccordionTrigger className=\"hover:no-underline\">\r\r\n            Is it accessible?\r\r\n          </AccordionTrigger>\r\r\n          <AccordionContent className=\"overflow-hidden\">\r\r\n            <div className=\"animate-in fade-in-0 duration-500 slide-in-from-bottom-2\">\r\r\n              Yes. It adheres to the WAI-ARIA design pattern.\r\r\n            </div>\r\r\n          </AccordionContent>\r\r\n        </AccordionItem>\r\r\n        <AccordionItem value=\"item-2\" className=\"border-b\">\r\r\n          <AccordionTrigger className=\"hover:no-underline\">\r\r\n            Is it styled?\r\r\n          </AccordionTrigger>\r\r\n          <AccordionContent className=\"overflow-hidden\">\r\r\n            <div className=\"animate-in fade-in-0 duration-500 slide-in-from-bottom-2\">\r\r\n              Yes. It comes with default styles that matches the other\r\r\n              components&apos; aesthetic.\r\r\n            </div>\r\r\n          </AccordionContent>\r\r\n        </AccordionItem>\r\r\n        <AccordionItem value=\"item-3\" className=\"border-b\">\r\r\n          <AccordionTrigger className=\"hover:no-underline\">\r\r\n            Is it animated?\r\r\n          </AccordionTrigger>\r\r\n          <AccordionContent className=\"overflow-hidden\">\r\r\n            <div className=\"animate-in fade-in-0 duration-500 slide-in-from-bottom-2\">\r\r\n              Yes. It&apos;s animated by default, but you can disable it if you\r\r\n              prefer.\r\r\n            </div>\r\r\n          </AccordionContent>\r\r\n        </AccordionItem>\r\r\n      </Accordion>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "accordions"
+    ]
+  }
+}

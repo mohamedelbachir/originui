@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "about-sections-values",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/about-sections-values.tsx",
+      "content": "import { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\nimport {\r\r\n  Heart,\r\r\n  BarChart3,\r\r\n  Lightbulb,\r\r\n  HandHeart,\r\r\n  Users2,\r\r\n  Shield,\r\r\n} from \"lucide-react\";\r\r\n\r\r\nconst values = [\r\r\n  {\r\r\n    icon: Heart,\r\r\n    title: \"Customer First\",\r\r\n    description:\r\r\n      \"We prioritize our customers&apos; needs in every decision we make. Your success is our success.\",\r\r\n  },\r\r\n  {\r\r\n    icon: Lightbulb,\r\r\n    title: \"Innovation\",\r\r\n    description:\r\r\n      \"We constantly push boundaries and explore new possibilities to deliver cutting-edge solutions.\",\r\r\n  },\r\r\n  {\r\r\n    icon: Shield,\r\r\n    title: \"Integrity\",\r\r\n    description:\r\r\n      \"We believe in transparency, honesty, and ethical conduct in all our interactions.\",\r\r\n  },\r\r\n  {\r\r\n    icon: BarChart3,\r\r\n    title: \"Excellence\",\r\r\n    description:\r\r\n      \"We strive for excellence in everything we do, from product development to customer support.\",\r\r\n  },\r\r\n  {\r\r\n    icon: Users2,\r\r\n    title: \"Collaboration\",\r\r\n    description:\r\r\n      \"We work together across teams and with our clients to create better outcomes for everyone.\",\r\r\n  },\r\r\n  {\r\r\n    icon: HandHeart,\r\r\n    title: \"Social Responsibility\",\r\r\n    description:\r\r\n      \"We&apos;re committed to making a positive impact on communities and the environment.\",\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function AboutSectionValues() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto space-y-8 px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"space-y-4 text-center\">\r\r\n        <h2 className=\"text-3xl font-bold\">Our Core Values</h2>\r\r\n        <p className=\"text-muted-foreground mx-auto max-w-2xl\">\r\r\n          These principles guide everything we do, from how we develop our\r\r\n          products to how we interact with our customers and each other.\r\r\n        </p>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3\">\r\r\n        {values.map((value) => (\r\r\n          <Card key={value.title} className=\"border-l-primary border-l-4 p-0\">\r\r\n            <CardContent className=\"space-y-4 p-6\">\r\r\n              <div className=\"flex items-center gap-4\">\r\r\n                <div className=\"bg-primary/10 rounded-full p-3\">\r\r\n                  <value.icon className=\"text-primary h-6 w-6\" />\r\r\n                </div>\r\r\n                <h3 className=\"text-lg font-bold\">{value.title}</h3>\r\r\n              </div>\r\r\n              <p className=\"text-muted-foreground\">{value.description}</p>\r\r\n            </CardContent>\r\r\n          </Card>\r\r\n        ))}\r\r\n      </div>\r\r\n\r\r\n      <div className=\"pt-8 text-center\">\r\r\n        <p className=\"text-muted-foreground mx-auto max-w-2xl\">\r\r\n          These values aren&apos;t just words on our website—they&apos;re lived\r\r\n          every day by our team members and reflected in the work we deliver.\r\r\n        </p>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "about-sections"
+    ]
+  }
+}

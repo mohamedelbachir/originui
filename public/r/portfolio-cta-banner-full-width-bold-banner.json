@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-cta-banner-full-width-bold-banner",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-cta-banner-full-width-bold-banner.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight } from \"lucide-react\";\r\r\n\r\r\nexport default function PortfolioCTAFullWidthBoldBanner() {\r\r\n  return (\r\r\n    <div className=\"bg-primary w-full py-12 md:py-16\">\r\r\n      <div className=\"container mx-auto px-4 text-center\">\r\r\n        <h2 className=\"text-primary-foreground text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl\">\r\r\n          Ready to Transform Your Vision into Reality?\r\r\n        </h2>\r\r\n\r\r\n        <p className=\"text-primary-foreground/90 mx-auto mt-3 max-w-2xl text-lg\">\r\r\n          Let&apos;s collaborate and create something exceptional together.\r\r\n        </p>\r\r\n\r\r\n        <Button\r\r\n          asChild\r\r\n          size=\"lg\"\r\r\n          variant=\"secondary\"\r\r\n          className=\"group mt-8 font-medium\"\r\r\n        >\r\r\n          <Link href=\"#\">\r\r\n            Contact Me\r\r\n            <ArrowRight className=\"ml-2 h-4 w-4 transition-transform group-hover:translate-x-1\" />\r\r\n          </Link>\r\r\n        </Button>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-cta-banner"
+    ]
+  }
+}
