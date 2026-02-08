@@ -1,6 +1,7 @@
 "use client"
 
-import { useId, useState } from "react"
+import { useEffect, useId, useState } from "react"
+import { useForm as useFormspree } from "@formspree/react"
 import { RiLoader3Line, RiNavigationLine } from "@remixicon/react"
 
 import { cn } from "@/registry/default/lib/utils"
@@ -8,7 +9,8 @@ import { Button } from "@/registry/default/ui/button"
 import { Input } from "@/registry/default/ui/input"
 
 import { Illustration } from "./illustration"
-import { subscribe } from "./subscribe-action"
+
+// import { subscribe } from "./subscribe-action"
 
 // Add type for form state
 type FormStatus = "idle" | "loading" | "success" | "error"
@@ -20,28 +22,31 @@ function Form() {
     status: "idle" as FormStatus,
     message: "",
   })
-
+  const [state, handleSubmission] = useFormspree("mdalkolq")
   const isLoading = formState.status === "loading"
 
+  useEffect(() => {
+    if (!state.succeeded) {
+      setFormState((prev) => ({
+        ...prev,
+        status: "error",
+        message: "Failed to subscribe",
+      }))
+    } else {
+      setFormState({
+        email: "",
+        status: "success",
+        message: "Thanks for subscribing!",
+      })
+    }
+  }, [state])
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setFormState((prev) => ({ ...prev, status: "loading", message: "" }))
 
     try {
-      const result = await subscribe(formState.email)
-      if (!result.success) {
-        setFormState((prev) => ({
-          ...prev,
-          status: "error",
-          message: result.error,
-        }))
-      } else {
-        setFormState({
-          email: "",
-          status: "success",
-          message: "Thanks for subscribing!",
-        })
-      }
+      // const result = await subscribe(formState.email)
+      const result = await handleSubmission({ email: formState.email })
     } catch (error) {
       setFormState((prev) => ({
         ...prev,
