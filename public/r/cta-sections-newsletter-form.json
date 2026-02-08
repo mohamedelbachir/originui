@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-sections-newsletter-form",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cta-sections-newsletter-form.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function NewsletterFormCTA() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Newsletter CTA Section */}\r\r\n      <div className=\"py-16 md:py-24 bg-muted\">\r\r\n        <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n          <div className=\"mx-auto max-w-2xl space-y-6 text-center\">\r\r\n            <div className=\"space-y-2\">\r\r\n              <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl\">\r\r\n                Subscribe to our newsletter\r\r\n              </h2>\r\r\n              <p className=\"mx-auto max-w-[600px] text-muted-foreground md:text-xl\">\r\r\n                Get the latest updates and news delivered to your inbox.\r\r\n              </p>\r\r\n            </div>\r\r\n            <div className=\"mx-auto w-full max-w-md\">\r\r\n              <form className=\"flex flex-col sm:flex-row w-full gap-2\">\r\r\n                <input\r\r\n                  type=\"email\"\r\r\n                  placeholder=\"Enter your email\"\r\r\n                  className=\"flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\"\r\r\n                  required\r\r\n                />\r\r\n                <Button type=\"submit\" className=\"sm:w-auto\">\r\r\n                  Subscribe\r\r\n                </Button>\r\r\n              </form>\r\r\n            </div>\r\r\n            <p className=\"text-xs text-muted-foreground\">\r\r\n              We respect your privacy. Unsubscribe at any time.\r\r\n            </p>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Newsletter CTA Section */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cta-sections"
+    ]
+  }
+}

@@ -3,10 +3,10 @@
   "name": "comp-512",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/calendar.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/popover.json"
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/calendar.json",
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/popover.json"
   ],
   "files": [
     {

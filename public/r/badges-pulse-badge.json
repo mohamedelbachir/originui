@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badges-pulse-badge",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/badges-pulse-badge.tsx",
+      "content": "import { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\n{\r\r\n  /* Add this to your global CSS file:\r\r\n@keyframes pulse-subtle {\r\r\n  0%,\r\r\n  100% {\r\r\n    opacity: 1;\r\r\n  }\r\r\n  50% {\r\r\n    opacity: 0.7;\r\r\n  }\r\r\n}\r\r\n\r\r\n.animate-pulse-subtle {\r\r\n  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;\r\r\n}\r\r\n*/\r\r\n}\r\r\n\r\r\nexport default function PulseBadge() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Badge variant=\"default\" className=\"animate-pulse-subtle\">\r\r\n        Default\r\r\n      </Badge>\r\r\n\r\r\n      <Badge variant=\"secondary\" className=\"animate-pulse-subtle\">\r\r\n        Secondary\r\r\n      </Badge>\r\r\n\r\r\n      <Badge variant=\"destructive\" className=\"animate-pulse-subtle\">\r\r\n        Destructive\r\r\n      </Badge>\r\r\n\r\r\n      <Badge variant=\"outline\" className=\"animate-pulse-subtle\">\r\r\n        Outline\r\r\n      </Badge>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badges"
+    ]
+  }
+}

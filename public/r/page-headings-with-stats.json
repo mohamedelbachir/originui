@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "page-headings-with-stats",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/page-headings-with-stats.tsx",
+      "content": "import { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\nimport {\r\r\n  ArrowDown,\r\r\n  ArrowUp,\r\r\n  Users,\r\r\n  DollarSign,\r\r\n  ShoppingCart,\r\r\n} from \"lucide-react\";\r\r\n\r\r\nexport default function PageHeadingWithStats() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 py-16 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"mb-8\">\r\r\n        <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\r\r\n          Dashboard Overview\r\r\n        </h1>\r\r\n        <p className=\"text-muted-foreground mt-2\">\r\r\n          Your business performance at a glance\r\r\n        </p>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"grid gap-4 md:grid-cols-2 lg:grid-cols-3\">\r\r\n        <Card className=\"p-0\">\r\r\n          <CardContent className=\"flex items-center justify-between p-6\">\r\r\n            <div>\r\r\n              <p className=\"text-muted-foreground text-sm font-medium\">\r\r\n                Total Customers\r\r\n              </p>\r\r\n              <h2 className=\"mt-2 text-3xl font-bold\">2,543</h2>\r\r\n              <p className=\"mt-1 flex items-center text-sm text-green-600\">\r\r\n                <ArrowUp className=\"mr-1 h-4 w-4\" />\r\r\n                12.5% from last month\r\r\n              </p>\r\r\n            </div>\r\r\n            <Users className=\"text-muted-foreground h-8 w-8\" />\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n\r\r\n        <Card className=\"p-0\">\r\r\n          <CardContent className=\"flex items-center justify-between p-6\">\r\r\n            <div>\r\r\n              <p className=\"text-muted-foreground text-sm font-medium\">\r\r\n                Revenue\r\r\n              </p>\r\r\n              <h2 className=\"mt-2 text-3xl font-bold\">$45,231</h2>\r\r\n              <p className=\"mt-1 flex items-center text-sm text-red-600\">\r\r\n                <ArrowDown className=\"mr-1 h-4 w-4\" />\r\r\n                4.3% from last month\r\r\n              </p>\r\r\n            </div>\r\r\n            <DollarSign className=\"text-muted-foreground h-8 w-8\" />\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n\r\r\n        <Card className=\"p-0\">\r\r\n          <CardContent className=\"flex items-center justify-between p-6\">\r\r\n            <div>\r\r\n              <p className=\"text-muted-foreground text-sm font-medium\">\r\r\n                Orders\r\r\n              </p>\r\r\n              <h2 className=\"mt-2 text-3xl font-bold\">1,345</h2>\r\r\n              <p className=\"mt-1 flex items-center text-sm text-green-600\">\r\r\n                <ArrowUp className=\"mr-1 h-4 w-4\" />\r\r\n                8.2% from last month\r\r\n              </p>\r\r\n            </div>\r\r\n            <ShoppingCart className=\"text-muted-foreground h-8 w-8\" />\r\r\n          </CardContent>\r\r\n        </Card>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "page-headings"
+    ]
+  }
+}

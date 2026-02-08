@@ -3,7 +3,7 @@
   "name": "comp-559",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/cropper.json"
+    "https://ui.woilasoft.com/r/cropper.json"
   ],
   "files": [
     {

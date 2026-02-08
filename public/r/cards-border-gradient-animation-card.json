@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cards-border-gradient-animation-card",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cards-border-gradient-animation-card.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardDescription,\r\r\n  CardFooter,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\n\r\r\nexport default function BorderGradientAnimationCard() {\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6 px-4\">\r\r\n      <div className=\"relative p-[1px] overflow-hidden rounded-lg bg-background\">\r\r\n        <span className=\"absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,theme(colors.primary.DEFAULT)_0%,theme(colors.secondary.DEFAULT)_50%,theme(colors.primary.DEFAULT)_100%)]\" />\r\r\n        <Card className=\"relative rounded-[calc(theme(borderRadius.lg)-1px)]\">\r\r\n          <CardHeader>\r\r\n            <CardTitle>Create project</CardTitle>\r\r\n            <CardDescription>\r\r\n              Deploy your new project in one-click.\r\r\n            </CardDescription>\r\r\n          </CardHeader>\r\r\n          <CardContent>\r\r\n            <p className=\"text-sm text-muted-foreground\">\r\r\n              Your new project will be created with the latest version of our\r\r\n              framework, complete with authentication, database, and API routes.\r\r\n            </p>\r\r\n          </CardContent>\r\r\n          <CardFooter className=\"flex justify-between\">\r\r\n            <Button variant=\"outline\">Cancel</Button>\r\r\n            <Button>Deploy</Button>\r\r\n          </CardFooter>\r\r\n        </Card>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cards"
+    ]
+  }
+}

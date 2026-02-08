@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cards-perspective-hover-card",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cards-perspective-hover-card.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardDescription,\r\r\n  CardFooter,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\nimport { useState } from \"react\";\r\r\n\r\r\nexport default function PerspectiveHoverCard() {\r\r\n  const [isHovered, setIsHovered] = useState(false);\r\r\n\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6 px-4\">\r\r\n      <div\r\r\n        className=\"transition-all duration-300 ease-out\"\r\r\n        style={{\r\r\n          transform: isHovered\r\r\n            ? \"perspective(1000px) rotateX(10deg)\"\r\r\n            : \"perspective(1000px) rotateX(0deg)\",\r\r\n        }}\r\r\n        onMouseEnter={() => setIsHovered(true)}\r\r\n        onMouseLeave={() => setIsHovered(false)}\r\r\n      >\r\r\n        <Card className=\"relative overflow-hidden\">\r\r\n          {/* Shadow effect */}\r\r\n          <div\r\r\n            className=\"absolute inset-0 pointer-events-none transition-opacity duration-300\"\r\r\n            style={{\r\r\n              boxShadow: \"inset 0 20px 20px -20px rgba(0, 0, 0, 0.3)\",\r\r\n              opacity: isHovered ? 1 : 0,\r\r\n            }}\r\r\n          />\r\r\n\r\r\n          <CardHeader>\r\r\n            <CardTitle\r\r\n              className=\"transition-transform duration-300\"\r\r\n              style={{\r\r\n                transform: isHovered ? \"translateY(-5px)\" : \"translateY(0)\",\r\r\n              }}\r\r\n            >\r\r\n              Create project\r\r\n            </CardTitle>\r\r\n            <CardDescription\r\r\n              className=\"transition-transform duration-300\"\r\r\n              style={{\r\r\n                transform: isHovered ? \"translateY(-3px)\" : \"translateY(0)\",\r\r\n              }}\r\r\n            >\r\r\n              Deploy your new project in one-click.\r\r\n            </CardDescription>\r\r\n          </CardHeader>\r\r\n          <CardContent>\r\r\n            <p\r\r\n              className=\"text-sm text-muted-foreground transition-transform duration-300\"\r\r\n              style={{\r\r\n                transform: isHovered ? \"translateY(-2px)\" : \"translateY(0)\",\r\r\n              }}\r\r\n            >\r\r\n              Your new project will be created with the latest version of our\r\r\n              framework, complete with authentication, database, and API routes.\r\r\n            </p>\r\r\n          </CardContent>\r\r\n          <CardFooter\r\r\n            className=\"flex justify-between transition-transform duration-300\"\r\r\n            style={{\r\r\n              transform: isHovered ? \"translateY(-1px)\" : \"translateY(0)\",\r\r\n            }}\r\r\n          >\r\r\n            <Button variant=\"outline\">Cancel</Button>\r\r\n            <Button>Deploy</Button>\r\r\n          </CardFooter>\r\r\n        </Card>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cards"
+    ]
+  }
+}

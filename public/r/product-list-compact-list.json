@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "product-list-compact-list",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/product-list-compact-list.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Heart, Star } from \"lucide-react\";\r\r\nimport Image from \"next/image\";\r\r\n\r\r\nexport default function CompactList() {\r\r\n  return (\r\r\n    <div className=\"w-full max-w-4xl mx-auto p-6\">\r\r\n      <div className=\"space-y-4\">\r\r\n        {[...Array(6)].map((_, i) => (\r\r\n          <div\r\r\n            key={i}\r\r\n            className=\"group flex gap-4 items-center bg-card border rounded-lg p-2 hover:bg-accent/50 transition-colors\"\r\r\n          >\r\r\n            {/* Product Image */}\r\r\n            <div className=\"relative h-24 aspect-square bg-muted rounded-md overflow-hidden shrink-0\">\r\r\n              <Image\r\r\n                src=\"https://images.unsplash.com/photo-1523275335684-37898b6baf30\"\r\r\n                alt=\"Product image\"\r\r\n                fill\r\r\n                className=\"object-cover\"\r\r\n                sizes=\"(max-width: 768px) 96px, 96px\"\r\r\n              />\r\r\n            </div>\r\r\n\r\r\n            {/* Product Info */}\r\r\n            <div className=\"flex-1 min-w-0 grid sm:grid-cols-3 gap-4 items-center\">\r\r\n              <div className=\"min-w-0\">\r\r\n                <h3 className=\"font-medium truncate\">Classic Leather Watch</h3>\r\r\n                <div className=\"flex items-center gap-1 mt-1\">\r\r\n                  <Star className=\"h-3.5 w-3.5 fill-primary text-primary\" />\r\r\n                  <span className=\"text-sm\">4.9</span>\r\r\n                  <span className=\"text-sm text-muted-foreground\">(128)</span>\r\r\n                </div>\r\r\n              </div>\r\r\n\r\r\n              <div className=\"sm:text-center\">\r\r\n                <div className=\"text-sm text-muted-foreground\">Price</div>\r\r\n                <div className=\"font-medium\">$299</div>\r\r\n                <div className=\"text-sm text-muted-foreground line-through\">\r\r\n                  $399\r\r\n                </div>\r\r\n              </div>\r\r\n\r\r\n              <div className=\"flex items-center gap-2 sm:justify-end\">\r\r\n                <Button\r\r\n                  size=\"sm\"\r\r\n                  variant=\"outline\"\r\r\n                  className=\"w-full sm:w-auto\"\r\r\n                >\r\r\n                  Add to Cart\r\r\n                </Button>\r\r\n                <Button\r\r\n                  size=\"icon\"\r\r\n                  variant=\"ghost\"\r\r\n                  className=\"shrink-0 h-8 w-8\"\r\r\n                >\r\r\n                  <Heart className=\"h-4 w-4\" />\r\r\n                </Button>\r\r\n              </div>\r\r\n            </div>\r\r\n          </div>\r\r\n        ))}\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "product-list"
+    ]
+  }
+}

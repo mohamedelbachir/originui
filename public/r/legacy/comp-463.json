@@ -3,9 +3,9 @@
   "name": "comp-463",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/pagination.json",
-    "https://originui.com/r/select.json"
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/pagination.json",
+    "https://ui.woilasoft.com/r/select.json"
   ],
   "files": [
     {

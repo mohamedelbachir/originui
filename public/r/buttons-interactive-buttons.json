@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "buttons-interactive-buttons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/buttons-interactive-buttons.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Heart, ThumbsUp, Star, Bell, Zap } from \"lucide-react\";\r\r\n\r\r\nexport default function InteractiveButtons() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Button variant=\"outline\" className=\"group gap-2\">\r\r\n        <Heart className=\"h-4 w-4 group-hover:fill-destructive group-hover:text-destructive group-hover:animate-[heartbeat_1s_ease-in-out]\" />\r\r\n        <span className=\"group-hover:text-destructive\">Like</span>\r\r\n      </Button>\r\r\n\r\r\n      <Button variant=\"outline\" className=\"group gap-2\">\r\r\n        <ThumbsUp className=\"h-4 w-4 group-hover:fill-primary group-hover:text-primary transition-transform group-hover:rotate-12\" />\r\r\n        <span className=\"group-hover:text-primary relative after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-primary after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform after:duration-300\">\r\r\n          Approve\r\r\n        </span>\r\r\n      </Button>\r\r\n\r\r\n      <Button variant=\"ghost\" className=\"group gap-2\">\r\r\n        <Star className=\"h-4 w-4 transition-all duration-300 group-hover:text-yellow-400 group-hover:fill-yellow-400 group-hover:animate-[spin_0.5s_ease-in-out]\" />\r\r\n        <span className=\"group-hover:text-yellow-500\">Star</span>\r\r\n      </Button>\r\r\n\r\r\n      <Button variant=\"outline\" className=\"group gap-2\">\r\r\n        <Bell className=\"h-4 w-4 group-hover:text-primary group-hover:[animation:ring_0.5s_ease-in-out]\" />\r\r\n        <span className=\"group-hover:text-primary\">Notify</span>\r\r\n      </Button>\r\r\n\r\r\n      <Button variant=\"default\" className=\"group gap-2\">\r\r\n        <Zap className=\"h-4 w-4 transition-all duration-300 group-hover:text-yellow-300 group-hover:scale-125 group-hover:-rotate-12\" />\r\r\n        <span className=\"relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-yellow-300/0 after:via-yellow-300/30 after:to-yellow-300/0 after:translate-x-[-100%] group-hover:after:translate-x-[100%] after:transition-transform after:duration-500\">\r\r\n          Boost\r\r\n        </span>\r\r\n      </Button>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "buttons"
+    ]
+  }
+}

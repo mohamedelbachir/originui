@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ecommerce-trust-guarantee-icon-list",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/ecommerce-trust-guarantee-icon-list.tsx",
+      "content": "import {\r\r\n  Shield,\r\r\n  Truck,\r\r\n  HeadphonesIcon,\r\r\n  CreditCard,\r\r\n  RotateCcw,\r\r\n} from \"lucide-react\";\r\r\n\r\r\nexport default function TrustGuaranteeIconList() {\r\r\n  const trustFeatures = [\r\r\n    {\r\r\n      icon: Shield,\r\r\n      title: \"SSL Encrypted\",\r\r\n      description: \"Your data is protected with bank-level security\",\r\r\n    },\r\r\n    {\r\r\n      icon: RotateCcw,\r\r\n      title: \"30-Day Returns\",\r\r\n      description: \"Full refund if you're not completely satisfied\",\r\r\n    },\r\r\n    {\r\r\n      icon: Truck,\r\r\n      title: \"Free Shipping\",\r\r\n      description: \"On orders over $50 with fast delivery\",\r\r\n    },\r\r\n    {\r\r\n      icon: CreditCard,\r\r\n      title: \"Secure Payments\",\r\r\n      description: \"Multiple payment options, all fully protected\",\r\r\n    },\r\r\n    {\r\r\n      icon: HeadphonesIcon,\r\r\n      title: \"24/7 Support\",\r\r\n      description: \"Real people ready to help when you need it\",\r\r\n    },\r\r\n  ];\r\r\n\r\r\n  return (\r\r\n    <div className=\"px-4 py-8 md:py-12\">\r\r\n      <div className=\"mx-auto max-w-md\">\r\r\n        <div className=\"space-y-4\">\r\r\n          {trustFeatures.map((feature, index) => {\r\r\n            const IconComponent = feature.icon;\r\r\n            return (\r\r\n              <div key={index} className=\"flex items-start gap-3\">\r\r\n                <div className=\"mt-0.5 flex-shrink-0\">\r\r\n                  <div className=\"bg-muted flex h-8 w-8 items-center justify-center rounded-full\">\r\r\n                    <IconComponent className=\"text-muted-foreground h-4 w-4\" />\r\r\n                  </div>\r\r\n                </div>\r\r\n                <div className=\"min-w-0 flex-1\">\r\r\n                  <h3 className=\"text-foreground mb-1 text-sm font-medium\">\r\r\n                    {feature.title}\r\r\n                  </h3>\r\r\n                  <p className=\"text-muted-foreground text-sm leading-relaxed\">\r\r\n                    {feature.description}\r\r\n                  </p>\r\r\n                </div>\r\r\n              </div>\r\r\n            );\r\r\n          })}\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ecommerce-trust-guarantee"
+    ]
+  }
+}

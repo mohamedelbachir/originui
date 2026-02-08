@@ -6,6 +6,7 @@ import LogoDark from "@/public/logo-dark.svg"
 import Logo from "@/public/logo.svg"
 import { RiGithubFill, RiMenu2Line, RiTwitterXFill } from "@remixicon/react"
 
+import { links } from "@/lib/navigation"
 import { useIsMobile } from "@/hooks/use-mobile"
 import HeaderLink from "@/components/header-link"
 import ThemeToggle from "@/components/theme-toggle"
@@ -15,11 +16,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu"
-
-const links = [
-  { text: "Layouts", href: "/layouts", isNew: true },
-  { text: "Easing Classes", href: "/easings" },
-]
 
 export default function Header() {
   const isMobile = useIsMobile()

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs-compact-breadcrumb",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/breadcrumb.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/breadcrumbs-compact-breadcrumb.tsx",
+      "content": "import {\r\r\n  Breadcrumb,\r\r\n  BreadcrumbItem,\r\r\n  BreadcrumbLink,\r\r\n  BreadcrumbList,\r\r\n  BreadcrumbPage,\r\r\n  BreadcrumbSeparator,\r\r\n} from \"@/registry/default/ui/breadcrumb\";\r\r\nimport { ChevronRight } from \"lucide-react\";\r\r\n\r\r\nexport default function CompactBreadcrumb() {\r\r\n  return (\r\r\n    <Breadcrumb className=\"p-6\">\r\r\n      <BreadcrumbList className=\"gap-0.5 text-xs\">\r\r\n        <BreadcrumbItem className=\"gap-0.5\">\r\r\n          <BreadcrumbLink href=\"/\">Home</BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator className=\"mx-0\">\r\r\n          <ChevronRight className=\"h-3 w-3\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem className=\"gap-0.5\">\r\r\n          <BreadcrumbLink href=\"/products\">Products</BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator className=\"mx-0\">\r\r\n          <ChevronRight className=\"h-3 w-3\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem className=\"gap-0.5\">\r\r\n          <BreadcrumbLink href=\"/products/categories\">\r\r\n            Categories\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator className=\"mx-0\">\r\r\n          <ChevronRight className=\"h-3 w-3\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem className=\"gap-0.5\">\r\r\n          <BreadcrumbPage>Electronics</BreadcrumbPage>\r\r\n        </BreadcrumbItem>\r\r\n      </BreadcrumbList>\r\r\n    </Breadcrumb>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "breadcrumbs"
+    ]
+  }
+}

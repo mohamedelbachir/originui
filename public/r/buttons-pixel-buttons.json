@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "buttons-pixel-buttons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/buttons-pixel-buttons.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function PixelButtons() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Button\r\r\n        variant=\"default\"\r\r\n        className=\"border-2 shadow-[4px_4px_0px_0px_currentColor] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_currentColor] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all\"\r\r\n      >\r\r\n        Default\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"secondary\"\r\r\n        className=\"border-2 shadow-[4px_4px_0px_0px_currentColor] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_currentColor] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all\"\r\r\n      >\r\r\n        Secondary\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"destructive\"\r\r\n        className=\"border-2 shadow-[4px_4px_0px_0px_currentColor] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_currentColor] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all\"\r\r\n      >\r\r\n        Destructive\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"outline\"\r\r\n        className=\"border-2 shadow-[4px_4px_0px_0px_currentColor] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_currentColor] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all\"\r\r\n      >\r\r\n        Outline\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"ghost\"\r\r\n        className=\"border-2 shadow-[4px_4px_0px_0px_currentColor] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_currentColor] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all\"\r\r\n      >\r\r\n        Ghost\r\r\n      </Button>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "buttons"
+    ]
+  }
+}

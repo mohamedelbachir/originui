@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "promo-sections-centered-icon-promo",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/promo-sections-centered-icon-promo.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/registry/default/ui/card\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\nimport { Zap, Clock, ShieldCheck } from \"lucide-react\";\r\r\n\r\r\nexport default function CenteredIconPromo() {\r\r\n  return (\r\r\n    <div className=\"bg-background py-12 sm:py-16 lg:py-20\">\r\r\n      <div className=\"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8\">\r\r\n        <div className=\"mx-auto max-w-2xl text-center lg:max-w-4xl\">\r\r\n          <Badge variant=\"default\" className=\"mb-4\">\r\r\n            Why Choose Us?\r\r\n          </Badge>\r\r\n          <h2 className=\"text-3xl font-bold tracking-tight text-foreground sm:text-4xl\">\r\r\n            Experience the Difference\r\r\n          </h2>\r\r\n          <p className=\"mt-4 text-lg text-muted-foreground\">\r\r\n            We provide lightning-fast service, 24/7 support, and top-tier\r\r\n            security for all your needs. See how we stand out from the\r\r\n            competition.\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 sm:max-w-none sm:grid-cols-3\">\r\r\n          <Card className=\"text-center transition-shadow hover:shadow-lg\">\r\r\n            <CardHeader className=\"flex items-center justify-center\">\r\r\n              <div className=\"rounded-md bg-primary/10 p-3\">\r\r\n                <Zap className=\"h-6 w-6 text-primary\" />\r\r\n              </div>\r\r\n            </CardHeader>\r\r\n            <CardContent>\r\r\n              <CardTitle className=\"mb-2 text-lg font-semibold\">\r\r\n                Lightning Speed\r\r\n              </CardTitle>\r\r\n              <p className=\"text-sm text-muted-foreground\">\r\r\n                Our infrastructure is optimized for performance, ensuring rapid\r\r\n                load times.\r\r\n              </p>\r\r\n            </CardContent>\r\r\n          </Card>\r\r\n\r\r\n          <Card className=\"text-center transition-shadow hover:shadow-lg\">\r\r\n            <CardHeader className=\"flex items-center justify-center\">\r\r\n              <div className=\"rounded-md bg-primary/10 p-3\">\r\r\n                <Clock className=\"h-6 w-6 text-primary\" />\r\r\n              </div>\r\r\n            </CardHeader>\r\r\n            <CardContent>\r\r\n              <CardTitle className=\"mb-2 text-lg font-semibold\">\r\r\n                24/7 Support\r\r\n              </CardTitle>\r\r\n              <p className=\"text-sm text-muted-foreground\">\r\r\n                Get help anytime with our dedicated support team, available\r\r\n                around the clock.\r\r\n              </p>\r\r\n            </CardContent>\r\r\n          </Card>\r\r\n\r\r\n          <Card className=\"text-center transition-shadow hover:shadow-lg\">\r\r\n            <CardHeader className=\"flex items-center justify-center\">\r\r\n              <div className=\"rounded-md bg-primary/10 p-3\">\r\r\n                <ShieldCheck className=\"h-6 w-6 text-primary\" />\r\r\n              </div>\r\r\n            </CardHeader>\r\r\n            <CardContent>\r\r\n              <CardTitle className=\"mb-2 text-lg font-semibold\">\r\r\n                Advanced Security\r\r\n              </CardTitle>\r\r\n              <p className=\"text-sm text-muted-foreground\">\r\r\n                Your data is protected with industry-leading security measures.\r\r\n              </p>\r\r\n            </CardContent>\r\r\n          </Card>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"mt-12 text-center\">\r\r\n          <Button size=\"lg\" asChild>\r\r\n            <Link href=\"#\">Get Started Today</Link>\r\r\n          </Button>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "promo-sections"
+    ]
+  }
+}

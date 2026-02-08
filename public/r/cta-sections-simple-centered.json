@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-sections-simple-centered",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cta-sections-simple-centered.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function SimpleCenteredCTA() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* CTA Section */}\r\r\n      <div className=\"py-12 md:py-16 lg:py-20\">\r\r\n        <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n          <div className=\"flex flex-col items-center justify-center space-y-4 text-center\">\r\r\n            <div className=\"space-y-2\">\r\r\n              <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl\">\r\r\n                Ready to get started?\r\r\n              </h2>\r\r\n              <p className=\"mx-auto max-w-[700px] text-muted-foreground md:text-xl\">\r\r\n                Join thousands of users who&apos;ve already made the switch.\r\r\n              </p>\r\r\n            </div>\r\r\n            <div className=\"space-x-4\">\r\r\n              <Button size=\"lg\" asChild>\r\r\n                <Link href=\"#\">Get Started</Link>\r\r\n              </Button>\r\r\n              <Button size=\"lg\" variant=\"outline\" asChild>\r\r\n                <Link href=\"#\">Learn More</Link>\r\r\n              </Button>\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End CTA Section */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cta-sections"
+    ]
+  }
+}

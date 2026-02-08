@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-rounded-pagination",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/pagination.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/pagination-rounded-pagination.tsx",
+      "content": "import {\r\r\n  Pagination,\r\r\n  PaginationContent,\r\r\n  PaginationEllipsis,\r\r\n  PaginationItem,\r\r\n  PaginationLink,\r\r\n  PaginationNext,\r\r\n  PaginationPrevious,\r\r\n} from \"@/registry/default/ui/pagination\";\r\r\n\r\r\nexport default function RoundedPagination() {\r\r\n  return (\r\r\n    <div className=\"p-6\">\r\r\n      <Pagination>\r\r\n        <PaginationContent>\r\r\n          <PaginationItem>\r\r\n            <PaginationPrevious href=\"#\" className=\"rounded-full\" />\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" className=\"rounded-full\">\r\r\n              1\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" isActive className=\"rounded-full\">\r\r\n              2\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" className=\"rounded-full\">\r\r\n              3\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationEllipsis />\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationLink href=\"#\" className=\"rounded-full\">\r\r\n              8\r\r\n            </PaginationLink>\r\r\n          </PaginationItem>\r\r\n          <PaginationItem>\r\r\n            <PaginationNext href=\"#\" className=\"rounded-full\" />\r\r\n          </PaginationItem>\r\r\n        </PaginationContent>\r\r\n      </Pagination>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "pagination"
+    ]
+  }
+}

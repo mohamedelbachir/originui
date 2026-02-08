@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-hero-showcases-minimalist-cta",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-hero-showcases-minimalist-cta.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight } from \"lucide-react\";\r\r\n\r\r\nexport default function PortfolioHeroMinimalistCta() {\r\r\n  return (\r\r\n    <div className=\"bg-background\">\r\r\n      <div className=\"container mx-auto grid min-h-[75vh] place-items-center px-4 py-16 sm:py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n        <div className=\"grid gap-8 text-center md:max-w-3xl\">\r\r\n          <div className=\"space-y-4\">\r\r\n            <div className=\"bg-primary mx-auto h-0.5 w-12\" />\r\r\n\r\r\n            <h1 className=\"scroll-m-20 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl\">\r\r\n              <span className=\"block\">Design is thinking</span>\r\r\n              <span className=\"mt-1 block\">\r\r\n                made <span className=\"text-primary\">visual</span>\r\r\n              </span>\r\r\n            </h1>\r\r\n          </div>\r\r\n\r\r\n          <p className=\"text-muted-foreground mx-auto max-w-xl text-lg\">\r\r\n            Freelance designer creating minimal, purposeful experiences for\r\r\n            digital products that connect brands with their audience.\r\r\n          </p>\r\r\n\r\r\n          <div className=\"mx-auto\">\r\r\n            <Button size=\"lg\" className=\"group gap-2 px-8 text-base\">\r\r\n              View Portfolio\r\r\n              <ArrowRight className=\"h-4 w-4 transition-transform group-hover:translate-x-1\" />\r\r\n            </Button>\r\r\n          </div>\r\r\n\r\r\n          <div className=\"mt-16 grid gap-8 border-t pt-8 sm:grid-cols-3\">\r\r\n            <div className=\"text-center\">\r\r\n              <p className=\"text-muted-foreground text-sm font-medium\">\r\r\n                EXPERTISE\r\r\n              </p>\r\r\n              <p className=\"mt-1 font-medium\">UI/UX Design</p>\r\r\n            </div>\r\r\n\r\r\n            <div className=\"text-center\">\r\r\n              <p className=\"text-muted-foreground text-sm font-medium\">\r\r\n                PROJECTS\r\r\n              </p>\r\r\n              <p className=\"mt-1 font-medium\">100+ Completed</p>\r\r\n            </div>\r\r\n\r\r\n            <div className=\"text-center\">\r\r\n              <p className=\"text-muted-foreground text-sm font-medium\">\r\r\n                EXPERIENCE\r\r\n              </p>\r\r\n              <p className=\"mt-1 font-medium\">8+ Years</p>\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-hero-showcases"
+    ]
+  }
+}

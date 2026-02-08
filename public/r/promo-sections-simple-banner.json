@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "promo-sections-simple-banner",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/promo-sections-simple-banner.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function SimpleBannerPromo() {\r\r\n  return (\r\r\n    <div className=\"bg-primary\">\r\r\n      <div className=\"mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:px-8 lg:py-16\">\r\r\n        <h2 className=\"text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl\">\r\r\n          <span className=\"block\">Ready to dive in?</span>\r\r\n          <span className=\"block text-primary-foreground/80\">\r\r\n            Start your free trial today.\r\r\n          </span>\r\r\n        </h2>\r\r\n        <div className=\"mt-8 flex lg:ml-4 lg:mt-0 lg:flex-shrink-0\">\r\r\n          <Button size=\"lg\" variant=\"secondary\" asChild>\r\r\n            <Link href=\"#\">Get started</Link>\r\r\n          </Button>\r\r\n          <Button\r\r\n            size=\"lg\"\r\r\n            variant=\"ghost\"\r\r\n            asChild\r\r\n            className=\"ml-3 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground\"\r\r\n          >\r\r\n            <Link href=\"#\">Learn more</Link>\r\r\n          </Button>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "promo-sections"
+    ]
+  }
+}

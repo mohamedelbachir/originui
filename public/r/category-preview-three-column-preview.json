@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "category-preview-three-column-preview",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/category-preview-three-column-preview.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight } from \"lucide-react\";\r\r\nimport Image from \"next/image\";\r\r\n\r\r\ninterface Category {\r\r\n  name: string;\r\r\n  description: string;\r\r\n  image: string;\r\r\n  productCount: number;\r\r\n}\r\r\n\r\r\nexport default function ThreeColumnPreview() {\r\r\n  const categories: Category[] = [\r\r\n    {\r\r\n      name: \"Analog Watches\",\r\r\n      description: \"Timeless classics with precision mechanics\",\r\r\n      image: \"https://images.unsplash.com/photo-1523275335684-37898b6baf30\",\r\r\n      productCount: 48,\r\r\n    },\r\r\n    {\r\r\n      name: \"Smart Watches\",\r\r\n      description: \"Advanced technology on your wrist\",\r\r\n      image: \"https://images.unsplash.com/photo-1523275335684-37898b6baf30\",\r\r\n      productCount: 32,\r\r\n    },\r\r\n    {\r\r\n      name: \"Sport Watches\",\r\r\n      description: \"Durable timepieces for active lifestyles\",\r\r\n      image: \"https://images.unsplash.com/photo-1523275335684-37898b6baf30\",\r\r\n      productCount: 24,\r\r\n    },\r\r\n  ];\r\r\n\r\r\n  return (\r\r\n    <div className=\"w-full max-w-7xl mx-auto p-6\">\r\r\n      <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">\r\r\n        {categories.map((category) => (\r\r\n          <div\r\r\n            key={category.name}\r\r\n            className=\"group relative bg-card rounded-xl border overflow-hidden\"\r\r\n          >\r\r\n            {/* Image */}\r\r\n            <div className=\"relative aspect-[4/3] bg-muted\">\r\r\n              <Image\r\r\n                src={category.image}\r\r\n                alt={category.name}\r\r\n                fill\r\r\n                className=\"object-cover transition-transform duration-500 group-hover:scale-105\"\r\r\n                sizes=\"(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw\"\r\r\n              />\r\r\n              <div className=\"absolute inset-0 bg-gradient-to-t from-background/80 to-background/0\" />\r\r\n            </div>\r\r\n\r\r\n            {/* Content */}\r\r\n            <div className=\"absolute inset-0 flex flex-col justify-end p-6\">\r\r\n              <h3 className=\"text-xl font-semibold tracking-tight mb-2\">\r\r\n                {category.name}\r\r\n              </h3>\r\r\n              <p className=\"text-sm text-accent-foreground/80 mb-4\">\r\r\n                {category.description}\r\r\n              </p>\r\r\n              <div className=\"flex items-center justify-between\">\r\r\n                <span className=\"text-sm text-accent-foreground/80\">\r\r\n                  {category.productCount} products\r\r\n                </span>\r\r\n                <Button\r\r\n                  variant=\"ghost\"\r\r\n                  className=\"opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300\"\r\r\n                >\r\r\n                  Shop now\r\r\n                  <ArrowRight className=\"h-4 w-4 ml-2\" />\r\r\n                </Button>\r\r\n              </div>\r\r\n            </div>\r\r\n\r\r\n            {/* Hover Overlay */}\r\r\n            <div className=\"absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300\" />\r\r\n          </div>\r\r\n        ))}\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "category-preview"
+    ]
+  }
+}

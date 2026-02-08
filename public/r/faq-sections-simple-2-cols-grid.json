@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "faq-sections-simple-2-cols-grid",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/faq-sections-simple-2-cols-grid.tsx",
+      "content": "const faqs = [\r\r\n  {\r\r\n    question: \"Can I cancel at anytime?\",\r\r\n    answer:\r\r\n      \"Yes, you can cancel anytime no questions are asked while you cancel but we would highly appreciate if you will give us some feedback.\",\r\r\n  },\r\r\n  {\r\r\n    question: \"My team has credits. How do we use them?\",\r\r\n    answer:\r\r\n      \"Once your team signs up for a subscription plan. This is where we sit down, grab a cup of coffee and dial in the details.\",\r\r\n  },\r\r\n  {\r\r\n    question: \"How does Acme's pricing work?\",\r\r\n    answer:\r\r\n      \"Our subscriptions are tiered. Understanding the task at hand and ironing out the wrinkles is key.\",\r\r\n  },\r\r\n  {\r\r\n    question: \"How secure is Acme?\",\r\r\n    answer:\r\r\n      \"Protecting the data you trust to Acme is our first priority. This part is really crucial in keeping the project in line to completion.\",\r\r\n  },\r\r\n  {\r\r\n    question: \"Do you offer discounts?\",\r\r\n    answer:\r\r\n      \"We've built in discounts at each tier for teams. The time has come to bring those ideas and plans to life.\",\r\r\n  },\r\r\n  {\r\r\n    question: \"What is your refund policy?\",\r\r\n    answer:\r\r\n      \"We offer refunds. We aim high at being focused on building relationships with our clients and community.\",\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function Simple2ColsGrid() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* FAQ */}\r\r\n      <div className=\"max-w-[85rem] container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32\">\r\r\n        {/* Title */}\r\r\n        <div className=\"max-w-2xl mx-auto text-center mb-10 lg:mb-14\">\r\r\n          <h2 className=\"text-2xl font-bold md:text-3xl md:leading-tight\">\r\r\n            Frequently Asked Questions\r\r\n          </h2>\r\r\n        </div>\r\r\n        {/* End Title */}\r\r\n\r\r\n        <div className=\"max-w-5xl mx-auto\">\r\r\n          {/* Grid */}\r\r\n          <div className=\"grid sm:grid-cols-2 gap-6 md:gap-12\">\r\r\n            {faqs.map((faq) => (\r\r\n              <div key={faq.question}>\r\r\n                <h3 className=\"text-lg font-semibold\">{faq.question}</h3>\r\r\n                <p className=\"mt-2 text-muted-foreground\">{faq.answer}</p>\r\r\n              </div>\r\r\n            ))}\r\r\n          </div>\r\r\n          {/* End Grid */}\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End FAQ */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "faq-sections"
+    ]
+  }
+}

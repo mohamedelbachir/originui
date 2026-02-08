@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs-bordered-breadcrumb",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/breadcrumb.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/breadcrumbs-bordered-breadcrumb.tsx",
+      "content": "import {\r\r\n  Breadcrumb,\r\r\n  BreadcrumbItem,\r\r\n  BreadcrumbLink,\r\r\n  BreadcrumbList,\r\r\n  BreadcrumbPage,\r\r\n  BreadcrumbSeparator,\r\r\n} from \"@/registry/default/ui/breadcrumb\";\r\r\nimport { ChevronRight } from \"lucide-react\";\r\r\n\r\r\nexport default function BorderedBreadcrumb() {\r\r\n  return (\r\r\n    <Breadcrumb className=\"p-6\">\r\r\n      <BreadcrumbList>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink\r\r\n            href=\"/\"\r\r\n            className=\"px-3 py-1 border border-border rounded hover:bg-muted transition-colors\"\r\r\n          >\r\r\n            Home\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink\r\r\n            href=\"/products\"\r\r\n            className=\"px-3 py-1 border border-border rounded hover:bg-muted transition-colors\"\r\r\n          >\r\r\n            Products\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink\r\r\n            href=\"/products/categories\"\r\r\n            className=\"px-3 py-1 border border-border rounded hover:bg-muted transition-colors\"\r\r\n          >\r\r\n            Categories\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbPage className=\"px-3 py-1 border border-primary rounded bg-primary/10 font-medium\">\r\r\n            Electronics\r\r\n          </BreadcrumbPage>\r\r\n        </BreadcrumbItem>\r\r\n      </BreadcrumbList>\r\r\n    </Breadcrumb>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "breadcrumbs"
+    ]
+  }
+}

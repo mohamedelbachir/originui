@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-icon-collapsible",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/collapsible.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/collapsible-icon-collapsible.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport {\r\r\n  Collapsible,\r\r\n  CollapsibleContent,\r\r\n  CollapsibleTrigger,\r\r\n} from \"@/registry/default/ui/collapsible\";\r\r\nimport { ChevronDown, ChevronUp, ShoppingCart } from \"lucide-react\";\r\r\nimport { useState } from \"react\";\r\r\n\r\r\nexport default function IconCollapsible() {\r\r\n  const [isOpen, setIsOpen] = useState(false);\r\r\n\r\r\n  return (\r\r\n    <div className=\"mx-auto max-w-md py-6\">\r\r\n      <Collapsible\r\r\n        className=\"w-full overflow-hidden rounded-md border\"\r\r\n        open={isOpen}\r\r\n        onOpenChange={setIsOpen}\r\r\n      >\r\r\n        <div className=\"bg-muted/5 border-b\">\r\r\n          <CollapsibleTrigger className=\"hover:bg-muted/10 flex w-full items-center justify-between px-4 py-3 transition-colors\">\r\r\n            <div className=\"flex items-center gap-3\">\r\r\n              <div className=\"bg-primary/10 flex h-8 w-8 items-center justify-center rounded-full\">\r\r\n                <ShoppingCart className=\"text-primary h-4 w-4\" />\r\r\n              </div>\r\r\n              <span className=\"font-medium\">Order Details</span>\r\r\n            </div>\r\r\n            {isOpen ? (\r\r\n              <ChevronUp className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\r\r\n            ) : (\r\r\n              <ChevronDown className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\r\r\n            )}\r\r\n          </CollapsibleTrigger>\r\r\n        </div>\r\r\n        <CollapsibleContent>\r\r\n          <div className=\"text-muted-foreground px-4 py-3 text-sm\">\r\r\n            <ul className=\"space-y-2\">\r\r\n              <li className=\"flex justify-between\">\r\r\n                <span>Product</span>\r\r\n                <span className=\"font-medium\">Premium Widget</span>\r\r\n              </li>\r\r\n              <li className=\"flex justify-between\">\r\r\n                <span>Quantity</span>\r\r\n                <span className=\"font-medium\">2</span>\r\r\n              </li>\r\r\n              <li className=\"flex justify-between\">\r\r\n                <span>Price</span>\r\r\n                <span className=\"font-medium\">$99.99</span>\r\r\n              </li>\r\r\n              <li className=\"mt-2 flex justify-between border-t pt-2\">\r\r\n                <span>Total</span>\r\r\n                <span className=\"font-medium\">$199.98</span>\r\r\n              </li>\r\r\n            </ul>\r\r\n          </div>\r\r\n        </CollapsibleContent>\r\r\n      </Collapsible>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "collapsible"
+    ]
+  }
+}

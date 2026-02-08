@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ecommerce-cross-sells-feature-icons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/ecommerce-cross-sells-feature-icons.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport { Zap, Shield, Headphones } from \"lucide-react\";\r\r\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\n\r\r\nexport default function CrossSellFeatureIcons() {\r\r\n  const products = [\r\r\n    {\r\r\n      id: 1,\r\r\n      title: \"Wireless Charging Pad\",\r\r\n      image: \"/placeholder.svg?height=200&width=200\",\r\r\n      feature: {\r\r\n        icon: Zap,\r\r\n        label: \"Fast 15W Charging\",\r\r\n      },\r\r\n      price: \"$29.99\",\r\r\n    },\r\r\n    {\r\r\n      id: 2,\r\r\n      title: \"Phone Case Pro\",\r\r\n      image: \"/placeholder.svg?height=200&width=200\",\r\r\n      feature: {\r\r\n        icon: Shield,\r\r\n        label: \"Military Grade Protection\",\r\r\n      },\r\r\n      price: \"$24.99\",\r\r\n    },\r\r\n    {\r\r\n      id: 3,\r\r\n      title: \"Bluetooth Earbuds\",\r\r\n      image: \"/placeholder.svg?height=200&width=200\",\r\r\n      feature: {\r\r\n        icon: Headphones,\r\r\n        label: \"Active Noise Cancelling\",\r\r\n      },\r\r\n      price: \"$79.99\",\r\r\n    },\r\r\n  ];\r\r\n\r\r\n  return (\r\r\n    <div className=\"px-4 py-8 md:py-12\">\r\r\n      <div className=\"mx-auto max-w-6xl\">\r\r\n        <div className=\"mb-8 text-center\">\r\r\n          <h2 className=\"mb-2 text-2xl font-bold tracking-tight\">\r\r\n            Complete Your Setup\r\r\n          </h2>\r\r\n          <p className=\"text-muted-foreground\">\r\r\n            Perfect accessories to enhance your experience\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3\">\r\r\n          {products.map((product) => {\r\r\n            const IconComponent = product.feature.icon;\r\r\n            return (\r\r\n              <Card\r\r\n                key={product.id}\r\r\n                className=\"group cursor-pointer gap-0 transition-all duration-200 hover:shadow-lg\"\r\r\n              >\r\r\n                <CardContent>\r\r\n                  <div className=\"bg-muted mb-4 aspect-square overflow-hidden rounded-lg\">\r\r\n                    <Image\r\r\n                      src={product.image || \"/placeholder.svg\"}\r\r\n                      alt={product.title}\r\r\n                      width={200}\r\r\n                      height={200}\r\r\n                      className=\"h-full w-full object-cover transition-transform duration-200 group-hover:scale-105\"\r\r\n                    />\r\r\n                  </div>\r\r\n\r\r\n                  <div className=\"space-y-3\">\r\r\n                    <h3 className=\"text-lg leading-tight font-semibold\">\r\r\n                      {product.title}\r\r\n                    </h3>\r\r\n\r\r\n                    <div className=\"text-muted-foreground flex items-center gap-2 text-sm\">\r\r\n                      <IconComponent className=\"text-primary h-4 w-4\" />\r\r\n                      <span>{product.feature.label}</span>\r\r\n                    </div>\r\r\n\r\r\n                    <div className=\"flex items-center justify-between pt-2\">\r\r\n                      <span className=\"text-xl font-bold\">{product.price}</span>\r\r\n                      <button className=\"bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 text-sm font-medium transition-colors\">\r\r\n                        Add to Cart\r\r\n                      </button>\r\r\n                    </div>\r\r\n                  </div>\r\r\n                </CardContent>\r\r\n              </Card>\r\r\n            );\r\r\n          })}\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ecommerce-cross-sells"
+    ]
+  }
+}

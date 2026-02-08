@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-resume-and-downloads-simple-download-button",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-resume-and-downloads-simple-download-button.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Download } from \"lucide-react\";\r\r\n\r\r\nexport default function SimpleDownloadButton() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto px-4 py-16 md:px-6 md:py-24\">\r\r\n      <div className=\"mx-auto max-w-md text-center\">\r\r\n        <h2 className=\"mb-4 text-3xl font-bold tracking-tight sm:text-4xl\">\r\r\n          Download My Resume\r\r\n        </h2>\r\r\n        <p className=\"text-muted-foreground mb-8\">\r\r\n          Feel free to download my resume to learn more about my skills and\r\r\n          experience.\r\r\n        </p>\r\r\n\r\r\n        <Button asChild size=\"lg\" className=\"group\">\r\r\n          <Link href=\"#\">\r\r\n            <Download className=\"mr-2 h-5 w-5\" />\r\r\n            <span>Download CV (PDF, 1.2MB)</span>\r\r\n          </Link>\r\r\n        </Button>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-resume-and-downloads"
+    ]
+  }
+}

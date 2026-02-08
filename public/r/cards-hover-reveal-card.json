@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cards-hover-reveal-card",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cards-hover-reveal-card.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardDescription,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\n\r\r\nexport default function HoverRevealCard() {\r\r\n  return (\r\r\n    <div className=\"mx-auto max-w-md px-4 py-6\">\r\r\n      <Card className=\"group relative overflow-hidden\">\r\r\n        <CardHeader>\r\r\n          <CardTitle>Create project</CardTitle>\r\r\n          <CardDescription>\r\r\n            Deploy your new project in one-click.\r\r\n          </CardDescription>\r\r\n        </CardHeader>\r\r\n        <CardContent>\r\r\n          <p className=\"text-muted-foreground text-sm\">\r\r\n            Your new project will be created with the latest version of our\r\r\n            framework, complete with authentication, database, and API routes.\r\r\n          </p>\r\r\n        </CardContent>\r\r\n\r\r\n        {/* Overlay that slides in on hover */}\r\r\n        <div className=\"bg-card absolute inset-0 flex translate-y-full flex-col p-6 transition-transform duration-300 group-hover:translate-y-0\">\r\r\n          <CardTitle className=\"mb-2\">Ready to deploy?</CardTitle>\r\r\n          <p className=\"text-muted-foreground mb-6 text-sm\">\r\r\n            Your project will be deployed to our secure cloud infrastructure\r\r\n            with automatic scaling and backups.\r\r\n          </p>\r\r\n          <div className=\"mt-auto flex justify-center\">\r\r\n            <Button className=\"w-full\">Deploy Now</Button>\r\r\n          </div>\r\r\n        </div>\r\r\n      </Card>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cards"
+    ]
+  }
+}

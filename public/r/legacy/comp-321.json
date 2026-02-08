@@ -3,9 +3,9 @@
   "name": "comp-321",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/dialog.json",
-    "https://originui.com/r/input.json"
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/dialog.json",
+    "https://ui.woilasoft.com/r/input.json"
   ],
   "files": [
     {

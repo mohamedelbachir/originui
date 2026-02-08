@@ -10,7 +10,11 @@ export default function Component() {
       <Checkbox id={id} />
       <Label htmlFor={id}>
         I agree to the{" "}
-        <a className="underline" href="https://originui.com" target="_blank">
+        <a
+          className="underline"
+          href="https://ui.woilasoft.com"
+          target="_blank"
+        >
           terms of service
         </a>
       </Label>

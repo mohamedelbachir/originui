@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stats-one-main-with-three-follow-ups",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/stats-one-main-with-three-follow-ups.tsx",
+      "content": "import { Badge } from \"@/registry/default/ui/badge\";\r\r\nimport { Verified } from \"lucide-react\";\r\r\n\r\r\nexport default function OneMainWithThreeFollowUps() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32\">\r\r\n      {/* Grid */}\r\r\n      <div className=\"grid items-center lg:grid-cols-12 gap-6 lg:gap-12\">\r\r\n        <div className=\"lg:col-span-4\">\r\r\n          {/* Stats */}\r\r\n          <div className=\"lg:pe-6 xl:pe-12\">\r\r\n            <p className=\"text-6xl font-bold leading-10\">\r\r\n              92%\r\r\n              <Badge variant=\"secondary\" className=\"gap-1\">\r\r\n                <Verified className=\"size-4 shrink-0\" />\r\r\n                +7% this month\r\r\n              </Badge>\r\r\n            </p>\r\r\n            <p className=\"mt-2 sm:mt-3 text-muted-foreground\">\r\r\n              of U.S. adults have bought from businesses using Space\r\r\n            </p>\r\r\n          </div>\r\r\n          {/* End Stats */}\r\r\n        </div>\r\r\n        {/* End Col */}\r\r\n\r\r\n        <div className=\"lg:col-span-8 relative lg:before:absolute lg:before:top-0 lg:before:-start-12 lg:before:w-px lg:before:h-full lg:before:bg-border\">\r\r\n          <div className=\"grid gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-3 sm:gap-8\">\r\r\n            {/* Stats */}\r\r\n            <div>\r\r\n              <p className=\"text-3xl font-semibold\">99.95%</p>\r\r\n              <p className=\"mt-1 text-muted-foreground\">in fulfilling orders</p>\r\r\n            </div>\r\r\n            {/* End Stats */}\r\r\n\r\r\n            {/* Stats */}\r\r\n            <div>\r\r\n              <p className=\"text-3xl font-semibold\">2,000+</p>\r\r\n              <p className=\"mt-1 text-muted-foreground\">partner with Acme</p>\r\r\n            </div>\r\r\n            {/* End Stats */}\r\r\n\r\r\n            {/* Stats */}\r\r\n            <div>\r\r\n              <p className=\"text-3xl font-semibold\">85%</p>\r\r\n              <p className=\"mt-1 text-muted-foreground\">this year alone</p>\r\r\n            </div>\r\r\n            {/* End Stats */}\r\r\n          </div>\r\r\n        </div>\r\r\n        {/* End Col */}\r\r\n      </div>\r\r\n      {/* End Grid */}\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stats"
+    ]
+  }
+}

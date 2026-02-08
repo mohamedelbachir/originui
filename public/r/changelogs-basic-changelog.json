@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "changelogs-basic-changelog",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/card.json",
+    "https://ui.woilasoft.com/r/separator.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/changelogs-basic-changelog.tsx",
+      "content": "import { Badge } from \"@/registry/default/ui/badge\";\r\r\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/registry/default/ui/card\";\r\r\nimport { Separator } from \"@/registry/default/ui/separator\";\r\r\n\r\r\nexport default function BasicChangelog() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto max-w-3xl px-4 py-8\">\r\r\n      <Card>\r\r\n        <CardHeader>\r\r\n          <CardTitle className=\"text-2xl font-bold\">Changelog</CardTitle>\r\r\n        </CardHeader>\r\r\n        <CardContent className=\"space-y-6\">\r\r\n          <div className=\"space-y-3\">\r\r\n            <div className=\"flex items-center justify-between\">\r\r\n              <h3 className=\"text-lg font-medium\">Version 2.0.0</h3>\r\r\n              <Badge>Latest</Badge>\r\r\n            </div>\r\r\n            <p className=\"text-muted-foreground text-sm\">\r\r\n              Released on April 15, 2023\r\r\n            </p>\r\r\n            <ul className=\"list-disc space-y-1.5 pl-5 text-sm\">\r\r\n              <li>Completely redesigned dashboard interface</li>\r\r\n              <li>Added dark mode support across all pages</li>\r\r\n              <li>Improved performance by 40%</li>\r\r\n              <li>Fixed multiple accessibility issues</li>\r\r\n            </ul>\r\r\n          </div>\r\r\n\r\r\n          <Separator />\r\r\n\r\r\n          <div className=\"space-y-3\">\r\r\n            <h3 className=\"text-lg font-medium\">Version 1.2.0</h3>\r\r\n            <p className=\"text-muted-foreground text-sm\">\r\r\n              Released on March 2, 2023\r\r\n            </p>\r\r\n            <ul className=\"list-disc space-y-1.5 pl-5 text-sm\">\r\r\n              <li>Added new analytics dashboard</li>\r\r\n              <li>Improved mobile responsiveness</li>\r\r\n              <li>Fixed bug with user authentication</li>\r\r\n            </ul>\r\r\n          </div>\r\r\n\r\r\n          <Separator />\r\r\n\r\r\n          <div className=\"space-y-3\">\r\r\n            <h3 className=\"text-lg font-medium\">Version 1.1.0</h3>\r\r\n            <p className=\"text-muted-foreground text-sm\">\r\r\n              Released on January 15, 2023\r\r\n            </p>\r\r\n            <ul className=\"list-disc space-y-1.5 pl-5 text-sm\">\r\r\n              <li>Added support for custom themes</li>\r\r\n              <li>Improved form validation</li>\r\r\n              <li>Updated documentation</li>\r\r\n            </ul>\r\r\n          </div>\r\r\n        </CardContent>\r\r\n      </Card>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "changelogs"
+    ]
+  }
+}

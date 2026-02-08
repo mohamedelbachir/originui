@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "page-headings-with-steps",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/page-headings-with-steps.tsx",
+      "content": "import { Check, ChevronRight } from \"lucide-react\";\r\r\nimport Link from \"next/link\";\r\r\n\r\r\nexport default function PageHeadingWithSteps() {\r\r\n  return (\r\r\n    <div className=\"border-b\">\r\r\n      <div className=\"container mx-auto px-4 py-16 md:px-6 2xl:max-w-[1400px]\">\r\r\n        <div className=\"flex flex-col items-center text-center\">\r\r\n          <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\r\r\n            Complete Your Profile\r\r\n          </h1>\r\r\n          <p className=\"text-muted-foreground mt-4 max-w-2xl text-xl\">\r\r\n            Let&apos;s get your account set up. Follow these steps to get\r\r\n            started with our platform.\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"mt-8 flex justify-center\">\r\r\n          <nav className=\"flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-2\">\r\r\n            <div className=\"flex items-center\">\r\r\n              <div className=\"bg-primary text-primary-foreground flex h-8 w-8 items-center justify-center rounded-full\">\r\r\n                <Check className=\"h-4 w-4\" />\r\r\n              </div>\r\r\n              <Link href=\"#\" className=\"ml-3 text-sm font-medium\">\r\r\n                Account\r\r\n              </Link>\r\r\n              <ChevronRight className=\"text-muted-foreground ml-3 hidden h-4 w-4 sm:block\" />\r\r\n            </div>\r\r\n\r\r\n            <div className=\"flex items-center\">\r\r\n              <div className=\"bg-primary text-primary-foreground flex h-8 w-8 items-center justify-center rounded-full\">\r\r\n                <span>2</span>\r\r\n              </div>\r\r\n              <Link href=\"#\" className=\"ml-3 text-sm font-medium\">\r\r\n                Business Details\r\r\n              </Link>\r\r\n              <ChevronRight className=\"text-muted-foreground ml-3 hidden h-4 w-4 sm:block\" />\r\r\n            </div>\r\r\n\r\r\n            <div className=\"flex items-center\">\r\r\n              <div className=\"border-muted bg-background flex h-8 w-8 items-center justify-center rounded-full border\">\r\r\n                <span className=\"text-muted-foreground\">3</span>\r\r\n              </div>\r\r\n              <Link\r\r\n                href=\"#\"\r\r\n                className=\"text-muted-foreground ml-3 text-sm font-medium\"\r\r\n              >\r\r\n                Verification\r\r\n              </Link>\r\r\n            </div>\r\r\n          </nav>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "page-headings"
+    ]
+  }
+}

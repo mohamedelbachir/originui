@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badges-icon-badge",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/badges-icon-badge.tsx",
+      "content": "import { Badge } from \"@/registry/default/ui/badge\";\r\r\nimport { CheckCircle2, AlertTriangle, Info, XCircle } from \"lucide-react\";\r\r\n\r\r\nexport default function IconBadge() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Badge variant=\"default\" className=\"flex items-center gap-1 px-2 py-1\">\r\r\n        <CheckCircle2 className=\"h-3.5 w-3.5\" />\r\r\n        <span>Default</span>\r\r\n      </Badge>\r\r\n\r\r\n      <Badge variant=\"secondary\" className=\"flex items-center gap-1 px-2 py-1\">\r\r\n        <Info className=\"h-3.5 w-3.5\" />\r\r\n        <span>Secondary</span>\r\r\n      </Badge>\r\r\n\r\r\n      <Badge\r\r\n        variant=\"destructive\"\r\r\n        className=\"flex items-center gap-1 px-2 py-1\"\r\r\n      >\r\r\n        <XCircle className=\"h-3.5 w-3.5\" />\r\r\n        <span>Destructive</span>\r\r\n      </Badge>\r\r\n\r\r\n      <Badge variant=\"outline\" className=\"flex items-center gap-1 px-2 py-1\">\r\r\n        <AlertTriangle className=\"h-3.5 w-3.5\" />\r\r\n        <span>Outline</span>\r\r\n      </Badge>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badges"
+    ]
+  }
+}

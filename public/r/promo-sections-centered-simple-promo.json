@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "promo-sections-centered-simple-promo",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/promo-sections-centered-simple-promo.tsx",
+      "content": "import Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\nexport default function CenteredSimplePromo() {\r\r\n  return (\r\r\n    <div className=\"relative isolate overflow-hidden bg-background py-16 sm:py-24\">\r\r\n      {/* Background Pattern */}\r\r\n      <svg\r\r\n        viewBox=\"0 0 1024 1024\"\r\r\n        className=\"absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0\"\r\r\n        aria-hidden=\"true\"\r\r\n      >\r\r\n        <circle\r\r\n          cx={512}\r\r\n          cy={512}\r\r\n          r={512}\r\r\n          fill=\"url(#gradient-pattern)\"\r\r\n          fillOpacity=\"0.2\"\r\r\n        />\r\r\n        <defs>\r\r\n          <radialGradient id=\"gradient-pattern\">\r\r\n            <stop stopColor=\"hsl(var(--primary))\" />\r\r\n            <stop offset={1} stopColor=\"hsl(var(--accent))\" />\r\r\n          </radialGradient>\r\r\n        </defs>\r\r\n      </svg>\r\r\n\r\r\n      {/* Content */}\r\r\n      <div className=\"mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8\">\r\r\n        <Badge variant=\"outline\" className=\"mb-4\">\r\r\n          Exclusive Access\r\r\n        </Badge>\r\r\n        <h2 className=\"text-3xl font-bold tracking-tight text-foreground sm:text-4xl\">\r\r\n          Join Our VIP Club\r\r\n        </h2>\r\r\n        <p className=\"mx-auto mt-4 max-w-xl text-lg leading-8 text-muted-foreground\">\r\r\n          Be the first to know about new arrivals, exclusive sales, and special\r\r\n          events. Sign up today and receive a 15% discount on your next order.\r\r\n        </p>\r\r\n        <div className=\"mt-10 flex items-center justify-center gap-x-6\">\r\r\n          <Button size=\"lg\" asChild>\r\r\n            <Link href=\"#\">Sign Up Now</Link>\r\r\n          </Button>\r\r\n          <Button size=\"lg\" variant=\"ghost\" asChild>\r\r\n            <Link\r\r\n              href=\"#\"\r\r\n              className=\"text-sm font-semibold leading-6 text-foreground\"\r\r\n            >\r\r\n              Learn more <span aria-hidden=\"true\">→</span>\r\r\n            </Link>\r\r\n          </Button>\r\r\n        </div>\r\r\n        <p className=\"mt-8 text-xs text-muted-foreground\">\r\r\n          By signing up, you agree to our Terms & Conditions.\r\r\n        </p>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "promo-sections"
+    ]
+  }
+}

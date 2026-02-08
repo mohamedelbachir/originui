@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-email-signup-and-newsletter-simple-inline-form",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/input.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-email-signup-and-newsletter-simple-inline-form.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { ArrowRight } from \"lucide-react\";\r\r\n\r\r\nexport default function PortfolioSimpleInlineForm() {\r\r\n  return (\r\r\n    <div className=\"w-full py-10 md:py-12\">\r\r\n      <div className=\"container mx-auto px-4\">\r\r\n        <div className=\"mx-auto max-w-4xl\">\r\r\n          <div className=\"flex flex-col gap-6 md:gap-8\">\r\r\n            <div className=\"text-center\">\r\r\n              <h3 className=\"text-xl font-semibold md:text-2xl\">\r\r\n                Get updates straight to your inbox\r\r\n              </h3>\r\r\n              <p className=\"text-muted-foreground mx-auto mt-2 max-w-lg\">\r\r\n                Subscribe to receive design tips, project insights, and\r\r\n                exclusive resources.\r\r\n              </p>\r\r\n            </div>\r\r\n\r\r\n            <form className=\"mx-auto flex w-full max-w-xl flex-col gap-3 sm:flex-row\">\r\r\n              <div className=\"flex-1\">\r\r\n                <Input\r\r\n                  type=\"text\"\r\r\n                  placeholder=\"Your name\"\r\r\n                  aria-label=\"Your name\"\r\r\n                  className=\"w-full\"\r\r\n                />\r\r\n              </div>\r\r\n              <div className=\"flex-1\">\r\r\n                <Input\r\r\n                  type=\"email\"\r\r\n                  placeholder=\"Your email\"\r\r\n                  aria-label=\"Your email\"\r\r\n                  className=\"w-full\"\r\r\n                />\r\r\n              </div>\r\r\n              <Button type=\"submit\" className=\"group whitespace-nowrap\">\r\r\n                Subscribe\r\r\n                <ArrowRight className=\"ml-2 h-4 w-4 transition-transform group-hover:translate-x-1\" />\r\r\n              </Button>\r\r\n            </form>\r\r\n\r\r\n            <p className=\"text-muted-foreground text-center text-xs\">\r\r\n              I respect your privacy. Unsubscribe at any time.\r\r\n            </p>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-email-signup-and-newsletter"
+    ]
+  }
+}

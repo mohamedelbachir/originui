@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-sections-gradient-background",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/hero-sections-gradient-background.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function HeroSectionGradientBackground() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Hero */}\r\r\n      <div className=\"relative overflow-hidden py-24 lg:py-32\">\r\r\n        {/* Gradients */}\r\r\n        <div\r\r\n          aria-hidden=\"true\"\r\r\n          className=\"flex absolute -top-96 start-1/2 transform -translate-x-1/2\"\r\r\n        >\r\r\n          <div className=\"bg-gradient-to-r from-background/50 to-background blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem]\" />\r\r\n          <div className=\"bg-gradient-to-tl blur-3xl w-[90rem] h-[50rem] rounded-full origin-top-left -rotate-12 -translate-x-[15rem] from-primary-foreground via-primary-foreground to-background\" />\r\r\n        </div>\r\r\n        {/* End Gradients */}\r\r\n        <div className=\"relative z-10\">\r\r\n          <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-10 lg:py-16\">\r\r\n            <div className=\"max-w-2xl text-center mx-auto\">\r\r\n              <p className=\"\">Elevate your projects</p>\r\r\n              {/* Title */}\r\r\n              <div className=\"mt-5 max-w-2xl\">\r\r\n                <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\r\r\n                  Beautiful UI Blocks\r\r\n                </h1>\r\r\n              </div>\r\r\n              {/* End Title */}\r\r\n              <div className=\"mt-5 max-w-3xl\">\r\r\n                <p className=\"text-xl text-muted-foreground\">\r\r\n                  Over 10+ fully responsive, UI blocks you can drop into your\r\r\n                  Shadcn UI projects and customize to your heart&apos;s content.\r\r\n                </p>\r\r\n              </div>\r\r\n              {/* Buttons */}\r\r\n              <div className=\"mt-8 gap-3 flex justify-center\">\r\r\n                <Button size={\"lg\"}>Get started</Button>\r\r\n                <Button size={\"lg\"} variant={\"outline\"}>\r\r\n                  Learn more\r\r\n                </Button>\r\r\n              </div>\r\r\n              {/* End Buttons */}\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Hero */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "hero-sections"
+    ]
+  }
+}

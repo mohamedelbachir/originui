@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-hero-showcases-full-screen-centered",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-hero-showcases-full-screen-centered.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function PortfolioHeroFullScreenCentered() {\r\r\n  return (\r\r\n    <div className=\"relative h-screen w-full overflow-hidden\">\r\r\n      {/* Full screen background image */}\r\r\n      <Image\r\r\n        src=\"https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3\"\r\r\n        alt=\"Design portfolio showcase\"\r\r\n        fill\r\r\n        className=\"object-cover object-center\"\r\r\n        priority\r\r\n      />\r\r\n\r\r\n      {/* Overlay gradient */}\r\r\n      <div className=\"absolute inset-0 bg-black/50\" />\r\r\n\r\r\n      {/* Content container */}\r\r\n      <div className=\"relative z-10 flex h-full w-full flex-col items-center justify-center px-4 text-center\">\r\r\n        <div className=\"max-w-3xl\">\r\r\n          <h1 className=\"text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl\">\r\r\n            Creative Design Solutions That Stand Out\r\r\n          </h1>\r\r\n\r\r\n          <p className=\"mt-6 text-xl text-white/90\">\r\r\n            Showcasing a collection of thoughtfully crafted designs and artistic\r\r\n            expressions that blend creativity with functionality.\r\r\n          </p>\r\r\n\r\r\n          <div className=\"mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row\">\r\r\n            <Button size=\"lg\">View Portfolio</Button>\r\r\n\r\r\n            <Button variant=\"secondary\" size=\"lg\">\r\r\n              Contact Me\r\r\n            </Button>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-hero-showcases"
+    ]
+  }
+}

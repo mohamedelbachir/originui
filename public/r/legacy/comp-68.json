@@ -3,9 +3,9 @@
   "name": "comp-68",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/label.json",
-    "https://originui.com/r/textarea.json"
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/label.json",
+    "https://ui.woilasoft.com/r/textarea.json"
   ],
   "files": [
     {

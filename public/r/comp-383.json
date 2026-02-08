@@ -3,9 +3,9 @@
   "name": "comp-383",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/badge.json",
-    "https://originui.com/r/button.json",
-    "https://originui.com/r/popover.json"
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/popover.json"
   ],
   "files": [
     {

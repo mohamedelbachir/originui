@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cards-corner-ribbon-card",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cards-corner-ribbon-card.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Card,\r\r\n  CardContent,\r\r\n  CardDescription,\r\r\n  CardFooter,\r\r\n  CardHeader,\r\r\n  CardTitle,\r\r\n} from \"@/registry/default/ui/card\";\r\r\n\r\r\nexport default function CornerRibbonCard() {\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6 px-4\">\r\r\n      <Card className=\"relative overflow-hidden\">\r\r\n        {/* Corner ribbon */}\r\r\n        <div className=\"absolute top-0 right-0 z-10 overflow-hidden w-24 h-24 -mt-3 -mr-3\">\r\r\n          <div className=\"absolute top-0 right-0 w-32 transform rotate-45 translate-y-8 bg-primary text-primary-foreground font-medium py-1 text-center text-xs\">\r\r\n            New Feature\r\r\n          </div>\r\r\n        </div>\r\r\n\r\r\n        <CardHeader>\r\r\n          <CardTitle>Create project</CardTitle>\r\r\n          <CardDescription>\r\r\n            Deploy your new project in one-click.\r\r\n          </CardDescription>\r\r\n        </CardHeader>\r\r\n        <CardContent>\r\r\n          <p className=\"text-sm text-muted-foreground\">\r\r\n            Your new project will be created with the latest version of our\r\r\n            framework, complete with authentication, database, and API routes.\r\r\n          </p>\r\r\n        </CardContent>\r\r\n        <CardFooter className=\"flex justify-between\">\r\r\n          <Button variant=\"outline\">Cancel</Button>\r\r\n          <Button>Deploy</Button>\r\r\n        </CardFooter>\r\r\n      </Card>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cards"
+    ]
+  }
+}

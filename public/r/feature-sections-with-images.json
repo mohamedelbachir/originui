@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "feature-sections-with-images",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/feature-sections-with-images.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport Image from \"next/image\";\r\r\n\r\r\nconst features = [\r\r\n  {\r\r\n    title: \"Streamlined Workflow\",\r\r\n    description:\r\r\n      \"Automate your workflow with our intuitive tools. Build, deploy, and scale your applications with ease.\",\r\r\n    image: \"https://placehold.co/1024x768/jpeg\",\r\r\n    imageAlt: \"Workflow dashboard screenshot\",\r\r\n    reverse: false,\r\r\n  },\r\r\n  {\r\r\n    title: \"Real-time Collaboration\",\r\r\n    description:\r\r\n      \"Work together in real-time with your team. Share, edit, and review code seamlessly.\",\r\r\n    image: \"https://placehold.co/1024x768/jpeg\",\r\r\n    imageAlt: \"Collaboration interface screenshot\",\r\r\n    reverse: true,\r\r\n  },\r\r\n  {\r\r\n    title: \"Advanced Analytics\",\r\r\n    description:\r\r\n      \"Get deep insights into your application's performance with our advanced analytics tools.\",\r\r\n    image: \"https://placehold.co/1024x768/jpeg\",\r\r\n    imageAlt: \"Analytics dashboard screenshot\",\r\r\n    reverse: false,\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function FeatureSectionWithImages() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto space-y-24 px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"space-y-4 text-center\">\r\r\n        <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl\">\r\r\n          Built for developers\r\r\n        </h2>\r\r\n        <p className=\"text-muted-foreground mx-auto max-w-[700px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed\">\r\r\n          Our platform provides the tools you need to build amazing\r\r\n          applications. Focus on what matters most - your code.\r\r\n        </p>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"space-y-24\">\r\r\n        {features.map((feature) => (\r\r\n          <div\r\r\n            key={feature.title}\r\r\n            className={`grid-col-1 grid items-center gap-8 lg:grid-cols-2 ${\r\r\n              feature.reverse\r\r\n                ? \"lg:grid-cols-[1fr,1fr]\"\r\r\n                : \"lg:grid-cols-[1fr,1fr]\"\r\r\n            }`}\r\r\n          >\r\r\n            <div className={feature.reverse ? \"lg:order-last\" : \"\"}>\r\r\n              <div className=\"space-y-4\">\r\r\n                <h3 className=\"text-2xl font-bold\">{feature.title}</h3>\r\r\n                <p className=\"text-muted-foreground\">{feature.description}</p>\r\r\n                <Button>Learn more</Button>\r\r\n              </div>\r\r\n            </div>\r\r\n            <div className=\"relative aspect-video overflow-hidden rounded-xl\">\r\r\n              <Image\r\r\n                src={feature.image}\r\r\n                alt={feature.imageAlt}\r\r\n                fill\r\r\n                className=\"object-cover object-center\"\r\r\n                priority\r\r\n              />\r\r\n            </div>\r\r\n          </div>\r\r\n        ))}\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "feature-sections"
+    ]
+  }
+}

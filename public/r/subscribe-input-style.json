@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "subscribe-input-style",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/subscribe-input-style.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Label } from \"@/registry/default/ui/label\";\r\r\nimport { ArrowRight, Mail } from \"lucide-react\";\r\r\n\r\r\nexport default function SubscribeInputStyle() {\r\r\n  return (\r\r\n    <form className=\"py-24 lg:py-32 container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"p-1.5 flex flex-col sm:flex-row items-center gap-2 rounded-lg\">\r\r\n        <div className=\"relative w-full\">\r\r\n          <Label htmlFor=\"subscribe-input\" className=\"sr-only\">\r\r\n            Subscribe\r\r\n          </Label>\r\r\n          <div className=\"absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3\">\r\r\n            <Mail className=\"size-4 mt-0.5 text-muted-foreground\" />\r\r\n          </div>\r\r\n          <Input\r\r\n            type=\"text\"\r\r\n            id=\"subscribe-input\"\r\r\n            name=\"subscribe-input\"\r\r\n            className=\"ps-9 \"\r\r\n            placeholder=\"Enter your email\"\r\r\n          />\r\r\n        </div>\r\r\n        <Button className=\"w-full sm:w-auto \">\r\r\n          Join\r\r\n          <ArrowRight className=\"size-3.5\" />\r\r\n        </Button>\r\r\n      </div>\r\r\n      <p className=\"ps-1.5 mt-2 text-xs text-muted-foreground\">\r\r\n        No spam, unsubscribe at any time.\r\r\n      </p>\r\r\n    </form>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "subscribe"
+    ]
+  }
+}

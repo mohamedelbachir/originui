@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ecommerce-cross-sells-with-badges",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/ecommerce-cross-sells-with-badges.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\n\r\r\nexport default function CrossSellWithBadges() {\r\r\n  const products = [\r\r\n    {\r\r\n      id: 1,\r\r\n      title: \"Wireless Bluetooth Headphones\",\r\r\n      price: \"$89.99\",\r\r\n      originalPrice: \"$129.99\",\r\r\n      image: \"/placeholder.svg?height=200&width=200\",\r\r\n      badge: \"Bestseller\",\r\r\n      badgeVariant: \"default\" as const,\r\r\n    },\r\r\n    {\r\r\n      id: 2,\r\r\n      title: \"Smart Fitness Tracker\",\r\r\n      price: \"$149.99\",\r\r\n      originalPrice: null,\r\r\n      image: \"/placeholder.svg?height=200&width=200\",\r\r\n      badge: \"Limited Time\",\r\r\n      badgeVariant: \"destructive\" as const,\r\r\n    },\r\r\n    {\r\r\n      id: 3,\r\r\n      title: \"Portable Phone Charger\",\r\r\n      price: \"$24.99\",\r\r\n      originalPrice: \"$34.99\",\r\r\n      image: \"/placeholder.svg?height=200&width=200\",\r\r\n      badge: \"New Arrival\",\r\r\n      badgeVariant: \"secondary\" as const,\r\r\n    },\r\r\n  ];\r\r\n\r\r\n  return (\r\r\n    <section className=\"px-4 py-8 md:py-12\">\r\r\n      <div className=\"mx-auto max-w-6xl\">\r\r\n        <div className=\"mb-8 text-center\">\r\r\n          <h2 className=\"text-2xl font-bold tracking-tight md:text-3xl\">\r\r\n            You might also like\r\r\n          </h2>\r\r\n          <p className=\"text-muted-foreground mt-2\">\r\r\n            Complete your purchase with these popular items\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"grid gap-6 sm:grid-cols-2 lg:grid-cols-3\">\r\r\n          {products.map((product) => (\r\r\n            <Card\r\r\n              key={product.id}\r\r\n              className=\"group relative overflow-hidden p-0\"\r\r\n            >\r\r\n              <CardContent className=\"p-0\">\r\r\n                <div className=\"relative aspect-square overflow-hidden\">\r\r\n                  <Badge\r\r\n                    variant={product.badgeVariant}\r\r\n                    className=\"absolute top-3 left-3 z-10 text-xs font-medium\"\r\r\n                  >\r\r\n                    {product.badge}\r\r\n                  </Badge>\r\r\n                  <Image\r\r\n                    src={product.image || \"/placeholder.svg\"}\r\r\n                    alt={product.title}\r\r\n                    fill\r\r\n                    className=\"object-cover transition-transform duration-300 group-hover:scale-105\"\r\r\n                  />\r\r\n                </div>\r\r\n\r\r\n                <div className=\"space-y-3 p-4\">\r\r\n                  <h3 className=\"line-clamp-2 leading-tight font-semibold\">\r\r\n                    {product.title}\r\r\n                  </h3>\r\r\n\r\r\n                  <div className=\"flex items-center gap-2\">\r\r\n                    <span className=\"text-lg font-bold\">{product.price}</span>\r\r\n                    {product.originalPrice && (\r\r\n                      <span className=\"text-muted-foreground text-sm line-through\">\r\r\n                        {product.originalPrice}\r\r\n                      </span>\r\r\n                    )}\r\r\n                  </div>\r\r\n\r\r\n                  <Button size=\"sm\" className=\"w-full\" variant=\"outline\">\r\r\n                    Add to Cart\r\r\n                  </Button>\r\r\n                </div>\r\r\n              </CardContent>\r\r\n            </Card>\r\r\n          ))}\r\r\n        </div>\r\r\n\r\r\n        <div className=\"mt-8 text-center\">\r\r\n          <Button variant=\"ghost\" className=\"text-sm\">\r\r\n            View all products\r\r\n          </Button>\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "ecommerce-cross-sells"
+    ]
+  }
+}

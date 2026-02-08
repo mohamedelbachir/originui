@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-email-signup-and-newsletter-popup-signup-form",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/dialog.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-email-signup-and-newsletter-popup-signup-form.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport { useState, useEffect } from \"react\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Label } from \"@/registry/default/ui/label\";\r\r\nimport {\r\r\n  Dialog,\r\r\n  DialogContent,\r\r\n  DialogHeader,\r\r\n  DialogTitle,\r\r\n  DialogDescription,\r\r\n  DialogFooter,\r\r\n} from \"@/registry/default/ui/dialog\";\r\r\n\r\r\nexport default function PortfolioPopupSignupForm() {\r\r\n  const [isOpen, setIsOpen] = useState(false);\r\r\n  const [hasInteracted, setHasInteracted] = useState(false);\r\r\n\r\r\n  // Simulate scroll trigger after a delay (or you could use scroll position)\r\r\n  useEffect(() => {\r\r\n    const timer = setTimeout(() => {\r\r\n      if (!hasInteracted) {\r\r\n        setIsOpen(true);\r\r\n      }\r\r\n    }, 3000); // Show after 3 seconds\r\r\n\r\r\n    return () => clearTimeout(timer);\r\r\n  }, [hasInteracted]);\r\r\n\r\r\n  // Track scroll for another trigger method\r\r\n  useEffect(() => {\r\r\n    const handleScroll = () => {\r\r\n      // Show when user has scrolled 60% of the page\r\r\n      const scrollHeight = document.documentElement.scrollHeight;\r\r\n      const scrollTop = window.scrollY;\r\r\n      const clientHeight = document.documentElement.clientHeight;\r\r\n      const scrollPercentage =\r\r\n        (scrollTop / (scrollHeight - clientHeight)) * 100;\r\r\n\r\r\n      if (scrollPercentage > 60 && !hasInteracted && !isOpen) {\r\r\n        setIsOpen(true);\r\r\n      }\r\r\n    };\r\r\n\r\r\n    window.addEventListener(\"scroll\", handleScroll);\r\r\n    return () => window.removeEventListener(\"scroll\", handleScroll);\r\r\n  }, [isOpen, hasInteracted]);\r\r\n\r\r\n  const closeDialog = () => {\r\r\n    setIsOpen(false);\r\r\n    setHasInteracted(true);\r\r\n  };\r\r\n\r\r\n  const handleSubmit = (e: React.FormEvent) => {\r\r\n    e.preventDefault();\r\r\n    // Handle form submission here\r\r\n    closeDialog();\r\r\n  };\r\r\n\r\r\n  return (\r\r\n    <Dialog open={isOpen} onOpenChange={setIsOpen}>\r\r\n      <DialogContent className=\"sm:max-w-md\">\r\r\n        <DialogHeader>\r\r\n          <DialogTitle>Stay updated with my latest work</DialogTitle>\r\r\n          <DialogDescription>\r\r\n            Subscribe to receive updates, insights and exclusive content.\r\r\n          </DialogDescription>\r\r\n        </DialogHeader>\r\r\n\r\r\n        <form onSubmit={handleSubmit} className=\"space-y-4\">\r\r\n          <div className=\"space-y-2\">\r\r\n            <Label htmlFor=\"popup-email\">Email address</Label>\r\r\n            <Input\r\r\n              id=\"popup-email\"\r\r\n              type=\"email\"\r\r\n              placeholder=\"your@email.com\"\r\r\n              required\r\r\n            />\r\r\n          </div>\r\r\n\r\r\n          <DialogFooter className=\"flex items-center gap-3\">\r\r\n            <Button type=\"submit\" className=\"flex-1\">\r\r\n              Subscribe\r\r\n            </Button>\r\r\n            <Button\r\r\n              type=\"button\"\r\r\n              variant=\"outline\"\r\r\n              onClick={closeDialog}\r\r\n              className=\"flex-1\"\r\r\n            >\r\r\n              Maybe later\r\r\n            </Button>\r\r\n          </DialogFooter>\r\r\n\r\r\n          <p className=\"text-muted-foreground text-center text-xs\">\r\r\n            Subscribe for free design tips and resources. I&apos;ll never share\r\r\n            your email address.\r\r\n          </p>\r\r\n        </form>\r\r\n      </DialogContent>\r\r\n    </Dialog>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-email-signup-and-newsletter"
+    ]
+  }
+}

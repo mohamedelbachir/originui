@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "about-sections-process",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/about-sections-process.tsx",
+      "content": "import { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\n\r\r\nconst processSteps = [\r\r\n  {\r\r\n    number: \"01\",\r\r\n    title: \"Discovery\",\r\r\n    description:\r\r\n      \"We start by understanding your business, goals, and challenges through in-depth research and interviews.\",\r\r\n  },\r\r\n  {\r\r\n    number: \"02\",\r\r\n    title: \"Strategy\",\r\r\n    description:\r\r\n      \"Based on our findings, we develop a comprehensive strategy tailored to your specific needs and objectives.\",\r\r\n  },\r\r\n  {\r\r\n    number: \"03\",\r\r\n    title: \"Design\",\r\r\n    description:\r\r\n      \"Our creative team crafts beautiful, functional designs that align with your brand and engage your audience.\",\r\r\n  },\r\r\n  {\r\r\n    number: \"04\",\r\r\n    title: \"Development\",\r\r\n    description:\r\r\n      \"Our engineers bring designs to life with clean, efficient code that meets the highest quality standards.\",\r\r\n  },\r\r\n  {\r\r\n    number: \"05\",\r\r\n    title: \"Testing\",\r\r\n    description:\r\r\n      \"We rigorously test all aspects of your product to ensure performance, usability, and security.\",\r\r\n  },\r\r\n  {\r\r\n    number: \"06\",\r\r\n    title: \"Launch & Support\",\r\r\n    description:\r\r\n      \"After launch, we provide ongoing support and optimization to ensure continued success.\",\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function AboutSectionProcess() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto space-y-8 px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"space-y-4 text-center\">\r\r\n        <h2 className=\"text-3xl font-bold\">Our Process</h2>\r\r\n        <p className=\"text-muted-foreground mx-auto max-w-2xl\">\r\r\n          We follow a methodical approach to ensure every project delivers\r\r\n          exceptional results. Here&apos;s how we work with you from concept to\r\r\n          completion.\r\r\n        </p>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"grid grid-cols-1 gap-6 pt-8 md:grid-cols-2 lg:grid-cols-3\">\r\r\n        {processSteps.map((step) => (\r\r\n          <Card\r\r\n            key={step.number}\r\r\n            className=\"bg-accent/50 relative overflow-hidden border-none p-0\"\r\r\n          >\r\r\n            <div className=\"text-primary/10 absolute -top-4 -right-4 text-8xl font-bold\">\r\r\n              {step.number}\r\r\n            </div>\r\r\n            <CardContent className=\"relative z-10 space-y-3 p-6\">\r\r\n              <div className=\"bg-primary text-primary-foreground flex h-8 w-8 items-center justify-center rounded-full text-xs font-medium\">\r\r\n                {step.number}\r\r\n              </div>\r\r\n              <h3 className=\"text-xl font-bold\">{step.title}</h3>\r\r\n              <p className=\"text-muted-foreground\">{step.description}</p>\r\r\n            </CardContent>\r\r\n          </Card>\r\r\n        ))}\r\r\n      </div>\r\r\n\r\r\n      <div className=\"pt-12 text-center\">\r\r\n        <p className=\"text-muted-foreground mx-auto max-w-2xl\">\r\r\n          This proven process ensures we deliver high-quality solutions that\r\r\n          meet your business needs while providing a transparent, collaborative\r\r\n          experience.\r\r\n        </p>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "about-sections"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-card-collapsible",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/collapsible.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/collapsible-card-collapsible.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport {\r\r\n  Collapsible,\r\r\n  CollapsibleContent,\r\r\n  CollapsibleTrigger,\r\r\n} from \"@/registry/default/ui/collapsible\";\r\r\nimport { ChevronDown, ChevronUp } from \"lucide-react\";\r\r\nimport { useState } from \"react\";\r\r\n\r\r\nexport default function CardCollapsible() {\r\r\n  const [isOpen, setIsOpen] = useState(false);\r\r\n\r\r\n  return (\r\r\n    <div className=\"mx-auto max-w-md py-6\">\r\r\n      <Collapsible\r\r\n        className=\"w-full space-y-4\"\r\r\n        open={isOpen}\r\r\n        onOpenChange={setIsOpen}\r\r\n      >\r\r\n        <div className=\"overflow-hidden rounded-lg border shadow-sm transition-all duration-300\">\r\r\n          <CollapsibleTrigger className=\"bg-muted/30 hover:bg-muted/40 flex w-full items-center justify-between px-4 py-3 transition-colors\">\r\r\n            <span className=\"font-medium\">Product Information</span>\r\r\n            {isOpen ? (\r\r\n              <ChevronUp className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\r\r\n            ) : (\r\r\n              <ChevronDown className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\r\r\n            )}\r\r\n          </CollapsibleTrigger>\r\r\n          <CollapsibleContent className=\"border-t px-4 py-3\">\r\r\n            <p className=\"text-muted-foreground text-sm\">\r\r\n              Our product is designed with the highest quality materials and\r\r\n              built to last. We offer a 30-day money-back guarantee on all\r\r\n              purchases.\r\r\n            </p>\r\r\n          </CollapsibleContent>\r\r\n        </div>\r\r\n      </Collapsible>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "collapsible"
+    ]
+  }
+}

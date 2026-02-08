@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "footers-simple",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/footers-simple.tsx",
+      "content": "import Link from \"next/link\";\r\r\n\r\r\nexport default function FooterSimple() {\r\r\n  return (\r\r\n    <footer className=\"w-full border-t bg-background\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0\">\r\r\n        <div className=\"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0\">\r\r\n          <p className=\"text-center text-sm leading-loose text-muted-foreground md:text-left\">\r\r\n            Built with{\" \"}\r\r\n            <Link\r\r\n              href=\"https://nextjs.org\"\r\r\n              target=\"_blank\"\r\r\n              rel=\"noreferrer\"\r\r\n              className=\"font-medium underline underline-offset-4\"\r\r\n            >\r\r\n              Next.js\r\r\n            </Link>{\" \"}\r\r\n            and{\" \"}\r\r\n            <Link\r\r\n              href=\"https://ui.shadcn.com\"\r\r\n              target=\"_blank\"\r\r\n              rel=\"noreferrer\"\r\r\n              className=\"font-medium underline underline-offset-4\"\r\r\n            >\r\r\n              shadcn/ui\r\r\n            </Link>\r\r\n            .\r\r\n          </p>\r\r\n        </div>\r\r\n        <div className=\"flex flex-col items-center gap-4 md:flex-row md:gap-6\">\r\r\n          <nav className=\"flex gap-4 md:gap-6\">\r\r\n            <Link\r\r\n              href=\"#\"\r\r\n              className=\"text-sm font-medium text-muted-foreground transition-colors hover:text-foreground\"\r\r\n            >\r\r\n              Terms\r\r\n            </Link>\r\r\n            <Link\r\r\n              href=\"#\"\r\r\n              className=\"text-sm font-medium text-muted-foreground transition-colors hover:text-foreground\"\r\r\n            >\r\r\n              Privacy\r\r\n            </Link>\r\r\n            <Link\r\r\n              href=\"#\"\r\r\n              className=\"text-sm font-medium text-muted-foreground transition-colors hover:text-foreground\"\r\r\n            >\r\r\n              Contact\r\r\n            </Link>\r\r\n          </nav>\r\r\n          <p className=\"text-center text-sm text-muted-foreground md:text-left\">\r\r\n            &copy; {new Date().getFullYear()} Your Company. All rights reserved.\r\r\n          </p>\r\r\n        </div>\r\r\n      </div>\r\r\n    </footer>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "footers"
+    ]
+  }
+}

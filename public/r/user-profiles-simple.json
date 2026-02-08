@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "user-profiles-simple",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/avatar.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/user-profiles-simple.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/registry/default/ui/avatar\";\r\r\nimport { Mail, MapPin, Twitter } from \"lucide-react\";\r\r\nimport Link from \"next/link\";\r\r\n\r\r\nexport default function SimpleUserProfile() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-24 lg:py-32\">\r\r\n      <div className=\"max-w-3xl mx-auto\">\r\r\n        {/* Profile Header */}\r\r\n        <div className=\"flex items-center gap-x-3\">\r\r\n          <Avatar className=\"size-16\">\r\r\n            <AvatarImage\r\r\n              src=\"https://images.unsplash.com/photo-1510706019500-d23a509eecd4?q=80&w=2667&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80\"\r\r\n              alt=\"Eliana Garcia\"\r\r\n            />\r\r\n            <AvatarFallback>EG</AvatarFallback>\r\r\n          </Avatar>\r\r\n          <div className=\"grow\">\r\r\n            <h1 className=\"text-lg font-medium\">Eliana Garcia</h1>\r\r\n            <p className=\"text-sm text-muted-foreground\">\r\r\n              Graphic Designer, Web designer/developer\r\r\n            </p>\r\r\n          </div>\r\r\n        </div>\r\r\n\r\r\n        {/* About */}\r\r\n        <div className=\"mt-8\">\r\r\n          <p className=\"text-sm text-muted-foreground\">\r\r\n            I am a seasoned graphic designer with over 14 years of experience in\r\r\n            creating visually appealing and user-centric designs. My expertise\r\r\n            spans across UI design, design systems, and custom illustrations,\r\r\n            helping clients bring their digital visions to life.\r\r\n          </p>\r\r\n          <p className=\"mt-3 text-sm text-muted-foreground\">\r\r\n            Currently, I work remotely for Notion, where I design template UIs,\r\r\n            convert them into HTML and CSS, and provide comprehensive support to\r\r\n            our users. I am passionate about crafting elegant and functional\r\r\n            designs that enhance user experiences.\r\r\n          </p>\r\r\n\r\r\n          {/* Contact Links */}\r\r\n          <ul className=\"mt-5 flex flex-col gap-y-3\">\r\r\n            <li>\r\r\n              <Link\r\r\n                href=\"mailto:elianagarcia997@about.me\"\r\r\n                className=\"flex items-center gap-x-2.5 text-sm text-muted-foreground hover:text-foreground\"\r\r\n              >\r\r\n                <Mail className=\"size-3.5\" />\r\r\n                elianagarcia997@about.me\r\r\n              </Link>\r\r\n            </li>\r\r\n            <li>\r\r\n              <Link\r\r\n                href=\"https://twitter.com/elianagarcia997\"\r\r\n                className=\"flex items-center gap-x-2.5 text-sm text-muted-foreground hover:text-foreground\"\r\r\n              >\r\r\n                <Twitter className=\"size-3.5\" />\r\r\n                @elianagarcia997\r\r\n              </Link>\r\r\n            </li>\r\r\n            <li>\r\r\n              <Link\r\r\n                href=\"#\"\r\r\n                className=\"flex items-center gap-x-2.5 text-sm text-muted-foreground hover:text-foreground\"\r\r\n              >\r\r\n                <MapPin className=\"size-3.5\" />\r\r\n                San Francisco, CA\r\r\n              </Link>\r\r\n            </li>\r\r\n          </ul>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "user-profiles"
+    ]
+  }
+}

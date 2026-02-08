@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "announcement-banners-floating",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/announcement-banners-floating.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight } from \"lucide-react\";\r\r\n\r\r\nexport default function Floating() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Container */}\r\r\n      <div className=\"container mx-auto relative py-24 lg:py-32\">\r\r\n        {/* Floating Banner */}\r\r\n        <div className=\"pointer-events-none fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8\">\r\r\n          <div className=\"pointer-events-auto flex items-center justify-between gap-x-6 bg-primary px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5\">\r\r\n            <p className=\"text-sm leading-6 text-primary-foreground\">\r\r\n              <strong className=\"font-semibold\">Limited time offer</strong>\r\r\n              <svg\r\r\n                viewBox=\"0 0 2 2\"\r\r\n                className=\"mx-2 inline h-0.5 w-0.5 fill-current\"\r\r\n                aria-hidden=\"true\"\r\r\n              >\r\r\n                <circle cx={1} cy={1} r={1} />\r\r\n              </svg>\r\r\n              Get 50% off for your first month\r\r\n            </p>\r\r\n            <Button\r\r\n              size=\"sm\"\r\r\n              variant=\"secondary\"\r\r\n              className=\"flex items-center gap-x-1\"\r\r\n            >\r\r\n              Get started <ArrowRight className=\"h-4 w-4\" />\r\r\n            </Button>\r\r\n          </div>\r\r\n        </div>\r\r\n        {/* End of Floating Banner */}\r\r\n      </div>\r\r\n      {/* End of Container */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "announcement-banners"
+    ]
+  }
+}

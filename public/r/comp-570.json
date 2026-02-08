@@ -3,7 +3,7 @@
   "name": "comp-570",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/tree.json"
+    "https://ui.woilasoft.com/r/tree.json"
   ],
   "files": [
     {

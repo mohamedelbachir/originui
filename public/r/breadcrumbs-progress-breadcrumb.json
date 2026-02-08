@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs-progress-breadcrumb",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/breadcrumb.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/breadcrumbs-progress-breadcrumb.tsx",
+      "content": "import {\r\r\n  Breadcrumb,\r\r\n  BreadcrumbItem,\r\r\n  BreadcrumbLink,\r\r\n  BreadcrumbList,\r\r\n  BreadcrumbPage,\r\r\n  BreadcrumbSeparator,\r\r\n} from \"@/registry/default/ui/breadcrumb\";\r\r\nimport { Check } from \"lucide-react\";\r\r\n\r\r\nexport default function ProgressBreadcrumb() {\r\r\n  // In a real application, this would be dynamic based on the current step\r\r\n  const currentStep = 3;\r\r\n  const steps = [\r\r\n    { id: 1, name: \"Cart\", href: \"/cart\" },\r\r\n    { id: 2, name: \"Shipping\", href: \"/checkout/shipping\" },\r\r\n    { id: 3, name: \"Payment\", href: \"/checkout/payment\" },\r\r\n    { id: 4, name: \"Confirmation\", href: \"/checkout/confirmation\" },\r\r\n  ];\r\r\n\r\r\n  return (\r\r\n    <Breadcrumb className=\"p-6\">\r\r\n      <BreadcrumbList className=\"flex-wrap justify-center\">\r\r\n        {steps.map((step, index) => (\r\r\n          <div key={step.id} className=\"flex items-center\">\r\r\n            <BreadcrumbItem>\r\r\n              {step.id < currentStep ? (\r\r\n                <BreadcrumbLink\r\r\n                  href={step.href}\r\r\n                  className={`flex items-center gap-2 ${\r\r\n                    step.id < currentStep ? \"text-primary\" : \"\"\r\r\n                  }`}\r\r\n                >\r\r\n                  <span className=\"flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs\">\r\r\n                    <Check className=\"h-3 w-3\" />\r\r\n                  </span>\r\r\n                  <span>{step.name}</span>\r\r\n                </BreadcrumbLink>\r\r\n              ) : step.id === currentStep ? (\r\r\n                <BreadcrumbPage className=\"flex items-center gap-2 font-medium\">\r\r\n                  <span className=\"flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs\">\r\r\n                    {step.id}\r\r\n                  </span>\r\r\n                  <span>{step.name}</span>\r\r\n                </BreadcrumbPage>\r\r\n              ) : (\r\r\n                <BreadcrumbLink\r\r\n                  href={step.href}\r\r\n                  className=\"flex items-center gap-2 text-muted-foreground\"\r\r\n                >\r\r\n                  <span className=\"flex h-6 w-6 items-center justify-center rounded-full bg-muted text-muted-foreground text-xs\">\r\r\n                    {step.id}\r\r\n                  </span>\r\r\n                  <span>{step.name}</span>\r\r\n                </BreadcrumbLink>\r\r\n              )}\r\r\n            </BreadcrumbItem>\r\r\n\r\r\n            {index < steps.length - 1 && (\r\r\n              <BreadcrumbSeparator className=\"mx-2 text-muted-foreground\">\r\r\n                <div className=\"h-px w-8 bg-muted-foreground/30\"></div>\r\r\n              </BreadcrumbSeparator>\r\r\n            )}\r\r\n          </div>\r\r\n        ))}\r\r\n      </BreadcrumbList>\r\r\n    </Breadcrumb>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "breadcrumbs"
+    ]
+  }
+}

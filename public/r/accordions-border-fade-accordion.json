@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordions-border-fade-accordion",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/accordion.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/accordions-border-fade-accordion.tsx",
+      "content": "import {\r\r\n  Accordion,\r\r\n  AccordionContent,\r\r\n  AccordionItem,\r\r\n  AccordionTrigger,\r\r\n} from \"@/registry/default/ui/accordion\";\r\r\n\r\r\nexport default function BorderFadeAccordion() {\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6\">\r\r\n      <Accordion type=\"single\" collapsible className=\"w-full\">\r\r\n        <AccordionItem\r\r\n          value=\"item-1\"\r\r\n          className=\"border-0 mb-4 relative before:absolute before:inset-0 before:rounded-md before:border before:border-border/0 data-[state=open]:before:border-border/100 before:transition-colors before:duration-500\"\r\r\n        >\r\r\n          <div className=\"relative p-0.5\">\r\r\n            <AccordionTrigger className=\"hover:no-underline px-4 py-3\">\r\r\n              <span className=\"relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-foreground/10 after:to-transparent after:opacity-0 data-[state=open]:after:opacity-100 after:transition-opacity after:duration-500\">\r\r\n                Is it accessible?\r\r\n              </span>\r\r\n            </AccordionTrigger>\r\r\n            <AccordionContent className=\"px-4\">\r\r\n              Yes. It adheres to the WAI-ARIA design pattern.\r\r\n            </AccordionContent>\r\r\n          </div>\r\r\n        </AccordionItem>\r\r\n        <AccordionItem\r\r\n          value=\"item-2\"\r\r\n          className=\"border-0 mb-4 relative before:absolute before:inset-0 before:rounded-md before:border before:border-border/0 data-[state=open]:before:border-border/100 before:transition-colors before:duration-500\"\r\r\n        >\r\r\n          <div className=\"relative p-0.5\">\r\r\n            <AccordionTrigger className=\"hover:no-underline px-4 py-3\">\r\r\n              <span className=\"relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-foreground/10 after:to-transparent after:opacity-0 data-[state=open]:after:opacity-100 after:transition-opacity after:duration-500\">\r\r\n                Is it styled?\r\r\n              </span>\r\r\n            </AccordionTrigger>\r\r\n            <AccordionContent className=\"px-4\">\r\r\n              Yes. It comes with default styles that matches the other\r\r\n              components&apos; aesthetic.\r\r\n            </AccordionContent>\r\r\n          </div>\r\r\n        </AccordionItem>\r\r\n        <AccordionItem\r\r\n          value=\"item-3\"\r\r\n          className=\"border-0 mb-4 relative before:absolute before:inset-0 before:rounded-md before:border before:border-border/0 data-[state=open]:before:border-border/100 before:transition-colors before:duration-500\"\r\r\n        >\r\r\n          <div className=\"relative p-0.5\">\r\r\n            <AccordionTrigger className=\"hover:no-underline px-4 py-3\">\r\r\n              <span className=\"relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-foreground/10 after:to-transparent after:opacity-0 data-[state=open]:after:opacity-100 after:transition-opacity after:duration-500\">\r\r\n                Is it animated?\r\r\n              </span>\r\r\n            </AccordionTrigger>\r\r\n            <AccordionContent className=\"px-4\">\r\r\n              Yes. It&apos;s animated by default, but you can disable it if you\r\r\n              prefer.\r\r\n            </AccordionContent>\r\r\n          </div>\r\r\n        </AccordionItem>\r\r\n      </Accordion>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "accordions"
+    ]
+  }
+}

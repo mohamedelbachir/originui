@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-side-bordered-collapsible",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/collapsible.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/collapsible-side-bordered-collapsible.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport {\r\r\n  Collapsible,\r\r\n  CollapsibleContent,\r\r\n  CollapsibleTrigger,\r\r\n} from \"@/registry/default/ui/collapsible\";\r\r\nimport { ChevronDown, ChevronUp } from \"lucide-react\";\r\r\nimport { cn } from \"@/lib/utils\";\r\r\nimport { useState } from \"react\";\r\r\n\r\r\nexport default function SideBorderedCollapsible() {\r\r\n  const [isOpen, setIsOpen] = useState(false);\r\r\n\r\r\n  return (\r\r\n    <div className=\"max-w-md mx-auto py-6\">\r\r\n      <Collapsible\r\r\n        className={cn(\r\r\n          \"w-full transition-all duration-300\",\r\r\n          isOpen ? \"border-l-4 border-l-border pl-4\" : \"border-l-0 pl-0\"\r\r\n        )}\r\r\n        open={isOpen}\r\r\n        onOpenChange={setIsOpen}\r\r\n      >\r\r\n        <div className=\"border-b pb-1\">\r\r\n          <CollapsibleTrigger className=\"flex w-full items-center justify-between py-3 hover:text-foreground/80 transition-colors\">\r\r\n            <span className=\"font-medium\">Return Policy</span>\r\r\n            {isOpen ? (\r\r\n              <ChevronUp className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\r\r\n            ) : (\r\r\n              <ChevronDown className=\"h-4 w-4 shrink-0 transition-transform duration-200\" />\r\r\n            )}\r\r\n          </CollapsibleTrigger>\r\r\n        </div>\r\r\n        <CollapsibleContent>\r\r\n          <div className=\"py-3 text-sm text-muted-foreground\">\r\r\n            <p>\r\r\n              We accept returns within 30 days of purchase. Items must be in\r\r\n              original condition with tags attached.\r\r\n            </p>\r\r\n            <p className=\"mt-2\">\r\r\n              Refunds will be processed within 5-7 business days after we\r\r\n              receive your return.\r\r\n            </p>\r\r\n          </div>\r\r\n        </CollapsibleContent>\r\r\n      </Collapsible>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "collapsible"
+    ]
+  }
+}

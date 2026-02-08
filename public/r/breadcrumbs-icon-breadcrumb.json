@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs-icon-breadcrumb",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/breadcrumb.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/breadcrumbs-icon-breadcrumb.tsx",
+      "content": "import {\r\r\n  Breadcrumb,\r\r\n  BreadcrumbItem,\r\r\n  BreadcrumbLink,\r\r\n  BreadcrumbList,\r\r\n  BreadcrumbPage,\r\r\n  BreadcrumbSeparator,\r\r\n} from \"@/registry/default/ui/breadcrumb\";\r\r\nimport { ChevronRight, Home, ShoppingBag, Layers, Laptop } from \"lucide-react\";\r\r\n\r\r\nexport default function IconBreadcrumb() {\r\r\n  return (\r\r\n    <Breadcrumb className=\"p-6\">\r\r\n      <BreadcrumbList>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink href=\"/\" className=\"flex items-center gap-1\">\r\r\n            <Home className=\"h-3.5 w-3.5\" />\r\r\n            <span>Home</span>\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink href=\"/products\" className=\"flex items-center gap-1\">\r\r\n            <ShoppingBag className=\"h-3.5 w-3.5\" />\r\r\n            <span>Products</span>\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbLink\r\r\n            href=\"/products/categories\"\r\r\n            className=\"flex items-center gap-1\"\r\r\n          >\r\r\n            <Layers className=\"h-3.5 w-3.5\" />\r\r\n            <span>Categories</span>\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n        <BreadcrumbSeparator>\r\r\n          <ChevronRight className=\"h-4 w-4\" />\r\r\n        </BreadcrumbSeparator>\r\r\n        <BreadcrumbItem>\r\r\n          <BreadcrumbPage className=\"flex items-center gap-1 font-medium\">\r\r\n            <Laptop className=\"h-3.5 w-3.5\" />\r\r\n            <span>Electronics</span>\r\r\n          </BreadcrumbPage>\r\r\n        </BreadcrumbItem>\r\r\n      </BreadcrumbList>\r\r\n    </Breadcrumb>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "breadcrumbs"
+    ]
+  }
+}

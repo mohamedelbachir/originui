@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "feature-sections-with-stats",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/card.json",
+    "https://ui.woilasoft.com/r/progress.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/feature-sections-with-stats.tsx",
+      "content": "\"use client\";\r\r\n\r\r\nimport { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\nimport { Progress } from \"@/registry/default/ui/progress\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight, BarChart2, Users, Zap } from \"lucide-react\";\r\r\nimport Image from \"next/image\";\r\r\n\r\r\nconst stats = [\r\r\n  {\r\r\n    name: \"Active Users\",\r\r\n    value: \"50K+\",\r\r\n    progress: 84,\r\r\n    icon: Users,\r\r\n  },\r\r\n  {\r\r\n    name: \"Performance\",\r\r\n    value: \"2.5x\",\r\r\n    progress: 92,\r\r\n    icon: Zap,\r\r\n  },\r\r\n  {\r\r\n    name: \"Conversion Rate\",\r\r\n    value: \"28.5%\",\r\r\n    progress: 75,\r\r\n    icon: BarChart2,\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function FeatureSectionWithStats() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto space-y-8 px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"grid items-center gap-8 lg:grid-cols-2 lg:gap-12\">\r\r\n        <div className=\"space-y-8\">\r\r\n          <div className=\"space-y-6\">\r\r\n            <h2 className=\"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl\">\r\r\n              Powerful analytics to scale your business\r\r\n            </h2>\r\r\n            <p className=\"text-muted-foreground text-lg\">\r\r\n              Get actionable insights and make data-driven decisions with our\r\r\n              comprehensive analytics platform.\r\r\n            </p>\r\r\n            <Button size=\"lg\" className=\"gap-2\">\r\r\n              Get Started <ArrowRight className=\"size-4\" />\r\r\n            </Button>\r\r\n          </div>\r\r\n\r\r\n          <div className=\"grid gap-4\">\r\r\n            {stats.map((stat) => (\r\r\n              <Card key={stat.name} className=\"p-0\">\r\r\n                <CardContent className=\"p-6\">\r\r\n                  <div className=\"mb-4 flex items-center justify-between\">\r\r\n                    <div className=\"space-y-1\">\r\r\n                      <p className=\"text-muted-foreground text-sm\">\r\r\n                        {stat.name}\r\r\n                      </p>\r\r\n                      <p className=\"text-2xl font-bold\">{stat.value}</p>\r\r\n                    </div>\r\r\n                    <div className=\"bg-primary/10 rounded-lg p-3\">\r\r\n                      <stat.icon className=\"text-primary size-5\" />\r\r\n                    </div>\r\r\n                  </div>\r\r\n                  <Progress value={stat.progress} className=\"h-2\" />\r\r\n                </CardContent>\r\r\n              </Card>\r\r\n            ))}\r\r\n          </div>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"relative aspect-square\">\r\r\n          <Image\r\r\n            src=\"https://placehold.co/1024x1024/jpeg\"\r\r\n            alt=\"Analytics Dashboard\"\r\r\n            fill\r\r\n            className=\"rounded-2xl object-cover\"\r\r\n            priority\r\r\n          />\r\r\n          <div className=\"from-background/80 via-background/20 to-background/0 absolute inset-0 rounded-2xl bg-gradient-to-t\" />\r\r\n        </div>\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "feature-sections"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-sections-centred-with-image",
+  "type": "registry:block",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/blocks/hero-sections-centred-with-image.tsx",
+      "content": "import Image from \"next/image\";\r\r\n\r\r\nexport default function HeroSectionCentredWithImage() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Hero */}\r\r\n      <div className=\"relative overflow-hidden py-24 lg:py-32\">\r\r\n        <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n          <div className=\"max-w-2xl text-center mx-auto\">\r\r\n            <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\r\r\n              Nano-Frontiers: Reshaping Tech\r\r\n            </h1>\r\r\n            <p className=\"mt-3 text-xl text-muted-foreground\">\r\r\n              Nano-computing breaks barriers, unlocking new tech horizons.\r\r\n            </p>\r\r\n          </div>\r\r\n          <div className=\"mt-10 relative max-w-5xl mx-auto\">\r\r\n            <Image\r\r\n              src=\"https://placehold.co/1024x480/jpeg\"\r\r\n              className=\"rounded-xl\"\r\r\n              alt=\"Image Description\"\r\r\n              width={1024}\r\r\n              height={480}\r\r\n            />\r\r\n            <div className=\"absolute bottom-12 -start-20 -z-[1] w-48 h-48 bg-gradient-to-b from-primary-foreground via-primary-foreground to-background p-px rounded-lg\">\r\r\n              <div className=\"w-48 h-48 rounded-lg bg-background/10\" />\r\r\n            </div>\r\r\n            <div className=\"absolute -top-12 -end-20 -z-[1] w-48 h-48 bg-gradient-to-t from-primary-foreground via-primary-foreground to-background p-px rounded-full\">\r\r\n              <div className=\"w-48 h-48 rounded-full bg-background/10\" />\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Hero */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "hero-sections"
+    ]
+  }
+}

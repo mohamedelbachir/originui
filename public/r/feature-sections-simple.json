@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "feature-sections-simple",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/card.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/feature-sections-simple.tsx",
+      "content": "import { Card, CardContent } from \"@/registry/default/ui/card\";\r\r\nimport {\r\r\n  RocketIcon,\r\r\n  ShieldCheckIcon,\r\r\n  ZapIcon,\r\r\n  BarChartIcon,\r\r\n} from \"lucide-react\";\r\r\n\r\r\nconst features = [\r\r\n  {\r\r\n    icon: RocketIcon,\r\r\n    title: \"Fast Performance\",\r\r\n    description:\r\r\n      \"Optimized for speed and efficiency, ensuring your application runs smoothly.\",\r\r\n  },\r\r\n  {\r\r\n    icon: ShieldCheckIcon,\r\r\n    title: \"Secure by Default\",\r\r\n    description: \"Built-in security features to protect your data and users.\",\r\r\n  },\r\r\n  {\r\r\n    icon: ZapIcon,\r\r\n    title: \"Easy Integration\",\r\r\n    description: \"Simple to integrate with your existing tools and workflows.\",\r\r\n  },\r\r\n  {\r\r\n    icon: BarChartIcon,\r\r\n    title: \"Analytics\",\r\r\n    description: \"Detailed insights and metrics to track your progress.\",\r\r\n  },\r\r\n];\r\r\n\r\r\nexport default function FeatureSectionSimple() {\r\r\n  return (\r\r\n    <section className=\"container mx-auto space-y-8 px-4 py-24 md:px-6 2xl:max-w-[1400px]\">\r\r\n      <div className=\"space-y-4 text-center\">\r\r\n        <h2 className=\"text-3xl font-bold\">\r\r\n          Features that make you productive\r\r\n        </h2>\r\r\n        <p className=\"text-muted-foreground mx-auto max-w-2xl\">\r\r\n          Everything you need to get your work done efficiently and effectively.\r\r\n          Built for developers, designed for success.\r\r\n        </p>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4\">\r\r\n        {features.map((feature) => (\r\r\n          <Card key={feature.title} className=\"p-0\">\r\r\n            <CardContent className=\"space-y-2 p-6\">\r\r\n              <feature.icon className=\"text-primary h-12 w-12\" />\r\r\n              <h3 className=\"font-bold\">{feature.title}</h3>\r\r\n              <p className=\"text-muted-foreground text-sm\">\r\r\n                {feature.description}\r\r\n              </p>\r\r\n            </CardContent>\r\r\n          </Card>\r\r\n        ))}\r\r\n      </div>\r\r\n    </section>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "feature-sections"
+    ]
+  }
+}

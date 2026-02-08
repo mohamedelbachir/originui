@@ -51,10 +51,14 @@ export default function ComponentCard({
     >
       {isSearchPage ? (
         <div className={cn(getColSpanClasses(true), styleClasses)}>
-          {children}
+          <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+            {children}
+          </div>
         </div>
       ) : (
-        children
+        <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+          {children}
+        </div>
       )}
     </div>
   )

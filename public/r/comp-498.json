@@ -3,8 +3,8 @@
   "name": "comp-498",
   "type": "registry:component",
   "registryDependencies": [
-    "https://originui.com/r/calendar.json",
-    "https://originui.com/r/select.json"
+    "https://ui.woilasoft.com/r/calendar.json",
+    "https://ui.woilasoft.com/r/select.json"
   ],
   "files": [
     {

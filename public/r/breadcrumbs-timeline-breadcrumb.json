@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs-timeline-breadcrumb",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/breadcrumb.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/breadcrumbs-timeline-breadcrumb.tsx",
+      "content": "import {\r\r\n  Breadcrumb,\r\r\n  BreadcrumbItem,\r\r\n  BreadcrumbLink,\r\r\n  BreadcrumbList,\r\r\n  BreadcrumbPage,\r\r\n} from \"@/registry/default/ui/breadcrumb\";\r\r\n\r\r\nexport default function TimelineBreadcrumb() {\r\r\n  return (\r\r\n    <Breadcrumb className=\"p-6\">\r\r\n      <BreadcrumbList className=\"before:bg-muted-foreground/20 relative flex-col items-start gap-6 before:absolute before:top-0 before:left-[15px] before:h-full before:w-0.5 before:content-['']\">\r\r\n        <BreadcrumbItem className=\"flex w-full items-center gap-4\">\r\r\n          <div className=\"border-muted-foreground/20 bg-background relative z-10 flex h-[30px] w-[30px] items-center justify-center rounded-full border-2\">\r\r\n            <div className=\"bg-primary h-[18px] w-[18px] rounded-full\"></div>\r\r\n          </div>\r\r\n          <BreadcrumbLink\r\r\n            href=\"/\"\r\r\n            className=\"hover:text-primary text-base transition-colors\"\r\r\n          >\r\r\n            Home\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n\r\r\n        <BreadcrumbItem className=\"flex w-full items-center gap-4\">\r\r\n          <div className=\"border-muted-foreground/20 bg-background relative z-10 flex h-[30px] w-[30px] items-center justify-center rounded-full border-2\">\r\r\n            <div className=\"bg-primary h-[18px] w-[18px] rounded-full\"></div>\r\r\n          </div>\r\r\n          <BreadcrumbLink\r\r\n            href=\"/products\"\r\r\n            className=\"hover:text-primary text-base transition-colors\"\r\r\n          >\r\r\n            Products\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n\r\r\n        <BreadcrumbItem className=\"flex w-full items-center gap-4\">\r\r\n          <div className=\"border-muted-foreground/20 bg-background relative z-10 flex h-[30px] w-[30px] items-center justify-center rounded-full border-2\">\r\r\n            <div className=\"bg-primary h-[18px] w-[18px] rounded-full\"></div>\r\r\n          </div>\r\r\n          <BreadcrumbLink\r\r\n            href=\"/products/categories\"\r\r\n            className=\"hover:text-primary text-base transition-colors\"\r\r\n          >\r\r\n            Categories\r\r\n          </BreadcrumbLink>\r\r\n        </BreadcrumbItem>\r\r\n\r\r\n        <BreadcrumbItem className=\"flex w-full items-center gap-4\">\r\r\n          <div className=\"border-primary bg-background relative z-10 flex h-[30px] w-[30px] items-center justify-center rounded-full border-2\">\r\r\n            <div className=\"bg-primary h-[18px] w-[18px] rounded-full\"></div>\r\r\n          </div>\r\r\n          <BreadcrumbPage className=\"text-base font-medium\">\r\r\n            Electronics\r\r\n          </BreadcrumbPage>\r\r\n        </BreadcrumbItem>\r\r\n      </BreadcrumbList>\r\r\n    </Breadcrumb>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "breadcrumbs"
+    ]
+  }
+}

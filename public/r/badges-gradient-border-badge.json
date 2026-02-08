@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badges-gradient-border-badge",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/badges-gradient-border-badge.tsx",
+      "content": "import { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\nexport default function GradientBorderBadge() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <div className=\"relative inline-flex\">\r\r\n        <div className=\"absolute -inset-0.5 rounded-full bg-gradient-to-r from-primary to-secondary opacity-75 blur-[1px]\"></div>\r\r\n        <Badge variant=\"secondary\" className=\"relative border-0\">\r\r\n          Premium\r\r\n        </Badge>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"relative inline-flex\">\r\r\n        <div className=\"absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-75 blur-[1px]\"></div>\r\r\n        <Badge variant=\"secondary\" className=\"relative border-0 \">\r\r\n          Pro\r\r\n        </Badge>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"relative inline-flex\">\r\r\n        <div className=\"absolute -inset-0.5 rounded-full bg-gradient-to-r from-amber-500 to-pink-500 opacity-75 blur-[1px]\"></div>\r\r\n        <Badge variant=\"secondary\" className=\"relative border-0 \">\r\r\n          VIP\r\r\n        </Badge>\r\r\n      </div>\r\r\n\r\r\n      <div className=\"relative inline-flex\">\r\r\n        <div className=\"absolute -inset-0.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 opacity-75 blur-[1px]\"></div>\r\r\n        <Badge variant=\"secondary\" className=\"relative border-0 \">\r\r\n          Verified\r\r\n        </Badge>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badges"
+    ]
+  }
+}

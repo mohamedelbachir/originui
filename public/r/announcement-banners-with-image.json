@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "announcement-banners-with-image",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/announcement-banners-with-image.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight } from \"lucide-react\";\r\r\nimport Image from \"next/image\";\r\r\n\r\r\nexport default function WithImage() {\r\r\n  return (\r\r\n    <div className=\"relative isolate flex items-center gap-x-6 overflow-hidden bg-muted px-6 py-2.5 sm:px-3.5\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n        <div className=\"flex flex-wrap justify-between items-center gap-x-2 gap-y-2\">\r\r\n          <div className=\"flex items-center gap-2\">\r\r\n            <Image\r\r\n              src=\"https://placehold.co/32x32/jpeg\"\r\r\n              alt=\"Announcement\"\r\r\n              className=\"rounded-full\"\r\r\n              width={32}\r\r\n              height={32}\r\r\n            />\r\r\n            <p className=\"text-sm leading-6\">\r\r\n              <strong className=\"font-semibold\">New update</strong>\r\r\n              <svg\r\r\n                viewBox=\"0 0 2 2\"\r\r\n                className=\"mx-2 inline h-0.5 w-0.5 fill-current\"\r\r\n                aria-hidden=\"true\"\r\r\n              >\r\r\n                <circle cx={1} cy={1} r={1} />\r\r\n              </svg>\r\r\n              We&apos;ve just released new components\r\r\n            </p>\r\r\n          </div>\r\r\n          <Button size=\"sm\" variant=\"secondary\">\r\r\n            Learn more\r\r\n            <ArrowRight className=\"h-4 w-4\" />\r\r\n          </Button>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "announcement-banners"
+    ]
+  }
+}

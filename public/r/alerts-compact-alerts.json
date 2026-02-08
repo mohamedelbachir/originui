@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alerts-compact-alerts",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/alert.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/alerts-compact-alerts.tsx",
+      "content": "import { Alert, AlertDescription, AlertTitle } from \"@/registry/default/ui/alert\";\r\r\nimport { AlertCircle, AlertTriangle, CheckCircle, XCircle } from \"lucide-react\";\r\r\n\r\r\nexport default function CompactAlerts() {\r\r\n  return (\r\r\n    <div className=\"flex flex-col gap-4 p-6\">\r\r\n      <Alert className=\"py-2 px-3 text-sm\">\r\r\n        <AlertTitle className=\"text-sm font-medium\">Default Alert</AlertTitle>\r\r\n        <AlertDescription className=\"text-xs\">\r\r\n          This is a compact alert with less padding and smaller text.\r\r\n        </AlertDescription>\r\r\n      </Alert>\r\r\n\r\r\n      <Alert variant=\"destructive\" className=\"py-2 px-3 text-sm\">\r\r\n        <XCircle className=\"h-3 w-3\" />\r\r\n        <AlertTitle className=\"text-sm font-medium\">\r\r\n          Destructive Alert\r\r\n        </AlertTitle>\r\r\n        <AlertDescription className=\"text-xs\">\r\r\n          This is a compact alert with less padding and smaller text.\r\r\n        </AlertDescription>\r\r\n      </Alert>\r\r\n\r\r\n      <Alert className=\"border-green-500/50 text-green-700 dark:border-green-500 dark:text-green-400 [&>svg]:text-green-500 py-2 px-3 text-sm\">\r\r\n        <CheckCircle className=\"h-3 w-3\" />\r\r\n        <AlertTitle className=\"text-sm font-medium\">Success Alert</AlertTitle>\r\r\n        <AlertDescription className=\"text-xs\">\r\r\n          This is a compact alert with less padding and smaller text.\r\r\n        </AlertDescription>\r\r\n      </Alert>\r\r\n\r\r\n      <Alert className=\"border-yellow-500/50 text-yellow-700 dark:border-yellow-500 dark:text-yellow-400 [&>svg]:text-yellow-500 py-2 px-3 text-sm\">\r\r\n        <AlertTriangle className=\"h-3 w-3\" />\r\r\n        <AlertTitle className=\"text-sm font-medium\">Warning Alert</AlertTitle>\r\r\n        <AlertDescription className=\"text-xs\">\r\r\n          This is a compact alert with less padding and smaller text.\r\r\n        </AlertDescription>\r\r\n      </Alert>\r\r\n\r\r\n      <Alert className=\"border-blue-500/50 text-blue-700 dark:border-blue-500 dark:text-blue-400 [&>svg]:text-blue-500 py-2 px-3 text-sm\">\r\r\n        <AlertCircle className=\"h-3 w-3\" />\r\r\n        <AlertTitle className=\"text-sm font-medium\">Info Alert</AlertTitle>\r\r\n        <AlertDescription className=\"text-xs\">\r\r\n          This is a compact alert with less padding and smaller text.\r\r\n        </AlertDescription>\r\r\n      </Alert>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "alerts"
+    ]
+  }
+}

@@ -79,7 +79,7 @@ export default function Component() {
                   id={id}
                   className="pe-9"
                   type="text"
-                  defaultValue="https://originui.com/Avx8HD"
+                  defaultValue="https://ui.woilasoft.com/Avx8HD"
                   aria-label="Share link"
                   readOnly
                 />

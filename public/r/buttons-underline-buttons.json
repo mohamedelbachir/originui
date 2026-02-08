@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "buttons-underline-buttons",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/buttons-underline-buttons.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\n\r\r\nexport default function UnderlineButtons() {\r\r\n  return (\r\r\n    <div className=\"flex flex-wrap gap-4 p-6\">\r\r\n      <Button\r\r\n        variant=\"default\"\r\r\n        className=\"relative after:absolute after:bottom-2 after:left-2 after:right-2 after:h-[2px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left\"\r\r\n      >\r\r\n        Default\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"secondary\"\r\r\n        className=\"relative after:absolute after:bottom-2 after:left-2 after:right-2 after:h-[2px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left\"\r\r\n      >\r\r\n        Secondary\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"destructive\"\r\r\n        className=\"relative after:absolute after:bottom-2 after:left-2 after:right-2 after:h-[2px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left\"\r\r\n      >\r\r\n        Destructive\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"outline\"\r\r\n        className=\"relative after:absolute after:bottom-2 after:left-2 after:right-2 after:h-[2px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left\"\r\r\n      >\r\r\n        Outline\r\r\n      </Button>\r\r\n\r\r\n      <Button\r\r\n        variant=\"ghost\"\r\r\n        className=\"relative after:absolute after:bottom-2 after:left-2 after:right-2 after:h-[2px] after:bg-current after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left\"\r\r\n      >\r\r\n        Ghost\r\r\n      </Button>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "buttons"
+    ]
+  }
+}

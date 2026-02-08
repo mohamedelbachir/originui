@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-shadow-tabs",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/tabs.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/tabs-shadow-tabs.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/registry/default/ui/tabs\";\r\r\n\r\r\nexport default function ShadowTabs() {\r\r\n  return (\r\r\n    <div className=\"p-6\">\r\r\n      <Tabs defaultValue=\"account\" className=\"w-full max-w-3xl mx-auto\">\r\r\n        <TabsList className=\"grid w-full grid-cols-3 mb-8 bg-transparent gap-4\">\r\r\n          <TabsTrigger\r\r\n            value=\"account\"\r\r\n            className=\"bg-background shadow-sm hover:shadow transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg\"\r\r\n          >\r\r\n            Account\r\r\n          </TabsTrigger>\r\r\n          <TabsTrigger\r\r\n            value=\"password\"\r\r\n            className=\"bg-background shadow-sm hover:shadow transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg\"\r\r\n          >\r\r\n            Password\r\r\n          </TabsTrigger>\r\r\n          <TabsTrigger\r\r\n            value=\"settings\"\r\r\n            className=\"bg-background shadow-sm hover:shadow transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg\"\r\r\n          >\r\r\n            Settings\r\r\n          </TabsTrigger>\r\r\n        </TabsList>\r\r\n        <TabsContent\r\r\n          value=\"account\"\r\r\n          className=\"p-6 bg-background rounded-lg shadow-md\"\r\r\n        >\r\r\n          <h3 className=\"text-lg font-medium\">Account</h3>\r\r\n          <p className=\"text-sm text-muted-foreground mt-2\">\r\r\n            Manage your account settings and preferences.\r\r\n          </p>\r\r\n        </TabsContent>\r\r\n        <TabsContent\r\r\n          value=\"password\"\r\r\n          className=\"p-6 bg-background rounded-lg shadow-md\"\r\r\n        >\r\r\n          <h3 className=\"text-lg font-medium\">Password</h3>\r\r\n          <p className=\"text-sm text-muted-foreground mt-2\">\r\r\n            Change your password here. After saving, you&apos;ll be logged out.\r\r\n          </p>\r\r\n        </TabsContent>\r\r\n        <TabsContent\r\r\n          value=\"settings\"\r\r\n          className=\"p-6 bg-background rounded-lg shadow-md\"\r\r\n        >\r\r\n          <h3 className=\"text-lg font-medium\">Settings</h3>\r\r\n          <p className=\"text-sm text-muted-foreground mt-2\">\r\r\n            Configure your application preferences and settings.\r\r\n          </p>\r\r\n        </TabsContent>\r\r\n      </Tabs>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "tabs"
+    ]
+  }
+}

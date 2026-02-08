@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cta-sections-split-with-image",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/badge.json",
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/cta-sections-split-with-image.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\r\n\r\r\nexport default function SplitWithImageCTA() {\r\r\n  return (\r\r\n    <>\r\r\n      {/* Split CTA Section */}\r\r\n      <div className=\"py-16 md:py-24\">\r\r\n        <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px]\">\r\r\n          <div className=\"grid items-center gap-6 rounded-lg border p-6 md:grid-cols-2 md:gap-12 md:p-10\">\r\r\n            <div className=\"flex flex-col justify-center space-y-4\">\r\r\n              <Badge className=\"w-fit\" variant={\"outline\"}>\r\r\n                New Features\r\r\n              </Badge>\r\r\n              <div className=\"space-y-2\">\r\r\n                <h2 className=\"text-3xl font-bold tracking-tighter md:text-4xl\">\r\r\n                  Transform your workflow\r\r\n                </h2>\r\r\n                <p className=\"max-w-[600px] text-muted-foreground md:text-xl/relaxed\">\r\r\n                  Our latest features help you streamline your development\r\r\n                  process and boost productivity.\r\r\n                </p>\r\r\n              </div>\r\r\n              <div className=\"flex flex-col gap-2 min-[400px]:flex-row\">\r\r\n                <Button size=\"lg\" asChild>\r\r\n                  <Link href=\"#\">Explore Features</Link>\r\r\n                </Button>\r\r\n                <Button size=\"lg\" variant=\"outline\" asChild>\r\r\n                  <Link href=\"#\">Watch Demo</Link>\r\r\n                </Button>\r\r\n              </div>\r\r\n            </div>\r\r\n            <div className=\"relative aspect-video overflow-hidden rounded-lg md:order-last\">\r\r\n              <Image\r\r\n                src=\"https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3\"\r\r\n                alt=\"Productivity dashboard and analytics\"\r\r\n                fill\r\r\n                className=\"object-cover\"\r\r\n                priority\r\r\n              />\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n      {/* End Split CTA Section */}\r\r\n    </>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "cta-sections"
+    ]
+  }
+}

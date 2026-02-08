@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "portfolio-cta-banner-split-cta",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/portfolio-cta-banner-split-cta.tsx",
+      "content": "import Image from \"next/image\";\r\r\nimport Link from \"next/link\";\r\r\nimport { Button } from \"@/registry/default/ui/button\";\r\r\nimport { ArrowRight } from \"lucide-react\";\r\r\n\r\r\nexport default function PortfolioCTASplitLayout() {\r\r\n  return (\r\r\n    <div className=\"container mx-auto px-4 py-12 md:py-16\">\r\r\n      <div className=\"bg-muted/30 overflow-hidden rounded-xl\">\r\r\n        <div className=\"grid grid-cols-1 md:grid-cols-2\">\r\r\n          {/* Image column */}\r\r\n          <div className=\"relative h-64 md:h-auto\">\r\r\n            <Image\r\r\n              src=\"https://images.unsplash.com/photo-1587614382346-4ec70e388b28?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3\"\r\r\n              alt=\"Creative workspace with laptop and design tools\"\r\r\n              fill\r\r\n              className=\"object-cover\"\r\r\n            />\r\r\n            <div className=\"absolute inset-0 bg-gradient-to-r from-black/30 to-transparent\"></div>\r\r\n          </div>\r\r\n\r\r\n          {/* Text column */}\r\r\n          <div className=\"flex flex-col justify-center p-8 md:p-10 lg:p-12\">\r\r\n            <h2 className=\"text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl\">\r\r\n              Have a project in mind? Let&apos;s bring it to life together.\r\r\n            </h2>\r\r\n\r\r\n            <p className=\"text-muted-foreground mt-3 max-w-md\">\r\r\n              I&apos;m currently available for new projects, collaborations, and\r\r\n              consulting opportunities.\r\r\n            </p>\r\r\n\r\r\n            <Button asChild size=\"lg\" className=\"group mt-8 self-start\">\r\r\n              <Link href=\"#\">\r\r\n                Schedule a Consultation\r\r\n                <ArrowRight className=\"ml-2 h-4 w-4 transition-transform group-hover:translate-x-1\" />\r\r\n              </Link>\r\r\n            </Button>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "portfolio-cta-banner"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "page-headings-with-search-filters",
+  "type": "registry:block",
+  "registryDependencies": [
+    "https://ui.woilasoft.com/r/button.json",
+    "https://ui.woilasoft.com/r/input.json",
+    "https://ui.woilasoft.com/r/select.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/blocks/page-headings-with-search-filters.tsx",
+      "content": "import { Button } from \"@/registry/default/ui/button\";\r\r\nimport {\r\r\n  Select,\r\r\n  SelectContent,\r\r\n  SelectItem,\r\r\n  SelectTrigger,\r\r\n  SelectValue,\r\r\n} from \"@/registry/default/ui/select\";\r\r\nimport { Input } from \"@/registry/default/ui/input\";\r\r\nimport { Search } from \"lucide-react\";\r\r\n\r\r\nexport default function PageHeadingWithSearchFilters() {\r\r\n  return (\r\r\n    <div className=\"border-b bg-muted/40\">\r\r\n      <div className=\"container mx-auto px-4 md:px-6 2xl:max-w-[1400px] py-16\">\r\r\n        <div className=\"flex flex-col items-center text-center\">\r\r\n          <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\r\r\n            Find Your Next Job\r\r\n          </h1>\r\r\n          <p className=\"mt-4 max-w-2xl text-xl text-muted-foreground\">\r\r\n            Search through thousands of job listings to find your perfect role\r\r\n          </p>\r\r\n        </div>\r\r\n\r\r\n        <div className=\"mt-8\">\r\r\n          <div className=\"mx-auto max-w-4xl rounded-lg bg-background p-4 shadow-sm\">\r\r\n            <div className=\"grid gap-4 md:grid-cols-[1fr,200px,200px,auto]\">\r\r\n              <div className=\"relative\">\r\r\n                <Search className=\"absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground\" />\r\r\n                <Input\r\r\n                  type=\"search\"\r\r\n                  placeholder=\"Job title or keyword...\"\r\r\n                  className=\"pl-8\"\r\r\n                />\r\r\n              </div>\r\r\n              <Select>\r\r\n                <SelectTrigger>\r\r\n                  <SelectValue placeholder=\"Location\" />\r\r\n                </SelectTrigger>\r\r\n                <SelectContent>\r\r\n                  <SelectItem value=\"remote\">Remote</SelectItem>\r\r\n                  <SelectItem value=\"hybrid\">Hybrid</SelectItem>\r\r\n                  <SelectItem value=\"onsite\">On-site</SelectItem>\r\r\n                </SelectContent>\r\r\n              </Select>\r\r\n              <Select>\r\r\n                <SelectTrigger>\r\r\n                  <SelectValue placeholder=\"Job Type\" />\r\r\n                </SelectTrigger>\r\r\n                <SelectContent>\r\r\n                  <SelectItem value=\"full-time\">Full-time</SelectItem>\r\r\n                  <SelectItem value=\"part-time\">Part-time</SelectItem>\r\r\n                  <SelectItem value=\"contract\">Contract</SelectItem>\r\r\n                </SelectContent>\r\r\n              </Select>\r\r\n              <Button className=\"w-full\">Search Jobs</Button>\r\r\n            </div>\r\r\n          </div>\r\r\n        </div>\r\r\n      </div>\r\r\n    </div>\r\r\n  );\r\r\n}\r\r\n",
+      "type": "registry:block"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "page-headings"
+    ]
+  }
+}

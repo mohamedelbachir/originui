@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://originui.com/:path*",
+      "destination": "https://ui.woilasoft.com/:path*",
       "statusCode": 301,
       "has": [
         {
@@ -13,7 +13,7 @@
     },
     {
       "source": "/",
-      "destination": "https://originui.com/input",
+      "destination": "https://ui.woilasoft.com/input",
       "statusCode": 301,
       "has": [
         {
@@ -24,82 +24,82 @@
     },
     {
       "source": "/accordions",
-      "destination": "https://originui.com/accordion",
+      "destination": "https://ui.woilasoft.com/accordion",
       "statusCode": 301
     },
     {
       "source": "/alerts-notifications-banners",
-      "destination": "https://originui.com/alert",
+      "destination": "https://ui.woilasoft.com/alert",
       "statusCode": 301
     },
     {
       "source": "/avatars-badges",
-      "destination": "https://originui.com/avatar",
+      "destination": "https://ui.woilasoft.com/avatar",
       "statusCode": 301
     },
     {
       "source": "/badges",
-      "destination": "https://originui.com/badge",
+      "destination": "https://ui.woilasoft.com/badge",
       "statusCode": 301
     },
     {
       "source": "/banners",
-      "destination": "https://originui.com/banner",
+      "destination": "https://ui.woilasoft.com/banner",
       "statusCode": 301
     },
     {
       "source": "/breadcrumbs-paginations",
-      "destination": "https://originui.com/breadcrumb",
+      "destination": "https://ui.woilasoft.com/breadcrumb",
       "statusCode": 301
     },
     {
       "source": "/buttons",
-      "destination": "https://originui.com/button",
+      "destination": "https://ui.woilasoft.com/button",
       "statusCode": 301
     },
     {
       "source": "/calendars-date-pickers",
-      "destination": "https://originui.com/calendar-date-picker",
+      "destination": "https://ui.woilasoft.com/calendar-date-picker",
       "statusCode": 301
     },
     {
       "source": "/checks-radios-switches",
-      "destination": "https://originui.com/checkbox",
+      "destination": "https://ui.woilasoft.com/checkbox",
       "statusCode": 301
     },
     {
       "source": "/dialogs",
-      "destination": "https://originui.com/dialog",
+      "destination": "https://ui.woilasoft.com/dialog",
       "statusCode": 301
     },
     {
       "source": "/dropdowns-popovers",
-      "destination": "https://originui.com/dropdown",
+      "destination": "https://ui.woilasoft.com/dropdown",
       "statusCode": 301
     },
     {
       "source": "/inputs",
-      "destination": "https://originui.com/input",
+      "destination": "https://ui.woilasoft.com/input",
       "statusCode": 301
     },
     {
       "source": "/selects",
-      "destination": "https://originui.com/select",
+      "destination": "https://ui.woilasoft.com/select",
       "statusCode": 301
     },
     {
       "source": "/sliders",
-      "destination": "https://originui.com/slider",
+      "destination": "https://ui.woilasoft.com/slider",
       "statusCode": 301
     },
     {
       "source": "/tables",
-      "destination": "https://originui.com/table",
+      "destination": "https://ui.woilasoft.com/table",
       "statusCode": 301
     },
     {
       "source": "/tooltips",
-      "destination": "https://originui.com/tooltip",
+      "destination": "https://ui.woilasoft.com/tooltip",
       "statusCode": 301
     }
   ]
