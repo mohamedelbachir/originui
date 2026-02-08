@@ -26,7 +26,9 @@ export default function ShowcasePageClient() {
   const favorites = useFavoritesStore()
   const searchParams = useSearchParams()
 
-  const categories = favorites.getCategories()
+  const categories = favorites
+    .getCategories()
+    .filter((c) => c.components.length > 0)
   const category =
     categories.find((c) => c.slug === searchParams.get("category")) ||
     categories[0]
@@ -38,8 +40,7 @@ export default function ShowcasePageClient() {
       getComponentsByNames(
         favorites.favorites[categorySlug as string]?.components.map(
           (c) => c.name
-        ) || [],
-        "registry:component"
+        ) || []
       ),
     [favorites.favorites, categorySlug]
   )

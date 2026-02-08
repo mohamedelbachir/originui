@@ -5,8 +5,8 @@ import { Suspense } from "react"
 import Image from "next/image"
 import Autoplay from "embla-carousel-autoplay"
 import {
-  CheckIcon,
   ExternalLink,
+  InfoIcon,
   LightbulbIcon,
   Loader2Icon,
 } from "lucide-react"
@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/carousel"
 import { Prose } from "@/components/prose"
 
+import { Illustration } from "./illustration"
 import { RegistryMobileNav } from "./registry-mobile-nav"
 import { RegistrySidebar } from "./registry-sidebar"
 
@@ -135,12 +136,12 @@ function DefaultTips() {
         <div className="bg-primary/5 border-primary/10 relative overflow-hidden rounded-xl border p-5">
           <div className="bg-primary/5 absolute top-0 right-0 -mt-8 -mr-8 h-16 w-16 rounded-bl-full" />
           <h4 className="text-primary mb-3 flex items-center gap-2 text-sm font-bold">
-            <CheckIcon className="h-4 w-4" />
-            Fully Responsive
+            <InfoIcon className="h-4 w-4" />
+            Notice
           </h4>
           <p className="text-muted-foreground relative z-10 text-xs leading-relaxed">
-            Every component and block is optimized for all screen sizes, from
-            mobile to desktop.
+            Use cli installation to avoid missing dependency , instead of doing
+            just copy paste.
           </p>
         </div>
 
@@ -172,40 +173,35 @@ function RegistryAd() {
 
   const ads = [
     {
-      title: "Woilasoft Premium",
-      description:
-        "Get access to 100+ premium components, production-ready templates, and priority support.",
-      link: "https://woilasoft.com/pro",
+      title: "Woilasoft Agency",
+      description: "Digital website agency for your digital product.",
+      link: "https://woilasoft.com",
       gradient: "from-indigo-500 to-purple-600",
-      cta: "Upgrade Now",
+      cta: "Learn more",
       textColor: "text-indigo-100/90",
       ctaColor: "text-indigo-600 hover:bg-indigo-50",
-      image:
-        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=300&h=150&fit=crop",
+      image: "/brand/ogp.png",
     },
     {
-      title: "Hire Expert Devs",
+      title: "Templify",
       description:
-        "Need help with your project? Hire our top-tier developers to build your next big thing.",
-      link: "https://woilasoft.com/hire",
+        "the lightweight canvas editor for automated design workflows.",
+      link: "https://templify.woilasoft.com",
       gradient: "from-emerald-500 to-teal-600",
-      cta: "Get a Quote",
+      cta: "Get started",
       textColor: "text-emerald-100/90",
       ctaColor: "text-emerald-600 hover:bg-emerald-50",
-      image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=150&fit=crop",
+      image: "/brand/templify-logo.png",
     },
     {
-      title: "UI Design Kit",
-      description:
-        "The ultimate Figma kit for modern web applications. Speed up your design workflow today.",
-      link: "https://woilasoft.com/design",
+      title: "Eventree",
+      description: "Create your event and let the world know about it.",
+      link: "https://eventree.woilasoft.com",
       gradient: "from-pink-500 to-rose-600",
-      cta: "Download Kit",
+      cta: "Get started now",
       textColor: "text-pink-100/90",
       ctaColor: "text-pink-600 hover:bg-pink-50",
-      image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300&h=150&fit=crop",
+      image: "/brand/eventree.jpg",
     },
   ]
 
@@ -221,13 +217,22 @@ function RegistryAd() {
           {ads.map((ad, index) => (
             <CarouselItem key={index}>
               <div
-                className={cn(
-                  "relative overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-xl transition-all hover:scale-[1.02]",
-                  ad.gradient
-                )}
+                // className={cn(
+                //   "relative overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-xl transition-all hover:scale-[1.02]",
+                //   ad.gradient
+                // )}
+                className="dark relative overflow-hidden rounded-xl bg-zinc-900 p-4"
               >
+                <Illustration
+                  className="absolute top-0 left-0 -translate-x-1/2"
+                  aria-hidden="true"
+                />
+                <Illustration
+                  className="absolute right-0 bottom-0 translate-x-1/4"
+                  aria-hidden="true"
+                />
                 <div className="relative z-10">
-                  <div className="mb-4 overflow-hidden rounded-lg shadow-sm">
+                  <div className="mb-4 overflow-hidden rounded-lg bg-white/20 shadow-sm">
                     <Image
                       src={ad.image}
                       alt={ad.title}
@@ -239,11 +244,13 @@ function RegistryAd() {
                   <span className="mb-2 inline-block rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-bold tracking-wider text-white uppercase">
                     Sponsored
                   </span>
-                  <h3 className="mb-2 text-xl leading-tight font-bold">
+                  <h3 className="font-heading text-foreground mb-2 text-xl leading-tight">
                     {ad.title}
                   </h3>
                   <p
-                    className={cn("mb-4 text-xs leading-relaxed", ad.textColor)}
+                    className={cn(
+                      "text-foreground/80 mb-4 text-xs leading-relaxed"
+                    )}
                   >
                     {ad.description}
                   </p>
@@ -252,8 +259,7 @@ function RegistryAd() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
-                      "flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-bold transition-colors",
-                      ad.ctaColor
+                      "flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-bold text-black transition-colors"
                     )}
                   >
                     {ad.cta}

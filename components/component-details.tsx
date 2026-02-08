@@ -116,10 +116,13 @@ export default function ComponentDetails({
               Full screen preview of the component
             </DialogDescription>
           </DialogHeader>
-          <div className="items-top h-full justify-top mt-auto flex flex-1 flex-col overflow-auto">
-            <ComponentLoader component={component} />
-            {/* <div className="mx-auto mt-auto h-full w-full">
-            </div> */}
+          <div className="items-top justify-top mt-auto flex h-full flex-1 flex-col overflow-auto">
+            <div className="mx-auto mt-auto h-full w-full">
+              <ComponentLoader
+                component={component}
+                className="h-full !max-h-none"
+              />
+            </div>
           </div>
         </DialogContent>
       </Dialog>

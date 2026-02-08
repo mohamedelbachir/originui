@@ -1,13 +1,11 @@
 import type { MetadataRoute } from "next"
 
+import { blocks } from "@/config/blocks"
 import { categories } from "@/config/components"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const home = {
     url: "https://ui.woilasoft.com",
-  }
-  const search = {
-    url: "https://ui.woilasoft.com/search",
   }
   const easings = {
     url: "https://ui.woilasoft.com/easings",
@@ -16,5 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `https://ui.woilasoft.com/${category.slug}`,
   }))
 
-  return [home, ...categoryPages, search, easings]
+  const blockcategoryPages = blocks.map((category) => ({
+    url: `https://ui.woilasoft.com/blocks?categorie=${category.slug}`,
+  }))
+
+  return [home, ...categoryPages, ...blockcategoryPages, easings]
 }

@@ -2,6 +2,7 @@ import { ComponentType } from "react"
 import type { RegistryItem } from "shadcn/registry"
 
 import { cn } from "@/lib/utils"
+
 //import { IframeWrapper } from "@/components/iframe-wrapper"
 
 interface ComponentLoaderProps {
@@ -28,7 +29,7 @@ export default async function ComponentLoader<TProps extends object>({
     return (
       <div
         className={cn(
-          "mx-auto max-h-[450px] w-full overflow-auto py-10",
+          "mx-auto flex max-h-[450px] w-full items-start justify-center overflow-auto py-5",
           className
         )}
       >
