@@ -29,7 +29,7 @@ export default async function ComponentLoader<TProps extends object>({
     return (
       <div
         className={cn(
-          "mx-auto flex max-h-[450px] w-full items-start justify-center overflow-auto py-5",
+          "relative mx-auto flex max-h-[450px] w-full items-start justify-center overflow-auto py-5",
           className
         )}
       >

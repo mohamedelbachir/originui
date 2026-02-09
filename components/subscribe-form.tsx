@@ -34,15 +34,15 @@ function Form() {
       })
     }
   }, [state.succeeded])
-  useEffect(() => {
-    if (!state.succeeded) {
-      setFormState({
-        email: "",
-        status: "error",
-        message: "Failed to subscribe",
-      })
-    }
-  }, [state.errors])
+  // useEffect(() => {
+  //   if (!state.succeeded) {
+  //     setFormState({
+  //       email: "",
+  //       status: "error",
+  //       message: "Failed to subscribe",
+  //     })
+  //   }
+  // }, [state.errors])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

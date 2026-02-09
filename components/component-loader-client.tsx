@@ -48,7 +48,7 @@ export default function ComponentLoader<TProps extends object>({
     // <IframeWrapper className="min-h-[350px]">
     <div
       className={cn(
-        "flex h-fit max-h-[200px] w-full items-start justify-center overflow-auto p-8 sm:max-h-[450px]",
+        "relative flex h-fit max-h-[200px] w-full items-start justify-center overflow-auto p-8 sm:max-h-[450px]",
         className
       )}
     >
