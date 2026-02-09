@@ -16,10 +16,10 @@ export default function Footer() {
     <footer className="">
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6">
         <div className="border-border relative border-t px-4 py-8 sm:border-x sm:border-t-0 sm:px-6">
-          <div className="absolute -top-3 -left-3 z-10 h-6">
+          <div className="absolute -top-3 -left-3 z-10 hidden h-6 sm:block">
             <Cross />
           </div>
-          <div className="absolute -top-3 -right-3 z-10 h-6 -translate-x-px">
+          <div className="absolute -top-3 -right-3 z-10 hidden h-6 -translate-x-px sm:block">
             <Cross />
           </div>
 
