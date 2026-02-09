@@ -398,10 +398,7 @@ export default function Easings({ easings, view = "grid" }: EasingsProps) {
 
       <div
         id="easings-display"
-        className={cn(
-          "grid gap-6",
-          view === "grid" ? "sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
-        )}
+        className={cn("grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3")}
       >
         {getFilteredEasings().map((easing) => (
           <div

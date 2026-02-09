@@ -157,7 +157,7 @@ export default async function Page({ searchParams }: Props) {
           </p>
         </div>
 
-        <div className="bg-background flex items-center gap-1 rounded-lg border p-1 shadow-sm">
+        <div className="bg-background hidden items-center gap-1 rounded-lg border p-1 shadow-sm sm:flex">
           <Button
             asChild
             variant={view === "list" ? "secondary" : "ghost"}

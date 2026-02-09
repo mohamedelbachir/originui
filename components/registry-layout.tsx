@@ -76,22 +76,24 @@ export function RegistryLayout({
       )}
 
       {/* Middle Column: Content */}
-      <div
-        className={cn("bg-muted/30 relative min-h-screen lg:col-span-2", {
-          "lg:col-span-3": !sidebarTitle,
-        })}
-      >
-        <div className="flex h-full flex-col p-4 lg:p-8">
-          <RegistryMobileNav
-            categories={categories}
-            currentCategorySlug={currentCategorySlug}
-            basePath={basePath}
-          />
-          <div className="flex-1">
-            <Suspense fallback={<LoadingContent />}>{children}</Suspense>
+      {sidebarTitle && (
+        <div
+          className={cn("bg-muted/30 relative min-h-screen lg:col-span-2", {
+            "lg:col-span-3": !sidebarTitle,
+          })}
+        >
+          <div className="flex h-full flex-col p-4 lg:p-8">
+            <RegistryMobileNav
+              categories={categories}
+              currentCategorySlug={currentCategorySlug}
+              basePath={basePath}
+            />
+            <div className="flex-1">
+              <Suspense fallback={<LoadingContent />}>{children}</Suspense>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Right Column: Tips or Custom Content */}
       <div className="bg-background hidden sm:block lg:col-span-1">

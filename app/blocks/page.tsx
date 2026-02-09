@@ -126,10 +126,14 @@ export default async function ShowcasePage({ searchParams }: Props) {
             >
               <div
                 className={cn(
-                  "bg-grid-zinc-100/50 dark:bg-grid-zinc-900/50 w-full overflow-x-hidden"
+                  "bg-grid-zinc-100/50 dark:bg-grid-zinc-900/50 w-full overflow-x-hidden relative"
                 )}
               >
-                <ComponentLoader component={component} subPath={"blocks"} />
+                <ComponentLoader
+                  component={component}
+                  subPath={"blocks"}
+                  className="!w-fit"
+                />
               </div>
 
               <ComponentDetails component={component} categorie={category} />
