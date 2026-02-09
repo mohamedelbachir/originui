@@ -23,23 +23,27 @@ function Form() {
     message: "",
   })
   const [state, handleSubmission] = useFormspree("mdalkolq")
-  const isLoading = formState.status === "loading"
+  const isLoading = formState.status === "loading" || state.submitting
 
   useEffect(() => {
-    if (!state.succeeded) {
-      setFormState((prev) => ({
-        ...prev,
-        status: "error",
-        message: "Failed to subscribe",
-      }))
-    } else {
+    if (state.succeeded) {
       setFormState({
         email: "",
         status: "success",
         message: "Thanks for subscribing!",
       })
     }
-  }, [state])
+  }, [state.succeeded])
+  useEffect(() => {
+    if (!state.succeeded) {
+      setFormState({
+        email: "",
+        status: "error",
+        message: "Failed to subscribe",
+      })
+    }
+  }, [state.errors])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setFormState((prev) => ({ ...prev, status: "loading", message: "" }))

@@ -174,7 +174,8 @@ function RegistryAd() {
   const ads = [
     {
       title: "Woilasoft Agency",
-      description: "Digital website agency for your digital product.",
+      description:
+        "Woilasoft, your partner for custom digital solutions. We create the digital solutions ",
       link: "https://woilasoft.com",
       gradient: "from-indigo-500 to-purple-600",
       cta: "Learn more",
@@ -185,7 +186,7 @@ function RegistryAd() {
     {
       title: "Templify",
       description:
-        "the lightweight canvas editor for automated design workflows.",
+        "Create dynamic images programmatically, the lightweight canvas editor for automated design workflows.",
       link: "https://templify.woilasoft.com",
       gradient: "from-emerald-500 to-teal-600",
       cta: "Get started",
@@ -195,7 +196,8 @@ function RegistryAd() {
     },
     {
       title: "Eventree",
-      description: "Create your event and let the world know about it.",
+      description:
+        "An easy to use event management application for managing your events , start use it now !",
       link: "https://eventree.woilasoft.com",
       gradient: "from-pink-500 to-rose-600",
       cta: "Get started now",
