@@ -100,7 +100,7 @@ export function RegistryLayout({
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             delay={0.2}
-            className="hidden items-center justify-center px-4 sm:px-8 md:flex"
+            className="h-full"
           >
             <div className="flex-1">{rightColumn || <DefaultTips />}</div>
             <RegistryAd />

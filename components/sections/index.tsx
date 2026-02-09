@@ -134,10 +134,11 @@ const Hero = () => {
           <ViewAnimation
             initial={{ opacity: 0, translateY: -8 }}
             whileInView={{ opacity: 1, translateY: 0 }}
+            className="mx-auto"
           >
             <a
               href={item?.href}
-              className="mx-auto inline-flex w-fit items-center justify-center gap-1 rounded-full border-4 border-neutral-200 bg-[#334cec] py-0.5 pr-3 pl-0.5 text-xs shadow-[#080808] dark:border-neutral-800"
+              className="inline-flex w-fit items-center justify-center gap-1 rounded-full border-4 border-neutral-200 bg-[#334cec] py-0.5 pr-3 pl-0.5 text-xs shadow-[#080808] dark:border-neutral-800"
             >
               <div className="rounded-full bg-[#fcfdff] px-2 py-1 text-xs text-black">
                 Update
