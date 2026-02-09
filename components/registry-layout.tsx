@@ -122,7 +122,7 @@ function LoadingContent() {
 function DefaultTips() {
   return (
     <Prose>
-      <div className="mb-6 flex items-center gap-2 text-amber-500">
+      <div className="mb-5 flex items-center gap-2 text-amber-500">
         <div className="rounded-lg bg-amber-100 p-2 dark:bg-amber-900/30">
           <LightbulbIcon className="h-5 w-5" />
         </div>
@@ -216,7 +216,7 @@ function RegistryAd() {
   ]
 
   return (
-    <div className="mt-10 border-t pt-10">
+    <div className="my-5 border-t py-5">
       <Carousel
         plugins={[plugin.current]}
         className="w-full"

@@ -47,7 +47,7 @@ export function RegistrySidebar({
               <ViewAnimation
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                delay={index * 0.1}
+                delay={index * 0.05}
                 key={index}
               >
                 <Link
