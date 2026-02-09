@@ -48,6 +48,7 @@ export function RegistrySidebar({
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 delay={index * 0.1}
+                key={index}
               >
                 <Link
                   key={c.slug}
