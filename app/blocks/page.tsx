@@ -88,7 +88,7 @@ export default async function ShowcasePage({ searchParams }: Props) {
             className="h-8 w-8 p-0"
           >
             <Link
-              href={`/showcase?category=${categorySlug}&view=list`}
+              href={`/blocks?category=${categorySlug}&view=list`}
               title="List View"
             >
               <ListIcon size={16} />
@@ -101,7 +101,7 @@ export default async function ShowcasePage({ searchParams }: Props) {
             className="h-8 w-8 p-0"
           >
             <Link
-              href={`/showcase?category=${categorySlug}&view=grid`}
+              href={`/blocks?category=${categorySlug}&view=grid`}
               title="Grid View"
             >
               <LayoutGridIcon size={16} />
