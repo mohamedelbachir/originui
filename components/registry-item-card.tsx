@@ -71,7 +71,8 @@ export default function RegistryItemCard({ item }: RegistryItemCardProps) {
                   className="h-full w-full"
                   title={`${item.name} Preview`}
                   loading="lazy"
-                  security="none"
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 />
               ) : (
                 <div className="text-muted-foreground flex h-full flex-col items-center justify-center p-12 text-center">
