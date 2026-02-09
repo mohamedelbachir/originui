@@ -138,7 +138,7 @@ type Props = {
 }
 
 export default async function Page({ searchParams }: Props) {
-  const view = (await searchParams).view || "grid"
+  const view = (await searchParams).view || "list"
 
   return (
     <RegistryLayout
