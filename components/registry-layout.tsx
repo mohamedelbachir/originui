@@ -121,7 +121,7 @@ function DefaultTips() {
         <span className="text-foreground text-lg font-bold">Quick Tips</span>
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-4">
         <div className="group">
           <h4 className="group-hover:text-primary mb-3 flex items-center gap-2 text-sm font-semibold transition-colors">
             <div className="bg-primary h-1.5 w-1.5 rounded-full" />
@@ -186,7 +186,7 @@ function RegistryAd() {
     {
       title: "Templify",
       description:
-        "Create dynamic images programmatically, the lightweight canvas editor for automated design workflows.",
+        "Create dynamic images programmatically, the canvas editor for automated design workflows.",
       link: "https://templify.woilasoft.com",
       gradient: "from-emerald-500 to-teal-600",
       cta: "Get started",
