@@ -270,7 +270,7 @@ const AnimatedSquare = ({
   )
 }
 
-export default function Easings({ easings, view = "grid" }: EasingsProps) {
+export default function Easings({ easings, view = "list" }: EasingsProps) {
   const [duration, setDuration] = useState(defaultConfig.animationDuration)
   const [tempDuration, setTempDuration] = useState(
     defaultConfig.animationDuration
@@ -398,7 +398,10 @@ export default function Easings({ easings, view = "grid" }: EasingsProps) {
 
       <div
         id="easings-display"
-        className={cn("grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3")}
+        className={cn(
+          "grid gap-6",
+          view === "grid" ? "sm:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
+        )}
       >
         {getFilteredEasings().map((easing) => (
           <div
