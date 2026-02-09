@@ -12,7 +12,13 @@ import { cn } from "@/lib/utils"
 
 // import { Button } from "@/registry/default/ui/button"
 
-export default function SearchButton({ className }: { className?: string }) {
+export default function SearchButton({
+  className,
+  close,
+}: {
+  className?: string
+  close?: () => void
+}) {
   const setOpen = useSetAtom(isCommandMenuOpenAtom)
   // const isMobile = useIsMobile()
 
@@ -31,7 +37,12 @@ export default function SearchButton({ className }: { className?: string }) {
 
   return (
     <button
-      onClick={() => setOpen(true)}
+      onClick={() => {
+        setOpen(true)
+        if (close) {
+          close()
+        }
+      }}
       className={cn(
         "bg-background text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:ring-ring/50 inline-flex h-10 w-fit min-w-72 cursor-text items-center rounded-full border px-4 py-0 text-sm outline-none focus:ring-[3px]",
         className

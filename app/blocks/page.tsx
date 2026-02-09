@@ -62,7 +62,7 @@ export default async function ShowcasePage({ searchParams }: Props) {
       <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
-            <h1 className="text-4xl font-bold tracking-tight">
+            <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">
               {category.name}
             </h1>
             {category.isNew && (

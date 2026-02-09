@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { atom, useAtom } from "jotai"
 
 import { links } from "@/lib/navigation"
@@ -14,7 +15,7 @@ export const mobileMenuOpen = atom(false)
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useAtom(mobileMenuOpen)
-
+  const router = useRouter()
   return (
     <div
       className={cn(
@@ -27,13 +28,26 @@ export const MobileMenu = () => {
         <ActiveLink
           key={link.href}
           href={link.href}
-          onClick={() => setIsOpen(false)}
+          onClick={(e) => {
+            e.preventDefault()
+            setIsOpen(false)
+            router.push(link.href)
+          }}
         >
           {link.text}
         </ActiveLink>
       ))}
-      <SearchButton className="w-full" />
-      <Button variant="outline" size="sm" asChild>
+      <SearchButton className="w-full" close={() => setIsOpen(false)} />
+      <Button
+        variant="outline"
+        size="sm"
+        asChild
+        onClick={(e) => {
+          e.preventDefault()
+          setIsOpen(false)
+          router.push("/showcase")
+        }}
+      >
         <Link href="/showcase">Get started</Link>
       </Button>
       {/* <Button variant="outline" asChild onClick={() => setIsOpen(false)}>

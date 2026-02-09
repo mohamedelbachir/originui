@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useId, useState } from "react"
+import { ViewAnimation } from "@/providers/view-animation"
 import { useForm as useFormspree } from "@formspree/react"
 import { RiLoader3Line, RiNavigationLine } from "@remixicon/react"
 
@@ -127,21 +128,26 @@ function Form() {
 
 export function SubscribeBottom() {
   return (
-    <div className="dark relative overflow-hidden rounded-xl bg-zinc-900 px-4 py-14 sm:px-8">
-      <Illustration
-        className="absolute top-0 left-0 -translate-x-1/2"
-        aria-hidden="true"
-      />
-      <Illustration
-        className="absolute right-0 bottom-0 translate-x-1/4"
-        aria-hidden="true"
-      />
-      <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
-        <h2 className="font-heading text-foreground text-2xl/[1.1] font-bold tracking-tight md:text-3xl/[1.1]">
-          Get notified when new stuff drops.
-        </h2>
-        <Form />
+    <ViewAnimation
+      initial={{ opacity: 0, translateY: -8 }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+    >
+      <div className="dark relative overflow-hidden rounded-xl bg-zinc-900 px-4 py-14 sm:px-8">
+        <Illustration
+          className="absolute top-0 left-0 -translate-x-1/2"
+          aria-hidden="true"
+        />
+        <Illustration
+          className="absolute right-0 bottom-0 translate-x-1/4"
+          aria-hidden="true"
+        />
+        <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
+          <h2 className="font-heading text-foreground text-2xl/[1.1] font-bold tracking-tight md:text-3xl/[1.1]">
+            Get notified when new stuff drops.
+          </h2>
+          <Form />
+        </div>
       </div>
-    </div>
+    </ViewAnimation>
   )
 }

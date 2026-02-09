@@ -101,7 +101,7 @@ export default function ShowcasePageClient() {
 
       <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-4xl font-bold">{category.name}</h1>
+          <h1 className="text-2xl font-bold sm:text-4xl">{category.name}</h1>
           <p className="text-muted-foreground text-lg">
             {components.length} components available
           </p>

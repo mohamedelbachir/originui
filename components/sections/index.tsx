@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react"
 import Link from "next/link"
+import { ViewAnimation } from "@/providers/view-animation"
 import { ChevronsRight } from "lucide-react"
 
 //import { useTheme } from "next-themes"
@@ -130,79 +131,104 @@ const Hero = () => {
           </svg>
         </div>
         <article className="relative z-2 grid px-4 py-10 sm:px-0 sm:py-20">
-          <a
-            href={item?.href}
-            className="mx-auto inline-flex w-fit items-center justify-center gap-1 rounded-full border-4 border-neutral-200 bg-[#334cec] py-0.5 pr-3 pl-0.5 text-xs shadow-[#080808] dark:border-neutral-800"
+          <ViewAnimation
+            initial={{ opacity: 0, translateY: -8 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
           >
-            <div className="rounded-full bg-[#fcfdff] px-2 py-1 text-xs text-black">
-              Update
-            </div>
-            <p className="inline-block text-xs text-white sm:text-base">
-              ✨ Introducing
-              <span className="px-1 font-semibold">{item.title}</span>
-            </p>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-              data-slot="icon"
-              className="h-3 w-3 text-white"
+            <a
+              href={item?.href}
+              className="mx-auto inline-flex w-fit items-center justify-center gap-1 rounded-full border-4 border-neutral-200 bg-[#334cec] py-0.5 pr-3 pl-0.5 text-xs shadow-[#080808] dark:border-neutral-800"
             >
-              <path
-                fillRule="evenodd"
-                d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </a>
+              <div className="rounded-full bg-[#fcfdff] px-2 py-1 text-xs text-black">
+                Update
+              </div>
+              <p className="inline-block text-xs text-white sm:text-base">
+                ✨ Introducing
+                <span className="px-1 font-semibold">{item.title}</span>
+              </p>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+                className="h-3 w-3 text-white"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </ViewAnimation>
+
           {/* <h1 className="mt-5 text-center text-4xl leading-none font-semibold tracking-tighter text-balance sm:text-5xl">
             Woilasoft&ensp;
             <LineShadowText shadowColor={shadowColor}>UI</LineShadowText>
           </h1> */}
-          <h2 className="text-center text-3xl font-semibold tracking-tight text-black sm:text-5xl md:text-6xl xl:text-7xl dark:text-white">
-            {/* <span className="text-[2.5rem]">Don&apos;t Just Ship Website,</span>{" "}  */}
-            <span className="relative mt-4 flex translate-x-0 justify-center gap-2 text-[2rem] sm:text-5xl">
-              Ship{" "}
-              <WordAnimator
-                words={words}
-                duration={5}
-                className="w-fit border-neutral-200 bg-gray-200 pr-3 italic dark:border-neutral-800 dark:bg-gray-800" // Add any additional styling here
-              />{" "}
-              Website.
-            </span>
-          </h2>
-          <p className="mx-auto mt-5 text-center text-sm text-black sm:w-[80%] sm:text-lg lg:w-[700px] dark:text-white">
-            50+ Stunning Sections and Templates made with <strong>React</strong>
-            , <strong>TypeScript</strong>,<strong> Tailwind CSS</strong>.
-            <span className="hidden sm:inline">
-              {" "}
-              Powered by <b>originUI</b> , <b>shadcnUI</b> and{" "}
-              <b>framer motion</b>
-            </span>
-          </p>
-          <div className="mt-4 flex items-center justify-center gap-2">
-            <Link href="/showcase">
-              <ShimmerButton
-                borderRadius={"100px"}
-                className={cn(
-                  "flex w-fit items-center gap-2 rounded-full border px-4 py-3 text-white sm:px-4"
-                )}
-                background={"#334cec"}
-              >
-                <span className="text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-white lg:text-lg dark:from-white dark:to-slate-900/10">
-                  View Components
-                </span>
-              </ShimmerButton>
-            </Link>
-            <Button className="h-full rounded-full px-4 lg:text-lg" asChild>
-              <Link href="/blocks">
-                See blocks
-                <ChevronsRight />
+          <ViewAnimation
+            initial={{ opacity: 0, translateY: -8 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+          >
+            <h2 className="text-center text-3xl font-semibold tracking-tight text-black sm:text-5xl md:text-6xl xl:text-7xl dark:text-white">
+              {/* <span className="text-[2.5rem]">Don&apos;t Just Ship Website,</span>{" "}  */}
+              <span className="relative mt-4 flex translate-x-0 justify-center gap-2 text-[2rem] sm:text-5xl">
+                Ship{" "}
+                <WordAnimator
+                  words={words}
+                  duration={5}
+                  className="w-fit border-neutral-200 bg-gray-200 pr-3 italic dark:border-neutral-800 dark:bg-gray-800" // Add any additional styling here
+                />{" "}
+                Website.
+              </span>
+            </h2>
+          </ViewAnimation>
+          <ViewAnimation
+            initial={{ opacity: 0, translateY: -8 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            delay={0.4}
+          >
+            <p className="mx-auto mt-5 text-center text-sm text-black sm:w-[80%] sm:text-lg lg:w-[700px] dark:text-white">
+              50+ Stunning Sections and Templates made with{" "}
+              <strong>React</strong>, <strong>TypeScript</strong>,
+              <strong> Tailwind CSS</strong>.
+              <span className="hidden sm:inline">
+                {" "}
+                Powered by <b>originUI</b> , <b>shadcnUI</b> and{" "}
+                <b>framer motion</b>
+              </span>
+            </p>
+          </ViewAnimation>
+          <ViewAnimation
+            initial={{ opacity: 0, translateY: -8 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            delay={0.8}
+          >
+            <div className="mt-4 flex items-center justify-center gap-2">
+              <Link href="/showcase">
+                <ShimmerButton
+                  borderRadius={"100px"}
+                  className={cn(
+                    "flex w-fit items-center gap-2 rounded-full border px-4 py-3 text-white sm:px-4"
+                  )}
+                  background={"#334cec"}
+                >
+                  <span className="text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-white lg:text-lg dark:from-white dark:to-slate-900/10">
+                    View Components
+                  </span>
+                </ShimmerButton>
               </Link>
-            </Button>
-          </div>
+              <Button className="h-full rounded-full px-4 lg:text-lg" asChild>
+                <Link href="/blocks">
+                  See blocks
+                  <ChevronsRight />
+                </Link>
+              </Button>
+            </div>
+          </ViewAnimation>
+
           {/* <p className="text-center py-2">65% off during pre-sale.</p> */}
         </article>
         <div className="absolute inset-0 top-0 left-0 z-0 flex h-screen overflow-hidden">

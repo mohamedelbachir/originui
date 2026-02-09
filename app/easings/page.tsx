@@ -148,7 +148,9 @@ export default async function Page({ searchParams }: Props) {
     >
       <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="flex flex-col gap-3">
-          <h1 className="text-4xl font-bold tracking-tight">Easings</h1>
+          <h1 className="text-2xl font-bold tracking-tight sm:text-4xl">
+            Easings
+          </h1>
           <p className="text-muted-foreground text-lg">
             A set of easing functions ready to copy and paste into your Tailwind
             CSS project.

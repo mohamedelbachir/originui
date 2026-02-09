@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Suspense } from "react"
 import Image from "next/image"
+import { ViewAnimation } from "@/providers/view-animation"
 import Autoplay from "embla-carousel-autoplay"
 import {
   ExternalLink,
@@ -95,8 +96,15 @@ export function RegistryLayout({
       {/* Right Column: Tips or Custom Content */}
       <div className="bg-background hidden sm:block lg:col-span-1">
         <div className="custom-scrollbar sticky top-[64px] flex h-[calc(100vh-64px)] flex-col overflow-y-auto p-6">
-          <div className="flex-1">{rightColumn || <DefaultTips />}</div>
-          <RegistryAd />
+          <ViewAnimation
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            delay={0.2}
+            className="hidden items-center justify-center px-4 sm:px-8 md:flex"
+          >
+            <div className="flex-1">{rightColumn || <DefaultTips />}</div>
+            <RegistryAd />
+          </ViewAnimation>
         </div>
       </div>
     </WideSection>
